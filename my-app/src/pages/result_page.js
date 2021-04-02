@@ -1,10 +1,15 @@
 import React from 'react'
-import Paper from '@material-ui/core/Paper';
+import NavBar from '../components/nav_bar'
+
+import Grid from '@material-ui/core/Grid';
+import Box from '@material-ui/core/Box';
 
 export function ResultPage() {
     return (
-        <Paper>
-            "result"
-        </Paper>
+        <Box>
+            <NavBar/>
+            <Grid container>
+            </Grid>
+        </Box>
     )
 }
