@@ -1,7 +1,10 @@
 import React from 'react'
+import Paper from '@material-ui/core/Paper';
 
-export function resultPage() {
+export function ResultPage() {
     return (
-        "result"
+        <Paper>
+            "result"
+        </Paper>
     )
 }
