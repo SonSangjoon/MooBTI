@@ -19,8 +19,8 @@ export function App() {
     <div className={classes.root}>
       <BrowserRouter>
           <Route exact path="/" component={IntroPage}/>
-          <Route exact path="/test" component={TestPage}/>
           <Route exact path="/gender"component={GenderPage}/>
+          <Route exact path="/test" component={TestPage}/>
           <Route exact path="/:mbti/:gender"component={ResultPage}/>
       </BrowserRouter>
     </div>
