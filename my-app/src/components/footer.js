@@ -1,7 +1,6 @@
 import React from 'react'
 import { Box } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
-import logo from '../images/Logo.png'
 
 const useStyles = makeStyles({
     root: {
@@ -9,18 +8,12 @@ const useStyles = makeStyles({
         color: 'red',
         height: '0px'
     },
-    logo: {
-        padding: 10
-    }
   });
 
-export default function NavBar() {
+export default function Footer() {
     const classes = useStyles();
     return (
         <Box className={classes.root} position="static">
-            <Box className={classes.logo}>
-                <img src={logo} alt="Logo" />
-            </Box>
         </Box>
     );
 
