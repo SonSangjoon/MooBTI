@@ -5,6 +5,9 @@ import Grid from "@material-ui/core/Grid";
 import Box from "@material-ui/core/Box";
 import { makeStyles } from "@material-ui/core/styles";
 import { Typography } from "@material-ui/core";
+import female_pic from "../images/gender/female_pic.jpg";
+import male_pic from "../images/gender/male_pic.jpg";
+import {  Button } from '@material-ui/core';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -30,22 +33,29 @@ const useStyles = makeStyles((theme) => ({
   title: {
     marginBottom: "30px",
   },
-
+  gender_img: {
+    '&:hover': {
+      backgroundColor: '#ac141f',
+    },
+    padding: '8px 8px',
+    marginBottom: '10px' 
+  },
 }));
 
-function GenderPageText() {
+function GenderPageSelect() {
+  const classes = useStyles();
+
   return (
     <Box>
       <Typography variant="h4" align="center" gutterBottom>
         테스트를 진행할 프로필을 선택하세요.
       </Typography>
-      <Box display="flex" justifyContent="center" mt={5}>
+      <Box display="flex" justifyContent="center" mt={3}>
         <Box mr={5}>
           <Link to="/test">
-            <img
-              src="/images/male_pic.jpg"
-              alt="male_pic"
-            />
+            <Button className={classes.gender_img}>
+              <img src={male_pic} alt="male_pic"/>
+            </Button>
           </Link>
           <Typography variant="h6" align="center" gutterBottom>
             남성
@@ -53,10 +63,9 @@ function GenderPageText() {
         </Box>
         <Box>
           <Link to="/test">
-            <img
-              src="/images/female_pic.jpg"
-              alt="female_pic"
-            />
+          <Button className={classes.gender_img}>
+              <img src={female_pic} alt="female_pic"/>
+            </Button>
           </Link>
           <Typography variant="h6" align="center" gutterBottom>
             여성
@@ -76,7 +85,7 @@ export function GenderPage() {
         <Grid className={classes.emptyColumnGrid} item></Grid>
         <Grid className={classes.emptyRowGrid} item></Grid>
         <Grid item>
-          <GenderPageText />
+          <GenderPageSelect />
         </Grid>
       </Grid>
     </Box>
