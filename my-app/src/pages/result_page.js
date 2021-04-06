@@ -28,7 +28,7 @@ const useStyles = makeStyles((theme) => ({
         gridRow : 'span 1',
     },
 
-    emptyGrid: {
+    emptyColumn: {
         gridRow : 'span 10',
         gridColumn : 'span 1'
     },
@@ -63,7 +63,7 @@ export function ResultPage({match}) {
             <NavBar/>
             <Grid className={classes.container}>
                 <Grid className={classes.emptyRow} item/>
-                <Grid className={classes.emptyGrid} item/>
+                <Grid className={classes.emptyColumn} item/>
                 <Grid className={classes.resultGrid} item>
                     <ResultTemplate mbtiType={mbtiType} genderType={genderType}/>
                 </Grid>

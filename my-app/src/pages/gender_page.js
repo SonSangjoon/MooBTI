@@ -1,13 +1,10 @@
 import React from "react";
-import NavBar from "../components/nav_bar";
 import { Link } from "react-router-dom";
-import Grid from "@material-ui/core/Grid";
-import Box from "@material-ui/core/Box";
-import { makeStyles } from "@material-ui/core/styles";
-import { Typography } from "@material-ui/core";
 import female_pic from "../images/gender/female_pic.jpg";
 import male_pic from "../images/gender/male_pic.jpg";
-import {  Button } from '@material-ui/core';
+import NavBar from "../components/nav_bar";
+import { makeStyles } from "@material-ui/core/styles";
+import {  Button , Typography, Box, Grid  } from '@material-ui/core';
 import { PC, Mobile } from '../components/MediaQuery' 
 
 const useStyles = makeStyles((theme) => ({
@@ -36,9 +33,9 @@ const useStyles = makeStyles((theme) => ({
   },
   gender_img: {
     '&:hover': {
-      backgroundColor: '#ac141f',
+      backgroundColor: 'white',
     },
-    padding: '8px 8px',
+    padding: '4px 4px',
     marginBottom: '10px' 
   },
 }));
