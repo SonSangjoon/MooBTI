@@ -88,9 +88,10 @@ function IntroPageText(){
 
 export function IntroPage() {
   const classes = useStyles();
+  const pageType = "intro"
     return (
       <Box className={classes.root}>
-        <NavBar/>
+        <NavBar pageType={pageType}/>
         <Grid className={classes.container} spacing={3}>
           <Grid className={classes.emptyGrid} item xl={12}>
           </Grid>
