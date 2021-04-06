@@ -1,15 +1,74 @@
 import React from 'react'
 import NavBar from '../components/nav_bar'
+import Footer from '../components/footer'
+import ResultTemplate from '../templates/test_result'
+import RecommendContentsTemplate from '../templates/recommend_contents'
 
-import Grid from '@material-ui/core/Grid';
-import Box from '@material-ui/core/Box';
+import { makeStyles } from '@material-ui/core/styles';
+import { Box, Grid } from '@material-ui/core';
 
-export function ResultPage() {
+const useStyles = makeStyles((theme) => ({
+    root: {
+      height: '100vh',
+      backgroundColor: 'black'
+    },
+  
+    container: {
+      height: '100vh',
+  
+      display: 'grid',
+      gridTemplateRows: 'repeat(12, 1fr)',
+      gridTemplateColumns: 'repeat(12, 1fr)',
+    },
+
+    emptyRow: {
+        gridColumn : 'span 12',
+        gridRow : 'span 1',
+    },
+
+    emptyGrid: {
+        gridRow : 'span 10',
+        gridColumn : 'span 1'
+    },
+
+    resultGrid:{
+        gridColumn : 'span 5',
+        gridRow : 'span 10',
+        color: 'white'
+    },
+
+    result:{
+        display: 'flex'
+    },
+
+    recommendContentsGrid:{
+        gridColumn : 'span 5',
+        gridRow : 'span 10',
+        color: 'white'
+    },
+
+}))
+
+export function ResultPage({match}) {
+    const classes = useStyles();
+
+    const mbtiType = match.params.mbti
+    const genderType = match.params.gender
+
     return (
-        <Box>
+        <Box className={classes.root}>
             <NavBar/>
-            <Grid container>
+            <Grid className={classes.container}>
+                <Grid className={classes.emptyRow} item/>
+                <Grid className={classes.emptyGrid} item/>
+                <Grid className={classes.resultGrid} item>
+                    <ResultTemplate mbtiType={mbtiType} genderType={genderType}/>
+                </Grid>
+                <Grid className={classes.resultGrid} item>
+                    <RecommendContentsTemplate mbtiType={mbtiType} genderType={genderType}/>
+                </Grid>
             </Grid>
+            <Footer/>
         </Box>
     )
 }
