@@ -6,6 +6,8 @@ import RecommendContentsTemplate from '../templates/recommend_contents'
 
 import { makeStyles } from '@material-ui/core/styles';
 import { Box, Grid } from '@material-ui/core';
+import { PC, Mobile } from '../components/MediaQuery' 
+
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -56,7 +58,8 @@ export function ResultPage({match}) {
     const genderType = match.params.gender
 
     return (
-        <Box className={classes.root}>
+        <Box>
+        <PC className={classes.root}>
             <NavBar/>
             <Grid className={classes.container}>
                 <Grid className={classes.emptyRow} item/>
@@ -69,6 +72,11 @@ export function ResultPage({match}) {
                 </Grid>
             </Grid>
             <Footer/>
-        </Box>
+        </PC>
+        <Mobile>
+        Mobile
+        </Mobile>
+      </Box>
+
     )
 }
