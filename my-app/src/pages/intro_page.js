@@ -5,6 +5,8 @@ import Footer from '../components/footer'
 import { makeStyles } from '@material-ui/core/styles';
 import { Box, Grid, Button, Typography } from '@material-ui/core';
 import wallpaper from '../images/intro/Wallpaper.jpeg'
+import { PC, Mobile } from '../components/MediaQuery' 
+
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -90,16 +92,22 @@ export function IntroPage() {
   const classes = useStyles();
   const pageType = "intro"
     return (
-      <Box className={classes.root}>
-        <NavBar pageType={pageType}/>
-        <Grid className={classes.container} spacing={3}>
-          <Grid className={classes.emptyGrid} item xl={12}>
+      <Box>
+        <PC className={classes.root}>
+          <NavBar pageType={pageType}/>
+          <Grid className={classes.container} spacing={3}>
+            <Grid className={classes.emptyGrid} item xl={12}>
+            </Grid>
+            <Grid className={classes.textGrid} item xl={8}>
+              <IntroPageText/>
+            </Grid>
           </Grid>
-          <Grid className={classes.textGrid} item xl={8}>
-            <IntroPageText/>
-          </Grid>
-        </Grid>
-        <Footer/>
+          <Footer/>
+        </PC>
+        <Mobile>
+          Mobile
+        </Mobile>
       </Box>
+
     )
 }

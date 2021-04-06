@@ -4,7 +4,7 @@ import { IntroPage } from './pages/intro_page'
 import { TestPage } from './pages/test_page'
 import { GenderPage } from './pages/gender_page'
 import { ResultPage } from './pages/result_page'
-import { makeStyles } from '@material-ui/core/styles';
+import { makeStyles } from '@material-ui/core/styles'
 
 const useStyles = makeStyles({
     root: {
