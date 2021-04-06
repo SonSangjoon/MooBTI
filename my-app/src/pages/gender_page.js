@@ -8,11 +8,12 @@ import { Typography } from "@material-ui/core";
 import female_pic from "../images/gender/female_pic.jpg";
 import male_pic from "../images/gender/male_pic.jpg";
 import {  Button } from '@material-ui/core';
+import { PC, Mobile } from '../components/MediaQuery' 
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    color: "white",
-    height: "100vh",
+    height: '100vh',
+    backgroundColor: 'black'
   },
 
   container: {
@@ -31,7 +32,7 @@ const useStyles = makeStyles((theme) => ({
   },
 
   title: {
-    marginBottom: "30px",
+    color: 'white',
   },
   gender_img: {
     '&:hover': {
@@ -44,10 +45,9 @@ const useStyles = makeStyles((theme) => ({
 
 function GenderPageSelect() {
   const classes = useStyles();
-
   return (
     <Box>
-      <Typography variant="h4" align="center" gutterBottom>
+      <Typography className={classes.title} variant="h4" align="center" gutterBottom>
         테스트를 진행할 프로필을 선택하세요.
       </Typography>
       <Box display="flex" justifyContent="center" mt={3}>
@@ -57,7 +57,7 @@ function GenderPageSelect() {
               <img src={male_pic} alt="male_pic"/>
             </Button>
           </Link>
-          <Typography variant="h6" align="center" gutterBottom>
+          <Typography className={classes.title} variant="h6" align="center" gutterBottom>
             남성
           </Typography>
         </Box>
@@ -67,7 +67,7 @@ function GenderPageSelect() {
               <img src={female_pic} alt="female_pic"/>
             </Button>
           </Link>
-          <Typography variant="h6" align="center" gutterBottom>
+          <Typography className={classes.title} variant="h6" align="center" gutterBottom>
             여성
           </Typography>
         </Box>
@@ -79,7 +79,8 @@ function GenderPageSelect() {
 export function GenderPage() {
   const classes = useStyles();
   return (
-    <Box className={classes.root}>
+  <Box>
+    <PC className={classes.root}>
       <Grid className={classes.container} spacing={3}>
         <NavBar />
         <Grid className={classes.emptyColumnGrid} item></Grid>
@@ -88,6 +89,10 @@ export function GenderPage() {
           <GenderPageSelect />
         </Grid>
       </Grid>
-    </Box>
+    </PC>
+    <Mobile>
+      Mobile
+    </Mobile>
+  </Box>
   );
 }
