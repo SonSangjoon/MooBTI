@@ -34,7 +34,7 @@ const useStyles = makeStyles((theme) => ({
     },
 
     resultGrid:{
-        gridColumn : 'span 5',
+        gridColumn : 'span 6',
         gridRow : 'span 10',
         color: 'white'
     },
@@ -44,8 +44,8 @@ const useStyles = makeStyles((theme) => ({
     },
 
     recommendContentsGrid:{
-        gridColumn : 'span 5',
-        gridRow : 'span 10',
+        gridColumn : 'span 4',
+        gridRow : 'span 9',
         color: 'white'
     },
 
@@ -67,7 +67,7 @@ export function ResultPage({match}) {
                 <Grid className={classes.resultGrid} item>
                     <ResultTemplate mbtiType={mbtiType} genderType={genderType}/>
                 </Grid>
-                <Grid className={classes.resultGrid} item>
+                <Grid className={classes.recommendContentsGrid} item>
                     <RecommendContentsTemplate mbtiType={mbtiType} genderType={genderType}/>
                 </Grid>
             </Grid>
