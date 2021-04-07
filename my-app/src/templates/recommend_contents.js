@@ -1,6 +1,6 @@
 import React from "react";
 import dummy_poster_img from "../images/result/dummy_titanic_poster.jpg";
-import { Button, Typography, Box, Grid } from "@material-ui/core";
+import { Button, Typography, Box, Grid, Link } from "@material-ui/core";
 import {
   createMuiTheme,
   withStyles,
@@ -48,11 +48,11 @@ const useStyles = makeStyles((theme) => ({
 
   dummyRecommendGoodDesc: {
     gridColumn: "5/span 8",
-    gridRow: "5/ span 10",
+    gridRow: "4/ span 10",
   },
   dummyRecommendBadDesc: {
     gridColumn: "5/span 8",
-    gridRow: "5/ span 10",
+    gridRow: "4/ span 10",
   },
 
   dummyImg: {
@@ -61,13 +61,26 @@ const useStyles = makeStyles((theme) => ({
     maxHeight: "100%",
     // minheight: "100%"
   },
+
+  NetflixBtnGrid: {
+    gridColumn: "5/ span 4",
+    gridRow: "-3/ span 1",
+  },
+  NetflixBtn: {
+    maxheight: "100%",
+  },
+
   dummyBtnGrid: {
-    gridColumn: "4/ span 5",
-    gridRow: "11/ span 5",
+    // display: "grid",
+    // gridTemplateRows: "repeat(12, 1fr)",
+    // gridTemplateColumns: "repeat(12, 1fr)",
   },
 
   dummyBtn: {
-    minWidth: "100%",
+    gridColumn: "span 5",
+    gridRow: "span 5",
+
+    // minWidth: "100%",
   },
 
   recommendText: {
@@ -91,7 +104,7 @@ const useStyles = makeStyles((theme) => ({
 const CustomAnalysisBtn = withStyles((theme) => ({
   root: {
     // color: theme.palette.getContrastText(purple[500]),
-    backgroundColor: "#c81926",
+    // backgroundColor: "#c81926",
     "&:hover": {
       backgroundColor: "#99141d",
     },
@@ -123,7 +136,6 @@ function RecommendGoodDesc(mbtiType, genderType) {
 }
 
 function RecommendBadTitle(mbtiType, genderType) {
-  const classes = useStyles();
   return (
     <Box>
       <Typography size="small">
@@ -133,7 +145,6 @@ function RecommendBadTitle(mbtiType, genderType) {
   );
 }
 function RecommendBadDesc(mbtiType, genderType) {
-  const classes = useStyles();
   return (
     <Box>
       <Typography>
@@ -146,16 +157,24 @@ function RecommendBadDesc(mbtiType, genderType) {
   );
 }
 
-function DataAnalysisBtn(mbtiType, genderType) {
+function NetflixGoodBtn(mbtiType, genderType) {
   const classes = useStyles();
   return (
-    <CustomAnalysisBtn
-      variant="contained"
-      className={classes.dummyBtn}
-      color="secondary"
-    >
-      어떻게 분석했어?
-    </CustomAnalysisBtn>
+    <Link href="https://www.naver.com/" underline="none" target="_blank"> 
+      <Button variant="outlined" className={classes.dummyBtn} color="secondary">
+        Netflix에서 보기
+      </Button>
+    </Link>
+  );
+}
+function NetflixBadBtn(mbtiType, genderType) {
+  const classes = useStyles();
+  return (
+    <Link href="https://www.daum.net/" underline="none" target="_blank"> 
+      <Button variant="outlined" className={classes.dummyBtn} color="secondary">
+        Netflix에서 보기
+      </Button>
+    </Link>
   );
 }
 
@@ -178,6 +197,9 @@ export default function RecommendContentsTemplate({ mbtiType, genderType }) {
           <Grid className={classes.dummyRecommendGoodDesc}>
             <RecommendGoodDesc />
           </Grid>
+          <Grid className={classes.NetflixBtnGrid}>
+            <NetflixGoodBtn />
+          </Grid>
         </Grid>
         <Grid className={classes.recommendContainer} item>
           <Grid className={classes.dummyRecommendBadTitleGrid}>
@@ -194,11 +216,14 @@ export default function RecommendContentsTemplate({ mbtiType, genderType }) {
           <Grid className={classes.dummyRecommendBadDesc}>
             <RecommendBadDesc />
           </Grid>
+          <Grid className={classes.NetflixBtnGrid}>
+            <NetflixBadBtn />
+          </Grid>
         </Grid>
       </Grid>
       {/* <Grid className={classes.dummyBtnGrid}>
-        <DataAnalysisBtn className={classes.dummyBtn} />
       </Grid> */}
+      {/* <NetflixBtn className={classes.dummyBtn} /> */}
     </>
   );
 }
