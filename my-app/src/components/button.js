@@ -9,9 +9,7 @@ const useStyles = makeStyles((theme) => ({
     flexWrap: 'wrap',
     height: '100%',
     width: '100%',
-  },
-  image: {
-    position: 'relative',
+    
     '&:hover, &$focusVisible': {
       zIndex: 1,
       '& $imageMarked': {
@@ -20,10 +18,13 @@ const useStyles = makeStyles((theme) => ({
       '& $imageTitle': {
         border: '4px solid currentColor',
       },
-    },
+    }
   },
 
-  focusVisible: {},
+  focusVisible: {
+    width: "100%",    
+  },
+  
   imageButton: {
     position: 'absolute',
     display: 'flex',
@@ -55,19 +56,10 @@ export default function ButtonBases({choice}) {
     <div className={classes.root}>
         <ButtonBase
           focusRipple
-          className={classes.image}
           focusVisibleClassName={classes.focusVisible}
-          style={{
-            width: "100%",
-          }}
-        >
+          className={classes.focusVisible}>
           <span className={classes.imageButton}>
-            <Typography
-              component="span"
-              variant="subtitle1"
-              color="inherit"
-              className={classes.imageTitle}
-            >
+            <Typography className={classes.imageTitle}>
               {choice}
               <span className={classes.imageMarked} />
             </Typography>

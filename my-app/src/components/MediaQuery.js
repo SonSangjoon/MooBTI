@@ -6,7 +6,7 @@ const Mobile = ({ children }) => {
 }
 
 const Tablet = ({ children }) => {
-    const isTablet = useMediaQuery({ minWidth: '767px'})
+    const isTablet = useMediaQuery({ maxWidth: '767px'})
     return isTablet ? children : null
 }
 
@@ -15,5 +15,9 @@ const PC = ({ children }) => {
     return isPC? children : null
 }
 
+const PCwide = ({ children }) => {
+    const isPCwide = useMediaQuery({ maxWidth: '767px'})
+    return isPCwide ? children : null
+}
 
-export { Mobile, Tablet, PC }
+export { Mobile, Tablet, PC, PCwide }
