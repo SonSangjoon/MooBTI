@@ -3,7 +3,6 @@ import NavBar from '../components/nav_bar'
 import Footer from '../components/footer'
 import ResultTemplate from '../templates/test_result'
 import RecommendContentsTemplate from '../templates/recommend_contents'
-
 import { makeStyles } from '@material-ui/core/styles';
 import { Box, Grid } from '@material-ui/core';
 import { PC, Mobile } from '../components/MediaQuery' 
@@ -45,7 +44,7 @@ const useStyles = makeStyles((theme) => ({
 
     recommendContentsGrid:{
         gridColumn : 'span 4',
-        gridRow : 'span 9',
+        gridRow : 'span 10',
         color: 'white'
     },
 
@@ -77,6 +76,5 @@ export function ResultPage({match}) {
         Mobile
         </Mobile>
       </Box>
-
     )
 }
