@@ -1,7 +1,7 @@
 import React from "react";
 import { Button, Typography, Box, Grid } from "@material-ui/core";
 import dummy_img from "../images/result/dummy_titanic_jack.jpg";
-import { useCallback, useEffect, useMemo, useState, useContext } from "react";
+// import { useCallback, useEffect, useMemo, useState, useContext } from "react";
 import {
   createMuiTheme,
   withStyles,
