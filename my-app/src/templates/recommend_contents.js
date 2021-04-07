@@ -27,24 +27,33 @@ const useStyles = makeStyles((theme) => ({
     gridTemplateColumns: "repeat(12, 1fr)",
   },
 
-  dummyScriptGrid1: {
+  dummyRecommendGoodTitleGrid: {
     gridColumn: "span 12",
     gridRow: "2/span 2",
   },
-  dummyScriptGrid2: {
+  dummyRecommendBadTitleGrid: {
     gridColumn: "span 12",
     gridRow: "2/span 2",
   },
 
-  dummyImgGrid1: {
+  dummyGoodImgGrid: {
     gridColumn: "span 3",
     gridRow: "4/ span 10",
   },
 
-    dummyImgGrid2: {
-      gridColumn: "span 3",
-      gridRow: "4/span 10",
-    },
+  dummyBadImgGrid: {
+    gridColumn: "span 3",
+    gridRow: "4/span 10",
+  },
+
+  dummyRecommendGoodDesc: {
+    gridColumn: "5/span 8",
+    gridRow: "5/ span 10",
+  },
+  dummyRecommendBadDesc: {
+    gridColumn: "5/span 8",
+    gridRow: "5/ span 10",
+  },
 
   dummyImg: {
     objectFit: "cover",
@@ -89,23 +98,49 @@ const CustomAnalysisBtn = withStyles((theme) => ({
   },
 }))(Button);
 
+function RecommendGoodTitle(mbtiType, genderType) {
+  const classes = useStyles();
+  return (
+    <Box>
+      <Typography>
+        나와 잘 맞는 MBTI의 영화 주인공은 어떻게 연애했을까?
+      </Typography>
+    </Box>
+  );
+}
 function RecommendGoodDesc(mbtiType, genderType) {
   const classes = useStyles();
   return (
     <Box>
-      <Typography size="small">
-        나와 잘 맞는 MBTI의 영화 주인공 <br /> 어떻게 연애했을까?
+      <Typography>
+        "날 기억해줘. 최선을 다해서..." <br />
+        <br /> 따뜻하고 배려심 깊은 ISFJ 유형은 상대방을 잘 헤아려요.
+        클레멘타인처럼 사랑의 결실을 꿈꾸기도 하고요. 사랑하는 이에게
+        의지하면서도, 도움을 주고 싶어해요.
       </Typography>
     </Box>
   );
 }
 
-function RecommendBadDesc(mbtiType, genderType) {
+function RecommendBadTitle(mbtiType, genderType) {
   const classes = useStyles();
   return (
     <Box>
       <Typography size="small">
-        나와 잘 안맞는 MBTI의 영화 주인공 <br /> 어떻게 연애했을까?
+        나와 잘 안맞는 MBTI의 영화 주인공은 어떻게 연애했을까?
+      </Typography>
+    </Box>
+  );
+}
+function RecommendBadDesc(mbtiType, genderType) {
+  const classes = useStyles();
+  return (
+    <Box>
+      <Typography>
+        "날 기억해줘. 최선을 다해서..." <br />
+        <br /> 따뜻하고 배려심 깊은 ISFJ 유형은 상대방을 잘 헤아려요.
+        클레멘타인처럼 사랑의 결실을 꿈꾸기도 하고요. 사랑하는 이에게
+        의지하면서도, 도움을 주고 싶어해요.
       </Typography>
     </Box>
   );
@@ -130,28 +165,34 @@ export default function RecommendContentsTemplate({ mbtiType, genderType }) {
     <>
       <Grid className={classes.container}>
         <Grid className={classes.recommendContainer} item>
-          <Grid className={classes.dummyScriptGrid1}>
-            <RecommendGoodDesc />
+          <Grid className={classes.dummyRecommendGoodTitleGrid}>
+            <RecommendGoodTitle />
           </Grid>
-          <Grid className={classes.dummyImgGrid1}>
+          <Grid className={classes.dummyGoodImgGrid}>
             <img
               className={classes.dummyImg}
               src={dummy_poster_img}
               alt="dummy"
             />
+          </Grid>
+          <Grid className={classes.dummyRecommendGoodDesc}>
+            <RecommendGoodDesc />
           </Grid>
         </Grid>
         <Grid className={classes.recommendContainer} item>
-          <Grid className={classes.dummyScriptGrid2}>
-            <RecommendBadDesc />
+          <Grid className={classes.dummyRecommendBadTitleGrid}>
+            <RecommendBadTitle />
           </Grid>
 
-          <Grid className={classes.dummyImgGrid2}>
+          <Grid className={classes.dummyBadImgGrid}>
             <img
               className={classes.dummyImg}
               src={dummy_poster_img}
               alt="dummy"
             />
+          </Grid>
+          <Grid className={classes.dummyRecommendBadDesc}>
+            <RecommendBadDesc />
           </Grid>
         </Grid>
       </Grid>
