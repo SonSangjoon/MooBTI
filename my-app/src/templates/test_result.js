@@ -105,7 +105,7 @@ function MbtiTypeOutline(mbtiType, genderType) {
   return (
     <Box>
       <Typography className={classes.dummyTitleFont} align="center">
-        이 배의 탑승권을 따낸 건 내 인생 최고의 행운이었어. <br />
+        "이 배의 탑승권을 따낸 건 내 인생 최고의 행운이었어. <br />
         당신을 만났으니까."
         <br />
       </Typography>
