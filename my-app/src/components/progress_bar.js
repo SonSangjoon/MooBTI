@@ -10,11 +10,6 @@ function LinearProgressWithLabel(props) {
       <Box width="100%" height="2" >
         <LinearProgress variant="determinate" color="secondary" {...props} />
       </Box>
-      {/* <Box minWidth={35}>
-        <Typography variant="body2" color="white">{`${Math.round(
-          props.value,
-        )}%`}</Typography>
-      </Box> */}
     </Box>
   );
 }
@@ -29,18 +24,13 @@ const useStyles = makeStyles({
   },
 });
 
-export default function LinearWithValueLabel() {
+export default function LinearWithValueLabel({num}) {
   const classes = useStyles();
-  const [progress, setProgress] = React.useState(10);
+  const [progress, setProgress] = React.useState(0);
 
   React.useEffect(() => {
-    const timer = setInterval(() => {
-      setProgress((prevProgress) => (prevProgress >= 100 ? 10 : prevProgress + 10));
-    }, 800);
-    return () => {
-      clearInterval(timer);
-    };
-  }, []);
+    setProgress((num));
+  }, [num]);
 
   return (
     <Box className={classes.root}>

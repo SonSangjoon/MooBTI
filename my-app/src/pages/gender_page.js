@@ -76,8 +76,8 @@ function GenderPageSelect() {
 export function GenderPage() {
   const classes = useStyles();
   return (
-  <Box>
-    <PC className={classes.root}>
+  <Box className={classes.root}>
+    <PC>
       <Grid className={classes.container} spacing={3}>
         <NavBar />
         <Grid className={classes.emptyColumnGrid} item></Grid>

@@ -42,8 +42,8 @@ const useStyles = makeStyles((theme) => ({
 export function TestPage() {
     const classes = useStyles();
     return (
-        <Box>
-            <PC className={classes.root}>
+        <Box  className={classes.root}>
+            <PC>
                 <SubNavBar/>
                 <Grid className={classes.container}>
                     <Grid className={classes.emptyRow} item/>
