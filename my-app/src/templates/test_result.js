@@ -1,15 +1,10 @@
 import React from "react";
 import { Button, Typography, Box, Grid } from "@material-ui/core";
 import dummy_img from "../images/result/dummy_titanic_jack.jpg";
-// import { useCallback, useEffect, useMemo, useState, useContext } from "react";
 import {
-  createMuiTheme,
   withStyles,
   makeStyles,
-  ThemeProvider,
 } from "@material-ui/core/styles";
-
-import { PC, Mobile } from "../components/MediaQuery";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -90,7 +85,6 @@ const CustomAnalysisBtn = withStyles((theme) => ({
 }))(Button);
 
 function MbtiTypeImageDesc(mbtiType, genderType) {
-  const classes = useStyles();
   return (
     <Box>
       <Typography variant="h6" align="center">
