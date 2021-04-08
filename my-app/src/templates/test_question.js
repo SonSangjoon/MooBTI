@@ -20,7 +20,7 @@ const useStyles = makeStyles((theme) => ({
 
     questionText: {
         color: 'white',
-        fontSize: '4vw'
+        fontSize: '2.5vmax'
     },
 
     imageGrid:{
@@ -29,7 +29,7 @@ const useStyles = makeStyles((theme) => ({
     },
 
     image:{
-        objectFit: 'fill',
+        objectFit: 'contain',
         width: '100%',
         maxHeight: "100%"
     },
@@ -50,14 +50,14 @@ export default function TestQuestionTemplate() {
 
     const questionList = {
         0: {
-            question :"Q1. 이거 마시면 나랑 사귀는거다",
+            question :"Q1. 지긋이 바라보는데 갑자기 애인이 멋있고 예뻐보인다.",
             choice1 : "'어떻게 내 애인이지?' 속으로 생각해본다",
             choice2 : "\"오늘 왜 이렇게 예뻐/멋있어?\" 한 마디 해준다",
             
             image: "/images/test/test1.png",
         },
         1: {
-            question :"Q1. 이거 마시면 나랑 사귀는거다",
+            question :"Q1. 지긋이 바라보는데 갑자기 애인이 멋있고 예뻐보인다.",
             choice1 : "'어떻게 내 애인이지?' 속으로 생각해본다",
             choice2 : "\"오늘 왜 이렇게 예뻐/멋있어?\" 한 마디 해준다",
             
@@ -152,10 +152,6 @@ export default function TestQuestionTemplate() {
     },[answerSheet])
 
     function proceedTest(n) {
-        // if (answerSheet.length >= 13){
-            // 13문항 모두 작성시 axios.get()
-            // push
-        // }
         if(n === 1){
             setAnswerSheet(answerSheet => answerSheet+"1")
         }
@@ -164,7 +160,7 @@ export default function TestQuestionTemplate() {
         }
     }
 
-    if (answerSheet.length >= 13)
+    if (answerSheet.length >= 12)
         history.push("/intj/male")
 
     return (
