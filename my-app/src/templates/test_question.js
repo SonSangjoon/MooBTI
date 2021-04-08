@@ -20,7 +20,7 @@ const useStyles = makeStyles((theme) => ({
 
     questionText: {
         color: 'white',
-        fontSize: '4vw'
+        fontSize: '3vw'
     },
 
     imageGrid:{
@@ -50,16 +50,17 @@ export default function TestQuestionTemplate() {
 
     const questionList = {
         0: {
-            question :"Q1. 이거 마시면 나랑 사귀는거다",
-            choice1 : "마신다",
-            choice2 : "마시지 않는다",
+            question :"Q1. 지긋이 바라보는데 갑자기 그/그녀가 멋있고 예뻐보인다.",
+            choice1 : "어떻게 완벽한 그/그녀를 사랑하게 되었는지 생각에 잠겨본다",
+            choice2 : "가까이 다가가 \"오늘 왜 이렇게 예뻐? / 멋있어?\" 한 마디 해준다.",
             
             image: "/images/test/test1.png",
             },
         1: {
-            question :"Q1. 이거 마시면 나랑 사귀는거다",
-            choice1 : "마신다",
-            choice2 : "마시지 않는다",
+            question :"Q1. 지긋이 바라보는데 갑자기 그/그녀가 멋있고 예뻐보인다.",
+            choice1 : "어떻게 완벽한 그/그녀를 사랑하게 되었는지 생각에 잠겨본다",
+            choice2 : "가까이 다가가 \"오늘 왜 이렇게 예뻐? / 멋있어?\" 한 마디 해준다.",
+            
             image: "/images/test/test1.png",
         },
         2: {
@@ -67,76 +68,70 @@ export default function TestQuestionTemplate() {
             choice1 : "마신다",
             choice2 : "마시지 않는다",
             
-            image: "/images/test/test1.png",
+            image: "/images/test/test2.png",
         },
         3: {
             question :"Q3. 안녕하세요",
             choice1 : "마신다",
             choice2 : "마시지 않는다",
             
-            image: "/images/test/test1.png",
+            image: "/images/test/test3.png",
         },
         4: {
             question :"Q4. 안녕하세요",
             choice1 : "마신다",
             choice2 : "마시지 않는다",
             
-            image: "/images/test/test1.png",
+            image: "/images/test/test4.png",
         },
         5 : {
             question :"Q5. 안녕하세요",
             choice1 : "마신다",
             choice2 : "마시지 않는다",
             
-            image: "/images/test/test1.png",
+            image: "/images/test/test5.jpeg",
         },
         6 : {
             question :"Q6. 안녕하세요",
             choice1 : "마신다",
             choice2 : "마시지 않는다",
-            image: ""
+            image: "/images/test/test6.jpg"
         },
         7 : {
             question :"Q7. 안녕하세요",
             choice1 : "마신다",
             choice2 : "마시지 않는다",
-            image: ""
+            image: "/images/test/test7.png"
         },
         8 : {
             question :"Q8. 안녕하세요",
             choice1 : "마신다",
             choice2 : "마시지 않는다",
-            image: ""
+            image: "/images/test/test8.png"
         },
         9 : {
             question :"Q9. 안녕하세요",
             choice1 : "마신다",
             choice2 : "마시지 않는다",
-            image: ""
+            image: "/images/test/test9.jpg"
         },
         10 : {
             question :"Q10. 안녕하세요",
             choice1 : "마신다",
             choice2 : "마시지 않는다",
-            image: ""
+            image: "/images/test/test10.png"
         },
         11 : {
             question :"Q11. 안녕하세요",
             choice1 : "마신다",
             choice2 : "마시지 않는다",
-            image: ""
+            image: "/images/test/test11.png"
         },
         12 : {
             question :"Q12. 안녕하세요",
             choice1 : "마신다",
             choice2 : "마시지 않는다",
-            image: ""
-        },
-        13 : {
-            question :"Q13. 안녕하세요",
-            choice1 : "마신다",
-            choice2 : "마시지 않는다",
-            image: ""
+            image: "/images/test/test12.jpg"
         },
     }    
 
@@ -149,10 +144,6 @@ export default function TestQuestionTemplate() {
     },[answerSheet])
 
     function proceedTest(n) {
-        // if (answerSheet.length >= 13){
-            // 13문항 모두 작성시 axios.get()
-            // push
-        // }
         if(n === 1){
             setAnswerSheet(answerSheet => answerSheet+"1")
         }
@@ -161,7 +152,9 @@ export default function TestQuestionTemplate() {
         }
     }
 
-    if (answerSheet.length >= 13)
+    if (answerSheet.length >= 12)
+        // 13문항 모두 작성시 axios.get()
+        // ADD circular progress bar 
         history.push("/intj/male")
 
     return (
