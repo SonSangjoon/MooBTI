@@ -65,6 +65,11 @@ const useStyles = makeStyles((theme) => ({
       boxShadow: 'none',
       backgroundColor: 'rgba(250, 0, 0, 0.7)',
     },
+  },
+
+  mobileContainer : {
+    display: 'grid',
+    gridTemplateRows: 'repeat(3, 1fr)',
   }
 }))
 
@@ -104,8 +109,13 @@ export function IntroPage() {
           </Grid>
           <Footer/>
         </PC>
-        <Mobile>
-          Mobile
+        <Mobile className={classes.root}>
+          {/* <NavBar pageType={pageType}/> */}
+            <Grid className={classes.mobileContainer} spacing={3}>
+              <Grid></Grid>
+                <IntroPageText/>
+            </Grid>
+            <Footer/>
         </Mobile>
       </Box>
 
