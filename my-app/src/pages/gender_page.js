@@ -1,10 +1,10 @@
 import React from "react";
-import NavBar from "../components/nav_bar";
 import { Link } from "react-router-dom";
-import Grid from "@material-ui/core/Grid";
-import Box from "@material-ui/core/Box";
+import female_pic from "../images/gender/female_pic.jpg";
+import male_pic from "../images/gender/male_pic.jpg";
+import NavBar from "../components/nav_bar";
 import { makeStyles } from "@material-ui/core/styles";
-import { Typography } from "@material-ui/core";
+import {  Button , Typography, Box, Grid  } from '@material-ui/core';
 import { PC, Mobile } from '../components/MediaQuery' 
 
 const useStyles = makeStyles((theme) => ({
@@ -31,23 +31,28 @@ const useStyles = makeStyles((theme) => ({
   title: {
     color: 'white',
   },
-
+  gender_img: {
+    '&:hover': {
+      backgroundColor: 'white',
+    },
+    padding: '4px 4px',
+    marginBottom: '10px' 
+  },
 }));
 
-function GenderPageText() {
+function GenderPageSelect() {
   const classes = useStyles();
   return (
     <Box>
       <Typography className={classes.title} variant="h4" align="center" gutterBottom>
         테스트를 진행할 프로필을 선택하세요.
       </Typography>
-      <Box display="flex" justifyContent="center" mt={5}>
+      <Box display="flex" justifyContent="center" mt={3}>
         <Box mr={5}>
           <Link to="/test">
-            <img
-              src="/images/male_pic.jpg"
-              alt="male_pic"
-            />
+            <Button className={classes.gender_img}>
+              <img src={male_pic} alt="male_pic"/>
+            </Button>
           </Link>
           <Typography className={classes.title} variant="h6" align="center" gutterBottom>
             남성
@@ -55,10 +60,9 @@ function GenderPageText() {
         </Box>
         <Box>
           <Link to="/test">
-            <img
-              src="/images/female_pic.jpg"
-              alt="female_pic"
-            />
+          <Button className={classes.gender_img}>
+              <img src={female_pic} alt="female_pic"/>
+            </Button>
           </Link>
           <Typography className={classes.title} variant="h6" align="center" gutterBottom>
             여성
@@ -79,7 +83,7 @@ export function GenderPage() {
         <Grid className={classes.emptyColumnGrid} item></Grid>
         <Grid className={classes.emptyRowGrid} item></Grid>
         <Grid item>
-          <GenderPageText />
+          <GenderPageSelect />
         </Grid>
       </Grid>
     </PC>
