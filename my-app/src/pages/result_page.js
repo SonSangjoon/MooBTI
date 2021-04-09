@@ -7,7 +7,6 @@ import RecommendContentsTemplate from "../templates/recommend_contents";
 import { makeStyles } from "@material-ui/core/styles";
 import { Box, Grid } from "@material-ui/core";
 import { PC, Mobile } from "../components/MediaQuery";
-import Loading from '../components/loading'
 
 const useStyles = makeStyles((theme) => ({
   root: {

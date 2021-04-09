@@ -34,7 +34,7 @@ const useStyles = makeStyles((theme) => ({
   },
 
   imageTitle: {
-    fontSize: '25px',
+    fontSize: '1.3vw',
     position: 'relative',
     padding: `${theme.spacing(2)}px ${theme.spacing(4)}px ${theme.spacing(1) + 6}px`,
   },
