@@ -7,6 +7,7 @@ import RecommendContentsTemplate from "../templates/recommend_contents";
 import { makeStyles } from "@material-ui/core/styles";
 import { Box, Grid } from "@material-ui/core";
 import { PC, Mobile } from "../components/MediaQuery";
+import Loading from '../components/loading'
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -41,14 +42,14 @@ const useStyles = makeStyles((theme) => ({
   result: {
     display: "flex",
   },
-  shareBtnGrid: {
-    gridColumn: "12/span 3",
-    gridRow: "9/span 3",
-  },
   recommendContentsGrid: {
     gridColumn: "8/span 4",
     gridRow: "2/span 10",
     color: "white",
+  },
+  shareBtnGrid: {
+    gridColumn: "12",
+    gridRow: "10/span 2",
   },
 }));
 

@@ -1,4 +1,5 @@
 import React from "react";
+import {Link as RouterLink} from "react-router-dom"
 import dummy_poster_img from "../images/result/dummy_titanic_poster.jpg";
 import { Button, Typography, Box, Grid, Link } from "@material-ui/core";
 import {
@@ -33,7 +34,7 @@ const useStyles = makeStyles((theme) => ({
   },
   dummyRecommendBadTitleGrid: {
     gridColumn: "span 12",
-    gridRow: "1/span 2",
+    gridRow: "1",
   },
 
   dummyGoodImgGrid: {
@@ -46,7 +47,7 @@ const useStyles = makeStyles((theme) => ({
     gridRow: "3/span 7",
   },
   dummyImg: {
-    objectFit: "cover",
+    objectFit: "fill",
     width: "100%",
     maxHeight: "100%",
     // minheight: "100%"
@@ -75,7 +76,7 @@ const useStyles = makeStyles((theme) => ({
   },
 
   RestartBtnGrid: {
-    gridColumn: "3/ span 8",
+    gridColumn: "4/ span 6",
     gridRow: "-3/ span 2",
   },
   restartBtn: {
@@ -94,15 +95,15 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const CustomRestartBtn = withStyles((theme) => ({
-    root: {
-      // color: theme.palette.getContrastText(purple[500]),
-      backgroundColor: "#c81926",
-      "&:hover": {
-        backgroundColor: "#99141d",
-      },
+  root: {
+    // color: theme.palette.getContrastText(purple[500]),
+    backgroundColor: "#c81926",
+    "&:hover": {
+      backgroundColor: "#99141d",
     },
-  }))(Button);
-  
+  },
+}))(Button);
+
 function RecommendGoodTitle(mbtiType, genderType) {
 
   return (
@@ -117,10 +118,14 @@ function RecommendGoodDesc(mbtiType, genderType) {
 
   return (
     <Box>
+      <Typography variant="h6">ENFJ 타이타닉의 Jack</Typography>
       <Typography>
-        "날 기억해줘. 최선을 다해서..." <br />
-        <br /> 따뜻하고 배려심 깊은 ISFJ 유형의 사람들은 클레멘타인처럼 사랑하는
-        이에게 의지하면서도, 도움을 주고 싶어해요.
+        {/* <br /> */}
+        {/* <br /> 따뜻하고 배려심 깊은 ISFJ 유형의 사람들은 클레멘타인처럼 사랑하는
+        이에게 의지하면서도, 도움을 주고 싶어해요. */}
+        {/* <br /> */}
+        항상 사랑을 말하는 ESFP 남자. 낙천적이고 관계 맺기를 좋아하지만,
+        조금이라도 관계가 불편해지면 빠르게 거리를 둬요.
       </Typography>
     </Box>
   );
@@ -170,7 +175,7 @@ function NetflixBadBtn(mbtiType, genderType) {
 function RestartButton(mbtiType, genderType) {
   const classes = useStyles();
   return (
-    <Link href="https://www.nate.com/" underline="none" target="_blank">
+    <Link component={RouterLink} to="/" underline="none">
       <CustomRestartBtn
         variant="contained"
         className={classes.restartBtn}
