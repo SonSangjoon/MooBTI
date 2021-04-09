@@ -98,6 +98,7 @@ const CustomAnalysisBtn = withStyles((theme) => ({
 }))(Button);
 
 function MbtiTypeImageDesc(mbtiType, genderType) {
+  const classes = useStyles();
   return (
     <Box>
       <Typography className={classes.MbtiTypeImageDescFont}>
