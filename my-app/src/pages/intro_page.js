@@ -54,10 +54,11 @@ const useStyles = makeStyles((theme) => ({
 
     size: 'large',
     fontSize: "30px",
-    background: 'rgba(250, 0, 0, 1)',
-    color: 'rgba(250, 250, 250, 1)',
+    background: '#dc1a28',
+    color: 'white',
     '&:hover': {
-      backgroundColor: 'rgba(250, 0, 0, 0.5)',
+      backgroundColor: '#dc1a28',
+      opacity: 0.8,
       color: 'rgba(250, 250, 250, 0.5)',
     },
     '&:active': {

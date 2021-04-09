@@ -41,7 +41,7 @@ const useStyles = makeStyles({
 });
 
 const ToastAlert = () => {
-  const { addToast, removeToast } = useToasts();
+  const { addToast } = useToasts();
   const [success, setSuccess] = useState(false);
   const classes = useStyles();
 

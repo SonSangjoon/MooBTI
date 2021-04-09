@@ -3,6 +3,7 @@ import LinearWithValueLabel from '../components/progress_bar'
 import ButtonBases from '../components/button'
 import { makeStyles } from '@material-ui/core/styles';
 import { Box, Grid, Typography } from '@material-ui/core';
+import CircularIndeterminate from '../components/loading'
 
 import { useHistory } from 'react-router-dom'
 
@@ -15,12 +16,12 @@ const useStyles = makeStyles((theme) => ({
 
     emptyRow: {
         gridColumn : 'span 12',
-        gridRow : 'span 2',
+        gridRow : 'span 1',
     },
 
     questionText: {
         color: 'white',
-        fontSize: '2.5vmax'
+        fontSize: '2vmax'
     },
 
     imageGrid:{
@@ -41,6 +42,16 @@ const useStyles = makeStyles((theme) => ({
         display: 'grid',
         gridTemplateColumns: 'repeat(2, 1fr)',
     },
+
+    emptyBox:{
+        width: '100%',
+        height: "60vh",
+        
+        display:'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+    },
+
 
 }))
 
@@ -160,30 +171,48 @@ export default function TestQuestionTemplate() {
         }
     }
 
-    if (answerSheet.length >= 12)
-        // 13문항 모두 작성시 axios.get()
-        // ADD circular progress bar 
-        history.push("/intj/male")
+    if (answerSheet.length >= 12){
+        setTimeout(() => {
+            history.push("/intj/male")
+        },3000)
 
-    return (
-        <Grid className={classes.testContainer} item>    
+        return(
+            <Grid className={classes.testContainer} item>    
             <Grid className={classes.emptyRow} item>
                 <Typography className={classes.questionText}>
-                    {questionList[questionNum]['question']}
                 </Typography>
             </Grid>
             <Grid className={classes.imageGrid} item>
-                <img className={classes.image} src={questionList[questionNum]['image']} alt="testimage"/>
+                <Box className={classes.emptyBox}>
+                    <CircularIndeterminate/>
+                </Box>
                 <LinearWithValueLabel num={questionNum*100/13}/>
             </Grid>
-            <Grid className={classes.answerGrid}>
-                <Box onClick={()=>{proceedTest(1)}}>
-                    <ButtonBases choice={questionList[questionNum]['choice1']} />
-                </Box>
-                <Box onClick={(e)=>{proceedTest(0, e)}}>
-                    <ButtonBases choice={questionList[questionNum]['choice2']} />
-                </Box>
-            </Grid>
         </Grid>
-    )
+
+        )
+    }
+    else{
+        return (
+            <Grid className={classes.testContainer} item>    
+                <Grid className={classes.emptyRow} item>
+                    <Typography className={classes.questionText}>
+                        {questionList[questionNum]['question']}
+                    </Typography>
+                </Grid>
+                <Grid className={classes.imageGrid} item>
+                    <img className={classes.image} src={questionList[questionNum]['image']} alt="testimage"/>
+                    <LinearWithValueLabel num={questionNum*100/13}/>
+                </Grid>
+                <Grid className={classes.answerGrid}>
+                    <Box onClick={()=>{proceedTest(0)}}>
+                        <ButtonBases choice={questionList[questionNum]['choice1']} />
+                    </Box>
+                    <Box onClick={()=>{proceedTest(1)}}>
+                        <ButtonBases choice={questionList[questionNum]['choice2']} />
+                    </Box>
+                </Grid>
+            </Grid>
+        )
+    }
 }

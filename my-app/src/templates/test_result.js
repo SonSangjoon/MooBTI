@@ -121,7 +121,7 @@ function CharacterScript(mbtiType, genderType) {
 }
 
 function MbtiTypeOutline(mbtiType, genderType) {
-  const classes = useStyles();
+  // const classes = useStyles();
   return (
     <Box>
       <Typography align="center">

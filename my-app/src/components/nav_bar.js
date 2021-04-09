@@ -1,4 +1,6 @@
 import React from 'react'
+import { Link } from "react-router-dom";
+
 import { Box } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 import imageLogo from '../images/Logo.png'
@@ -32,7 +34,9 @@ export default function NavBar({pageType}) {
         return (
             <Box className={classes.root} position="static">
                 <Box className={classes.logo}>
-                    <img src={imageLogo} alt="Logo" />
+                    <Link to="/" >
+                        <img src={imageLogo} alt="Logo" />
+                    </Link>
                 </Box>
             </Box>
         ); 
@@ -40,8 +44,10 @@ export default function NavBar({pageType}) {
     else{
         return (
             <Box className={classes.root} position="static">
-                <Box className={classes.sublogo}>
-                    <img src={imageLogo} alt="Logo" className={classes.sublogoimage} />
+                <Box  className={classes.sublogo}>
+                    <Link to="/" >
+                        <img src={imageLogo} alt="Logo" className={classes.sublogoimage} />
+                    </Link>
                 </Box>
             </Box>
         );
