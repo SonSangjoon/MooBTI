@@ -29,9 +29,9 @@ const useStyles = makeStyles((theme) => ({
     },
 
     image:{
-        objectFit: 'contain',
+        objectFit: 'cover',
         width: '100%',
-        maxHeight: "100%"
+        height: "60vh"
     },
 
     answerGrid:{
@@ -95,7 +95,7 @@ export default function TestQuestionTemplate() {
             question :"Q6. 집에 돌아온 나를 보고 친구가 묻는다. \"오늘 데이트 어땠어?\"",
             choice1 : "\"오늘 성수동에 갔는데 말이야~\" 데이트 일정을 말한다",
             choice2 : "\"갑자기 진도를 빼는 것 같아\" 데이트의 감상을 얘기한다",
-            image: "/images/test/test6.png",
+            image: "/images/test/test6.jpg",
 
         },
         7 : {
@@ -161,6 +161,8 @@ export default function TestQuestionTemplate() {
     }
 
     if (answerSheet.length >= 12)
+        // 13문항 모두 작성시 axios.get()
+        // ADD circular progress bar 
         history.push("/intj/male")
 
     return (
@@ -172,7 +174,7 @@ export default function TestQuestionTemplate() {
             </Grid>
             <Grid className={classes.imageGrid} item>
                 <img className={classes.image} src={questionList[questionNum]['image']} alt="testimage"/>
-                <LinearWithValueLabel/>
+                <LinearWithValueLabel num={questionNum*100/13}/>
             </Grid>
             <Grid className={classes.answerGrid}>
                 <Box onClick={()=>{proceedTest(1)}}>

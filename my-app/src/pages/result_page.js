@@ -60,8 +60,8 @@ export function ResultPage({ match }) {
   const genderType = match.params.gender;
 
   return (
-    <Box>
-      <PC className={classes.root}>
+    <Box className={classes.root}>
+      <PC >
         <NavBar />
         <Grid className={classes.container}>
           {/* <Grid className={classes.emptyRow} item /> */}
