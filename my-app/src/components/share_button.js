@@ -1,9 +1,8 @@
 import React, { useRef, useState } from "react";
 import { makeStyles } from "@material-ui/core/styles";
-import { Grid, Fab } from "@material-ui/core";
+import { Box, Grid, Fab } from "@material-ui/core";
 // import { SpeedDial, SpeedDialItem } from 'react-mui-speeddial';
-import AddIcon from "@material-ui/icons/Add";
-import EditIcon from "@material-ui/icons/Edit";
+import { ToastProvider, useToasts } from "react-toast-notifications";
 import LinkIcon from "@material-ui/icons/Link";
 import { ReactComponent as KakaoTalk } from "../images/sharebutton/kakaotalk.svg";
 const useStyles = makeStyles({
