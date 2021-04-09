@@ -4,22 +4,19 @@ import NavBar from '../components/nav_bar'
 import Footer from '../components/footer'
 import { makeStyles } from '@material-ui/core/styles';
 import { Box, Grid, Button, Typography } from '@material-ui/core';
-import wallpaper from '../images/intro/Wallpaper.jpeg'
 import { PC, Mobile } from '../components/MediaQuery' 
-
+import Wallpaper from '../images/intro/Wallpaper.jpeg'
 
 const useStyles = makeStyles((theme) => ({
   root: {
     height: '100vh',
-
-    backgroundImage: `url(${wallpaper})`,
+    backgroundImage: `url(${Wallpaper})`,
     backgroundRepeat: 'no-repeat',
     backgroundSize: 'cover',
   },
 
   container: {
     height: '100vh',
-
     display: 'grid',
     gridTemplateRows: 'repeat(3, 1fr)',
     gridTemplateColumns: 'repeat(3, 1fr)',
@@ -39,12 +36,14 @@ const useStyles = makeStyles((theme) => ({
   mainText: {
     padding: 5,
     color: 'white',
+    fontSize: "5vw",
   },
 
   subText: {
     padding: 5,
     marginBottom: 10,
     color: 'white',
+    fontSize: "2vw",
   },
   link:{
     textDecoration: 'none',
@@ -65,6 +64,11 @@ const useStyles = makeStyles((theme) => ({
       boxShadow: 'none',
       backgroundColor: 'rgba(250, 0, 0, 0.7)',
     },
+  },
+
+  mobileContainer : {
+    display: 'grid',
+    gridTemplateRows: 'repeat(3, 1fr)',
   }
 }))
 
@@ -92,10 +96,11 @@ export function IntroPage() {
   const classes = useStyles();
   const pageType = "intro"
     return (
-      <Box>
-        <PC className={classes.root}>
+      <Box className={classes.root}>
+        <PC>
+          <Box className={classes.root}>
           <NavBar pageType={pageType}/>
-          <Grid className={classes.container} spacing={3}>
+          <Grid className={classes.container}>
             <Grid className={classes.emptyGrid} item xl={12}>
             </Grid>
             <Grid className={classes.textGrid} item xl={8}>
@@ -103,9 +108,10 @@ export function IntroPage() {
             </Grid>
           </Grid>
           <Footer/>
+          </Box>
         </PC>
-        <Mobile>
-          Mobile
+        <Mobile className={classes.root}>
+          hello
         </Mobile>
       </Box>
 
