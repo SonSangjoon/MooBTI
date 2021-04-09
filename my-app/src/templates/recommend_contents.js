@@ -3,10 +3,10 @@ import {Link as RouterLink} from "react-router-dom"
 import dummy_poster_img from "../images/result/dummy_titanic_poster.jpg";
 import { Button, Typography, Box, Grid, Link } from "@material-ui/core";
 import {
-  createMuiTheme,
+  // createMuiTheme,
   withStyles,
   makeStyles,
-  ThemeProvider,
+  // ThemeProvider,
 } from "@material-ui/core/styles";
 
 const useStyles = makeStyles((theme) => ({
@@ -105,7 +105,7 @@ const CustomRestartBtn = withStyles((theme) => ({
 }))(Button);
 
 function RecommendGoodTitle(mbtiType, genderType) {
-  const classes = useStyles();
+
   return (
     <Box>
       <Typography>
@@ -115,7 +115,7 @@ function RecommendGoodTitle(mbtiType, genderType) {
   );
 }
 function RecommendGoodDesc(mbtiType, genderType) {
-  const classes = useStyles();
+
   return (
     <Box>
       <Typography variant="h6">ENFJ 타이타닉의 Jack</Typography>
