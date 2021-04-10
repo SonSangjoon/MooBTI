@@ -1,10 +1,14 @@
-import React, { useRef, useState } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import { Box, Grid, Fab } from "@material-ui/core";
 // import { SpeedDial, SpeedDialItem } from 'react-mui-speeddial';
 import { ToastProvider, useToasts } from "react-toast-notifications";
 import LinkIcon from "@material-ui/icons/Link";
 import { ReactComponent as KakaoTalk } from "../images/sharebutton/kakaotalk.svg";
+// import { Helmet } from 'react-helmet'
+import KakaoShareButton from './kakao_share_button';
+
+
 const useStyles = makeStyles({
   root: {
     background: "rgba(0, 0, 0, 0)",
@@ -90,6 +94,17 @@ const ToastAlert = () => {
 export default function ShareButton() {
   const classes = useStyles();
 
+
+  useEffect(() => {
+    const script = document.createElement('script')
+    script.src = 'https://developers.kakao.com/sdk/js/kakao.js'
+    script.async = true
+    document.body.appendChild(script)
+    return () => {
+      document.body.removeChild(script)
+    }
+  }, [])
+
   // const [success, setSuccess] = useState(false);
   // const textInput = useRef();
 
@@ -113,10 +128,15 @@ export default function ShareButton() {
         readOnly
         className={classes.copy}
       ></textarea> */}
+
       <Grid className={classes.shareBtn1Grid}>
-        <Fab style={{ backgroundColor: "#fef01b" }} aria-label="add">
+        {/* <Helmet>
+        <script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
+        </Helmet> */}
+        {/* <Fab style={{ backgroundColor: "#fef01b" }} aria-label="add">
           <KakaoTalk className={classes.imageIcon} />
-        </Fab>
+        </Fab> */}
+        <KakaoShareButton />
       </Grid>
       <Grid className={classes.shareBtn2Grid}>
         {/* <Fab
