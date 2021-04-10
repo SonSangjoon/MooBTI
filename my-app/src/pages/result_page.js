@@ -69,10 +69,7 @@ export function ResultPage({ match }) {
             <ResultTemplate mbtiType={mbtiType} genderType={genderType} />
           </Grid>
           <Grid className={classes.recommendContentsGrid} item>
-            <RecommendContentsTemplate
-              mbtiType={mbtiType}
-              genderType={genderType}
-            />
+            <RecommendContentsTemplate mbtiType={mbtiType} genderType={genderType}/>
           </Grid>
           <Grid className={classes.shareBtnGrid} item>
             <ShareButton />

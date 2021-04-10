@@ -99,7 +99,7 @@ const CustomRestartBtn = withStyles((theme) => ({
   },
 }))(Button);
 
-function RecommendTitle(mbtiType, genderType) {
+function RecommendTitle() {
 
   return (
     <Box>
@@ -109,7 +109,7 @@ function RecommendTitle(mbtiType, genderType) {
     </Box>
   );
 }
-function RecommendDesc(mbtiType, genderType) {
+function RecommendDesc() {
 
   return (
     <Box>
@@ -125,7 +125,7 @@ function RecommendDesc(mbtiType, genderType) {
 }
 
 
-function LinkButton(mbtiType, genderType) {
+function LinkButton() {
   const classes = useStyles();
   return (
     <Link href="https://www.naver.com/" underline="none" target="_blank">
@@ -136,7 +136,7 @@ function LinkButton(mbtiType, genderType) {
   );
 }
 
-function RestartButton(mbtiType, genderType) {
+function RestartButton() {
   const classes = useStyles();
   return (
     <Link component={RouterLink} to="/" underline="none">
