@@ -21,7 +21,8 @@ const useStyles = makeStyles((theme) => ({
 
     questionText: {
         color: 'white',
-        fontSize: '2vmax'
+        fontSize: '2vmax',
+        paddingTop: 20
     },
 
     imageGrid:{
@@ -32,7 +33,8 @@ const useStyles = makeStyles((theme) => ({
     image:{
         objectFit: 'cover',
         width: '100%',
-        height: "60vh"
+        height: "60vh",
+        borderRadius: "10px"
     },
 
     answerGrid:{
@@ -52,7 +54,11 @@ const useStyles = makeStyles((theme) => ({
         alignItems: 'center',
     },
 
-
+    loadingText:{
+        color: 'white',
+        fontSize: '2vmax',
+        padding: 20
+    }
 }))
 
 export default function TestQuestionTemplate() {
@@ -158,7 +164,6 @@ export default function TestQuestionTemplate() {
     const [answerSheet, setAnswerSheet] = useState("") 
 
     useEffect(()=>{
-        console.log(answerSheet)
         SetQuestionNum(questionNum => questionNum + 1)
     },[answerSheet])
 
@@ -174,7 +179,7 @@ export default function TestQuestionTemplate() {
     if (answerSheet.length >= 12){
         setTimeout(() => {
             history.push("/intj/male")
-        },3000)
+        },2000)
 
         return(
             <Grid className={classes.testContainer} item>    
@@ -184,9 +189,9 @@ export default function TestQuestionTemplate() {
             </Grid>
             <Grid className={classes.imageGrid} item>
                 <Box className={classes.emptyBox}>
+                    <Box className={classes.loadingText}>분석중</Box>
                     <CircularIndeterminate/>
                 </Box>
-                <LinearWithValueLabel num={questionNum*100/13}/>
             </Grid>
         </Grid>
 
@@ -195,14 +200,14 @@ export default function TestQuestionTemplate() {
     else{
         return (
             <Grid className={classes.testContainer} item>    
+                <Grid className={classes.imageGrid} item>
+                    <img className={classes.image} src={questionList[questionNum]['image']} alt="testimage"/>
+                    <LinearWithValueLabel num={questionNum*100/12}/>
+                </Grid>
                 <Grid className={classes.emptyRow} item>
                     <Typography className={classes.questionText}>
                         {questionList[questionNum]['question']}
                     </Typography>
-                </Grid>
-                <Grid className={classes.imageGrid} item>
-                    <img className={classes.image} src={questionList[questionNum]['image']} alt="testimage"/>
-                    <LinearWithValueLabel num={questionNum*100/13}/>
                 </Grid>
                 <Grid className={classes.answerGrid}>
                     <Box onClick={()=>{proceedTest(0)}}>

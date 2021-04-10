@@ -29,15 +29,30 @@ const useStyles = makeStyles((theme) => ({
   },
 
   title: {
+    paddingBottom: '5vh',
+    fontSize: 45,
     color: 'white',
   },
+
+  imgTitle: {
+    fontSize: 20,
+    color: 'white',
+  },
+
   gender_img: {
+    borderRadius:'10px',
     '&:hover': {
-      backgroundColor: 'white',
+      backgroundColor: "white",
+      borderRadius:'10px'
+
     },
     padding: '4px 4px',
     marginBottom: '10px' 
   },
+
+  image: { 
+    borderRadius:'10px',
+  }
 }));
 
 function GenderPageSelect() {
@@ -51,20 +66,20 @@ function GenderPageSelect() {
         <Box mr={5}>
           <Link to="/test">
             <Button className={classes.gender_img}>
-              <img src={male_pic} alt="male_pic"/>
+              <img src={male_pic} alt="male_pic" className={classes.image}/>
             </Button>
           </Link>
-          <Typography className={classes.title} variant="h6" align="center" gutterBottom>
+          <Typography className={classes.imgTitle} variant="h6" align="center" gutterBottom>
             남성
           </Typography>
         </Box>
         <Box>
           <Link to="/test">
           <Button className={classes.gender_img}>
-              <img src={female_pic} alt="female_pic"/>
+              <img src={female_pic} alt="female_pic" className={classes.image}/>
             </Button>
           </Link>
-          <Typography className={classes.title} variant="h6" align="center" gutterBottom>
+          <Typography className={classes.imgTitle} variant="h6" align="center" gutterBottom>
             여성
           </Typography>
         </Box>

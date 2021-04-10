@@ -2,7 +2,6 @@ import React from 'react'
 import SubNavBar from '../components/nav_bar'
 import Footer from '../components/footer'
 import TestQuestionTemplate from '../templates/test_question'
-import CircularIndeterminate from '../components/loading'
 import { makeStyles } from '@material-ui/core/styles';
 import { Box, Grid } from '@material-ui/core';
 import { PC, Mobile } from '../components/MediaQuery' 
@@ -56,7 +55,6 @@ export function TestPage() {
                 <Footer/>
             </PC>
             <Mobile>
-                <CircularIndeterminate/>
             </Mobile>
         </Box>
     )
