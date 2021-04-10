@@ -5,6 +5,8 @@ import {
   withStyles,
   makeStyles,
 } from "@material-ui/core/styles";
+// import { useCallback, useEffect, useMemo, useState, useContext } from "react";
+// import { GenderContext } from "../App";
 
 // function GetList(){
 //   axios.post(`${Url}/${user_mbti}/${user_gender}`).then(response =>{
@@ -138,13 +140,16 @@ function MbtiTypeOutline(mbtiType, genderType) {
 }
 
 function DataAnalysisBtn(mbtiType, genderType) {
+  // const { gender, setGender } = useContext(GenderContext);
+
   const classes = useStyles();
   return (
     <CustomAnalysisBtn
       variant="contained"
       className={classes.dummyBtn}
       color="secondary"
-    >
+      // onClick={() => { console.log(gender) }}
+      >
       어떻게 분석했어?
     </CustomAnalysisBtn>
   );
