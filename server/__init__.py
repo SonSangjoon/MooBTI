@@ -19,7 +19,7 @@ def create_app():
     app.config.from_object(config)
     # api 설정 및 적용
     api = Api(app)
-    api.add_resource(Mbti, "/mbti", "/mbti/<gender>/<user_mbti>")
+    api.add_resource(Mbti, "/mbti", "/mbti/<user_mbti>/<gender>")
     # db 적용 및 migrate
     db.init_app(app)
     db.create_all(app=app)
