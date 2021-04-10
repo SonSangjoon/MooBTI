@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useState, useContext } from "react";
 import { Link } from "react-router-dom";
+import { GenderContext } from "../App";
 import female_pic from "../images/gender/female_pic.jpg";
 import male_pic from "../images/gender/male_pic.jpg";
 import NavBar from "../components/nav_bar";
@@ -57,6 +58,13 @@ const useStyles = makeStyles((theme) => ({
 
 function GenderPageSelect() {
   const classes = useStyles();
+  const { gender, setGender } = useContext(GenderContext);
+
+  const handleGenderChange = (event) => {
+    setGender(event.currentTarget.value);
+    // console.log(gender);
+  };
+
   return (
     <Box>
       <Typography className={classes.title} variant="h4" align="center" gutterBottom>
@@ -65,8 +73,8 @@ function GenderPageSelect() {
       <Box display="flex" justifyContent="center" mt={3}>
         <Box mr={5}>
           <Link to="/test">
-            <Button className={classes.gender_img}>
-              <img src={male_pic} alt="male_pic" className={classes.image}/>
+            <Button className={classes.gender_img} value="male" onClick={handleGenderChange}>
+              <img src={male_pic} alt="male_pic" className={classes.image} />
             </Button>
           </Link>
           <Typography className={classes.imgTitle} variant="h6" align="center" gutterBottom>
@@ -75,7 +83,7 @@ function GenderPageSelect() {
         </Box>
         <Box>
           <Link to="/test">
-          <Button className={classes.gender_img}>
+          <Button className={classes.gender_img} value="female" onClick={handleGenderChange}>
               <img src={female_pic} alt="female_pic" className={classes.image}/>
             </Button>
           </Link>
