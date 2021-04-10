@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import axios from 'axios';
 import LinearWithValueLabel from '../components/progress_bar'
 import ButtonBases from '../components/button'
 import { makeStyles } from '@material-ui/core/styles';
@@ -64,6 +65,10 @@ const useStyles = makeStyles((theme) => ({
 export default function TestQuestionTemplate() {
     const classes = useStyles();
     const history = useHistory();
+    const data = {
+        gender: "male",
+        answer: "000000000000"
+    }
 
     const questionList = {
         0: {
@@ -176,7 +181,17 @@ export default function TestQuestionTemplate() {
         }
     }
 
+
+    function GetList(){
+        axios.post(`http://localhost:5000/mbti`, data).then(response =>{
+            console.log(response.data.user_mbti)
+        })
+    }
+
+    GetList();
+
     if (answerSheet.length >= 12){
+
         setTimeout(() => {
             history.push("/intj/male")
         },2000)
