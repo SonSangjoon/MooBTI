@@ -65,10 +65,10 @@ const useStyles = makeStyles((theme) => ({
 export default function TestQuestionTemplate() {
     const classes = useStyles();
     const history = useHistory();
-    const data = {
+    const [testData, setTestData] = useState({
         gender: "male",
-        answer: "000000000000"
-    }
+        answer: ""
+    })
 
     const questionList = {
         0: {
@@ -166,35 +166,34 @@ export default function TestQuestionTemplate() {
     }    
 
     const [questionNum, SetQuestionNum] = useState(0)
-    const [answerSheet, setAnswerSheet] = useState("") 
+    const {gender, answer} = testData
 
     useEffect(()=>{
         SetQuestionNum(questionNum => questionNum + 1)
-    },[answerSheet])
+    },[answer])
 
     function proceedTest(n) {
         if(n === 1){
-            setAnswerSheet(answerSheet => answerSheet+"1")
+            setTestData({'answer': answer+"1"})
         }
         else{
-            setAnswerSheet(answerSheet => answerSheet+"0")
+            setTestData({'answer': answer+"0"})
         }
     }
 
 
-    function GetList(){
-        axios.post(`http://localhost:5000/mbti`, data).then(response =>{
-            console.log(response.data.user_mbti)
-        })
+    function GetMbti(){
+        axios.post(`http://localhost:5000/mbti`, testData).then(response =>{
+            console.log(response.data.user_mbti);
+        }).then(        
+            setTimeout(() => {
+            history.push("/intj/male")},2000)
+        )
     }
 
-    GetList();
-
-    if (answerSheet.length >= 12){
-
-        setTimeout(() => {
-            history.push("/intj/male")
-        },2000)
+    if (answer.length >= 12){
+        
+        GetMbti();
 
         return(
             <Grid className={classes.testContainer} item>    
