@@ -18,42 +18,41 @@ const useStyles = makeStyles((theme) => ({
     gridTemplateColumns: "repeat(12, 1fr)",
   },
 
-  recommendContainer: {
+  recommendGrid: {
     gridColumn: "span 12",
-    gridRow: "span 6",
-    color: "white",
+    gridRow: "span 5",
+  },
 
+  recommendContainer: {
+    color: "white",
     display: "grid",
     gridTemplateRows: "repeat(12, 1fr)",
     gridTemplateColumns: "repeat(12, 1fr)",
   },
 
-  dummyRecommendGoodTitleGrid: {
+  recommendTitleGrid: {
     gridColumn: "span 12",
     gridRow: "2/span 2",
   },
-  dummyRecommendBadTitleGrid: {
+  recommendBadTitleGrid: {
     gridColumn: "span 12",
     gridRow: "1",
   },
 
-  dummyGoodImgGrid: {
+  ImageGrid: {
     gridColumn: "span 3",
     gridRow: "4/ span 7",
   },
 
-  dummyBadImgGrid: {
-    gridColumn: "span 3",
-    gridRow: "3/span 7",
-  },
-  dummyImg: {
+
+  PosterImg: {
     objectFit: "fill",
     width: "100%",
     maxHeight: "100%",
     // minheight: "100%"
   },
 
-  dummyRecommendGoodDesc: {
+  recommendDesc: {
     gridColumn: "5/span 8",
     gridRow: "4/ span 10",
   },
@@ -62,22 +61,18 @@ const useStyles = makeStyles((theme) => ({
     gridRow: "3/ span 10",
   },
 
-  NetflixGoodBtnGrid: {
+  netflixLinkBtnGrid: {
     gridColumn: "5/ span 5",
     gridRow: "-5/ span 2",
-  },
-  NetflixBadBtnGrid: {
-    gridColumn: "5/ span 5",
-    gridRow: "-6/ span 2",
   },
 
   NetflixBtn: {
     maxheight: "100%",
   },
 
-  RestartBtnGrid: {
+  restartBtnGrid: {
     gridColumn: "4/ span 6",
-    gridRow: "-3/ span 2",
+    gridRow: "-2/ span 2",
   },
   restartBtn: {
     minWidth: "100%",
@@ -104,7 +99,7 @@ const CustomRestartBtn = withStyles((theme) => ({
   },
 }))(Button);
 
-function RecommendGoodTitle(mbtiType, genderType) {
+function RecommendTitle(mbtiType, genderType) {
 
   return (
     <Box>
@@ -114,16 +109,14 @@ function RecommendGoodTitle(mbtiType, genderType) {
     </Box>
   );
 }
-function RecommendGoodDesc(mbtiType, genderType) {
+function RecommendDesc(mbtiType, genderType) {
 
   return (
     <Box>
-      <Typography variant="h6">ENFJ 타이타닉의 Jack</Typography>
+      <Typography variant="h6">
+        ENFJ 타이타닉의 Jack
+      </Typography>
       <Typography>
-        {/* <br /> */}
-        {/* <br /> 따뜻하고 배려심 깊은 ISFJ 유형의 사람들은 클레멘타인처럼 사랑하는
-        이에게 의지하면서도, 도움을 주고 싶어해요. */}
-        {/* <br /> */}
         항상 사랑을 말하는 ESFP 남자. 낙천적이고 관계 맺기를 좋아하지만,
         조금이라도 관계가 불편해지면 빠르게 거리를 둬요.
       </Typography>
@@ -131,28 +124,8 @@ function RecommendGoodDesc(mbtiType, genderType) {
   );
 }
 
-function RecommendBadTitle(mbtiType, genderType) {
-  return (
-    <Box>
-      <Typography size="small">
-        나와 잘 안맞는 MBTI의 영화 주인공은 어떻게 연애했을까?
-      </Typography>
-    </Box>
-  );
-}
-function RecommendBadDesc(mbtiType, genderType) {
-  return (
-    <Box>
-      <Typography>
-        "날 기억해줘. 최선을 다해서..." <br />
-        <br /> 따뜻하고 배려심 깊은 ISFJ 유형의 사람들은 클레멘타인처럼 사랑하는
-        이에게 의지하면서도, 도움을 주고 싶어해요.
-      </Typography>
-    </Box>
-  );
-}
 
-function NetflixGoodBtn(mbtiType, genderType) {
+function LinkButton(mbtiType, genderType) {
   const classes = useStyles();
   return (
     <Link href="https://www.naver.com/" underline="none" target="_blank">
@@ -162,80 +135,56 @@ function NetflixGoodBtn(mbtiType, genderType) {
     </Link>
   );
 }
-function NetflixBadBtn(mbtiType, genderType) {
-  const classes = useStyles();
-  return (
-    <Link href="https://www.daum.net/" underline="none" target="_blank">
-      <Button variant="outlined" className={classes.dummyBtn} color="secondary">
-        Netflix에서 보기
-      </Button>
-    </Link>
-  );
-}
+
 function RestartButton(mbtiType, genderType) {
   const classes = useStyles();
   return (
     <Link component={RouterLink} to="/" underline="none">
-      <CustomRestartBtn
-        variant="contained"
-        className={classes.restartBtn}
-        color="secondary"
-      >
+      <CustomRestartBtn variant="contained" className={classes.restartBtn} color="secondary">
         테스트 다시 하기
       </CustomRestartBtn>
     </Link>
   );
 }
 
+function RecommendComponent(){
+  const classes = useStyles();
+
+  return(
+    <Grid className={classes.recommendContainer} item>
+      <Grid className={classes.recommendTitleGrid}>
+        <RecommendTitle />
+      </Grid>
+      <Grid className={classes.ImageGrid}>
+        <img className={classes.PosterImg} src={dummy_poster_img} alt="poster"/>
+      </Grid>
+      <Grid className={classes.recommendDesc}>
+        <RecommendDesc />
+      </Grid>
+      <Grid className={classes.netflixLinkBtnGrid}>
+        <LinkButton />
+      </Grid>
+    </Grid>
+  )
+}
+
+
 export default function RecommendContentsTemplate({ mbtiType, genderType }) {
   const classes = useStyles();
+
   return (
     <>
       <Grid className={classes.container}>
-        <Grid className={classes.recommendContainer} item>
-          <Grid className={classes.dummyRecommendGoodTitleGrid}>
-            <RecommendGoodTitle />
-          </Grid>
-          <Grid className={classes.dummyGoodImgGrid}>
-            <img
-              className={classes.dummyImg}
-              src={dummy_poster_img}
-              alt="dummy"
-            />
-          </Grid>
-          <Grid className={classes.dummyRecommendGoodDesc}>
-            <RecommendGoodDesc />
-          </Grid>
-          <Grid className={classes.NetflixGoodBtnGrid}>
-            <NetflixGoodBtn />
-          </Grid>
+        <Grid className={classes.recommendGrid} item>
+          <RecommendComponent/>
         </Grid>
-        <Grid className={classes.recommendContainer} item>
-          <Grid className={classes.dummyRecommendBadTitleGrid}>
-            <RecommendBadTitle />
-          </Grid>
-
-          <Grid className={classes.dummyBadImgGrid}>
-            <img
-              className={classes.dummyImg}
-              src={dummy_poster_img}
-              alt="dummy"
-            />
-          </Grid>
-          <Grid className={classes.dummyRecommendBadDesc}>
-            <RecommendBadDesc />
-          </Grid>
-          <Grid className={classes.NetflixBadBtnGrid}>
-            <NetflixBadBtn />
-          </Grid>
-          <Grid className={classes.RestartBtnGrid}>
-            <RestartButton />
-          </Grid>
+        <Grid className={classes.recommendGrid} item>
+          <RecommendComponent/>
         </Grid>
+          <Grid className={classes.restartBtnGrid} mt={40}>
+            <RestartButton/>
+          </Grid>
       </Grid>
-      {/* <Grid className={classes.dummyBtnGrid}>
-      </Grid> */}
-      {/* <NetflixBtn className={classes.dummyBtn} /> */}
     </>
   );
 }

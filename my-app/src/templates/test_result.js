@@ -6,9 +6,14 @@ import {
   makeStyles,
 } from "@material-ui/core/styles";
 
+// function GetList(){
+//   axios.post(`${Url}/${user_mbti}/${user_gender}`).then(response =>{
+//       setList(response.data.result)
+//   })
+// }
+
 const useStyles = makeStyles((theme) => ({
   root: {
-    // height: "100%",
     backgroundColor: "black",
   },
 
@@ -19,15 +24,6 @@ const useStyles = makeStyles((theme) => ({
     gridTemplateRows: "repeat(12, 1fr)",
     gridTemplateColumns: "repeat(12, 1fr)",
   },
-
-  // emptyRow: {
-  //   gridColumn: "span 12",
-  //   gridRow: "span 1",
-  // },
-  // emptyColumn: {
-  //   gridColumn: "span 1",
-  //   gridRow: "span 12",
-  // },
 
   resultOutline: {
     gridColumn: "span 12",
@@ -45,15 +41,19 @@ const useStyles = makeStyles((theme) => ({
   mbtiTypeImageDescGrid:{
     gridColumn: "span 10",
     gridRow: "11/ span 2",
+
   },
 
   dummyImg: {
     objectFit: "fill",
     width: "100%",
     maxHeight: "100%",
+    borderRadius: '15px'
     // minheight: "100%"
   },
   MbtiTypeImageDescFont: {
+    align: "center",
+    marginTop: 15,
     fontSize: "2vw",
   },
   charScriptFont: {
@@ -101,7 +101,7 @@ function MbtiTypeImageDesc(mbtiType, genderType) {
   const classes = useStyles();
   return (
     <Box>
-      <Typography className={classes.MbtiTypeImageDescFont}>
+      <Typography className={classes.MbtiTypeImageDescFont} align="center">
         항상 사랑을 말하는 당신은, 타이타닉의 Jack
       </Typography>
     </Box>
