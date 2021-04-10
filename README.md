@@ -3,7 +3,7 @@
 **어떠한 데이터셋와 도구 및 기술을 사용했는지에 대한 설명과 엔드유저에게 보이는 웹서비스에 대한 소개**
 
 - 사용하려는 데이터: 해외 영화 대본
-- 기술 스택: Python, Flask, React,  SQLalchemy, Jupyer, SQLite
+- 기술 스택: Python, Flask, React,  SQLalchemy, Jupyter
 - 사용된 라이브러리: Numpy, Pandas
 - 웹서비스에 대한 자세한 개요:
 
