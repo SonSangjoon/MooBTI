@@ -168,7 +168,7 @@ export default function TestQuestionTemplate() {
     }    
 
     const [questionNum, SetQuestionNum] = useState(0)
-    const {gender, answer} = testData
+    const {answer} = testData
 
     useEffect(()=>{
         SetQuestionNum(questionNum => questionNum + 1)
