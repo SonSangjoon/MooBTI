@@ -1,10 +1,11 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState, useContext } from 'react'
 import axios from 'axios';
 import LinearWithValueLabel from '../components/progress_bar'
 import ButtonBases from '../components/button'
 import { makeStyles } from '@material-ui/core/styles';
 import { Box, Grid, Typography } from '@material-ui/core';
 import CircularIndeterminate from '../components/loading'
+import { GenderContext } from "../App";
 
 import { useHistory } from 'react-router-dom'
 
@@ -69,6 +70,7 @@ export default function TestQuestionTemplate() {
         gender: "male",
         answer: ""
     })
+    const { gender, setGender } = useContext(GenderContext);
 
     const questionList = {
         0: {
