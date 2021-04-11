@@ -58,29 +58,23 @@ const KakaoShareButton = () => {
         // container: "#kakao_share_button",
         objectType: "feed",
         content: {
-          title: "타이틀",
-          description: "#리액트 #카카오 #공유버튼",
-          imageUrl: "IMAGE_URL", // i.e. process.env.FETCH_URL + '/logo.png'
+          title: "타이틀(ex. 당신은 항상 사랑을 말하는 당신은, 타이타닉의 Jack)",
+          description: "나와 잘 맞는 영화 주인공은?",
+          imageUrl: "../images/result/dummy_titanic_jack.jpg", 
+          // i.e. process.env.FETCH_URL + '/logo.png'
           link: {
             mobileWebUrl: window.location.href,
             webUrl: window.location.href,
           },
         },
-        social: {
-          likeCount: 77,
-          commentCount: 55,
-          sharedCount: 333,
-        },
+        // social: {
+        //   likeCount: 77,
+        //   commentCount: 55,
+        //   sharedCount: 333,
+        // },
         buttons: [
           {
-            title: "웹으로 보기",
-            link: {
-              mobileWebUrl: window.location.href,
-              webUrl: window.location.href,
-            },
-          },
-          {
-            title: "앱으로 보기",
+            title: "나도 테스트 해보기",
             link: {
               mobileWebUrl: window.location.href,
               webUrl: window.location.href,
