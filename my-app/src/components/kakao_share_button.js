@@ -60,8 +60,7 @@ const KakaoShareButton = () => {
         content: {
           title: "타이틀(ex. 당신은 항상 사랑을 말하는 당신은, 타이타닉의 Jack)",
           description: "나와 잘 맞는 영화 주인공은?",
-          imageUrl: "../images/result/dummy_titanic_jack.jpg", 
-          // i.e. process.env.FETCH_URL + '/logo.png'
+          imageUrl: 'http://mud-kage.kakao.co.kr/dn/Q2iNx/btqgeRgV54P/VLdBs9cvyn8BJXB3o7N8UK/kakaolink40_original.png', 
           link: {
             mobileWebUrl: window.location.href,
             webUrl: window.location.href,

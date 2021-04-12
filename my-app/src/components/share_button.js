@@ -2,11 +2,12 @@ import React, { useRef, useState, useEffect } from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import { Box, Grid, Fab } from "@material-ui/core";
 // import { SpeedDial, SpeedDialItem } from 'react-mui-speeddial';
-import { ToastProvider, useToasts } from "react-toast-notifications";
+// import { ToastProvider, useToasts } from "react-toast-notifications";
 import LinkIcon from "@material-ui/icons/Link";
 import { ReactComponent as KakaoTalk } from "../images/sharebutton/kakaotalk.svg";
 import { Helmet } from 'react-helmet'
 import KakaoShareButton from './kakao_share_button';
+import Snackbar from '@material-ui/core/Snackbar';
 
 
 const useStyles = makeStyles({
@@ -45,27 +46,63 @@ const useStyles = makeStyles({
 });
 
 const ToastAlert = () => {
-  const { addToast } = useToasts();
-  const [success, setSuccess] = useState(false);
   const classes = useStyles();
-  useEffect(() => {
-    copy();
-  },[]);
-
 
   const textInput = useRef();
-  const copy = async () => {
-    const el = textInput.current;
-    el.select();
-    document.execCommand("copy");
-    setSuccess(true);
-      if (success) {
-       addToast("링크가 클립보드로 복사되었습니다.", { appearance: "success" });
-    } 
+  // const copy = async (newState) => () => {
+  //   const el = textInput.current;
+  //   el.select();
+  //   document.execCommand("copy");
+  //   setSuccess(true);    
+  //     if (success) {
+  //     // //  addToast("링크가 클립보드로 복사되었습니다.", { appearance: "success" });
+  //       handleClick(newState);
+  //   }    
+  //   } 
   //   else {
   //     addToast("다시 시도하십시오.", { appearance: "error" });
   // }
-}
+//  }
+
+
+
+
+  const [state, setState] = useState({
+    open: false,
+    vertical: 'top',
+    horizontal: 'center',
+  });
+
+  const { vertical, horizontal, open } = state;
+
+  const handleClick = (newState) => () => {
+    const el = textInput.current;
+    el.select();
+    document.execCommand("copy");
+
+    setState({ open: true, ...newState });
+    //   const el = textInput.current;
+    //   el.select();
+    //   document.execCommand("copy");
+    //   setSuccess(true);    
+    //     if (success) {
+    //      addToast("링크가 클립보드로 복사되었습니다.", { appearance: "success" });
+    //   } 
+    // //   else {
+    // //     addToast("다시 시도하십시오.", { appearance: "error" });
+    // // }  
+  };
+
+  // const events = (newState) => {
+  //   copy();
+  //   handleClick(newState);
+  // }
+
+
+
+  const handleClose = () => {
+    setState({ ...state, open: false });
+  };
 
   return (
   <Box>
@@ -81,14 +118,25 @@ const ToastAlert = () => {
     <Fab
       style={{ backgroundColor: "#dc1a28" }}
       aria-label="edit"
-      onClick={copy}
-    >
+      onClick={handleClick({ vertical: 'bottom', horizontal: 'center' })}>
       <LinkIcon />
     </Fab>
+
+    <Snackbar
+        anchorOrigin={{ vertical, horizontal }}
+        open={open}
+        onClose={handleClose}
+        autoHideDuration={2000}
+        message="I love snacks"
+        key={vertical + horizontal}
+      />
   </Box>
   );
 };
 
+// <Button onClick={handleClick({ vertical: 'bottom', horizontal: 'center' })}>
+// Bottom-Center
+// </Button>
 
 //-------------------------------------------------------------------------------------------
 
@@ -103,9 +151,9 @@ export default function ShareButton() {
       <KakaoShareButton/>
       </Grid>
       <Grid className={classes.shareBtn2Grid}>
-        <ToastProvider>
+        {/* <ToastProvider> */}
           <ToastAlert />
-        </ToastProvider>
+        {/* </ToastProvider> */}
       </Grid>
     </Grid>
   );
