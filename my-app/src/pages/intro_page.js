@@ -32,6 +32,21 @@ const useStyles = makeStyles((theme) => ({
     gridColumn : 'span 2'
   },
 
+  //Mobile
+
+  mobileContainer : {
+    height: '100vh',
+    display: 'grid',
+    gridTemplateRows: 'repeat(3, 1fr)',
+    gridGap: theme.spacing(1),
+    background: 'linear-gradient(135deg, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0))',
+  },
+  mobileInto : {
+    gridRow : '2/span 1'
+  },
+
+  // Into page text
+
   mainText: {
     padding: 5,
     color: 'white',
@@ -68,30 +83,117 @@ const useStyles = makeStyles((theme) => ({
     },
   },
 
-  mobileContainer : {
-    display: 'grid',
-    gridTemplateRows: 'repeat(3, 1fr)',
-  }
+
+  //모바일
+  mobileMainText: {
+    padding: 5,
+    color: 'white',
+    fontSize: "8vw",
+    fontFamily: 'S-CoreDream-4Regular',
+    textAlign: 'center'
+  },
+
+  mobileSubText: {
+    padding: 5,
+    marginBottom: 10,
+    color: 'white',
+    fontSize: "4vw",
+    fontFamily: 'S-CoreDream-4Regular',
+    textAlign: 'center'
+
+  }, 
+
+  mobileLink:{
+    textDecoration: 'none',
+    position: 'absolute',
+    left: '50%',
+    transform: 'translate(-50%, 0%)',
+  },
+
+  mobileButton:{
+    padding: '5px 30px 5px 30px',
+    size: 'large',
+    fontSize: "20px",
+    background: '#dc1a28',
+    color: 'white',
+    '&:hover': {
+      backgroundColor: '#dc1a28',
+      opacity: 0.8,
+      color: 'rgba(250, 250, 250, 0.5)',
+    },
+    '&:active': {
+      boxShadow: 'none',
+      backgroundColor: 'rgba(250, 0, 0, 0.7)',
+    },
+  },
 }))
 
 function IntroPageText(){
   const classes = useStyles();
 
-  return (
+  return(
     <Box>
-      <Box className={classes.mainText}>
-        MBTI로 받아보는 연애 코칭?
+      <PC>
+      <Box>
+        <Box className={classes.mainText}>
+          MBTI로 받아보는 연애 코칭?
+        </Box>
+        <Box className={classes.subText}>
+          영화 캐릭터로 보는 나의 연애스타일과 나와 어울리는 캐릭터
+        </Box>
+        <Link to="/gender" className={classes.link}>
+          <Button className={classes.button}>
+            시작하기 
+          </Button>
+        </Link>
       </Box>
-      <Box className={classes.subText}>
-        영화 캐릭터로 보는 나의 연애스타일과 나와 어울리는 캐릭터
-      </Box>
-      <Link to="/gender" className={classes.link}>
-        <Button className={classes.button}>
+      </PC>
+      <Mobile >
+        <Box className={classes.mobileMainText} >
+          MBTI로 받아보는 연애 코칭?
+        </Box>
+        <Box className={classes.mobileSubText}>
+          영화 캐릭터로 보는 나의 연애스타일과 나와 어울리는 캐릭터
+        </Box>
+        <Link to="/gender" className={classes.mobileLink}>
+        <Button className={classes.mobileButton}>
           시작하기 
-        </Button>
-      </Link>
+        </Button>     
+        </Link>
+      </Mobile>
+      <Tablet>
+      <Box>
+        <Box className={classes.mainText}>
+          MBTI로 받아보는 연애 코칭?
+        </Box>
+        <Box className={classes.subText}>
+          영화 캐릭터로 보는 나의 연애스타일과 나와 어울리는 캐릭터
+        </Box>
+        <Link to="/gender" className={classes.link}>
+          <Button className={classes.button}>
+            시작하기 
+          </Button>
+        </Link>
+      </Box>
+      </Tablet>
+      <PCwide>
+      <Box>
+        <Box className={classes.mainText}>
+          MBTI로 받아보는 연애 코칭?
+        </Box>
+        <Box className={classes.subText}>
+          영화 캐릭터로 보는 나의 연애스타일과 나와 어울리는 캐릭터
+        </Box>
+        <Link to="/gender" className={classes.link}>
+          <Button className={classes.button}>
+            시작하기 
+          </Button>
+        </Link>
+      </Box>
+      </PCwide>
     </Box>
   )
+
 }
 
 export function IntroPage() {
@@ -112,13 +214,19 @@ export function IntroPage() {
           <Footer/>
           </Box>
         </PC>
-
+        
+        {/* Mobile View */}
+        
         <Mobile >
         <Box className={classes.root}>
-          <NavBar pageType={pageType}/>
-          <IntroPageText/>
+          <NavBar pageType="mobile"/>
+          <Grid className={classes.mobileContainer}>
+            <Grid item className={classes.mobileInto}>
+              <IntroPageText />
+            </Grid>
+          </Grid>
           <Footer/>
-          </Box>
+        </Box>
         </Mobile>
 
           <Tablet>

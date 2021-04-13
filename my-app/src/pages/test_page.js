@@ -1,5 +1,5 @@
 import React from 'react'
-import SubNavBar from '../components/nav_bar'
+import NavBar from '../components/nav_bar'
 import Footer from '../components/footer'
 import TestQuestionTemplate from '../templates/test_question'
 import { makeStyles } from '@material-ui/core/styles';
@@ -36,6 +36,18 @@ const useStyles = makeStyles((theme) => ({
         gridRow : 'span 10',
     },
 
+      //Mobile
+
+    mobileContainer : {
+        height: '100vh',
+        display: 'grid',
+        gridTemplateRows: 'repeat(4, 1fr)',
+        gridGap: theme.spacing(1),
+    },
+    mobileTestGrid : {
+        gridRow : '2/span 2'
+    },
+
 }))
 
 export function TestPage() {
@@ -43,7 +55,7 @@ export function TestPage() {
     return (
         <Box  className={classes.root}>
             <PC>
-            <SubNavBar/>
+                <NavBar/>
                 <Grid className={classes.container}>
                     <Grid className={classes.emptyRow} item/>
                     <Grid className={classes.emptyGrid} item/>
@@ -54,12 +66,21 @@ export function TestPage() {
                 </Grid>
                 <Footer/>
             </PC>
+
+            {/* Mobile View */}
+             
             <Mobile>
-                mobile
+                <NavBar/>
+                <Grid className={classes.obileContaine}>
+                    <Grid className={classes.mobileTestGrid} item>
+                        <TestQuestionTemplate/>
+                    </Grid>
+                </Grid>
+                <Footer/>
             </Mobile>
 
             <Tablet>
-            <SubNavBar/>
+            <NavBar/>
                 <Grid className={classes.container}>
                     <Grid className={classes.emptyRow} item/>
                     <Grid className={classes.emptyGrid} item/>
@@ -72,7 +93,7 @@ export function TestPage() {
             </Tablet>
 
             <PCwide>
-            <SubNavBar/>
+            <NavBar/>
                 <Grid className={classes.container}>
                     <Grid className={classes.emptyRow} item/>
                     <Grid className={classes.emptyGrid} item/>

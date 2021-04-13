@@ -6,6 +6,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import { Box, Grid, } from '@material-ui/core';
 import CircularIndeterminate from '../components/loading'
 import { GenderContext } from "../App";
+import { Mobile, Tablet, PC, PCwide } from '../components/MediaQuery' 
 
 import { useHistory } from 'react-router-dom'
 
@@ -60,7 +61,16 @@ const useStyles = makeStyles((theme) => ({
         color: 'white',
         fontSize: '2vmax',
         padding: 20
-    }
+    },
+
+    // mobile
+
+    mobileTestContainer: {
+        height: "100%",
+        display: 'grid',
+        gridTemplateRows: 'repeat(12, 1fr)',
+    },
+    
     
 }))
 
@@ -201,19 +211,63 @@ export default function TestQuestionTemplate() {
 
         GetMbti();
         return(
-        <Grid className={classes.testContainer} item>    
-            <Grid className={classes.imageGrid} item>
-                <Box className={classes.emptyBox}>
-                    <Box className={classes.loadingText}>분석중</Box>
-                    <CircularIndeterminate/>
-                </Box>
-            </Grid>
-        </Grid>
+            <Box>
+                <PC>
+                <Grid className={classes.testContainer} item>    
+                    <Grid className={classes.imageGrid} item>
+                        <Box className={classes.emptyBox}>
+                            <Box className={classes.loadingText}>분석중</Box>
+                            <CircularIndeterminate/>
+                        </Box>
+                    </Grid>
+                </Grid>
+                </PC>
+
+
+
+                <Mobile>
+                <Grid className={classes.testContainer} item>    
+                    <Grid className={classes.imageGrid} item>
+                        <Box className={classes.emptyBox}>
+                            <Box className={classes.loadingText}>분석중</Box>
+                            <CircularIndeterminate/>
+                        </Box>
+                    </Grid>
+                </Grid>
+                </Mobile>
+
+
+                <Tablet>
+                <Grid className={classes.testContainer} item>    
+                    <Grid className={classes.imageGrid} item>
+                        <Box className={classes.emptyBox}>
+                            <Box className={classes.loadingText}>분석중</Box>
+                            <CircularIndeterminate/>
+                        </Box>
+                    </Grid>
+                </Grid>
+                </Tablet>
+
+                
+                <PCwide>
+                <Grid className={classes.testContainer} item>    
+                    <Grid className={classes.imageGrid} item>
+                        <Box className={classes.emptyBox}>
+                            <Box className={classes.loadingText}>분석중</Box>
+                            <CircularIndeterminate/>
+                        </Box>
+                    </Grid>
+                </Grid>
+                </PCwide>
+            </Box>
+
         )
     }
     else{
         return (
-            <Grid className={classes.testContainer} item>    
+            <Box>
+                <PC>
+                <Grid className={classes.testContainer} item>    
                 <Grid className={classes.imageGrid} item>
                     <img className={classes.image} src={questionList[questionNum]['image']} alt="testimage"/>
                     <LinearWithValueLabel num={questionNum*100/12}/>
@@ -232,6 +286,72 @@ export default function TestQuestionTemplate() {
                     </Box>
                 </Grid>
             </Grid>
+                </PC>
+                <Mobile>
+                <Grid className={classes.testContainer} item>    
+                    <Grid className={classes.imageGrid} item>
+                        <img className={classes.image} src={questionList[questionNum]['image']} alt="testimage"/>
+                        <LinearWithValueLabel num={questionNum*100/12}/>
+                    </Grid>
+                    <Grid className={classes.emptyRow} item>
+                        <Box className={classes.questionText} align="center">
+                            {questionList[questionNum]['question']}
+                        </Box>
+                    </Grid>
+                    <Grid className={classes.answerGrid}>
+                        <Box onClick={()=>{proceedTest(0)}}>
+                            <ButtonBases choice={questionList[questionNum]['choice1']} />
+                        </Box>
+                        <Box onClick={()=>{proceedTest(1)}}>
+                            <ButtonBases choice={questionList[questionNum]['choice2']} />
+                        </Box>
+                    </Grid>
+                    </Grid>
+                </Mobile>
+                <Tablet>
+                    <Grid className={classes.testContainer} item>    
+                    <Grid className={classes.imageGrid} item>
+                        <img className={classes.image} src={questionList[questionNum]['image']} alt="testimage"/>
+                        <LinearWithValueLabel num={questionNum*100/12}/>
+                    </Grid>
+                    <Grid className={classes.emptyRow} item>
+                        <Box className={classes.questionText} align="center">
+                            {questionList[questionNum]['question']}
+                        </Box>
+                    </Grid>
+                    <Grid className={classes.answerGrid}>
+                        <Box onClick={()=>{proceedTest(0)}}>
+                            <ButtonBases choice={questionList[questionNum]['choice1']} />
+                        </Box>
+                        <Box onClick={()=>{proceedTest(1)}}>
+                            <ButtonBases choice={questionList[questionNum]['choice2']} />
+                        </Box>
+                    </Grid>
+                </Grid>
+                </Tablet>
+
+                <PCwide>
+                    <Grid className={classes.testContainer} item>    
+                        <Grid className={classes.imageGrid} item>
+                            <img className={classes.image} src={questionList[questionNum]['image']} alt="testimage"/>
+                            <LinearWithValueLabel num={questionNum*100/12}/>
+                        </Grid>
+                        <Grid className={classes.emptyRow} item>
+                            <Box className={classes.questionText} align="center">
+                                {questionList[questionNum]['question']}
+                            </Box>
+                        </Grid>
+                        <Grid className={classes.answerGrid}>
+                            <Box onClick={()=>{proceedTest(0)}}>
+                                <ButtonBases choice={questionList[questionNum]['choice1']} />
+                            </Box>
+                            <Box onClick={()=>{proceedTest(1)}}>
+                                <ButtonBases choice={questionList[questionNum]['choice2']} />
+                            </Box>
+                        </Grid>
+                    </Grid>
+                </PCwide>
+            </Box>
         )
     }
 }
