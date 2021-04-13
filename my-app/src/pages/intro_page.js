@@ -21,7 +21,6 @@ const useStyles = makeStyles((theme) => ({
     gridTemplateRows: 'repeat(3, 1fr)',
     gridTemplateColumns: 'repeat(3, 1fr)',
     gridGap: theme.spacing(3),
-
     background: 'linear-gradient(135deg, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0))',
   },
   emptyGrid: {
@@ -46,15 +45,14 @@ const useStyles = makeStyles((theme) => ({
     color: 'white',
     fontSize: "2vw",
     fontFamily: 'S-CoreDream-4Regular'
-
   },
+
   link:{
     textDecoration: 'none',
   },
 
   button:{
     padding: '5px 30px 5px 30px',
-
     size: 'large',
     fontSize: "25px",
     background: '#dc1a28',

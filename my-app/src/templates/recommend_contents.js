@@ -104,9 +104,9 @@ function RecommendTitle() {
 
   return (
     <Box>
-      <Typography>
+      {/* <Typography> */}
         나와 잘 맞는 MBTI의 영화 주인공은 어떻게 연애했을까?
-      </Typography>
+      {/* </Typography> */}
     </Box>
   );
 }
@@ -114,13 +114,13 @@ function RecommendDesc() {
 
   return (
     <Box>
-      <Typography variant="h6">
+      <Box>
         ENFJ 타이타닉의 Jack
-      </Typography>
-      <Typography>
+      </Box>
+      <Box>
         항상 사랑을 말하는 ESFP 남자. 낙천적이고 관계 맺기를 좋아하지만,
         조금이라도 관계가 불편해지면 빠르게 거리를 둬요.
-      </Typography>
+      </Box>
     </Box>
   );
 }

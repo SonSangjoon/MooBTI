@@ -34,9 +34,11 @@ const useStyles = makeStyles((theme) => ({
   },
 
   imageTitle: {
-    fontSize: '1.12vw',
+    fontSize: '1.3vw',
+    fontFamily: 'S-CoreDream-3Light',
     position: 'relative',
-    padding: `${theme.spacing(2)}px ${theme.spacing(4)}px ${theme.spacing(1) + 6}px`,
+    // padding: `${theme.spacing(2)}px ${theme.spacing(4)}px ${theme.spacing(1) + 6}px`,
+    padding: 20
   },
   imageMarked: {
     height: 3,
