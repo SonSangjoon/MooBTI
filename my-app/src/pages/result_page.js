@@ -33,7 +33,7 @@ const useStyles = makeStyles((theme) => ({
   },
 
   resultGrid: {
-    gridColumn: "2/span 6",
+    gridColumn: "2/span 5",
     gridRow: "2/span 10",
     color: "white",
   },

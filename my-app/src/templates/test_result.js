@@ -37,11 +37,11 @@ const useStyles = makeStyles((theme) => ({
     gridTemplateColumns: "repeat(12, 1fr)",
   },
   dummyImgGrid: {
-    gridColumn: "2/span 8",
+    gridColumn: "3/span 8",
     gridRow: "2/span 9",
   },
   mbtiTypeImageDescGrid:{
-    gridColumn: "span 10",
+    gridColumn: "span 12",
     gridRow: "11/ span 2",
 
   },
@@ -72,17 +72,17 @@ const useStyles = makeStyles((theme) => ({
     gridTemplateColumns: "repeat(12, 1fr)",
   },
   dummyScriptGrid: {
-    gridColumn: "span 10",
+    gridColumn: "2/span 10",
     gridRow: "span 2",
   },
   mbtiTypeOutlineGrid: {
-    gridColumn: "span 10",
+    gridColumn: "span 12",
     gridRow: "4/ span 5",
   },
 
   dummyBtnGrid: {
     gridColumn: "4/ span 4",
-    gridRow: "11/ span 5",
+    gridRow: "11/ span 2",
   },
   dummyBtn: {
     minWidth: "100%",
@@ -115,8 +115,7 @@ function CharacterScript(mbtiType, genderType) {
   return (
     <Box>
       <Typography className={classes.charScriptFont} align="center">
-        "이 배의 탑승권을 따낸 건 내 인생 최고의 행운이었어. <br />
-        당신을 만났으니까."
+        "이 배의 탑승권을 따낸 건 내 인생 최고의 행운이었어. <br/>당신을 만났으니까."
       </Typography>
     </Box>
   );
@@ -173,11 +172,11 @@ export default function ResultTemplate({ mbtiType, genderType }) {
         </Grid>
         <Grid className={classes.mbtiTypeOutlineGrid}>
           <MbtiTypeOutline mbtiType={mbtiType} genderType={genderType} />
-          <Grid className={classes.dummyBtnGrid}>
+        </Grid>
+        <Grid className={classes.dummyBtnGrid}>
           <DataAnalysisBtn />
         </Grid>
 
-        </Grid>
       </Grid>
     </Grid>
   );
