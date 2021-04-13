@@ -3,7 +3,7 @@ import axios from 'axios';
 import LinearWithValueLabel from '../components/progress_bar'
 import ButtonBases from '../components/button'
 import { makeStyles } from '@material-ui/core/styles';
-import { Box, Grid, Typography } from '@material-ui/core';
+import { Box, Grid, } from '@material-ui/core';
 import CircularIndeterminate from '../components/loading'
 import { GenderContext } from "../App";
 
@@ -12,7 +12,6 @@ import { useHistory } from 'react-router-dom'
 const useStyles = makeStyles((theme) => ({
     testContainer: {
         height: "100%",
-        
         display: 'grid',
         gridTemplateRows: 'repeat(12, 1fr)',
         gridTemplateColumns: 'repeat(12, 1fr)',
@@ -66,19 +65,20 @@ const useStyles = makeStyles((theme) => ({
 }))
 
 export default function TestQuestionTemplate() {
-    const selectedGender = useContext(GenderContext);
+    const { selectedGender } = useContext(GenderContext);
     const classes = useStyles();
     const history = useHistory();
+    const [questionNum, SetQuestionNum] = useState(0)
+
     const [testData, setTestData] = useState({
         gender: selectedGender,
         answer: ""
     })
 
-
     const questionList = {
         0: {
-            question :"Q1. 지긋이 바라보는데 갑자기 애인이 멋있고 예뻐보인다",
-            choice1 : "'어떻게 내 애인이지?' 속으로 생각해본다",
+            question :"Q1. 지긋이 바라보는데 새삼스럽게 애인이 멋있고 예뻐보인다",
+            choice1 : "'오늘따라 귀엽네' 속으로 생각해본다",
             choice2 : "\"오늘 왜 이렇게 예뻐/멋있어?\" 한마디 해준다",
             
             image: "/images/test/test1.png",
@@ -170,7 +170,6 @@ export default function TestQuestionTemplate() {
 
     }    
 
-    const [questionNum, SetQuestionNum] = useState(0)
     const {answer} = testData
 
     useEffect(()=>{
@@ -178,34 +177,33 @@ export default function TestQuestionTemplate() {
     },[answer])
 
     function proceedTest(n) {
+        console.log(testData)
+
         if(n === 1){
-            setTestData({'answer': answer+"1"})
+            setTestData({...testData, answer: answer+"1"})
         }
         else{
-            setTestData({'answer': answer+"0"})
+            setTestData({...testData, answer: answer+"0"})
         }
     }
 
-
+    const [sendUrl, setSendUrl] = useState("")
     function GetMbti(){
-        axios.post(`http://localhost:5000/mbti`, testData).then(response =>{
+        console.log(testData)
+        axios.post(`http://elice-kdt-ai-track-vm-da-03.koreacentral.cloudapp.azure.com:5000/mbti`, testData).then(response =>{
             console.log(response.data.user_mbti);
+            setSendUrl(`/${response.data.user_mbti}/${testData["gender"]}`)
         }).then(        
             setTimeout(() => {
-            history.push("/intj/male")},2000)
+            history.push(sendUrl)},2000)
         )
     }
 
     if (answer.length >= 12){
-        
-        GetMbti();
 
+        GetMbti();
         return(
         <Grid className={classes.testContainer} item>    
-            {/* <Grid className={classes.emptyRow} item>
-                <Typography className={classes.questionText}>
-                </Typography>
-            </Grid> */}
             <Grid className={classes.imageGrid} item>
                 <Box className={classes.emptyBox}>
                     <Box className={classes.loadingText}>분석중</Box>
@@ -213,7 +211,6 @@ export default function TestQuestionTemplate() {
                 </Box>
             </Grid>
         </Grid>
-
         )
     }
     else{

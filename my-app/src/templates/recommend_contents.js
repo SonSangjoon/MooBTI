@@ -1,7 +1,7 @@
 import React from "react";
 import {Link as RouterLink} from "react-router-dom"
 import dummy_poster_img from "../images/result/dummy_titanic_poster.jpg";
-import { Button, Box, Box, Grid, Link } from "@material-ui/core";
+import { Button, Box, Grid, Link } from "@material-ui/core";
 import {
   // createMuiTheme,
   withStyles,

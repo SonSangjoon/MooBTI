@@ -5,7 +5,7 @@ import female_pic from "../images/gender/female_pic.jpg";
 import male_pic from "../images/gender/male_pic.jpg";
 import NavBar from "../components/nav_bar";
 import { makeStyles } from "@material-ui/core/styles";
-import {  Button , Typography, Box, Grid  } from '@material-ui/core';
+import {  Button , Box, Grid  } from '@material-ui/core';
 import { Mobile, Tablet, PC, PCwide } from '../components/MediaQuery' 
 
 const useStyles = makeStyles((theme) => ({
@@ -61,11 +61,11 @@ const useStyles = makeStyles((theme) => ({
 
 function GenderPageSelect() {
   const classes = useStyles();
-  const { gender, setGender } = useContext(GenderContext);
+  const { selectedGender, setSelectedGender } = useContext(GenderContext);
 
   const handleGenderChange = (event) => {
-    setGender(event.currentTarget.value);
-    console.log(gender);
+    setSelectedGender(event.currentTarget.value);
+    console.log(selectedGender);
   };
 
   return (
