@@ -9,7 +9,8 @@ const useStyles = makeStyles({
     root: {
         background: 'rgba(0, 0, 0, 0)',
         color: 'red',
-        height: '0px'
+        height: '0px',
+        display: "container-fluid"
     },
     logo: {
         padding: 20
