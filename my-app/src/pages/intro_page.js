@@ -4,7 +4,7 @@ import NavBar from '../components/nav_bar'
 import Footer from '../components/footer'
 import { makeStyles } from '@material-ui/core/styles';
 import { Box, Grid, Button, Typography } from '@material-ui/core';
-import { PC, Mobile } from '../components/MediaQuery' 
+import { Mobile, Tablet, PC, PCwide } from '../components/MediaQuery' 
 import Wallpaper from '../images/intro/Wallpaper.jpeg'
 
 const useStyles = makeStyles((theme) => ({
@@ -111,10 +111,40 @@ export function IntroPage() {
           <Footer/>
           </Box>
         </PC>
+        
         <Mobile className={classes.root}>
           hello
         </Mobile>
+
+          <Tablet>
+            <Box className={classes.root}>
+            <NavBar pageType={pageType}/>
+            <Grid className={classes.container}>
+              <Grid className={classes.emptyGrid} item xl={12}>
+              </Grid>
+              <Grid className={classes.textGrid} item xl={8}>
+                <IntroPageText/>
+              </Grid>
+            </Grid>
+            <Footer/>
+          </Box>
+          </Tablet>
+
+          <PCwide>
+            <Box className={classes.root}>
+            <NavBar pageType={pageType}/>
+            <Grid className={classes.container}>
+              <Grid className={classes.emptyGrid} item xl={12}>
+              </Grid>
+              <Grid className={classes.textGrid} item xl={8}>
+                <IntroPageText/>
+              </Grid>
+            </Grid>
+            <Footer/>
+            </Box>
+          </PCwide>
       </Box>
+      
 
     )
 }
