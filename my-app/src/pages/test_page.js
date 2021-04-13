@@ -45,7 +45,7 @@ export function TestPage() {
             <PC>
             <SubNavBar/>
                 <Grid className={classes.container}>
-                    <Grid className={classes.emptyRow} item/>
+                <Grid className={classes.emptyRow} item/>
                     <Grid className={classes.emptyGrid} item/>
                     <Grid className={classes.testGrid} item>
                         <TestQuestionTemplate/>
