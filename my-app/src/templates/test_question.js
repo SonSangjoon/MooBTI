@@ -187,16 +187,14 @@ export default function TestQuestionTemplate() {
         }
     }
 
-    const [sendUrl, setSendUrl] = useState("")
     function GetMbti(){
         console.log(testData)
         axios.post(`http://elice-kdt-ai-track-vm-da-03.koreacentral.cloudapp.azure.com:5000/mbti`, testData).then(response =>{
             console.log(response.data.user_mbti);
-            setSendUrl(`/${response.data.user_mbti}/${testData["gender"]}`)
-        }).then(        
             setTimeout(() => {
-            history.push(sendUrl)},2000)
-        )
+                history.push(`/${response.data.user_mbti}/${testData["gender"]}`)},2000)
+        })
+
     }
 
     if (answer.length >= 12){
