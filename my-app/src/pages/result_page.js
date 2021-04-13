@@ -1,7 +1,7 @@
 import React from "react";
 import NavBar from "../components/nav_bar";
 import Footer from "../components/footer";
-import ShareButton from "../components/share_button";
+import ShareButton from "../components/share_buttons";
 import ResultTemplate from "../templates/test_result";
 import RecommendContentsTemplate from "../templates/recommend_contents";
 import { makeStyles } from "@material-ui/core/styles";

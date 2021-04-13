@@ -21,7 +21,6 @@ export function App() {
             <Route exact path="/:mbti/:gender"component={ResultPage}/>
         </BrowserRouter>
       </GenderContext.Provider>
-
     </div>
   );
 }
