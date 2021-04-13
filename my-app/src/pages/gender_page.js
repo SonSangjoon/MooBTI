@@ -30,8 +30,8 @@ const useStyles = makeStyles((theme) => ({
   },
 
   title: {
-    paddingBottom: '5vh',
-    fontSize: 45,
+    paddingBottom: '1vh',
+    fontSize: '28px',
     color: 'white',
   },
 
@@ -70,9 +70,9 @@ function GenderPageSelect() {
 
   return (
     <Box>
-      <Typography className={classes.title} variant="h4" align="center" gutterBottom>
+      <Box className={classes.title} align="center" gutterBottom>
         테스트를 진행할 프로필을 선택하세요.
-      </Typography>
+      </Box>
       <Box display="flex" justifyContent="center" mt={3}>
         <Box mr={5}>
           <Link to="/test">
@@ -80,9 +80,9 @@ function GenderPageSelect() {
               <img src={male_pic} alt="male_pic" className={classes.image} />
             </Button>
           </Link>
-          <Typography className={classes.imgTitle} variant="h6" align="center" gutterBottom>
+          <Box className={classes.imgTitle} variant="h6" align="center" gutterBottom>
             남성
-          </Typography>
+          </Box>
         </Box>
         <Box>
           <Link to="/test">
@@ -90,9 +90,9 @@ function GenderPageSelect() {
               <img src={female_pic} alt="female_pic" className={classes.image}/>
             </Button>
           </Link>
-          <Typography className={classes.imgTitle} variant="h6" align="center" gutterBottom>
+          <Box className={classes.imgTitle} variant="h6" align="center" gutterBottom>
             여성
-          </Typography>
+          </Box>
         </Box>
       </Box>
     </Box>
