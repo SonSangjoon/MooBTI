@@ -1,4 +1,4 @@
-import React, { useState, useContext } from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import { GenderContext } from "../App";
 import female_pic from "../images/gender/female_pic.jpg";
@@ -6,7 +6,7 @@ import male_pic from "../images/gender/male_pic.jpg";
 import NavBar from "../components/nav_bar";
 import { makeStyles } from "@material-ui/core/styles";
 import {  Button , Typography, Box, Grid  } from '@material-ui/core';
-import { PC, Mobile } from '../components/MediaQuery' 
+import { Mobile, Tablet, PC, PCwide } from '../components/MediaQuery' 
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -65,7 +65,7 @@ function GenderPageSelect() {
 
   const handleGenderChange = (event) => {
     setGender(event.currentTarget.value);
-    // console.log(gender);
+    console.log(gender);
   };
 
   return (
@@ -113,9 +113,32 @@ export function GenderPage() {
         </Grid>
       </Grid>
     </PC>
+
     <Mobile>
       Mobile
     </Mobile>
+
+    <Tablet>
+      <Grid className={classes.container} spacing={3}>
+          <NavBar />
+          <Grid className={classes.emptyColumnGrid} item></Grid>
+          <Grid className={classes.emptyRowGrid} item></Grid>
+          <Grid item>
+            <GenderPageSelect />
+          </Grid>
+      </Grid>
+    </Tablet>
+
+    <PCwide>
+      <Grid className={classes.container} spacing={3}>
+          <NavBar />
+          <Grid className={classes.emptyColumnGrid} item></Grid>
+          <Grid className={classes.emptyRowGrid} item></Grid>
+          <Grid item>
+            <GenderPageSelect />
+          </Grid>
+      </Grid>
+    </PCwide>
   </Box>
   );
 }
