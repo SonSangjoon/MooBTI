@@ -53,9 +53,9 @@ const useStyles = makeStyles((theme) => ({
 
   image: { 
     borderRadius:'10px',
-  }
+  },
 
-//
+//Tablet Layout
 
 }));
 
