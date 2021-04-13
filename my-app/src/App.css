@@ -1,3 +1,25 @@
+/* @font-face {
+  font-family: 'GmarketSansMedium';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+} */
+
+@font-face {
+  font-family: "InfinitySans-BoldA1";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/InfinitySans-BoldA1.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+* {
+  font-family: "InfinitySans-BoldA1";
+}
+
+
+
 .App {
   text-align: center;
 }
@@ -37,10 +59,3 @@
   }
 }
 
-@font-face {
-  font-family: "InfinitySans-BoldA1";
-  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/InfinitySans-BoldA1.woff")
-    format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
