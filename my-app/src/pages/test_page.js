@@ -40,12 +40,13 @@ const useStyles = makeStyles((theme) => ({
 
     mobileContainer : {
         height: '100vh',
+        
         display: 'grid',
-        gridTemplateRows: 'repeat(4, 1fr)',
+        gridTemplateRows: 'repeat(12, 1fr)',
         gridGap: theme.spacing(1),
     },
     mobileTestGrid : {
-        gridRow : '2/span 2'
+        gridRow : '2/span 10'
     },
 
 }))
@@ -70,8 +71,8 @@ export function TestPage() {
             {/* Mobile View */}
              
             <Mobile>
-                <NavBar/>
-                <Grid className={classes.obileContaine}>
+                <NavBar pageType="mobile"/>
+                <Grid className={classes.mobileContainer}>
                     <Grid className={classes.mobileTestGrid} item>
                         <TestQuestionTemplate/>
                     </Grid>

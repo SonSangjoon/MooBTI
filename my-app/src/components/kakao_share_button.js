@@ -1,41 +1,17 @@
 import React from "react";
+import { Box } from '@material-ui/core';
 import { makeStyles } from "@material-ui/core/styles";
 import { Helmet } from 'react-helmet'
 import { Fab } from "@material-ui/core";
 import { ReactComponent as KakaoTalk } from "../images/sharebutton/kakaotalk.svg";
 
 const useStyles = makeStyles({
-  root: {
-    background: "rgba(0, 0, 0, 0)",
-    color: "red",
-    height: "5px",
-  },
-  container: {
-    height: "100%",
 
-    display: "grid",
-    gridTemplateRows: "repeat(7, 1fr)",
-    gridTemplateColumns: "repeat(3, 1fr)",
-  },
-  shareBtn1Grid: {
-    gridColumn: "2",
-    gridRow: "1, span 3",
-  },
-  shareBtn2Grid: {
-    gridColumn: "2",
-    gridRow: "3",
-  },
   imageIcon: {
     height: "30px",
     width: "30px",
   },
-  copy: {
-    width: "0px",
-    height: "0px",
-    bottom: "0",
-    left: "0",
-    opacity: "0",
-  },
+
 });
 
 const KakaoShareButton = () => {
@@ -58,11 +34,7 @@ const KakaoShareButton = () => {
             webUrl: window.location.href,
           },
         },
-        // social: {
-        //   likeCount: 77,
-        //   commentCount: 55,
-        //   sharedCount: 333,
-        // },
+
         buttons: [
           {
             title: "나도 테스트 해보기",
@@ -77,7 +49,7 @@ const KakaoShareButton = () => {
   };
   
   return (
-    <div className="kakao-share-button">
+    <Box className="kakao-share-button">
       <Helmet>
         <script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
       </Helmet>
@@ -89,7 +61,7 @@ const KakaoShareButton = () => {
       >
         <KakaoTalk className={classes.imageIcon} />
       </Fab>
-    </div>
+    </Box>
   );
 };
 export default KakaoShareButton;

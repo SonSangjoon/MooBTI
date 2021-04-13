@@ -105,6 +105,7 @@ const useStyles = makeStyles((theme) => ({
 
   mobileLink:{
     textDecoration: 'none',
+    marginTop: '20px',
     position: 'absolute',
     left: '50%',
     transform: 'translate(-50%, 0%)',

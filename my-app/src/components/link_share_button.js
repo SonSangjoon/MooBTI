@@ -43,6 +43,7 @@ const LinkShareButton = () => {
 
   return (
     <Box>
+    <Box>
       <textarea
         type="text"
         value={window.location.href}
@@ -58,16 +59,17 @@ const LinkShareButton = () => {
       >
         <LinkIcon />
       </Fab>
+    </Box>
 
-      <Snackbar
-        anchorOrigin={{ vertical, horizontal }}
-        open={open}
-        onClose={handleClose}
-        autoHideDuration={2000}
-        message="링크가 클립보드에 복사되었습니다."
-        key={vertical + horizontal}
-        action={action}
-      />
+    <Snackbar
+    anchorOrigin={{ vertical, horizontal }}
+    open={open}
+    onClose={handleClose}
+    autoHideDuration={2000}
+    message="링크가 클립보드에 복사되었습니다."
+    key={vertical + horizontal}
+    action={action}
+    />
     </Box>
   );
 };
