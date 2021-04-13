@@ -1,7 +1,7 @@
 import React from "react";
 import {Link as RouterLink} from "react-router-dom"
 import dummy_poster_img from "../images/result/dummy_titanic_poster.jpg";
-import { Button, Typography, Box, Grid, Link } from "@material-ui/core";
+import { Button, Box, Box, Grid, Link } from "@material-ui/core";
 import {
   // createMuiTheme,
   withStyles,
@@ -75,6 +75,7 @@ const useStyles = makeStyles((theme) => ({
     gridColumn: "4/ span 6",
     gridRow: "-2/ span 2",
   },
+
   restartBtn: {
     minWidth: "100%",
   },
@@ -104,9 +105,9 @@ function RecommendTitle() {
 
   return (
     <Box>
-      {/* <Typography> */}
+      <Box>
         나와 잘 맞는 MBTI의 영화 주인공은 어떻게 연애했을까?
-      {/* </Typography> */}
+      </Box>
     </Box>
   );
 }
@@ -114,7 +115,7 @@ function RecommendDesc() {
 
   return (
     <Box>
-      <Box>
+      <Box variant="h6">
         ENFJ 타이타닉의 Jack
       </Box>
       <Box>
