@@ -8,11 +8,11 @@ import {createContext, useState} from "react"
 const GenderContext = createContext({});
 
 export function App() {
-  const [gender, setGender] = useState("")
+  const [selectedGender, setSelectedGender] = useState("")
 
   return (
     <div>
-      <GenderContext.Provider value={{gender, setGender}}>
+      <GenderContext.Provider value={{selectedGender, setSelectedGender}}>
         <BrowserRouter>
             <Route exact path="/" component={IntroPage}/>
             <Route exact path="/gender"component={GenderPage}/>
