@@ -36,7 +36,7 @@ const useStyles = makeStyles((theme) => ({
   mainText: {
     padding: 5,
     color: 'white',
-    fontSize: "5vw",
+    fontSize: "4.5vw",
   },
 
   subText: {

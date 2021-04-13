@@ -14,6 +14,8 @@ const useStyles = makeStyles((theme) => ({
         display: 'grid',
         gridTemplateRows: 'repeat(12, 1fr)',
         gridTemplateColumns: 'repeat(12, 1fr)',
+        height: "100%",
+
     },
 
     emptyRow: {
@@ -24,19 +26,19 @@ const useStyles = makeStyles((theme) => ({
     questionText: {
         color: 'white',
         fontSize: '2vmax',
-        paddingTop: 20
+        // paddingTop: 20
     },
 
     imageGrid:{
         gridColumn : 'span 12',
-        gridRow : 'span 8',
+        gridRow : 'span 10',
     },
 
     image:{
         objectFit: 'cover',
         width: '100%',
         height: "60vh",
-        borderRadius: "10px"
+        // borderRadius: "10px"
     },
 
     answerGrid:{
