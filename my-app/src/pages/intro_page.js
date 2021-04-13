@@ -102,16 +102,16 @@ export function IntroPage() {
           <Box className={classes.root}>
           <NavBar pageType={pageType}/>
           <Grid className={classes.container}>
-            <Grid className={classes.emptyGrid} item xl={12}>
+            <Grid className={classes.emptyGrid} item >
             </Grid>
-            <Grid className={classes.textGrid} item xl={8}>
+            <Grid className={classes.textGrid} item >
               <IntroPageText/>
             </Grid>
           </Grid>
           <Footer/>
           </Box>
         </PC>
-        
+
         <Mobile className={classes.root}>
           hello
         </Mobile>
@@ -120,9 +120,9 @@ export function IntroPage() {
             <Box className={classes.root}>
             <NavBar pageType={pageType}/>
             <Grid className={classes.container}>
-              <Grid className={classes.emptyGrid} item xl={12}>
+              <Grid className={classes.emptyGrid} item >
               </Grid>
-              <Grid className={classes.textGrid} item xl={8}>
+              <Grid className={classes.textGrid} item>
                 <IntroPageText/>
               </Grid>
             </Grid>
@@ -134,9 +134,9 @@ export function IntroPage() {
             <Box className={classes.root}>
             <NavBar pageType={pageType}/>
             <Grid className={classes.container}>
-              <Grid className={classes.emptyGrid} item xl={12}>
+              <Grid className={classes.emptyGrid} item >
               </Grid>
-              <Grid className={classes.textGrid} item xl={8}>
+              <Grid className={classes.textGrid} item >
                 <IntroPageText/>
               </Grid>
             </Grid>
