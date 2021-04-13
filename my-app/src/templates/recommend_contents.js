@@ -33,7 +33,7 @@ const useStyles = makeStyles((theme) => ({
 
   recommendTitleGrid: {
     gridColumn: "span 12",
-    gridRow: "2/span 2",
+    gridRow: "span 2",
   },
   recommendBadTitleGrid: {
     gridColumn: "span 12",
