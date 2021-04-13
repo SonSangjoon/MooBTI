@@ -2,6 +2,7 @@ import React from "react";
 import SubNavBar from "../components/nav_bar";
 import Footer from "../components/footer";
 import TestQuestionTemplate from "../templates/test_question";
+import TestQuestionTemplateTablet from "../templates/test_question_tablet";
 import { makeStyles } from "@material-ui/core/styles";
 import { Box, Grid } from "@material-ui/core";
 import { Mobile, Tablet, PC, PCwide } from "../components/MediaQuery";
@@ -60,7 +61,7 @@ export function TestPage() {
       <SubNavBar />
         <Grid className={classes.container}>
           <Grid className={classes.grid}>
-          <TestQuestionTemplate />
+          <TestQuestionTemplateTablet />
           </Grid>
           <Grid className={classes.emptyGrid} item></Grid>
         </Grid>
