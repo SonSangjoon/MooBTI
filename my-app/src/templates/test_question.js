@@ -25,7 +25,7 @@ const useStyles = makeStyles((theme) => ({
 
     questionText: {
         color: 'white',
-        fontSize: '2vmax',
+        fontSize: '1.8vmax',
         // paddingTop: 20
     },
 
@@ -105,7 +105,7 @@ export default function TestQuestionTemplate() {
         },
         4: {
             question :"Q4. 용기를 내 고백했다. 하지만 돌아오는 대답은 \"나 좋아하지마\"",
-            choice1 : "\"왜 나는 안되는가야?\"라고 되묻는다",
+            choice1 : "\"왜 나는 안되는거야?\"라고 되묻는다",
             choice2 : "\"왜 내가 널 좋아하면 안돼?\"라고 되묻는다",
             
             image: "/images/test/test4.png",
@@ -120,7 +120,7 @@ export default function TestQuestionTemplate() {
         6 : {
             question :"Q6. 집에 돌아온 나를 보고 친구가 묻는다. \"오늘 데이트 어땠어?\"",
             choice1 : "\"오늘 성수동에 갔는데 말이야~\" 데이트 일정을 말한다",
-            choice2 : "\"갑자기 진도를 빼는 것 같아\" 데이트의 감상을 얘기한다",
+            choice2 : "\"갑자기 진도를 빼는 것 같아\" 데이트 감상을 얘기한다",
             image: "/images/test/test6.jpg",
 
         },
@@ -147,7 +147,7 @@ export default function TestQuestionTemplate() {
         },
         10 : {
             question :"Q10. 소송 없이 이혼하기로 약속했지만, 몰래 이혼 전문 변호사 고용할까..?",
-            choice1 : "재산 분할을 걱정하며 이혼 전문 변호사와 계획을 짠다",
+            choice1 : "재산 분할을 위해 이혼 전문 변호사와 계획을 짠다",
             choice2 : "소송 없이 진행하며 관계 개선의 여지를 둔다",
             image: "/images/test/test10.png",
 
