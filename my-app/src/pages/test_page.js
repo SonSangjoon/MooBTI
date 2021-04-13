@@ -4,7 +4,7 @@ import Footer from '../components/footer'
 import TestQuestionTemplate from '../templates/test_question'
 import { makeStyles } from '@material-ui/core/styles';
 import { Box, Grid } from '@material-ui/core';
-import { PC, Mobile } from '../components/MediaQuery' 
+import { Mobile, Tablet, PC, PCwide } from '../components/MediaQuery' 
 
 
 const useStyles = makeStyles((theme) => ({
@@ -43,7 +43,7 @@ export function TestPage() {
     return (
         <Box  className={classes.root}>
             <PC>
-                <SubNavBar/>
+            <SubNavBar/>
                 <Grid className={classes.container}>
                     <Grid className={classes.emptyRow} item/>
                     <Grid className={classes.emptyGrid} item/>
@@ -55,7 +55,34 @@ export function TestPage() {
                 <Footer/>
             </PC>
             <Mobile>
+                mobile
             </Mobile>
+
+            <Tablet>
+            <SubNavBar/>
+                <Grid className={classes.container}>
+                    <Grid className={classes.emptyRow} item/>
+                    <Grid className={classes.emptyGrid} item/>
+                    <Grid className={classes.testGrid} item>
+                        <TestQuestionTemplate/>
+                    </Grid>
+                    <Grid className={classes.emptyGrid} item></Grid>
+                </Grid>
+                <Footer/>
+            </Tablet>
+
+            <PCwide>
+            <SubNavBar/>
+                <Grid className={classes.container}>
+                    <Grid className={classes.emptyRow} item/>
+                    <Grid className={classes.emptyGrid} item/>
+                    <Grid className={classes.testGrid} item>
+                        <TestQuestionTemplate/>
+                    </Grid>
+                    <Grid className={classes.emptyGrid} item></Grid>
+                </Grid>
+                <Footer/>
+            </PCwide>
         </Box>
     )
 }
