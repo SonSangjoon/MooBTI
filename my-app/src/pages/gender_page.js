@@ -54,6 +54,9 @@ const useStyles = makeStyles((theme) => ({
   image: { 
     borderRadius:'10px',
   }
+
+//
+
 }));
 
 function GenderPageSelect() {
