@@ -173,9 +173,10 @@ export default function ResultTemplate({ mbtiType, genderType }) {
         </Grid>
         <Grid className={classes.mbtiTypeOutlineGrid}>
           <MbtiTypeOutline mbtiType={mbtiType} genderType={genderType} />
-        </Grid>
-        <Grid className={classes.dummyBtnGrid}>
+          <Grid className={classes.dummyBtnGrid}>
           <DataAnalysisBtn />
+        </Grid>
+
         </Grid>
       </Grid>
     </Grid>

@@ -24,6 +24,7 @@ const useStyles = makeStyles((theme) => ({
   },
 
   recommendContainer: {
+    // height: "100%",
     color: "white",
     display: "grid",
     gridTemplateRows: "repeat(12, 1fr)",
