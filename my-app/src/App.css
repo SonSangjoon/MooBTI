@@ -1,37 +1,10 @@
-/* @font-face {
-  font-family: 'GmarketSansMedium';
-  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-} */
-/* 
 @font-face {
-  font-family: "InfinitySans-BoldA1";
-  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/InfinitySans-BoldA1.woff")
-    format("woff");
-  font-weight: normal;
-  font-style: normal;
-} */
-
-/* 
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
-
-* {
-  font-family: 'Noto Sans KR', sans-serif;} */
-
-
-
-  /* @import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css);
-* { font-family: 'Spoqa Han Sans', 'Spoqa Han Sans JP', 'Sans-serif'; }
- */
-
-
- @font-face {
-  font-family: 'S-CoreDream-6Bold';
-  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-6Bold.woff') format('woff');
+  font-family: 'S-CoreDream-2ExtraLight';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-2ExtraLight.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 }
+
 
 @font-face {
   font-family: 'S-CoreDream-3Light';
@@ -47,18 +20,22 @@
   font-style: normal;
 }
 
-
 @font-face {
-  font-family: 'S-CoreDream-2ExtraLight';
-  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-2ExtraLight.woff') format('woff');
+  font-family: 'S-CoreDream-6Bold';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-6Bold.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'twaysky';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_tway@1.0/twaysky.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 }
 
 
 
-
-* { font-family: 'S-CoreDream-6Bold', 'S-CoreDream-3Light', 'S-CoreDream-4Regular', 'S-CoreDream-2ExtraLight'}
+* { font-family: 'S-CoreDream-4Regular','S-CoreDream-2ExtraLight', 'S-CoreDream-3Light','S-CoreDream-6Bold'}
 
 
 
