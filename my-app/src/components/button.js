@@ -2,6 +2,9 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import ButtonBase from '@material-ui/core/ButtonBase';
 import Typography from '@material-ui/core/Typography';
+import { Box} from '@material-ui/core';
+import { Mobile, Tablet, PC, PCwide } from './MediaQuery' 
+
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -16,6 +19,9 @@ const useStyles = makeStyles((theme) => ({
         opacity: 0,
       },
       '& $imageTitle': {
+        border: '4px solid currentColor',
+      },
+      '& $mobileImageTitle': {
         border: '4px solid currentColor',
       },
     }
@@ -49,13 +55,22 @@ const useStyles = makeStyles((theme) => ({
     left: 'calc(50% - 9px)',
     transition: theme.transitions.create('opacity'),
   },
+
+  //Mobile View
+  mobileImageTitle: {
+    fontSize: '3.5vw',
+    fontFamily: 'S-CoreDream-3Light',
+    position: 'relative',
+    padding: 20
+  },
 }));
 
 export default function ButtonBases({choice}) {
   const classes = useStyles();
 
   return (
-    <div className={classes.root}>
+    <Box className={classes.root}>
+      <PC>
         <ButtonBase
           focusRipple
           focusVisibleClassName={classes.focusVisible}
@@ -67,7 +82,47 @@ export default function ButtonBases({choice}) {
             </Typography>
           </span>
         </ButtonBase>
-    </div>
+      </PC>
+      <Mobile>
+      <ButtonBase
+          focusRipple
+          focusVisibleClassName={classes.focusVisible}
+          className={classes.focusVisible}>
+          <span className={classes.imageButton}>
+            <Typography className={classes.mobileImageTitle}>
+              {choice}
+              <span className={classes.imageMarked} />
+            </Typography>
+          </span>
+        </ButtonBase>
+      </Mobile>
+      <Tablet>
+      <ButtonBase
+          focusRipple
+          focusVisibleClassName={classes.focusVisible}
+          className={classes.focusVisible}>
+          <span className={classes.imageButton}>
+            <Typography className={classes.imageTitle}>
+              {choice}
+              <span className={classes.imageMarked} />
+            </Typography>
+          </span>
+        </ButtonBase>
+      </Tablet>
+      <PCwide>
+      <ButtonBase
+          focusRipple
+          focusVisibleClassName={classes.focusVisible}
+          className={classes.focusVisible}>
+          <span className={classes.imageButton}>
+            <Typography className={classes.imageTitle}>
+              {choice}
+              <span className={classes.imageMarked} />
+            </Typography>
+          </span>
+        </ButtonBase>
+      </PCwide>
+    </Box>
   );
 }
 

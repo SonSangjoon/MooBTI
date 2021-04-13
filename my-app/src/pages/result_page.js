@@ -13,7 +13,6 @@ const useStyles = makeStyles((theme) => ({
   root: {
     height: "100vh",
     backgroundColor: "black",
-    minHeight: '3000px'
   },
 
   container: {
@@ -54,6 +53,40 @@ const useStyles = makeStyles((theme) => ({
   },
 
   
+// Mobile View
+
+mobileContainer: {
+  // overflow: 'auto',
+  backgroundColor: "black",
+  height: 'auto',
+  position: 'relative',
+
+},
+
+mobileBlock:{
+  overflow: 'auto',
+  display: "block",
+  height: "5vh",
+  margin: "15px"
+},
+
+mobileResultBlock:{
+  overflow: 'auto',
+  display: "block",
+  margin: "15px"
+},
+
+mobileRecommendBlock:{
+  overflow: 'auto',
+  display: "block",
+  margin: "15px"
+},
+mobileShareButton:{
+    position: 'fixed',
+    bottom: '0px',
+    right: '0px', 
+    padding: '50px'
+}
 
 
 }));
@@ -83,7 +116,20 @@ export function ResultPage({ match }) {
       </PC>
 
       <Mobile>
-          mobile
+        <Box className={classes.mobileContainer}>
+          <NavBar pageType="mobile" />
+            <Box className={classes.mobileBlock}>
+            </Box>
+            <Box className={classes.mobileResultBlock}>
+              <ResultTemplate mbtiType={mbtiType} genderType={genderType} />
+            </Box>
+            <Box className={classes.mobileRecommendBlock}>
+              <RecommendContentsTemplate mbtiType={mbtiType} genderType={genderType}/>
+            </Box>
+              <ShareButton className={classes.mobileShareButton}/>
+          <Footer />
+      </Box>
+
       </Mobile>
 
       {/* Tablet view */}

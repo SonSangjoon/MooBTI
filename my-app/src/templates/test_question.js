@@ -70,7 +70,43 @@ const useStyles = makeStyles((theme) => ({
         display: 'grid',
         gridTemplateRows: 'repeat(12, 1fr)',
     },
+
+    mobileImage:{
+        objectFit: 'cover',
+        width: '100%',
+        height: '28vh',
+        borderRadius: "10px"
+    },
+
+    mobileImageGrid:{
+        gridRow : 'span 5',
+        margin: '10px'
+    },
+
+    mobileQuestionRow:{
+        gridRow : '7/span 2',
+        paddingTop: '10px'
+    },
     
+    mobileQuestionText:{
+        color: 'white',
+        fontSize: '4vw',
+    },
+
+    mobileAnswerGrid1:{
+        gridRow : '9/span 2',
+    },    
+
+    mobileAnswerGrid2:{
+        gridRow : '11/span 2',
+    },
+
+    mobileBtnWrapper:{
+        display: 'flex',
+        justifyContent: 'center',
+        alignContent: 'center',
+        height: '100%'
+    }
     
 }))
 
@@ -287,27 +323,33 @@ export default function TestQuestionTemplate() {
                 </Grid>
             </Grid>
                 </PC>
+
+
                 <Mobile>
-                <Grid className={classes.testContainer} item>    
-                    <Grid className={classes.imageGrid} item>
-                        <img className={classes.image} src={questionList[questionNum]['image']} alt="testimage"/>
-                        <LinearWithValueLabel num={questionNum*100/12}/>
-                    </Grid>
-                    <Grid className={classes.emptyRow} item>
-                        <Box className={classes.questionText} align="center">
-                            {questionList[questionNum]['question']}
-                        </Box>
-                    </Grid>
-                    <Grid className={classes.answerGrid}>
-                        <Box onClick={()=>{proceedTest(0)}}>
-                            <ButtonBases choice={questionList[questionNum]['choice1']} />
-                        </Box>
-                        <Box onClick={()=>{proceedTest(1)}}>
-                            <ButtonBases choice={questionList[questionNum]['choice2']} />
-                        </Box>
-                    </Grid>
+                   <Grid className={classes.mobileTestContainer}>    
+                        <Grid className={classes.mobileImageGrid} item>
+                            <img className={classes.mobileImage} src={questionList[questionNum]['image']} alt="testimage"/>
+                            <LinearWithValueLabel num={questionNum*100/12}/>
+                        </Grid>
+                        <Grid className={classes.mobileQuestionRow} item>
+                            <Box className={classes.mobileQuestionText} align="center">
+                                {questionList[questionNum]['question']}
+                            </Box>
+                        </Grid>
+                        <Grid className={classes.mobileAnswerGrid1} item>
+                            <Box className={classes.mobileBtnWrapper} onClick={()=>{proceedTest(0)}}>
+                                <ButtonBases choice={questionList[questionNum]['choice1']} />
+                            </Box>
+                        </Grid>
+                        <Grid className={classes.mobileAnswerGrid2} item>
+                            <Box className={classes.mobileBtnWrapper} onClick={()=>{proceedTest(1)}}>
+                                <ButtonBases choice={questionList[questionNum]['choice2']} />
+                            </Box>
+                        </Grid>
                     </Grid>
                 </Mobile>
+
+
                 <Tablet>
                     <Grid className={classes.testContainer} item>    
                     <Grid className={classes.imageGrid} item>

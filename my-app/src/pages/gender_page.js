@@ -65,7 +65,18 @@ const useStyles = makeStyles((theme) => ({
 
  mobileGrid:{
   gridRow: '2/span 1'
- }
+ },
+
+ mobiletitle: {
+  paddingBottom: '1vh',
+  fontSize: '20px',
+  color: 'white',
+},
+
+mobileImageTitle: {
+  fontSize: 17,
+  color:'white'
+}
 
 }));
 
@@ -79,33 +90,124 @@ function GenderPageSelect() {
   };
 
   return (
-    
     <Box>
-      <Box className={classes.title} align="center" gutterBottom>
-        테스트를 진행할 프로필을 선택하세요.
-      </Box>
-      <Box display="flex" justifyContent="center" mt={3}>
-        <Box mr={5}>
-          <Link to="/test">
-            <Button className={classes.gender_img} value="male" onClick={handleGenderChange}>
-              <img src={male_pic} alt="male_pic" className={classes.image} />
-            </Button>
-          </Link>
-          <Box className={classes.imgTitle} variant="h6" align="center" gutterBottom>
-            남성
+      <PC>
+      <Box>
+        <Box className={classes.title} align="center" gutterBottom>
+          테스트를 진행할 프로필을 선택하세요.
+        </Box>
+        <Box display="flex" justifyContent="center" mt={3}>
+          <Box mr={5}>
+            <Link to="/test">
+              <Button className={classes.gender_img} value="male" onClick={handleGenderChange}>
+                <img src={male_pic} alt="male_pic" className={classes.image} />
+              </Button>
+            </Link>
+            <Box className={classes.imgTitle} variant="h6" align="center" gutterBottom>
+              남성
+            </Box>
+          </Box>
+          <Box>
+            <Link to="/test">
+            <Button className={classes.gender_img} value="female" onClick={handleGenderChange}>
+                <img src={female_pic} alt="female_pic" className={classes.image}/>
+              </Button>
+            </Link>
+            <Box className={classes.imgTitle} variant="h6" align="center" gutterBottom>
+              여성
+            </Box>
           </Box>
         </Box>
+      </Box>
+      </PC>
+
+
+      <Mobile>
+      <Box className={classes.mobiletitle} align="center" gutterBottom>
+          테스트를 진행할 프로필을 선택하세요.
+        </Box>
+        <Box display="flex" justifyContent="center" mt={3}>
+          <Box mr={5}>
+            <Link to="/test">
+              <Button className={classes.gender_img} value="male" onClick={handleGenderChange}>
+                <img src={male_pic} alt="male_pic" className={classes.image} />
+              </Button>
+            </Link>
+            <Box className={classes.mobileImageTitle} variant="h6" align="center" gutterBottom>
+              남성
+            </Box>
+          </Box>
+          <Box>
+            <Link to="/test">
+            <Button className={classes.mobileImageTitle} value="female" onClick={handleGenderChange}>
+                <img src={female_pic} alt="female_pic" className={classes.image}/>
+              </Button>
+            </Link>
+            <Box className={classes.mobileImageTitle} variant="h6" align="center" gutterBottom>
+              여성
+            </Box>
+          </Box>
+        </Box>
+      </Mobile>
+
+      <Tablet>
         <Box>
-          <Link to="/test">
-          <Button className={classes.gender_img} value="female" onClick={handleGenderChange}>
-              <img src={female_pic} alt="female_pic" className={classes.image}/>
-            </Button>
-          </Link>
-          <Box className={classes.imgTitle} variant="h6" align="center" gutterBottom>
-            여성
+        <Box className={classes.title} align="center" gutterBottom>
+          테스트를 진행할 프로필을 선택하세요.
+        </Box>
+        <Box display="flex" justifyContent="center" mt={3}>
+          <Box mr={5}>
+            <Link to="/test">
+              <Button className={classes.gender_img} value="male" onClick={handleGenderChange}>
+                <img src={male_pic} alt="male_pic" className={classes.image} />
+              </Button>
+            </Link>
+            <Box className={classes.imgTitle} variant="h6" align="center" gutterBottom>
+              남성
+            </Box>
+          </Box>
+          <Box>
+            <Link to="/test">
+            <Button className={classes.gender_img} value="female" onClick={handleGenderChange}>
+                <img src={female_pic} alt="female_pic" className={classes.image}/>
+              </Button>
+            </Link>
+            <Box className={classes.imgTitle} variant="h6" align="center" gutterBottom>
+              여성
+            </Box>
           </Box>
         </Box>
       </Box>
+      </Tablet>
+      <PCwide>
+        <Box>
+        <Box className={classes.title} align="center" gutterBottom>
+          테스트를 진행할 프로필을 선택하세요.
+        </Box>
+        <Box display="flex" justifyContent="center" mt={3}>
+          <Box mr={5}>
+            <Link to="/test">
+              <Button className={classes.gender_img} value="male" onClick={handleGenderChange}>
+                <img src={male_pic} alt="male_pic" className={classes.image} />
+              </Button>
+            </Link>
+            <Box className={classes.imgTitle} variant="h6" align="center" gutterBottom>
+              남성
+            </Box>
+          </Box>
+          <Box>
+            <Link to="/test">
+            <Button className={classes.gender_img} value="female" onClick={handleGenderChange}>
+                <img src={female_pic} alt="female_pic" className={classes.image}/>
+              </Button>
+            </Link>
+            <Box className={classes.imgTitle} variant="h6" align="center" gutterBottom>
+              여성
+            </Box>
+          </Box>
+        </Box>
+      </Box>
+      </PCwide>
     </Box>
   );
 }
@@ -126,8 +228,8 @@ export function GenderPage() {
     </PC>
 
     <Mobile>
-      <Grid className={classes.mobileContainer} spacing={3}>
-          <NavBar />
+      <Grid className={classes.mobileContainer}>
+          <NavBar pageType="mobile"/>
           <Grid className={classes.mobileGrid} item>
             <GenderPageSelect />
           </Grid>
