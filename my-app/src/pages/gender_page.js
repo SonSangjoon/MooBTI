@@ -53,9 +53,19 @@ const useStyles = makeStyles((theme) => ({
 
   image: { 
     borderRadius:'10px',
-  }
+  },
 
-//
+//mobile
+ mobileContainer: {
+    height: "100vh",
+    display: "grid",
+    gridTemplateRows: "repeat(3, 1fr)",
+    gridGap: theme.spacing(1),
+ },
+
+ mobileGrid:{
+  gridRow: '2/span 1'
+ }
 
 }));
 
@@ -69,6 +79,7 @@ function GenderPageSelect() {
   };
 
   return (
+    
     <Box>
       <Box className={classes.title} align="center" gutterBottom>
         테스트를 진행할 프로필을 선택하세요.
@@ -115,7 +126,12 @@ export function GenderPage() {
     </PC>
 
     <Mobile>
-      Mobile
+      <Grid className={classes.mobileContainer} spacing={3}>
+          <NavBar />
+          <Grid className={classes.mobileGrid} item>
+            <GenderPageSelect />
+          </Grid>
+        </Grid>
     </Mobile>
 
     <Tablet>

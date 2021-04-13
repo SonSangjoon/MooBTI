@@ -5,6 +5,8 @@ import { Box } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 import imageLogo from '../images/Logo.png'
 
+
+
 const useStyles = makeStyles({
     root: {
         background: 'rgba(0, 0, 0, 0)',
@@ -24,6 +26,16 @@ const useStyles = makeStyles({
         width: 'auto',
         height: 'auto',
         maxHeight: '50px'
+    },
+
+    mobileLogo: {
+        padding: 15,
+    },
+
+    mobileLogoimage:{
+        width: 'auto',
+        height: 'auto',
+        maxHeight: '30px'
     }
 
   });
@@ -33,14 +45,29 @@ export default function NavBar({pageType}) {
 
     if (pageType === "intro"){
         return (
+            <Box>
+                <Box className={classes.root} position="static">
+                    <Box className={classes.logo}>
+                        <Link to="/" >
+                            <img src={imageLogo} alt="Logo" />
+                        </Link>
+                    </Box>
+                </Box>
+            </Box>
+
+        ); 
+    }
+    
+    else if (pageType === "mobile"){
+        return(
             <Box className={classes.root} position="static">
-                <Box className={classes.logo}>
+                <Box  className={classes.mobileLogo}>
                     <Link to="/" >
-                        <img src={imageLogo} alt="Logo" />
+                        <img src={imageLogo} alt="Logo" className={classes.mobileLogoimage} />
                     </Link>
                 </Box>
             </Box>
-        ); 
+        );
     }
     else{
         return (
