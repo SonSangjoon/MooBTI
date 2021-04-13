@@ -62,7 +62,6 @@ const useStyles = makeStyles((theme) => ({
         fontSize: '2vmax',
         padding: 20
     }
-
     
 }))
 

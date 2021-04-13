@@ -8,7 +8,7 @@ import { Mobile, Tablet, PC, PCwide } from '../components/MediaQuery'
 import Wallpaper from '../images/intro/Wallpaper.jpeg'
 
 const useStyles = makeStyles((theme) => ({
-  root: {
+  root: {    
     height: '100vh',
     backgroundImage: `url(${Wallpaper})`,
     backgroundRepeat: 'no-repeat',

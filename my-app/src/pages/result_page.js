@@ -9,9 +9,11 @@ import { Box, Grid } from "@material-ui/core";
 import { Mobile, Tablet, PC, PCwide } from "../components/MediaQuery";
 
 const useStyles = makeStyles((theme) => ({
+
   root: {
     height: "100vh",
     backgroundColor: "black",
+    minHeight: '3000px'
   },
 
   container: {
@@ -50,6 +52,8 @@ const useStyles = makeStyles((theme) => ({
     gridColumn: "12",
     gridRow: "10/span 2",
   },
+
+
 }));
 
 export function ResultPage({ match }) {
