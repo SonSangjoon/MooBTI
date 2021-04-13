@@ -6,17 +6,20 @@ const Mobile = ({ children }) => {
 }
 
 const Tablet = ({ children }) => {
-    const isTablet = useMediaQuery({ maxWidth: '767px'})
+    const isTablet = useMediaQuery({ 
+        minWidth: '768px',
+        maxWidth: '1023px'})
     return isTablet ? children : null
 }
 
 const PC = ({ children }) => {
-    const isPC = useMediaQuery({ minWidth: '767px'})
+    const isPC = useMediaQuery({ 
+        minWidth: '1024px',maxWidth: '1279px'})
     return isPC? children : null
 }
 
 const PCwide = ({ children }) => {
-    const isPCwide = useMediaQuery({ maxWidth: '767px'})
+    const isPCwide = useMediaQuery({ minWidth: '1280px'})
     return isPCwide ? children : null
 }
 
