@@ -13,8 +13,6 @@ export function TestPage() {
             <PC>
                 <NavBar/>
                 <Grid className={classes.container}>
-                    <Grid className={classes.emptyRow} item/>
-                    <Grid className={classes.emptyGrid} item/>
                     <Grid className={classes.testGrid} item>
                         <TestQuestionTemplate/>
                     </Grid>
@@ -38,9 +36,7 @@ export function TestPage() {
             <Tablet>
             <NavBar/>
                 <Grid className={classes.container}>
-                    <Grid className={classes.emptyRow} item/>
-                    <Grid className={classes.emptyGrid} item/>
-                    <Grid className={classes.testGrid} item>
+                    <Grid className={classes.tabletTestGrid} item>
                         <TestQuestionTemplate/>
                     </Grid>
                     <Grid className={classes.emptyGrid} item></Grid>
@@ -51,12 +47,9 @@ export function TestPage() {
             <PCwide>
             <NavBar/>
                 <Grid className={classes.container}>
-                    <Grid className={classes.emptyRow} item/>
-                    <Grid className={classes.emptyGrid} item/>
-                    <Grid className={classes.testGrid} item>
+                    <Grid className={classes.pcwideTestGrid} item>
                         <TestQuestionTemplate/>
                     </Grid>
-                    <Grid className={classes.emptyGrid} item></Grid>
                 </Grid>
                 <Footer/>
             </PCwide>
