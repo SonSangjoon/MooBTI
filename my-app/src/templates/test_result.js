@@ -45,12 +45,12 @@ function ResultDescription() {
   );
 }
 
-function DataAnalysisBtn(mbtiType, genderType) {
+function DataAnalysisBtn({value}) {
 
   const classes = useStyles();
   return (
     <Button variant="outlined" className={classes.dummyBtn} color="secondary">
-      어떻게 분석했어?
+      {value}
     </Button>
   );
 }
@@ -66,7 +66,10 @@ export default function ResultTemplate({ mbtiType, genderType }) {
         <ResultDescription/>
       </Grid>
       <Grid className={classes.buttonGrid}>
-        <DataAnalysisBtn />
+        <DataAnalysisBtn value= "어떻게 분석했어?"/>
+      </Grid>
+      <Grid className={classes.buttonGrid}>
+        <DataAnalysisBtn value= "영화보러 가기"/>
       </Grid>
     </Grid>
   );
