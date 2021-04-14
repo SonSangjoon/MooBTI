@@ -35,7 +35,7 @@ const useStyles = makeStyles((theme) => ({
     },
 
     image:{
-        objectFit: 'cover',
+        objectFit: 'fill',
         width: '100%',
         height: '53vh',
         borderRadius: "10px"
