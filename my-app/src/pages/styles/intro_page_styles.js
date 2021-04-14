@@ -18,6 +18,7 @@ const useStyles = makeStyles((theme) => ({
     gridGap: theme.spacing(3),
     background: 'linear-gradient(135deg, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0))',
   },
+
   emptyGrid: {
     gridColumn : 'span 3'
   },
@@ -31,7 +32,7 @@ const useStyles = makeStyles((theme) => ({
   mainText: {
     padding: 5,
     color: 'white',
-    fontSize: "4.5vw",
+    fontSize: "3.5vw",
     fontFamily: 'S-CoreDream-4Regular'
   },
 
@@ -51,6 +52,7 @@ const useStyles = makeStyles((theme) => ({
     padding: '5px 30px 5px 30px',
     size: 'large',
     fontSize: "25px",
+    fontFamily: 'S-CoreDream-6Bold',
     background: '#dc1a28',
     color: 'white',
     '&:hover': {
@@ -112,15 +114,15 @@ const useStyles = makeStyles((theme) => ({
     mobileContainer : {
       height: '100vh',
       display: 'grid',
-      gridTemplateRows: 'repeat(3, 1fr)',
+      gridTemplateRows: 'repeat(12, 1fr)',
       gridGap: theme.spacing(1),
       background: 'linear-gradient(135deg, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0))',
     },
-    mobileInto : {
-      gridRow : '2/span 1'
-    },
 
-// Tablet View
+    mobileIntro : {
+      gridRow : '3/span 3',
+      gridColumn: 'span 12'
+    },
 
   },
 }))

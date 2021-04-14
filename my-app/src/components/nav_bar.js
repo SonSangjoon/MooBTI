@@ -1,9 +1,8 @@
 import React from 'react'
 import { Link } from "react-router-dom";
-
 import { Box } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
-import imageLogo from '../images/Logo.png'
+
 
 
 const useStyles = makeStyles({
@@ -48,7 +47,7 @@ export default function NavBar({pageType}) {
                 <Box className={classes.root} position="static">
                     <Box className={classes.logo}>
                         <Link to="/" >
-                            <img src={imageLogo} alt="Logo" />
+                            <img src="/images/Logo.png" alt="Logo" />
                         </Link>
                     </Box>
                 </Box>
@@ -62,7 +61,7 @@ export default function NavBar({pageType}) {
             <Box className={classes.root} position="static">
                 <Box  className={classes.mobileLogo}>
                     <Link to="/" >
-                        <img src={imageLogo} alt="Logo" className={classes.mobileLogoimage} />
+                        <img src="/images/Logo.png" alt="Logo" className={classes.mobileLogoimage} />
                     </Link>
                 </Box>
             </Box>
@@ -73,7 +72,7 @@ export default function NavBar({pageType}) {
             <Box className={classes.root} position="static">
                 <Box  className={classes.sublogo}>
                     <Link to="/" >
-                        <img src={imageLogo} alt="Logo" className={classes.sublogoimage} />
+                        <img src="/images/Logo.png" alt="Logo" className={classes.sublogoimage} />
                     </Link>
                 </Box>
             </Box>
