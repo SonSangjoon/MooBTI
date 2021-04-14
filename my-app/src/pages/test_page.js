@@ -11,16 +11,16 @@ export function TestPage() {
     return (
         <Box  className={classes.root}>
             <PC>
-                <NavBar/>
                 <Grid className={classes.container}>
-                    <Grid className={classes.emptyRow} item/>
-                    <Grid className={classes.emptyGrid} item/>
+                <NavBar/>
+
                     <Grid className={classes.testGrid} item>
+
                         <TestQuestionTemplate/>
                     </Grid>
                     <Grid className={classes.emptyGrid} item></Grid>
                 </Grid>
-                <Footer/>
+                {/* <Footer/> */}
             </PC>
 
             {/* Mobile View */}
@@ -38,9 +38,9 @@ export function TestPage() {
             <Tablet>
             <NavBar/>
                 <Grid className={classes.container}>
-                    <Grid className={classes.emptyRow} item/>
-                    <Grid className={classes.emptyGrid} item/>
-                    <Grid className={classes.testGrid} item>
+                    {/* <Grid className={classes.emptyRow} item/>
+                    <Grid className={classes.emptyGrid} item/> */}
+                    <Grid className={classes.tabletTestGrid} item>
                         <TestQuestionTemplate/>
                     </Grid>
                     <Grid className={classes.emptyGrid} item></Grid>

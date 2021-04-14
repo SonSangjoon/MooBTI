@@ -158,7 +158,7 @@ export default function TestQuestionTemplate() {
                 <Tablet>
                     <Grid className={classes.testContainer} item>    
                     <Grid className={classes.imageGrid} item>
-                        <img className={classes.image} src={questionList[questionNum]['image']} alt="testimage"/>
+                        <img className={classes.tabletImage} src={questionList[questionNum]['image']} alt="testimage"/>
                         <LinearWithValueLabel num={questionNum*100/12}/>
                     </Grid>
                     <Grid className={classes.emptyRow} item>

@@ -8,25 +8,25 @@ const useStyles = makeStyles((theme) => ({
   
     container: {
       height: '100vh',
-  
+    
       display: 'grid',
       gridTemplateRows: 'repeat(12, 1fr)',
       gridTemplateColumns: 'repeat(12, 1fr)',
     },
 
-    emptyRow: {
-        gridColumn : 'span 12',
-        gridRow : 'span 1',
-    },
+    // emptyRow: {
+    //     gridColumn : 'span 12',
+    //     gridRow : 'span 1',
+    // },
 
-    emptyGrid: {
-        gridRow : 'span 10',
-        gridColumn : 'span 2'
-    },
+    // emptyGrid: {
+    //     gridRow : 'span 10',
+    //     gridColumn : 'span 2'
+    // },
 
     testGrid:{
-        gridColumn : 'span 8',
-        gridRow : 'span 10',
+        gridColumn : '3/span 8',
+        gridRow : '3/span 9',
     },
 
     //Mobile View
@@ -44,6 +44,13 @@ const useStyles = makeStyles((theme) => ({
 
     
     //Tablet View
+    tabletTestGrid:{
+        gridColumn : '2/span 10',
+        gridRow : '3/span 9',
+    },
+
+
+
 
     //PcWide View
 
