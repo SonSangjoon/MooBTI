@@ -28,7 +28,7 @@ const useStyles = makeStyles((theme) => ({
 
   buttonGrid: {
     gridColumn: "4/ span 6",
-    gridRow: "-2/ span 2",
+    gridRow: "span 1",
   },
 
   imageGrid: {
