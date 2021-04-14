@@ -69,17 +69,25 @@ const useStyles = makeStyles((theme) => ({
 
   // Mobile
   
+  mobileContainer : {
+    height: '100vh',
+    display: 'grid',
+    gridTemplateRows: 'repeat(3, 1fr)',
+    gridGap: theme.spacing(1),
+    background: 'linear-gradient(135deg, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0))',
+  },
+
   mobileMainText: {
     padding: 5,
     color: 'white',
-    fontSize: "8vw",
+    fontSize: "5.5vw",
     fontFamily: 'S-CoreDream-4Regular',
     textAlign: 'center'
   },
 
   mobileSubText: {
-    padding: 5,
-    marginBottom: 10,
+    padding: 15,
+    // marginBottom: 5,
     color: 'white',
     fontSize: "4vw",
     fontFamily: 'S-CoreDream-4Regular',
@@ -111,17 +119,8 @@ const useStyles = makeStyles((theme) => ({
       backgroundColor: 'rgba(250, 0, 0, 0.7)',
     },
 
-    mobileContainer : {
-      height: '100vh',
-      display: 'grid',
-      gridTemplateRows: 'repeat(3, 1fr)',
-      gridGap: theme.spacing(1),
-      background: 'linear-gradient(135deg, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0))',
-    },
-
     mobileIntro : {
-      gridRow : '3/span 3',
-      gridColumn: 'span 12'
+      gridRow : '1/span 1',
     },
 
   },
