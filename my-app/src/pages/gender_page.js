@@ -19,6 +19,7 @@ export function GenderPage() {
           </Grid>
         </Grid>
       </PC>
+
       <Mobile>
         <Grid className={classes.mobileContainer}>
             <NavBar pageType="mobile"/>
@@ -27,6 +28,7 @@ export function GenderPage() {
             </Grid>
           </Grid>
      </Mobile>
+     
       <Tablet>
         <Grid className={classes.tabletContainer} spacing={3}>
           <NavBar />

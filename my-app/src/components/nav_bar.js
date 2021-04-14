@@ -6,7 +6,6 @@ import { makeStyles } from '@material-ui/core/styles';
 import imageLogo from '../images/Logo.png'
 
 
-
 const useStyles = makeStyles({
     root: {
         background: 'rgba(0, 0, 0, 0)',
