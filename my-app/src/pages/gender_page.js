@@ -10,8 +10,8 @@ import { Mobile, Tablet, PC, PCwide } from '../components/MediaQuery'
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    height: '100vh',
-    backgroundColor: 'black'
+    height: "100vh",
+    backgroundColor: "black",
   },
 
   container: {
@@ -30,25 +30,55 @@ const useStyles = makeStyles((theme) => ({
   },
 
   title: {
-    paddingBottom: '1vh',
-    fontSize: '28px',
-    color: 'white',
+    paddingBottom: "1vh",
+    fontSize: "28px",
+    color: "white",
   },
 
   imgTitle: {
     fontSize: 20,
-    color: 'white',
+    color: "white",
   },
 
   gender_img: {
-    borderRadius:'10px',
-    '&:hover': {
+    borderRadius: "10px",
+    "&:hover": {
       backgroundColor: "white",
-      borderRadius:'10px'
-
+      borderRadius: "10px",
     },
-    padding: '4px 4px',
-    marginBottom: '10px' 
+    padding: "4px 4px",
+    marginBottom: "10px",
+  },
+
+  image: {
+    borderRadius: "10px",
+  },
+
+  //Tablet Layout
+
+  tabletRoot: {
+    height: "100vh",
+    backgroundColor: "black",
+  },
+
+  tabletContainer: {
+    height: "100vh",
+    display: "grid",
+    gridTemplateRows: "repeat(3, 1fr)",
+    gridTemplateColumns: "1fr 2fr 1fr",
+    gridGap: theme.spacing(2),
+  },
+
+  // tabletEmptyRowGrid: {
+  //   gridRow: "span 2",
+  // },
+  // tabletEmptyColumnGrid: {
+  //   gridColumn: "span 2",
+  // },
+
+  tabletGenderPageGrid:{
+    gridColumn: "2",
+    gridRow: "2"
   },
 
   image: { 
@@ -77,6 +107,12 @@ mobileImageTitle: {
   fontSize: 17,
   color:'white'
 }
+
+// tabletTitle:{
+//     fontSize: "2.7vw",
+//     color: "white",
+
+//   },
 
 }));
 
@@ -212,51 +248,122 @@ function GenderPageSelect() {
   );
 }
 
+
+
+function GenderPageSelectMobile() {
+  const classes = useStyles();
+  const { gender, setGender } = useContext(GenderContext);
+
+  const handleGenderChange = (event) => {
+    setGender(event.currentTarget.value);
+    console.log(gender);
+  };
+
+  return (
+    <Box>
+      <Box className={classes.tabletTitle} align="center" gutterBottom>
+        테스트를 진행할 프로필을 선택하세요.
+      </Box>
+      <Box display="flex" justifyContent="center" mt={3}>
+        <Box mr={5}>
+          <Link to="/test">
+            <Button
+              className={classes.gender_img}
+              value="male"
+              onClick={handleGenderChange}
+            >
+              <img src={male_pic} alt="male_pic" className={classes.image} />
+            </Button>
+          </Link>
+          <Box
+            className={classes.imgTitle}
+            variant="h6"
+            align="center"
+            gutterBottom
+          >
+            남성
+          </Box>
+        </Box>
+        <Box>
+          <Link to="/test">
+            <Button
+              className={classes.gender_img}
+              value="female"
+              onClick={handleGenderChange}
+            >
+              <img
+                src={female_pic}
+                alt="female_pic"
+                className={classes.image}
+              />
+            </Button>
+          </Link>
+          <Box
+            className={classes.imgTitle}
+            variant="h6"
+            align="center"
+            gutterBottom
+          >
+            여성
+          </Box>
+        </Box>
+      </Box>
+    </Box>
+  );
+}
+
+
+
+
+
+
+
+
+
+
 export function GenderPage() {
   const classes = useStyles();
   return (
-  <Box className={classes.root}>
-    <PC>
-      <Grid className={classes.container} spacing={3}>
-        <NavBar />
-        <Grid className={classes.emptyColumnGrid} item></Grid>
-        <Grid className={classes.emptyRowGrid} item></Grid>
-        <Grid item>
-          <GenderPageSelect />
-        </Grid>
-      </Grid>
-    </PC>
-
-    <Mobile>
-      <Grid className={classes.mobileContainer}>
-          <NavBar pageType="mobile"/>
-          <Grid className={classes.mobileGrid} item>
-            <GenderPageSelect />
-          </Grid>
-        </Grid>
-    </Mobile>
-
-    <Tablet>
-      <Grid className={classes.container} spacing={3}>
+    <Box className={classes.root}>
+      <PC>
+        <Grid className={classes.container} spacing={3}>
           <NavBar />
           <Grid className={classes.emptyColumnGrid} item></Grid>
           <Grid className={classes.emptyRowGrid} item></Grid>
           <Grid item>
             <GenderPageSelect />
           </Grid>
-      </Grid>
-    </Tablet>
+        </Grid>
+      </PC>
+      <Mobile>
+        <Grid className={classes.mobileContainer}>
+            <NavBar pageType="mobile"/>
+            <Grid className={classes.mobileGrid} item>
+              <GenderPageSelect />
+            </Grid>
+          </Grid>
+     </Mobile>
+      <Tablet>
+        <Grid className={classes.tabletContainer} spacing={3}>
+          <NavBar />
+          {/* <Grid className={classes.tabletEmptyColumnGrid} item></Grid>
+          <Grid className={classes.tabletEmptyRowGrid} item></Grid> */}
+          <Grid className={classes.tabletGenderPageGrid} item>
+            <GenderPageSelectMobile />
+          </Grid>
+        </Grid>
+      </Tablet>
 
-    <PCwide>
-      <Grid className={classes.container} spacing={3}>
+      <PCwide>
+        <Grid className={classes.container} spacing={3}>
           <NavBar />
           <Grid className={classes.emptyColumnGrid} item></Grid>
           <Grid className={classes.emptyRowGrid} item></Grid>
           <Grid item>
             <GenderPageSelect />
           </Grid>
-      </Grid>
-    </PCwide>
-  </Box>
+        </Grid>
+      </PCwide>
+    </Box>
   );
 }

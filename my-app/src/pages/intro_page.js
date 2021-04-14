@@ -29,6 +29,7 @@ const useStyles = makeStyles((theme) => ({
 
   textGrid: {
     paddingLeft: 50,
+    paddingTop: 20,
     gridColumn : 'span 2'
   },
 

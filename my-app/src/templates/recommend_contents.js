@@ -18,9 +18,13 @@ const useStyles = makeStyles((theme) => ({
     gridTemplateColumns: "repeat(12, 1fr)",
   },
 
-  recommendGrid: {
+  recommendGrid1: {
     gridColumn: "span 12",
-    gridRow: "span 5",
+    gridRow: "span 6",
+  },
+  recommendGrid2: {
+    gridColumn: "span 12",
+    gridRow: "7/span 5",
   },
 
   recommendContainer: {
@@ -38,6 +42,19 @@ const useStyles = makeStyles((theme) => ({
   recommendBadTitleGrid: {
     gridColumn: "span 12",
     gridRow: "1",
+  },
+
+  recommendTitleFont:{
+    fontSize: "17.3px",
+  },
+  recommendMbtiFont:{
+    fontSize: "16px",
+    fontFamily: 'S-CoreDream-3Light'
+  },
+  recommendDescFont:{
+    fontSize: "14px",
+    fontFamily: 'S-CoreDream-3Light'
+
   },
 
   ImageGrid: {
@@ -64,15 +81,19 @@ const useStyles = makeStyles((theme) => ({
 
   netflixLinkBtnGrid: {
     gridColumn: "5/ span 5",
-    gridRow: "-5/ span 2",
+    gridRow: "9/ span 2",
+  },
+  dummyBtn: {
+    minWidth: "100%",
+    fontSize: "12px"
   },
 
-  NetflixBtn: {
-    maxheight: "100%",
-  },
+  // NetflixBtn: {
+  //   maxheight: "100%",
+  // },
 
   restartBtnGrid: {
-    gridColumn: "4/ span 6",
+    gridColumn: "3/ span 8",
     gridRow: "-2/ span 2",
   },
 
@@ -80,9 +101,6 @@ const useStyles = makeStyles((theme) => ({
     minWidth: "100%",
   },
 
-  //   dummyBtn: {
-  //     minWidth: "100%",
-  //   },
 
   recommendText: {
     gridColumn: "span 12",
@@ -102,6 +120,7 @@ const CustomRestartBtn = withStyles((theme) => ({
 }))(Button);
 
 function RecommendTitle() {
+  const classes = useStyles();
 
   return (
     <Box>
@@ -111,14 +130,16 @@ function RecommendTitle() {
     </Box>
   );
 }
+
 function RecommendDesc() {
+  const classes = useStyles();
 
   return (
     <Box>
       <Box variant="h6">
         ENFJ 타이타닉의 Jack
       </Box>
-      <Box>
+      <Box className={classes.recommendDescFont}>
         항상 사랑을 말하는 ESFP 남자. 낙천적이고 관계 맺기를 좋아하지만,
         조금이라도 관계가 불편해지면 빠르게 거리를 둬요.
       </Box>
@@ -127,24 +148,36 @@ function RecommendDesc() {
 }
 
 
+// function LinkButton() {
+//   const classes = useStyles();
+//   return (
+//     <Link href="https://www.naver.com/" underline="none" target="_blank">
+//       <Button variant="outlined" className={classes.dummyBtn} color="secondary">
+//         Netflix에서 보기
+//       </Button>
+//     </Link>
+//   );
+// }
+
 function LinkButton() {
   const classes = useStyles();
   return (
     <Link href="https://www.naver.com/" underline="none" target="_blank">
-      <Button variant="outlined" className={classes.dummyBtn} color="secondary">
+      <CustomRestartBtn variant="contained" className={classes.dummyBtn} color="secondary">
         Netflix에서 보기
-      </Button>
+      </CustomRestartBtn>
     </Link>
   );
 }
+
 
 function RestartButton() {
   const classes = useStyles();
   return (
     <Link component={RouterLink} to="/" underline="none">
-      <CustomRestartBtn variant="contained" className={classes.restartBtn} color="secondary">
+      <Button variant="outlined" className={classes.restartBtn} color="secondary">
         테스트 다시 하기
-      </CustomRestartBtn>
+      </Button>
     </Link>
   );
 }
@@ -177,10 +210,10 @@ export default function RecommendContentsTemplate({ mbtiType, genderType }) {
   return (
     <>
       <Grid className={classes.container}>
-        <Grid className={classes.recommendGrid} item>
+        <Grid className={classes.recommendGrid1} item>
           <RecommendComponent/>
         </Grid>
-        <Grid className={classes.recommendGrid} item>
+        <Grid className={classes.recommendGrid2} item>
           <RecommendComponent/>
         </Grid>
           <Grid className={classes.restartBtnGrid} mt={40}>
