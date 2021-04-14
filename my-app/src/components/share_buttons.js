@@ -1,8 +1,8 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import { Box } from "@material-ui/core";
-import KakaoShareButton from "./kakao_share_button";
-import LinkShareButton from "./link_share_button";
+import KakaoShareButton from "./button_kakao_share";
+import LinkShareButton from "./button_link_share";
 
 const useStyles = makeStyles({
   container: {
