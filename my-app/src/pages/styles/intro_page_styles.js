@@ -114,7 +114,7 @@ const useStyles = makeStyles((theme) => ({
     mobileContainer : {
       height: '100vh',
       display: 'grid',
-      gridTemplateRows: 'repeat(12, 1fr)',
+      gridTemplateRows: 'repeat(3, 1fr)',
       gridGap: theme.spacing(1),
       background: 'linear-gradient(135deg, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0))',
     },
