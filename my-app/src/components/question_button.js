@@ -2,7 +2,7 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import ButtonBase from '@material-ui/core/ButtonBase';
 import Typography from '@material-ui/core/Typography';
-import { Box} from '@material-ui/core';
+import { Box } from '@material-ui/core';
 import { Mobile, Tablet, PC, PCwide } from './MediaQuery' 
 
 
@@ -40,15 +40,11 @@ const useStyles = makeStyles((theme) => ({
   },
 
   imageTitle: {
-    fontSize: '15px',
+    fontSize: '1.3vw',
     fontFamily: 'S-CoreDream-3Light',
     position: 'relative',
     // padding: `${theme.spacing(2)}px ${theme.spacing(4)}px ${theme.spacing(1) + 6}px`,
-    paddingTop: 18,
-    paddingBottom: 18,
-    paddingRight: 20.5,
-    paddingLeft: 20.5,
-    whiteSpace: "pre-wrap"
+    padding: 20
   },
   imageMarked: {
     height: 3,
@@ -61,12 +57,14 @@ const useStyles = makeStyles((theme) => ({
   },
 
   //Mobile View
+  
   mobileImageTitle: {
     fontSize: '3.5vw',
     fontFamily: 'S-CoreDream-3Light',
     position: 'relative',
     padding: 20
   },
+
 }));
 
 export default function ButtonBases({choice}) {
@@ -87,6 +85,7 @@ export default function ButtonBases({choice}) {
           </span>
         </ButtonBase>
       </PC>
+
       <Mobile>
       <ButtonBase
           focusRipple
@@ -100,6 +99,7 @@ export default function ButtonBases({choice}) {
           </span>
         </ButtonBase>
       </Mobile>
+
       <Tablet>
       <ButtonBase
           focusRipple
@@ -113,6 +113,7 @@ export default function ButtonBases({choice}) {
           </span>
         </ButtonBase>
       </Tablet>
+
       <PCwide>
       <ButtonBase
           focusRipple
