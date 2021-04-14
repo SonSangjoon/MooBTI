@@ -95,7 +95,8 @@ export function IntroPage() {
         
         <Mobile >
           <NavBar pageType="mobile"/>
-          <Grid className={classes.container}>
+          <Grid className={classes.mobileContainer}>
+            <Grid item></Grid>
             <Grid className={classes.mobileIntro} item >
               <IntroPageText />
             </Grid>
