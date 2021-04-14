@@ -7,6 +7,7 @@ import RecommendContentsTemplate from "../templates/recommend_contents";
 import { Box, Grid } from "@material-ui/core";
 import { Mobile, Tablet, PC, PCwide } from "../components/MediaQuery";
 import {useStyles} from "./styles/result_page_styles"
+import  {resultList} from "../data/result_data"
 
 export function ResultPage({ match }) {
   const classes = useStyles();
@@ -14,16 +15,23 @@ export function ResultPage({ match }) {
   const mbtiType = match.params.mbti;
   const genderType = match.params.gender;
 
+  const data = resultList[mbtiType][genderType]
+  const recommendData = {
+    good : resultList[data['goodMbti']][genderType==='male' ? 'female'  : 'male'],
+    bad : resultList[data['badMbti']][genderType==='male' ? 'female'  : 'male'],
+  }
+
+ 
   return (
     <Box className={classes.root}>
       <PC >
         <NavBar />
         <Grid className={classes.container}>
           <Grid className={classes.resultGrid} item>
-            <ResultTemplate mbtiType={mbtiType} genderType={genderType} />
+            <ResultTemplate data={data} />
           </Grid>
           <Grid className={classes.recommendContentsGrid} item>
-            <RecommendContentsTemplate mbtiType={mbtiType} genderType={genderType}/>
+            <RecommendContentsTemplate data={recommendData}/>
           </Grid>
           <Grid className={classes.shareBtnGrid} item>
             <ShareButton />
@@ -38,10 +46,10 @@ export function ResultPage({ match }) {
             <Box className={classes.mobileBlock}>
             </Box>
             <Box className={classes.mobileResultBlock}>
-              <ResultTemplate mbtiType={mbtiType} genderType={genderType} />
+              <ResultTemplate  data={data}/>
             </Box>
             <Box className={classes.mobileRecommendBlock}>
-              <RecommendContentsTemplate mbtiType={mbtiType} genderType={genderType}/>
+              <RecommendContentsTemplate data={recommendData}/>
             </Box>
               <ShareButton className={classes.mobileShareButton}/>
           <Footer />
@@ -55,10 +63,10 @@ export function ResultPage({ match }) {
         <NavBar />
         <Grid className={classes.container}>
           <Grid className={classes.resultGrid} item>
-            <ResultTemplate mbtiType={mbtiType} genderType={genderType} />
+            <ResultTemplate data={data} />
           </Grid>
           <Grid className={classes.recommendContentsGrid} item>
-            <RecommendContentsTemplate mbtiType={mbtiType} genderType={genderType}/>
+            <RecommendContentsTemplate data={recommendData}/>
           </Grid>
           <Grid className={classes.shareBtnGrid} item>
             <ShareButton />
@@ -73,10 +81,10 @@ export function ResultPage({ match }) {
       <NavBar />
         <Grid className={classes.container}>
           <Grid className={classes.resultGrid} item>
-            <ResultTemplate mbtiType={mbtiType} genderType={genderType} />
+            <ResultTemplate data={data} />
           </Grid>
           <Grid className={classes.recommendContentsGrid} item>
-            <RecommendContentsTemplate mbtiType={mbtiType} genderType={genderType}/>
+            <RecommendContentsTemplate  data={recommendData}/>
           </Grid>
           <Grid className={classes.shareBtnGrid} item>
             <ShareButton />
