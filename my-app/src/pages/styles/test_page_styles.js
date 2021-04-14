@@ -29,7 +29,7 @@ const useStyles = makeStyles((theme) => ({
         gridRow : 'span 10',
     },
 
-      //Mobile
+    //Mobile View
 
     mobileContainer : {
         height: '100vh',
@@ -42,6 +42,10 @@ const useStyles = makeStyles((theme) => ({
         gridRow : '2/span 10'
     },
 
+    
+    //Tablet View
+
+    //PcWide View
 
 
 }))

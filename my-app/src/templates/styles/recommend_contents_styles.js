@@ -91,6 +91,12 @@ const useStyles = makeStyles((theme) => ({
     gridRow: "span 3",
     color: "white",
   },
+
+
+    //Tablet View
+
+    //PcWide View
+
 }));
 
 

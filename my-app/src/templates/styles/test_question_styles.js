@@ -53,7 +53,7 @@ const useStyles = makeStyles((theme) => ({
         padding: 20
     },
 
-    // mobile
+    // Mobile View
 
     mobileTestContainer: {
         height: "100%",
@@ -96,7 +96,11 @@ const useStyles = makeStyles((theme) => ({
         justifyContent: 'center',
         alignContent: 'center',
         height: '100%'
-    }
+    },
+
+     //Tablet View
+
+    //PcWide View
     
 }));
 
