@@ -8,7 +8,7 @@ import { GenderContext } from "../App";
 import { Mobile, Tablet, PC, PCwide } from '../components/MediaQuery' 
 import { useStyles } from './styles/test_question_styles'
 import { useHistory } from 'react-router-dom'
-import { questionList } from '../components/data/test_data'
+import { questionList } from '../data/test_data'
 
 export default function TestQuestionTemplate() {
     const { selectedGender } = useContext(GenderContext);
