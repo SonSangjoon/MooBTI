@@ -76,6 +76,11 @@ const useStyles = makeStyles((theme) => ({
   dummyBtn: {
     minWidth: "100%",
   },
+
+    //Tablet View
+
+    //PcWide View
+
 }));
 
 export { useStyles }

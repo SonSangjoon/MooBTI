@@ -78,8 +78,12 @@ mobileShareButton:{
     bottom: '0px',
     right: '0px', 
     padding: '50px'
-}
+},
+
+//Tablet View
+
+//PcWide View
 
 }));
 
-export {useStyles}
+export {useStyles }

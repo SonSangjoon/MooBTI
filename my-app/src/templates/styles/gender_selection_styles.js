@@ -46,7 +46,32 @@ const useStyles = makeStyles((theme) => ({
     borderRadius: "10px",
   },
 
-  //Tablet Layout
+//Mobile View
+
+ mobileContainer: {
+  height: "100vh",
+  display: "grid",
+  gridTemplateRows: "repeat(3, 1fr)",
+  gridGap: theme.spacing(1),
+},
+
+mobileGrid:{
+gridRow: '2/span 1'
+},
+
+mobiletitle: {
+paddingBottom: '1vh',
+fontSize: '20px',
+color: 'white',
+},
+
+mobileImageTitle: {
+fontSize: 17,
+color:'white'
+},
+
+
+  //Tablet View
 
   tabletRoot: {
     height: "100vh",
@@ -77,34 +102,13 @@ const useStyles = makeStyles((theme) => ({
   //   borderRadius:'10px',
   // },
 
-//mobile
- mobileContainer: {
-    height: "100vh",
-    display: "grid",
-    gridTemplateRows: "repeat(3, 1fr)",
-    gridGap: theme.spacing(1),
- },
-
- mobileGrid:{
-  gridRow: '2/span 1'
- },
-
- mobiletitle: {
-  paddingBottom: '1vh',
-  fontSize: '20px',
-  color: 'white',
-},
-
-mobileImageTitle: {
-  fontSize: 17,
-  color:'white'
-}
-
 // tabletTitle:{
 //     fontSize: "2.7vw",
 //     color: "white",
 
 //   },
+
+//PcWide View
 
 }));
 

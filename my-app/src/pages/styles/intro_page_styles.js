@@ -28,21 +28,6 @@ const useStyles = makeStyles((theme) => ({
     gridColumn : 'span 2'
   },
 
-  //Mobile
-
-  mobileContainer : {
-    height: '100vh',
-    display: 'grid',
-    gridTemplateRows: 'repeat(3, 1fr)',
-    gridGap: theme.spacing(1),
-    background: 'linear-gradient(135deg, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0))',
-  },
-  mobileInto : {
-    gridRow : '2/span 1'
-  },
-
-  // Into page text
-
   mainText: {
     padding: 5,
     color: 'white',
@@ -80,7 +65,8 @@ const useStyles = makeStyles((theme) => ({
   },
 
 
-  //모바일
+  // Mobile
+  
   mobileMainText: {
     padding: 5,
     color: 'white',
@@ -122,6 +108,20 @@ const useStyles = makeStyles((theme) => ({
       boxShadow: 'none',
       backgroundColor: 'rgba(250, 0, 0, 0.7)',
     },
+
+    mobileContainer : {
+      height: '100vh',
+      display: 'grid',
+      gridTemplateRows: 'repeat(3, 1fr)',
+      gridGap: theme.spacing(1),
+      background: 'linear-gradient(135deg, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0))',
+    },
+    mobileInto : {
+      gridRow : '2/span 1'
+    },
+
+// Tablet View
+
   },
 }))
 
