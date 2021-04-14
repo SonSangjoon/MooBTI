@@ -290,8 +290,8 @@ const resultList = {
             description: '주도적이며 대화를 즐기는 ESFJ 유형은 본투비 주인공이에요. 상황이 자기 중심으로 돌아가는 걸 좋아하죠. 외향적인 성격에 사람들이 자신에게 호기심을 가져주기를 바라요. 🕺🏻 사려 깊고 다정한 당신은 애인에게 관심과 사랑을 아주 퍼부어 주네요. 현실적인 성향이 강해서 상대와 자신의 상황과 조건, 성격을 꼼꼼히 따지며 고민하지만.. 연애를 시작하면 그녀에게 헌신하는 스타일! 그리고 계획적 데이트와 안정적 관계를 선호하는 군요. 그래서 그런 걸까요? 애인에게 준 사랑만큼 사랑받지 못하면 상처를 받아요.. 하지만 걱정하지 말아요. 나중엔 그녀가 당신에게 더 푹 빠질 거니까요.',
             movieUrl: 'www.netflix.com/title/70218756',
 
-            imageUrl: '/images/result/john.png',
-            imageSmallUrl: '/images/result/john_small.png',
+            imageUrl: '/images/result/ted.png',
+            imageSmallUrl: '/images/result/ted_small.png',
 
             goodMbti: 'ISTP',
             badMbti:'ENFJ',
@@ -406,8 +406,10 @@ const resultList = {
             script: '"사람들은 다른 사람들의 열정에 끌리게 되어있어."',
             description: '솔직하고 센스 있는 ENFJ 유형은, 호불호가 명확한 편이에요. 말을 잘하고 부드러운 리더십도 있어서 주위 사람들이 많이 따르죠. 효율적인 방법으로 신속하게 일 처리하는 당신.. 이미 인기쟁이군요! 🏄‍♀️ 🌊 타고난 공감 능력으로 상대방에게 깊게 공감할 수 있고, 적극적인 애정 표현을 아끼지 않아요. 리더십이 있어서 애인이 더 좋은 사람이 되도록 이끌어주기도 하네요! 한편 이렇게 타인을 돕는 데에 앞장 서지만, 도움 받는 입장이 되면 마음이 편치 않은 당신.. 마음의 무게가 무거워요. 홀로 문제를 해결하려고 하기 보다, 사랑하는 사람들의 손을 붙잡는 건 어떨까요? 그가 당신의 손을 기다리고 있어요.',
             movieUrl: 'www.watcha.com/contents/m5GXz42',
+
             imageUrl: '/images/result/mia.png',
             imageSmallUrl: '/images/result/mia_small.png',
+
             goodMbti: 'INFP',
             badMbti:'ESTJ',
             shortDesc: '센스 넘치는 사랑꾼 ENFJ 여자. 당신을 아름답고 풍요로운 생활로 이끌어주겠지만, 때론 그의 숨겨진 고민을 들어보세요.',
@@ -422,12 +424,13 @@ const resultList = {
             script: '"더 이상 내가 싫지 않다면, 고백하건대 난 마법에 걸렸습니다. 당신을 사랑하고 또 사랑합니다."',
             description: '독립적으로 사고하고 행동하는 INTJ 유형은, 명확한 목표를 갖고 있어요. 생명력과 열정을 갖고 사는 그녀에게 푹 빠지는 스타일이죠. 👨‍💼 겉으론 무뚝뚝한 INTJ이기에 애정 표현을 하는 게 어색해요. 게다가 어딘가 어른스럽고 냉철해 보여서, 상대방도 거리감을 느껴요. 게다가 INTJ는 연애도 문제 해결의 과정처럼 느낀답니다. 그런데 애인은 당신이 사랑하는 방식에 낯설 수도 있어요. 생각이 관계를 가로막는 당신에게 해주고 싶은 말은.. “너무 깊이 생각하지 말아요. 솔직하게 자기 본능을 따라보세요. “',
             movieUrl: 'www.watcha.com/contents/mOk6ZMW',
+
             imageUrl: '/images/result/darcy.png',
             imageSmallUrl: '/images/result/darcy_small.png',
+
             goodMbti: 'ENFP',
             badMbti:'ISFJ',
             shortDesc: '독립적으로 사고하고 행동하는 INTJ 남자. 그의 지적인 행동 방식이 멋있기도 하지만, 가끔 이해할 수 없어요.',
-
         },
         female:{
             mbit : 'INTJ',
@@ -444,6 +447,7 @@ const resultList = {
             shortDesc: '독립적으로 사고하고 행동하는 INTJ 여자. 그의 지적인 행동 방식이 멋있기도 하지만, 가끔 이해할 수 없어요.' , 
         }
     },
+
     INTP:{ 
         male:{
             mbit : 'INTP',

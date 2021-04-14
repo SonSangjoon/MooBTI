@@ -12,13 +12,15 @@ import  {resultList} from "../data/result_data"
 export function ResultPage({ match }) {
   const classes = useStyles();
 
-  const mbtiType = match.params.mbti;
+  const mbtiType = match.params.mbti.toUpperCase();
   const genderType = match.params.gender;
+
+  console.log(match.params.mbti, match.params.gender, genderType)
 
   const data = resultList[mbtiType][genderType]
   const recommendData = {
-    good : resultList[data['goodMbti']][genderType==='male' ? 'female'  : 'male'],
-    bad : resultList[data['badMbti']][genderType==='male' ? 'female'  : 'male'],
+    good : resultList[data['goodMbti']][genderType === 'male' ? 'female' : 'male'],
+    bad : resultList[data['badMbti']][genderType === 'male' ? 'female' : 'male'],
   }
 
  
