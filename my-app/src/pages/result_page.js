@@ -53,8 +53,10 @@ export function ResultPage({ match }) {
             <Box className={classes.mobileRecommendBlock}>
               <RecommendContentsTemplate data={recommendData}/>
             </Box>
-              <ShareButton className={classes.mobileShareButton}/>
-          <Footer />
+            <Box className={classes.mobileShareButton}>
+              <ShareButton />
+            </Box>
+          <Footer type="mobile" />
       </Box>
 
       </Mobile>

@@ -10,7 +10,7 @@ const useStyles = makeStyles({
   },
   shareBtn1Grid: {
     display: 'block',
-    paddingLeft: '4px',
+    paddingLeft: '6.5px',
     marginBlock: "10px"
   },
   shareBtn2Grid: {
