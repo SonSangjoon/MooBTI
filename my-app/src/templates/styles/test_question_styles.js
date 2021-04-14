@@ -21,13 +21,13 @@ const useStyles = makeStyles((theme) => ({
 
     imageGrid:{
         gridColumn : 'span 12',
-        gridRow : 'span 8',
+        gridRow : 'span 6',
     },
 
     image:{
         objectFit: 'cover',
         width: '100%',
-        height: '53vh',
+        height: '40vh',
         borderRadius: "10px"
     },
 
@@ -99,6 +99,12 @@ const useStyles = makeStyles((theme) => ({
     },
 
      //Tablet View
+     tabletImage:{
+        objectFit: 'cover',
+        width: '100%',
+        height: '53vh',
+        borderRadius: "10px"
+    },
 
     //PcWide View
     
