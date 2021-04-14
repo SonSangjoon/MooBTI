@@ -10,17 +10,11 @@ const useStyles = makeStyles((theme) => ({
     height: "100vh",
     display: "grid",
     gridTemplateRows: "repeat(3, 1fr)",
-    gridTemplateColumns: "1fr 2fr 1fr",
     gridGap: theme.spacing(2),
   },
-
-  emptyRowGrid: {
-    gridRow: "span 2",
+  genderGrid:{
+    gridRow: '2/span 1'
   },
-  emptyColumnGrid: {
-    gridColumn: "span 2",
-  },
-
   title: {
     paddingBottom: "1vh",
     fontSize: "28px",
@@ -38,12 +32,16 @@ const useStyles = makeStyles((theme) => ({
       backgroundColor: "white",
       borderRadius: "10px",
     },
-    padding: "4px 4px",
+    padding: "14px 14px",
     marginBottom: "10px",
+
   },
 
   image: {
-    borderRadius: "10px",
+    borderRadius: "50px",
+    objectFit: 'cover',
+    width: '100%',
+    height: '53vh',
   },
 
   

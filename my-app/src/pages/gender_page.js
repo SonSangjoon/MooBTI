@@ -12,9 +12,7 @@ export function GenderPage() {
       <PC>
         <Grid className={classes.container} spacing={3}>
           <NavBar />
-          <Grid className={classes.emptyColumnGrid} item></Grid>
-          <Grid className={classes.emptyRowGrid} item></Grid>
-          <Grid item>
+          <Grid className={classes.genderGrid} item>
             <GenderPageSelect />
           </Grid>
         </Grid>
@@ -41,9 +39,7 @@ export function GenderPage() {
       <PCwide>
         <Grid className={classes.container} spacing={3}>
           <NavBar />
-          <Grid className={classes.emptyColumnGrid} item></Grid>
-          <Grid className={classes.emptyRowGrid} item></Grid>
-          <Grid item>
+          <Grid className={classes.genderGrid} item>
             <GenderPageSelect />
           </Grid>
         </Grid>
