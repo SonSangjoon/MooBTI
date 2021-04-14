@@ -29,19 +29,18 @@ const useStyles = makeStyles((theme) => ({
     gridColumn: "span 12",
     gridRow: "span 2",
   },
-  recommendBadTitleGrid: {
-    gridColumn: "span 12",
-    gridRow: "1",
+  
+  recommendDesc: {
+    gridColumn: "5/span 8",
+    gridRow: "4/ span 10",
   },
 
-  recommendTitleFont:{
-    fontSize: "17.3px",
-  },
-  recommendMbtiFont:{
-    fontSize: "16px",
+  recommendCharText:{
+    fontSize: "14px",
     fontFamily: 'S-CoreDream-3Light'
   },
-  recommendDescFont:{
+
+  recommendDescText:{
     fontSize: "14px",
     fontFamily: 'S-CoreDream-3Light'
 
@@ -58,21 +57,12 @@ const useStyles = makeStyles((theme) => ({
     maxHeight: "100%",
   },
 
-  recommendDesc: {
-    gridColumn: "5/span 8",
-    gridRow: "4/ span 10",
-  },
-  dummyRecommendBadDesc: {
-    gridColumn: "5/span 8",
-    gridRow: "3/ span 10",
-  },
-
-  netflixLinkBtnGrid: {
+  movieLinkBtnGrid: {
     gridColumn: "5/ span 5",
     gridRow: "9/ span 2",
   },
   
-  dummyBtn: {
+  movieLinkBtn: {
     minWidth: "100%",
     fontSize: "12px"
   },
@@ -86,14 +76,59 @@ const useStyles = makeStyles((theme) => ({
     minWidth: "100%",
   },
 
-  recommendText: {
-    gridColumn: "span 12",
-    gridRow: "span 3",
-    color: "white",
+  recommendTitleText:{
+    fontSize: "14px",
+    fontFamily: "S-CoreDream-6Bold"
   },
 
+  // Mobile View
+  mobileRecommendTitleGrid:{
+    gridColumn: "span 12",
+    gridRow: "span 2",
+  },
 
+  mobileRecommendTitleText:{
+    fontSize: "14px",
+    fontFamily: "S-CoreDream-6Bold"
+  },
+
+  mobileRecommendCharText:{
+    fontSize: "14px",
+    fontFamily: "S-CoreDream-4Regular"
+  },
+
+  mobileRecommendDesc:{
+    gridColumn: "5/span 8",
+    gridRow: "4/ span 7",
+  },
+  mobileMovieLinkBtnGrid: {
+    gridColumn: "5/ span 5",
+    gridRow: "-4/ span 2",
+  },
     //Tablet View
+    tabletRecommendTitleGrid:{
+      gridColumn: "span 12",
+      gridRow: "span 2",
+    },
+  
+    tabletRecommendTitleText:{
+      fontSize: "14px",
+      fontFamily: "S-CoreDream-6Bold"
+    },
+  
+    tabletRecommendCharText:{
+      fontSize: "14px",
+      fontFamily: "S-CoreDream-4Regular"
+    },
+  
+    tabletRecommendDesc:{
+      gridColumn: "5/span 8",
+      gridRow: "4/ span 7",
+    },
+    tabletMovieLinkBtnGrid: {
+      gridColumn: "2/span 10",
+      gridRow: "span 2",
+    },
 
     //PcWide View
 

@@ -14,19 +14,9 @@ const useStyles = makeStyles((theme) => ({
       gridTemplateColumns: 'repeat(12, 1fr)',
     },
 
-    // emptyRow: {
-    //     gridColumn : 'span 12',
-    //     gridRow : 'span 1',
-    // },
-
-    // emptyGrid: {
-    //     gridRow : 'span 10',
-    //     gridColumn : 'span 2'
-    // },
-
     testGrid:{
-        gridColumn : '3/span 8',
-        gridRow : '3/span 9',
+        gridColumn : '2/span 10',
+        gridRow : '3/span 10',
     },
 
     //Mobile View
@@ -38,6 +28,7 @@ const useStyles = makeStyles((theme) => ({
         gridTemplateRows: 'repeat(12, 1fr)',
         gridGap: theme.spacing(1),
     },
+
     mobileTestGrid : {
         gridRow : '2/span 10'
     },
@@ -48,12 +39,11 @@ const useStyles = makeStyles((theme) => ({
         gridColumn : '2/span 10',
         gridRow : '3/span 9',
     },
-
-
-
-
     //PcWide View
-
+    pcwideTestGrid:{
+        gridColumn : '1/span10',
+        gridRow : '2/span 10',
+    },
 
 }))
 

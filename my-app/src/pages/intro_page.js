@@ -12,26 +12,27 @@ function IntroPageText(){
   return(
     <Box>
       <PC>
-      <Box>
         <Box className={classes.mainText}>
-          MBTI로 받아보는 연애 코칭?
+          내가 만약 로맨스 영화 주인공이라면?
         </Box>
         <Box className={classes.subText}>
-          영화 캐릭터로 보는 나의 연애스타일과 나와 어울리는 캐릭터
+          로맨스 영화 속 나의 부캐와 궁합을 찾고,<br/>
+          당신의 연애를 코칭해 줄 영화를 받아보세요!
         </Box>
         <Link to="/gender" className={classes.link}>
           <Button className={classes.button}>
             시작하기 
           </Button>
         </Link>
-      </Box>
       </PC>
+
       <Mobile >
         <Box className={classes.mobileMainText} >
-          MBTI로 받아보는 연애 코칭?
+          내가 만약 로맨스 영화 주인공이라면?
         </Box>
         <Box className={classes.mobileSubText}>
-          영화 캐릭터로 보는 나의 연애스타일과 나와 어울리는 캐릭터
+          로맨스 영화 속 나의 부캐와 궁합을 찾고,<br/>
+          당신의 연애를 코칭해 줄 영화를 받아보세요!
         </Box>
         <Link to="/gender" className={classes.mobileLink}>
         <Button className={classes.mobileButton}>
@@ -39,35 +40,35 @@ function IntroPageText(){
         </Button>     
         </Link>
       </Mobile>
+
       <Tablet>
-      <Box>
         <Box className={classes.mainText}>
-          MBTI로 받아보는 연애 코칭?
+          내가 만약 로맨스 영화 주인공이라면?
         </Box>
         <Box className={classes.subText}>
-          영화 캐릭터로 보는 나의 연애스타일과 나와 어울리는 캐릭터
+          로맨스 영화 속 나의 부캐와 궁합을 찾고,<br/>
+          당신의 연애를 코칭해 줄 영화를 받아보세요!
         </Box>
         <Link to="/gender" className={classes.link}>
           <Button className={classes.button}>
             시작하기 
           </Button>
         </Link>
-      </Box>
       </Tablet>
+      
       <PCwide>
-      <Box>
         <Box className={classes.mainText}>
-          MBTI로 받아보는 연애 코칭?
+          내가 만약 로맨스 영화 주인공이라면?
         </Box>
         <Box className={classes.subText}>
-          영화 캐릭터로 보는 나의 연애스타일과 나와 어울리는 캐릭터
+          로맨스 영화 속 나의 부캐와 궁합을 찾고,<br/>
+          당신의 연애를 코칭해 줄 영화를 받아보세요!
         </Box>
         <Link to="/gender" className={classes.link}>
           <Button className={classes.button}>
             시작하기 
           </Button>
         </Link>
-      </Box>
       </PCwide>
     </Box>
   )
@@ -76,12 +77,10 @@ function IntroPageText(){
 
 export function IntroPage() {
   const classes = useStyles();
-  const pageType = "intro"
     return (
       <Box className={classes.root}>
         <PC>
-          <Box className={classes.root}>
-          <NavBar pageType={pageType}/>
+          <NavBar pageType="intro"/>
           <Grid className={classes.container}>
             <Grid className={classes.emptyGrid} item >
             </Grid>
@@ -90,26 +89,22 @@ export function IntroPage() {
             </Grid>
           </Grid>
           <Footer/>
-          </Box>
         </PC>
         
         {/* Mobile View */}
         
         <Mobile >
-        <Box className={classes.root}>
           <NavBar pageType="mobile"/>
-          <Grid className={classes.mobileContainer}>
-            <Grid item className={classes.mobileInto}>
+          <Grid className={classes.container}>
+            <Grid className={classes.mobileIntro} item >
               <IntroPageText />
             </Grid>
           </Grid>
           <Footer/>
-        </Box>
         </Mobile>
 
           <Tablet>
-            <Box className={classes.root}>
-            <NavBar pageType={pageType}/>
+            <NavBar pageType="intro"/>
             <Grid className={classes.container}>
               <Grid className={classes.emptyGrid} item >
               </Grid>
@@ -118,12 +113,10 @@ export function IntroPage() {
               </Grid>
             </Grid>
             <Footer/>
-          </Box>
           </Tablet>
 
           <PCwide>
-            <Box className={classes.root}>
-            <NavBar pageType={pageType}/>
+            <NavBar pageType="intro"/>
             <Grid className={classes.container}>
               <Grid className={classes.emptyGrid} item >
               </Grid>
@@ -132,10 +125,7 @@ export function IntroPage() {
               </Grid>
             </Grid>
             <Footer/>
-            </Box>
           </PCwide>
       </Box>
-      
-
     )
 }
