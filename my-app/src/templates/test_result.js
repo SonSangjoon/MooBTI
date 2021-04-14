@@ -1,5 +1,5 @@
 import React from "react";
-import { Button, Typography, Grid, Box } from "@material-ui/core";
+import { Button, Grid, Box } from "@material-ui/core";
 import dummy_img from "../images/result/dummy_titanic_jack.jpg";
 import { withStyles, makeStyles,} from "@material-ui/core/styles";
 

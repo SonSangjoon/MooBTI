@@ -114,8 +114,12 @@ export function IntroPage() {
           </Box>
         </PC>
 
-        <Mobile className={classes.root}>
-          hello
+        <Mobile >
+        <Box className={classes.root}>
+          <NavBar pageType={pageType}/>
+          <IntroPageText/>
+          <Footer/>
+          </Box>
         </Mobile>
 
           <Tablet>
