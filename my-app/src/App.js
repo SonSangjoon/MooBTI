@@ -9,10 +9,11 @@ const GenderContext = createContext({});
 
 export function App() {
   const [selectedGender, setSelectedGender] = useState("")
+  const [openModal, setOpenModal] = useState(false)
 
   return (
     <div>
-      <GenderContext.Provider value={{selectedGender, setSelectedGender}}>
+      <GenderContext.Provider value={{selectedGender, setSelectedGender, openModal, setOpenModal}}>
         <BrowserRouter>
             <Route exact path="/" component={IntroPage}/>
             <Route exact path="/gender"component={GenderPage}/>
