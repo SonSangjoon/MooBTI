@@ -11,16 +11,14 @@ export function TestPage() {
     return (
         <Box  className={classes.root}>
             <PC>
+            <NavBar/>
                 <Grid className={classes.container}>
-                <NavBar/>
-
                     <Grid className={classes.testGrid} item>
-
                         <TestQuestionTemplate/>
                     </Grid>
                     <Grid className={classes.emptyGrid} item></Grid>
                 </Grid>
-                {/* <Footer/> */}
+                <Footer/>
             </PC>
 
             {/* Mobile View */}
