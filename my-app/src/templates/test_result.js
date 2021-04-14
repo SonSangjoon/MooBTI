@@ -1,13 +1,10 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Button, Grid, Box } from "@material-ui/core";
+import { GenderContext } from "../App";
+
 import dummy_img from "../images/result/dummy_titanic_jack.jpg";
 import { useStyles } from './styles/test_result_styles'
-
-// function GetList(){
-//   axios.post(`${Url}/${user_mbti}/${user_gender}`).then(response =>{
-//       setList(response.data.result)
-//   })
-// }
+import TransitionsModal from '../components/modal'
 
 function ResultMain() {
   const classes = useStyles();
@@ -57,20 +54,26 @@ function DataAnalysisBtn({value}) {
 
 export default function ResultTemplate({ mbtiType, genderType }) {
   const classes = useStyles();
+  const { setOpenModal } = useContext(GenderContext);
+
   return (
-    <Grid className={classes.container}>
+    <Grid className={classes.container} >
       <Grid className={classes.resultMainGrid} item>
         <ResultMain/>
       </Grid>
       <Grid className={classes.resultDescriptionGrid} item>
         <ResultDescription/>
       </Grid>
-      <Grid className={classes.buttonGrid}>
+      <Grid className={classes.buttonGrid} onClick ={() => setOpenModal(true)}>
         <DataAnalysisBtn value= "어떻게 분석했어?"/>
       </Grid>
       <Grid className={classes.buttonGrid}>
         <DataAnalysisBtn value= "영화보러 가기"/>
       </Grid>
+      <TransitionsModal />
     </Grid>
   );
 }
+
+
+

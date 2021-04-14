@@ -52,7 +52,6 @@ const useStyles = makeStyles((theme) => ({
     gridRow: "4/ span 7",
   },
 
-
   PosterImg: {
     objectFit: "fill",
     width: "100%",
@@ -72,6 +71,7 @@ const useStyles = makeStyles((theme) => ({
     gridColumn: "5/ span 5",
     gridRow: "9/ span 2",
   },
+  
   dummyBtn: {
     minWidth: "100%",
     fontSize: "12px"
