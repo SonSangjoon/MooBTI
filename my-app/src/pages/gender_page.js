@@ -32,8 +32,6 @@ export function GenderPage() {
       <Tablet>
         <Grid className={classes.tabletContainer} spacing={3}>
           <NavBar />
-          {/* <Grid className={classes.tabletEmptyColumnGrid} item></Grid>
-          <Grid className={classes.tabletEmptyRowGrid} item></Grid> */}
           <Grid className={classes.tabletGenderPageGrid} item>
             <GenderPageSelect />
           </Grid>

@@ -72,41 +72,17 @@ mobileImageTitle: {
 
 //Tablet View
 
-tabletRoot: {
-  height: "100vh",
-  backgroundColor: "black",
-},
-
 tabletContainer: {
   height: "100vh",
   display: "grid",
   gridTemplateRows: "repeat(3, 1fr)",
-  gridTemplateColumns: "1fr 2fr 1fr",
   gridGap: theme.spacing(2),
 },
 
-// tabletEmptyRowGrid: {
-//   gridRow: "span 2",
-// },
-// tabletEmptyColumnGrid: {
-//   gridColumn: "span 2",
-// },
-
 tabletGenderPageGrid:{
-  gridColumn: "2",
-  gridRow: "2"
+  gridRow: '2/span 1'
 },
 
-// image: { 
-//   borderRadius:'10px',
-// },
-
-
-// tabletTitle:{
-//     fontSize: "2.7vw",
-//     color: "white",
-
-//   },
 
 }));
 

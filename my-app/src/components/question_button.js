@@ -24,6 +24,13 @@ const useStyles = makeStyles((theme) => ({
       '& $mobileImageTitle': {
         border: '4px solid currentColor',
       },
+      '& $tabletImageTitle': {
+        border: '4px solid currentColor',
+      }, 
+      '& $pcWideImageTitle': {
+        border: '4px solid currentColor',
+      }, 
+      
     }
   },
 
@@ -40,7 +47,7 @@ const useStyles = makeStyles((theme) => ({
   },
 
   imageTitle: {
-    fontSize: '1.3vw',
+    fontSize: '17px',
     fontFamily: 'S-CoreDream-3Light',
     position: 'relative',
     // padding: `${theme.spacing(2)}px ${theme.spacing(4)}px ${theme.spacing(1) + 6}px`,
@@ -63,6 +70,25 @@ const useStyles = makeStyles((theme) => ({
     fontFamily: 'S-CoreDream-3Light',
     position: 'relative',
     padding: 20
+  },
+
+  //Tablet View
+
+  tabletImageTitle: {
+    fontSize: '16px',
+    fontFamily: 'S-CoreDream-3Light',
+    position: 'relative',
+    padding: 20,
+    whiteSpace: 'pre-wrap'
+  },
+
+  //PcWide View
+
+  pcWideImageTitle: {
+    fontSize: '30px',
+    fontFamily: 'S-CoreDream-3Light',
+    position: 'relative',
+    padding: 20,
   },
 
 }));
@@ -106,7 +132,7 @@ export default function ButtonBases({choice}) {
           focusVisibleClassName={classes.focusVisible}
           className={classes.focusVisible}>
           <span className={classes.imageButton}>
-            <Typography className={classes.imageTitle}>
+            <Typography className={classes.tabletImageTitle}>
               {choice}
               <span className={classes.imageMarked} />
             </Typography>
@@ -120,7 +146,7 @@ export default function ButtonBases({choice}) {
           focusVisibleClassName={classes.focusVisible}
           className={classes.focusVisible}>
           <span className={classes.imageButton}>
-            <Typography className={classes.imageTitle}>
+            <Typography className={classes.pcWideImageTitle}>
               {choice}
               <span className={classes.imageMarked} />
             </Typography>

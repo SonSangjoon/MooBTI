@@ -106,14 +106,13 @@ export default function TestQuestionTemplate() {
     }
     else{
         return (
-            <Box>
-                <PC>
-                <Grid className={classes.testContainer} item>    
+            <Grid className={classes.testContainer} item>
+                <PC> 
                 <Grid className={classes.imageGrid} item>
                     <img className={classes.image} src={questionList[questionNum]['image']} alt="testimage"/>
                     <LinearWithValueLabel num={questionNum*100/12}/>
                 </Grid>
-                <Grid className={classes.emptyRow} item>
+                <Grid className={classes.questionRow} item>
                     <Box className={classes.questionText} align="center">
                         {questionList[questionNum]['question']}
                     </Box>
@@ -126,12 +125,10 @@ export default function TestQuestionTemplate() {
                         <ButtonBases choice={questionList[questionNum]['choice2']} />
                     </Box>
                 </Grid>
-            </Grid>
                 </PC>
 
 
-                <Mobile>
-                   <Grid className={classes.mobileTestContainer}>    
+                <Mobile> 
                         <Grid className={classes.mobileImageGrid} item>
                             <img className={classes.mobileImage} src={questionList[questionNum]['image']} alt="testimage"/>
                             <LinearWithValueLabel num={questionNum*100/12}/>
@@ -151,18 +148,16 @@ export default function TestQuestionTemplate() {
                                 <ButtonBases choice={questionList[questionNum]['choice2']} />
                             </Box>
                         </Grid>
-                    </Grid>
                 </Mobile>
 
 
                 <Tablet>
-                    <Grid className={classes.testContainer} item>    
-                    <Grid className={classes.imageGrid} item>
-                        <img className={classes.image} src={questionList[questionNum]['image']} alt="testimage"/>
+                    <Grid className={classes.tabletImageGrid} item>
+                        <img className={classes.tabletImage} src={questionList[questionNum]['image']} alt="testimage"/>
                         <LinearWithValueLabel num={questionNum*100/12}/>
                     </Grid>
-                    <Grid className={classes.emptyRow} item>
-                        <Box className={classes.questionText} align="center">
+                    <Grid className={classes.tabletQuestionRow} item>
+                        <Box className={classes.tabletQuestionText} align="center">
                             {questionList[questionNum]['question']}
                         </Box>
                     </Grid>
@@ -173,32 +168,29 @@ export default function TestQuestionTemplate() {
                         <Box onClick={()=>{proceedTest(1)}}>
                             <ButtonBases choice={questionList[questionNum]['choice2']} />
                         </Box>
-                    </Grid>
                 </Grid>
                 </Tablet>
 
                 <PCwide>
-                    <Grid className={classes.testContainer} item>    
-                        <Grid className={classes.imageGrid} item>
-                            <img className={classes.image} src={questionList[questionNum]['image']} alt="testimage"/>
-                            <LinearWithValueLabel num={questionNum*100/12}/>
-                        </Grid>
-                        <Grid className={classes.emptyRow} item>
-                            <Box className={classes.questionText} align="center">
-                                {questionList[questionNum]['question']}
-                            </Box>
-                        </Grid>
-                        <Grid className={classes.answerGrid}>
-                            <Box onClick={()=>{proceedTest(0)}}>
-                                <ButtonBases choice={questionList[questionNum]['choice1']} />
-                            </Box>
-                            <Box onClick={()=>{proceedTest(1)}}>
-                                <ButtonBases choice={questionList[questionNum]['choice2']} />
-                            </Box>
-                        </Grid>
+                    <Grid className={classes.pcWideImageGrid} item>
+                        <img className={classes.pcWideImage} src={questionList[questionNum]['image']} alt="testimage"/>
+                        <LinearWithValueLabel num={questionNum*100/12}/>
+                    </Grid>
+                    <Grid className={classes.pcWideQuestionRow} item>
+                        <Box className={classes.pcWideQuestionText} align="center">
+                            {questionList[questionNum]['question']}
+                        </Box>
+                    </Grid>
+                    <Grid className={classes.pcWideAnswerGrid}>
+                        <Box onClick={()=>{proceedTest(0)}}>
+                            <ButtonBases choice={questionList[questionNum]['choice1']} />
+                        </Box>
+                        <Box onClick={()=>{proceedTest(1)}}>
+                            <ButtonBases choice={questionList[questionNum]['choice2']} />
+                        </Box>
                     </Grid>
                 </PCwide>
-            </Box>
+            </Grid>
         )
     }
 }
