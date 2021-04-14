@@ -75,9 +75,9 @@ mobileRecommendBlock:{
 },
 mobileShareButton:{
     position: 'fixed',
-    bottom: '0px',
-    right: '0px', 
-    padding: '50px'
+    bottom: '80px',
+    right: '0',
+    padding: '10px'
 },
 
 //Tablet View
