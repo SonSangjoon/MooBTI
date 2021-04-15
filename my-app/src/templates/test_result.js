@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import { Button, Grid, Box } from "@material-ui/core";
 import { GenderContext } from "../App";
 import { useStyles } from "./styles/test_result_styles";
-import TransitionsModal from "../components/modal";
+import TransitionsModal from "../components/modal_result";
 import { Mobile, PC, PCwide, Tablet } from "../components/MediaQuery";
 
 function ResultMain({ data }) {

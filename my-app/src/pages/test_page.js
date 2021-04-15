@@ -5,19 +5,22 @@ import TestQuestionTemplate from "../templates/test_question";
 import { Box, Grid } from "@material-ui/core";
 import { Mobile, Tablet, PC, PCwide } from "../components/MediaQuery.js";
 import { useStyles } from "./styles/test_page_styles";
+import TransitionsModal from "../components/modal_result";
 
 export function TestPage() {
   const classes = useStyles();
+
   return (
     <Box className={classes.root}>
       <PC>
-        <NavBar />
+        <NavBar pageType="intro" />
         <Grid className={classes.container}>
           <Grid className={classes.testGrid} item>
             <TestQuestionTemplate />
           </Grid>
           <Grid className={classes.emptyGrid} item></Grid>
         </Grid>
+
         <Footer />
       </PC>
 
@@ -34,7 +37,7 @@ export function TestPage() {
       </Mobile>
 
       <Tablet>
-        <NavBar />
+        <NavBar pageType="intro" />
         <Grid className={classes.container}>
           <Grid className={classes.tabletTestGrid} item>
             <TestQuestionTemplate />
@@ -45,7 +48,7 @@ export function TestPage() {
       </Tablet>
 
       <PCwide>
-        <NavBar />
+        <NavBar pageType="intro" />
         <Grid className={classes.container}>
           <Grid className={classes.pcwideTestGrid} item>
             <TestQuestionTemplate />
