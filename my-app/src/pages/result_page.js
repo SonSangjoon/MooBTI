@@ -27,7 +27,7 @@ export function ResultPage({ match }) {
   return (
     <Box className={classes.root}>
       <PC>
-        <NavBar pageType="result"/>
+        <NavBar pageType="intro" />
         <Grid className={classes.container}>
           <Grid className={classes.resultGrid} item>
             <ResultTemplate data={data} />
@@ -44,7 +44,7 @@ export function ResultPage({ match }) {
 
       <Mobile>
         <Box className={classes.mobileContainer}>
-          <NavBar pageType="mobile" />
+          <NavBar pageType="intro"  />
           <Box className={classes.mobileBlock}></Box>
           <Box className={classes.mobileResultBlock}>
             <ResultTemplate data={data} />
@@ -62,7 +62,7 @@ export function ResultPage({ match }) {
       {/* Tablet view */}
 
       <Tablet>
-        <NavBar />
+        <NavBar pageType="intro" />
         <Grid className={classes.container}>
           <Grid className={classes.resultGrid} item>
             <ResultTemplate data={data} />
@@ -80,7 +80,7 @@ export function ResultPage({ match }) {
       {/* PC wide view */}
 
       <PCwide>
-        <NavBar />
+        <NavBar pageType="intro" />
         <Grid className={classes.container}>
           <Grid className={classes.resultGrid} item>
             <ResultTemplate data={data} />
