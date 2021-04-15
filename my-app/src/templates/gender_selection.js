@@ -50,7 +50,7 @@ export default function GenderPageSelect() {
   
   
         <Mobile>
-        <Box className={classes.mobiletitle} align="center" gutterBottom>
+        <Box className={classes.mobileTitle} align="center" gutterBottom>
             테스트를 진행할 프로필을 선택하세요.
           </Box>
           <Box display="flex" justifyContent="center" mt={3}>
@@ -60,17 +60,17 @@ export default function GenderPageSelect() {
                   <img src="/images/gender/boy_profile.png" alt="male_pic" className={classes.image} />
                 </Button>
               </Link>
-              <Box className={classes.mobileImageTitle} variant="h6" align="center" gutterBottom>
+              <Box className={classes.mobileImageTitle} align="center" gutterBottom>
                 남성
               </Box>
             </Box>
             <Box>
               <Link to="/test">
-              <Button className={classes.mobileImageTitle} value="female" onClick={handleGenderChange}>
+              <Button className={classes.gender_img} value="female" onClick={handleGenderChange}>
                   <img src='/images/gender/girl_profile.png' alt="female_pic" className={classes.image}/>
               </Button>
               </Link>
-              <Box className={classes.mobileImageTitle} variant="h6" align="center" gutterBottom>
+              <Box className={classes.mobileImageTitle} align="center" gutterBottom>
                 여성
               </Box>
             </Box>

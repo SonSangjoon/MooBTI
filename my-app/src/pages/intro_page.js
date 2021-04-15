@@ -19,7 +19,7 @@ function IntroPageText(){
           로맨스 영화 속 나의 부캐와 궁합을 찾고,<br/>
           당신의 연애를 코칭해 줄 영화를 받아보세요!
         </Box>
-        <Link to="/gender" className={classes.link}>
+        <Link to="/gender" className={classes.link} >
           <Button className={classes.button}>
             시작하기 
           </Button>

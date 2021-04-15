@@ -52,7 +52,7 @@ const useStyles = makeStyles((theme) => ({
     padding: '5px 30px 5px 30px',
     size: 'large',
     fontSize: "25px",
-    fontFamily: 'S-CoreDream-6Bold',
+    fontWeight: "bold",
     background: '#dc1a28',
     color: 'white',
     '&:hover': {
