@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import { Link } from "react-router-dom";
-import { GenderContext } from "../App";
+import { MbtiContext } from "../App";
 // import female_pic from "../images/gender/girl_profile.png";
 // import male_pic from "../images/gender/boy_profile.png";
 import { Button, Box } from "@material-ui/core";
@@ -9,7 +9,7 @@ import { useStyles } from "./styles/gender_selection_styles";
 
 export default function GenderPageSelect() {
   const classes = useStyles();
-  const { selectedGender, setSelectedGender } = useContext(GenderContext);
+  const { selectedGender, setSelectedGender } = useContext(MbtiContext);
 
   const handleGenderChange = (event) => {
     setSelectedGender(event.currentTarget.value);

@@ -5,25 +5,26 @@ import { GenderPage } from './pages/gender_page'
 import { ResultPage } from './pages/result_page'
 import {createContext, useState} from "react"
 import './App.css'
-const GenderContext = createContext({});
+const MbtiContext = createContext({});
 
 export function App() {
   const [selectedGender, setSelectedGender] = useState("")
   const [openModal, setOpenModal] = useState(false)
+  const [openIntroduction, setOpenIntroduction] = useState(false)
 
   return (
     <div>
-      <GenderContext.Provider value={{selectedGender, setSelectedGender, openModal, setOpenModal}}>
+      <MbtiContext.Provider value={{selectedGender, setSelectedGender, openModal, setOpenModal, openIntroduction, setOpenIntroduction}}>
         <BrowserRouter>
             <Route exact path="/" component={IntroPage}/>
             <Route exact path="/gender"component={GenderPage}/>
             <Route exact path="/test" component={TestPage}/>
             <Route exact path="/:mbti/:gender"component={ResultPage}/>
         </BrowserRouter>
-      </GenderContext.Provider>
+      </MbtiContext.Provider>
     </div>
   );
 }
-export {GenderContext}
+export {MbtiContext}
 
 export default App;

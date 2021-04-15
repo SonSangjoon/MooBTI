@@ -4,14 +4,14 @@ import LinearWithValueLabel from "../components/progress_bar";
 import ButtonBases from "../components/question_button";
 import { Box, Grid } from "@material-ui/core";
 import CircularIndeterminate from "../components/progress_circle";
-import { GenderContext } from "../App";
+import { MbtiContext } from "../App";
 import { Mobile, Tablet, PC, PCwide } from "../components/MediaQuery";
 import { useStyles } from "./styles/test_question_styles";
 import { useHistory } from "react-router-dom";
 import { questionList } from "../data/test_data";
 
 export default function TestQuestionTemplate() {
-  const { selectedGender } = useContext(GenderContext);
+  const { selectedGender } = useContext(MbtiContext);
   const classes = useStyles();
   const history = useHistory();
   const [questionNum, SetQuestionNum] = useState(0);

@@ -4,7 +4,7 @@ import Modal from "@material-ui/core/Modal";
 import Backdrop from "@material-ui/core/Backdrop";
 import Fade from "@material-ui/core/Fade";
 import { Box, Grid } from "@material-ui/core";
-import { GenderContext } from "../App";
+import { MbtiContext } from "../App";
 import IconButton from "@material-ui/core/IconButton";
 import CloseIcon from "@material-ui/icons/Close";
 import { Mobile, Tablet, PC, PCwide } from "../components/MediaQuery.js";
@@ -141,7 +141,7 @@ function Analysis(data) {
 
 function ModalCloseBtn() {
   const classes = useStyles();
-  const { openModal, setOpenModal } = useContext(GenderContext);
+  const { setOpenModal } = useContext(MbtiContext);
 
   const handleClose = () => {
     setOpenModal(false);
@@ -160,7 +160,7 @@ function ModalCloseBtn() {
 
 export default function TransitionsModal(data) {
   const classes = useStyles();
-  const { openModal, setOpenModal } = useContext(GenderContext);
+  const { openModal, setOpenModal } = useContext(MbtiContext);
 
   const handleClose = () => {
     setOpenModal(false);
