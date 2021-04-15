@@ -195,7 +195,7 @@ function ModalCloseBtn() {
   );
 }
 
-export default function TransitionsModal(data) {
+export default function IntroductionModal(data) {
   const classes = useStyles();
   const { openModal, setOpenModal } = useContext(GenderContext);
 
