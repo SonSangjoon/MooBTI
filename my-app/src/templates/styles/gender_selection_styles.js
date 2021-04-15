@@ -25,11 +25,14 @@ const useStyles = makeStyles((theme) => ({
     paddingBottom: "1vh",
     fontSize: "28px",
     color: "white",
+    fontFamily: "S-CoreDream-4Regular",
   },
 
   imgTitle: {
     fontSize: 20,
     color: "white",
+    fontFamily: "S-CoreDream-4Regular",
+
   },
 
   gender_img: {
@@ -44,6 +47,8 @@ const useStyles = makeStyles((theme) => ({
 
   image: {
     borderRadius: "10px",
+    height: "120px",
+    weight: "120px"
   },
 
 //Mobile View
@@ -59,15 +64,19 @@ mobileGrid:{
 gridRow: '2/span 1'
 },
 
-mobiletitle: {
+mobileTitle: {
 paddingBottom: '1vh',
 fontSize: '20px',
 color: 'white',
+fontFamily: "S-CoreDream-4Regular",
+
 },
 
 mobileImageTitle: {
 fontSize: 17,
-color:'white'
+color:'white',
+fontFamily: "S-CoreDream-4Regular",
+
 },
 
 

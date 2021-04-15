@@ -47,7 +47,7 @@ function RecommendComponent({data, value}){
     <Grid className={classes.recommendContainer} item>
       <PC>
         <Grid className={classes.recommendTitleGrid}>
-          <Box className={classes.mobileRecommendTitleText}> 
+          <Box className={classes.recommendTitleText}> 
             {value}
           </Box>
         </Grid>
