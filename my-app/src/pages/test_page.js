@@ -5,9 +5,11 @@ import TestQuestionTemplate from "../templates/test_question";
 import { Box, Grid } from "@material-ui/core";
 import { Mobile, Tablet, PC, PCwide } from "../components/MediaQuery.js";
 import { useStyles } from "./styles/test_page_styles";
+import TransitionsModal from "../components/modal_result";
 
 export function TestPage() {
   const classes = useStyles();
+
   return (
     <Box className={classes.root}>
       <PC>
@@ -18,6 +20,7 @@ export function TestPage() {
           </Grid>
           <Grid className={classes.emptyGrid} item></Grid>
         </Grid>
+
         <Footer />
       </PC>
 
