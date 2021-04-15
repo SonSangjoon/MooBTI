@@ -13,7 +13,7 @@ export function TestPage() {
   return (
     <Box className={classes.root}>
       <PC>
-        <NavBar />
+        <NavBar pageType="intro" />
         <Grid className={classes.container}>
           <Grid className={classes.testGrid} item>
             <TestQuestionTemplate />
@@ -37,7 +37,7 @@ export function TestPage() {
       </Mobile>
 
       <Tablet>
-        <NavBar />
+        <NavBar pageType="intro" />
         <Grid className={classes.container}>
           <Grid className={classes.tabletTestGrid} item>
             <TestQuestionTemplate />
@@ -48,7 +48,7 @@ export function TestPage() {
       </Tablet>
 
       <PCwide>
-        <NavBar />
+        <NavBar pageType="intro" />
         <Grid className={classes.container}>
           <Grid className={classes.pcwideTestGrid} item>
             <TestQuestionTemplate />
