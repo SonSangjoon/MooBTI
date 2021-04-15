@@ -52,55 +52,53 @@ export default function TestQuestionTemplate() {
 
         GetMbti();
         return(
-            <Box>
+            <Grid className={classes.loadingContainer} item>    
+            
                 <PC>
-                <Grid className={classes.testContainer} item>    
-                    <Grid className={classes.imageGrid} item>
-                        <Box className={classes.emptyBox}>
+                    <Grid className={classes.loadingGrid} item>
+                        <Box className={classes.loadingBox}>
                             <Box className={classes.loadingText}>분석중</Box>
                             <CircularIndeterminate/>
                         </Box>
                     </Grid>
-                </Grid>
+
                 </PC>
 
 
 
                 <Mobile>
-                <Grid className={classes.testContainer} item>    
-                    <Grid className={classes.imageGrid} item>
-                        <Box className={classes.emptyBox}>
+   
+                    <Grid className={classes.loadingGrid} item>
+                        <Box className={classes.loadingBox}>
                             <Box className={classes.loadingText}>분석중</Box>
                             <CircularIndeterminate/>
                         </Box>
                     </Grid>
-                </Grid>
+
                 </Mobile>
 
 
                 <Tablet>
-                <Grid className={classes.testContainer} item>    
-                    <Grid className={classes.imageGrid} item>
-                        <Box className={classes.emptyBox}>
+
+                    <Grid className={classes.loadingGrid} item>
+                        <Box className={classes.loadingBox}>
                             <Box className={classes.loadingText}>분석중</Box>
                             <CircularIndeterminate/>
                         </Box>
                     </Grid>
-                </Grid>
+
                 </Tablet>
 
                 
-                <PCwide>
-                <Grid className={classes.testContainer} item>    
-                    <Grid className={classes.imageGrid} item>
-                        <Box className={classes.emptyBox}>
-                            <Box className={classes.loadingText}>분석중</Box>
-                            <CircularIndeterminate/>
-                        </Box>
-                    </Grid>
+                <PCwide> 
+                <Grid className={classes.loadingGrid} item>
+                    <Box className={classes.loadingBox}>
+                        <Box className={classes.loadingText}>분석중</Box>
+                        <CircularIndeterminate/>
+                    </Box>
                 </Grid>
                 </PCwide>
-            </Box>
+            </Grid>
 
         )
     }

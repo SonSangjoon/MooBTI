@@ -52,12 +52,13 @@ const useStyles = makeStyles((theme) => ({
     align: "center",
     marginTop: 15,
     // fontSize: "2vw",
-    fontFamily: 'S-CoreDream-6Bold',
-    fontSize: "20px",
+    fontFamily: 'S-CoreDream-8Heavy',
+    fontSize: "25px",
     whiteSpace: 'pre-wrap'
   },
+
   charScriptText: {
-    fontSize: "13px",
+    fontSize: "15px",
     fontFamily: 'S-CoreDream-6Bold',
     letterSpacing: '2px',
 
@@ -75,7 +76,7 @@ const useStyles = makeStyles((theme) => ({
   },
 
   characterDetailText:{
-    fontSize: '13px',
+    fontSize: '1vw',
     fontFamily: 'S-CoreDream-3Light',
     letterSpacing: '2px'
  

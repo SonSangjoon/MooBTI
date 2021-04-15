@@ -37,12 +37,15 @@ const useStyles = makeStyles((theme) => ({
 
   recommendCharText:{
     fontSize: "14px",
-    fontFamily: "S-CoreDream-6Bold"
+    fontFamily: "S-CoreDream-6Bold",
+    paddingBottom: '8px',
+
+
   },
 
   recommendDescText:{
-    fontSize: "1.8vh",
-    fontFamily: 'S-CoreDream-3Light'
+    fontSize: "1.6vh",
+    fontFamily: 'S-CoreDream-3Light',
 
   },
 

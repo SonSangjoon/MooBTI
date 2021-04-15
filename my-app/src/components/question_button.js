@@ -85,7 +85,7 @@ const useStyles = makeStyles((theme) => ({
   //PcWide View
 
   pcWideImageTitle: {
-    fontSize: '30px',
+    fontSize: '22px',
     fontFamily: 'S-CoreDream-3Light',
     position: 'relative',
     padding: 20,
