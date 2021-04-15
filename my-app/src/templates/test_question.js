@@ -48,7 +48,7 @@ export default function TestQuestionTemplate() {
         console.log(response.data.user_mbti);
         setTimeout(() => {
           history.push(`/${response.data.user_mbti}/${testData["gender"]}`);
-        }, 1000000);
+        }, 2000);
       });
   }
 

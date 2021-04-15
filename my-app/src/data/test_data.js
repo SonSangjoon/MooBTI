@@ -39,13 +39,13 @@ const questionList = {
         choice1 : "빨간 약: \n  현실로 돌아가는 약을 먹는다",
         choice2 : "파란 약: \n  꿈에서 영원히 연애하는 약을 먹는다",
         
-        image: "/images/test/test5.jpeg",
+        image: "/images/test/test5.png",
     },
     6 : {
         question :"Q6. 집에 돌아온 나를 보고 친구가 묻는다.\n \"오늘 데이트 어땠어?\"",
         choice1 : "\"오늘은 성수동에 갔는데~\" \n 데이트 일정을 말한다",
         choice2 : "\"점점 편해지는 것 같아\" \n 데이트의 감상을 얘기한다",
-        image: "/images/test/test6.jpg",
+        image: "/images/test/test6.png",
 
     },
     7 : {
@@ -66,7 +66,7 @@ const questionList = {
         question :"Q9. 올해 꼭 결혼해야 하는 다프네.\n 하필 비혼주의자 사이먼과 사랑에 빠졌다",
         choice1 : "날 좋아해 주는 왕자와 \n 올해 결혼하겠어",
         choice2 : "그가 생각을 바꿀지 몰라. \n 지금 그와 많이 사랑할래",
-        image: "/images/test/test9.jpg",
+        image: "/images/test/test9.png",
 
     },
     10 : {
@@ -87,7 +87,7 @@ const questionList = {
         question :"Q12. 죽은 줄 알았던 애인과 \n 딱 하루의 시간을 함께 보낼 수 있다.",
         choice1 : "하루는 짧다. 계획적으로 시간을 보낸다.",
         choice2 : "그저 마음 가는 대로 시간을 보낸다.",
-        image: "/images/test/test12.jpg",
+        image: "/images/test/test12.png",
 
     },
 
