@@ -1,14 +1,16 @@
-import React from 'react';
+import React, { useContext } from 'react';
 
 import { Link } from "react-router-dom";
 import { Box } from "@material-ui/core";
-
+import { MbtiContext } from "../App";
 import { makeStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import IconButton from '@material-ui/core/IconButton';
 import AccountCircle from '@material-ui/icons/AccountCircle';
+import IntroductionModal from "../components/modal_introduction";
+
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -47,6 +49,8 @@ const useStyles = makeStyles((theme) => ({
 export default function NavBar({ pageType }) {
   const classes = useStyles();
 
+  const {setOpenIntroduction} = useContext(MbtiContext);
+
   if (pageType === "intro") {
   return (
     <Box className={classes.root}>
@@ -61,7 +65,7 @@ export default function NavBar({ pageType }) {
           </Typography>
             <Box>
               <IconButton
-                // onClick={handleMenu}
+                onClick={() => setOpenIntroduction(true)}
                 color="inherit"
               >
                 <AccountCircle />
@@ -69,6 +73,7 @@ export default function NavBar({ pageType }) {
             </Box>
         </Toolbar>
       </AppBar>
+      <IntroductionModal />
     </Box>
   );
   } else if (pageType === "mobile")
@@ -86,7 +91,7 @@ export default function NavBar({ pageType }) {
           </Typography>
             <Box>
               <IconButton
-                // onClick={handleMenu}
+                onClick={() => setOpenIntroduction(true)}
                 color="inherit"
               >
                 <AccountCircle />
@@ -94,6 +99,7 @@ export default function NavBar({ pageType }) {
             </Box>
         </Toolbar>
       </AppBar>
+      <IntroductionModal />
     </Box>
     )} else {
       return(

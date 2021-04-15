@@ -5,7 +5,7 @@ import TestQuestionTemplate from "../templates/test_question";
 import { Box, Grid } from "@material-ui/core";
 import { Mobile, Tablet, PC, PCwide } from "../components/MediaQuery.js";
 import { useStyles } from "./styles/test_page_styles";
-import TransitionsModal from "../components/modal_result";
+
 
 export function TestPage() {
   const classes = useStyles();

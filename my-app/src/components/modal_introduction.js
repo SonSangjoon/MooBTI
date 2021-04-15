@@ -3,8 +3,8 @@ import { makeStyles } from "@material-ui/core/styles";
 import Modal from "@material-ui/core/Modal";
 import Backdrop from "@material-ui/core/Backdrop";
 import Fade from "@material-ui/core/Fade";
-import { Box, Grid, Button, Fab } from "@material-ui/core";
-import { GenderContext } from "../App";
+import { Box, Grid, Fab } from "@material-ui/core";
+import { MbtiContext } from "../App";
 import IconButton from "@material-ui/core/IconButton";
 import CloseIcon from "@material-ui/icons/Close";
 import { Mobile, Tablet, PC, PCwide } from "../components/MediaQuery.js";
@@ -167,21 +167,13 @@ function MemberIntro(data) {
     </Box>
   );
 }
-function UrlBtn({ value }) {
-  const classes = useStyles();
-  return (
-    <Button variant="outlined" className={classes.dummyBtn} color="secondary">
-      {value}
-    </Button>
-  );
-}
 
 function ModalCloseBtn() {
   const classes = useStyles();
-  const { openModal, setOpenModal } = useContext(GenderContext);
+  const { setOpenIntroduction} = useContext(MbtiContext);
 
   const handleClose = () => {
-    setOpenModal(false);
+    setOpenIntroduction(false);
   };
 
   return (
@@ -197,16 +189,16 @@ function ModalCloseBtn() {
 
 export default function IntroductionModal(data) {
   const classes = useStyles();
-  const { openModal, setOpenModal } = useContext(GenderContext);
+  const { openIntroduction, setOpenIntroduction} = useContext(MbtiContext);
 
   const handleClose = () => {
-    setOpenModal(false);
+    setOpenIntroduction(false);
   };
 
   return (
     <Modal
       className={classes.modal}
-      open={openModal}
+      open={openIntroduction}
       onClose={handleClose}
       closeAfterTransition
       BackdropComponent={Backdrop}
@@ -216,7 +208,7 @@ export default function IntroductionModal(data) {
     >
       <Box className={classes.root}>
         <PC>
-          <Fade in={openModal}>
+          <Fade in={openIntroduction}>
             <Grid className={classes.container}>
               <Grid className={classes.titleLogoGrid}>
                 <TitleLogo />
@@ -271,7 +263,7 @@ export default function IntroductionModal(data) {
 
         {/* Tablet View */}
         <Tablet>
-          <Fade in={openModal}>
+          <Fade in={openIntroduction}>
             <Grid className={classes.container}>
               <Grid className={classes.titleLogoGrid}>
                 <TitleLogo />
@@ -326,7 +318,7 @@ export default function IntroductionModal(data) {
 
         {/* Mobile View */}
         <Mobile>
-          <Fade in={openModal}>
+          <Fade in={openIntroduction}>
             <Grid className={classes.container}>
               <Grid className={classes.titleLogoGrid}>
                 <TitleLogo />
@@ -381,7 +373,7 @@ export default function IntroductionModal(data) {
 
         {/* PCwide View */}
         <PCwide>
-          <Fade in={openModal}>
+          <Fade in={openIntroduction}>
             <Grid className={classes.container}>
               <Grid className={classes.titleLogoGrid}>
                 <TitleLogo />
