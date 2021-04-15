@@ -43,7 +43,7 @@ export default function TestQuestionTemplate() {
         axios.post(`http://elice-kdt-ai-track-vm-da-03.koreacentral.cloudapp.azure.com:5000/mbti`, testData).then(response =>{
             console.log(response.data.user_mbti);
             setTimeout(() => {
-                history.push(`/${response.data.user_mbti}/${testData["gender"]}`)},2000)
+                history.push(`/${response.data.user_mbti}/${testData["gender"]}`)},100000)
         })
 
     }
@@ -52,52 +52,40 @@ export default function TestQuestionTemplate() {
 
         GetMbti();
         return(
-            <Grid className={classes.loadingContainer} item>    
-            
-                <PC>
-                    <Grid className={classes.loadingGrid} item>
-                        <Box className={classes.loadingBox}>
-                            <Box className={classes.loadingText}>분석중</Box>
-                            <CircularIndeterminate/>
-                        </Box>
-                    </Grid>
-
-                </PC>
-
-
-
-                <Mobile>
-   
-                    <Grid className={classes.loadingGrid} item>
-                        <Box className={classes.loadingBox}>
-                            <Box className={classes.loadingText}>분석중</Box>
-                            <CircularIndeterminate/>
-                        </Box>
-                    </Grid>
-
-                </Mobile>
-
-
-                <Tablet>
-
-                    <Grid className={classes.loadingGrid} item>
-                        <Box className={classes.loadingBox}>
-                            <Box className={classes.loadingText}>분석중</Box>
-                            <CircularIndeterminate/>
-                        </Box>
-                    </Grid>
-
-                </Tablet>
-
-                
-                <PCwide> 
+            <Grid className={classes.loadingContainer}>   
+                <Grid item></Grid>
                 <Grid className={classes.loadingGrid} item>
+
+                <PC>
                     <Box className={classes.loadingBox}>
                         <Box className={classes.loadingText}>분석중</Box>
                         <CircularIndeterminate/>
                     </Box>
-                </Grid>
+                </PC>
+
+                <Mobile>
+                    <Box className={classes.loadingBox}>
+                        <Box className={classes.loadingText}>분석중</Box>
+                        <CircularIndeterminate/>
+                    </Box>
+                </Mobile>
+
+
+                <Tablet>
+                    <Box className={classes.loadingBox}>
+                        <Box className={classes.loadingText}>분석중</Box>
+                        <CircularIndeterminate/>
+                    </Box>
+                </Tablet>
+
+                
+                <PCwide> 
+                    <Box className={classes.loadingBox}>
+                        <Box className={classes.loadingText}>분석중</Box>
+                        <CircularIndeterminate/>
+                    </Box>
                 </PCwide>
+                </Grid>
             </Grid>
 
         )
