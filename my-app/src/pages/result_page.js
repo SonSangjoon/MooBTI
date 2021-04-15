@@ -6,8 +6,8 @@ import ResultTemplate from "../templates/test_result";
 import RecommendContentsTemplate from "../templates/recommend_contents";
 import { Box, Grid } from "@material-ui/core";
 import { Mobile, Tablet, PC, PCwide } from "../components/MediaQuery";
-import {useStyles} from "./styles/result_page_styles"
-import  {resultList} from "../data/result_data"
+import { useStyles } from "./styles/result_page_styles";
+import { resultList } from "../data/result_data";
 
 export function ResultPage({ match }) {
   const classes = useStyles();
@@ -15,25 +15,25 @@ export function ResultPage({ match }) {
   const mbtiType = match.params.mbti.toUpperCase();
   const genderType = match.params.gender;
 
-  console.log(match.params.mbti, match.params.gender, genderType)
+  console.log(match.params.mbti, match.params.gender, genderType);
 
-  const data = resultList[mbtiType][genderType]
+  const data = resultList[mbtiType][genderType];
   const recommendData = {
-    good : resultList[data['goodMbti']][genderType === 'male' ? 'female' : 'male'],
-    bad : resultList[data['badMbti']][genderType === 'male' ? 'female' : 'male'],
-  }
+    good:
+      resultList[data["goodMbti"]][genderType === "male" ? "female" : "male"],
+    bad: resultList[data["badMbti"]][genderType === "male" ? "female" : "male"],
+  };
 
- 
   return (
     <Box className={classes.root}>
-      <PC >
+      <PC>
         <NavBar />
         <Grid className={classes.container}>
           <Grid className={classes.resultGrid} item>
             <ResultTemplate data={data} />
           </Grid>
           <Grid className={classes.recommendContentsGrid} item>
-            <RecommendContentsTemplate data={recommendData}/>
+            <RecommendContentsTemplate data={recommendData} />
           </Grid>
           <Grid className={classes.shareBtnGrid} item>
             <ShareButton />
@@ -45,20 +45,18 @@ export function ResultPage({ match }) {
       <Mobile>
         <Box className={classes.mobileContainer}>
           <NavBar pageType="mobile" />
-            <Box className={classes.mobileBlock}>
-            </Box>
-            <Box className={classes.mobileResultBlock}>
-              <ResultTemplate  data={data}/>
-            </Box>
-            <Box className={classes.mobileRecommendBlock}>
-              <RecommendContentsTemplate data={recommendData}/>
-            </Box>
-            <Box className={classes.mobileShareButton}>
-              <ShareButton />
-            </Box>
+          <Box className={classes.mobileBlock}></Box>
+          <Box className={classes.mobileResultBlock}>
+            <ResultTemplate data={data} />
+          </Box>
+          <Box className={classes.mobileRecommendBlock}>
+            <RecommendContentsTemplate data={recommendData} />
+          </Box>
+          <Box className={classes.mobileShareButton}>
+            <ShareButton />
+          </Box>
           <Footer type="mobile" />
-      </Box>
-
+        </Box>
       </Mobile>
 
       {/* Tablet view */}
@@ -70,7 +68,7 @@ export function ResultPage({ match }) {
             <ResultTemplate data={data} />
           </Grid>
           <Grid className={classes.recommendContentsGrid} item>
-            <RecommendContentsTemplate data={recommendData}/>
+            <RecommendContentsTemplate data={recommendData} />
           </Grid>
           <Grid className={classes.shareBtnGrid} item>
             <ShareButton />
@@ -82,13 +80,13 @@ export function ResultPage({ match }) {
       {/* PC wide view */}
 
       <PCwide>
-      <NavBar />
+        <NavBar />
         <Grid className={classes.container}>
           <Grid className={classes.resultGrid} item>
             <ResultTemplate data={data} />
           </Grid>
           <Grid className={classes.recommendContentsGrid} item>
-            <RecommendContentsTemplate  data={recommendData}/>
+            <RecommendContentsTemplate data={recommendData} />
           </Grid>
           <Grid className={classes.shareBtnGrid} item>
             <ShareButton />

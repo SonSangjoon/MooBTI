@@ -1,26 +1,29 @@
-import { useMediaQuery } from 'react-responsive';
+import { useMediaQuery } from "react-responsive";
 
 const Mobile = ({ children }) => {
-    const isMobile = useMediaQuery({ maxWidth: '767px'})
-    return isMobile ? children : null
-}
+  const isMobile = useMediaQuery({ maxWidth: "767px" });
+  return isMobile ? children : null;
+};
 
 const Tablet = ({ children }) => {
-    const isTablet = useMediaQuery({ 
-        minWidth: '768px',
-        maxWidth: '1023px'})
-    return isTablet ? children : null
-}
+  const isTablet = useMediaQuery({
+    minWidth: "768px",
+    maxWidth: "1023px",
+  });
+  return isTablet ? children : null;
+};
 
 const PC = ({ children }) => {
-    const isPC = useMediaQuery({ 
-        minWidth: '1024px',maxWidth: '1279px'})
-    return isPC? children : null
-}
+  const isPC = useMediaQuery({
+    minWidth: "1024px",
+    maxWidth: "1279px",
+  });
+  return isPC ? children : null;
+};
 
 const PCwide = ({ children }) => {
-    const isPCwide = useMediaQuery({ minWidth: '1280px'})
-    return isPCwide ? children : null
-}
+  const isPCwide = useMediaQuery({ minWidth: "1280px" });
+  return isPCwide ? children : null;
+};
 
-export { Mobile, Tablet, PC, PCwide }
+export { Mobile, Tablet, PC, PCwide };

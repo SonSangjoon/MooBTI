@@ -1,17 +1,15 @@
 import React from "react";
-import { Box } from '@material-ui/core';
+import { Box } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
-import { Helmet } from 'react-helmet'
+import { Helmet } from "react-helmet";
 import { Fab } from "@material-ui/core";
 import { ReactComponent as KakaoTalk } from "../images/sharebutton/kakaotalk.svg";
 
 const useStyles = makeStyles({
-
   imageIcon: {
     height: "30px",
     width: "30px",
   },
-
 });
 
 const KakaoShareButton = () => {
@@ -26,9 +24,11 @@ const KakaoShareButton = () => {
       kakao.Link.sendDefault({
         objectType: "feed",
         content: {
-          title: "타이틀(ex. 당신은 항상 사랑을 말하는 당신은, 타이타닉의 Jack)",
+          title:
+            "타이틀(ex. 당신은 항상 사랑을 말하는 당신은, 타이타닉의 Jack)",
           description: "나와 잘 맞는 영화 주인공은?",
-          imageUrl: 'http://mud-kage.kakao.co.kr/dn/Q2iNx/btqgeRgV54P/VLdBs9cvyn8BJXB3o7N8UK/kakaolink40_original.png', 
+          imageUrl:
+            "http://mud-kage.kakao.co.kr/dn/Q2iNx/btqgeRgV54P/VLdBs9cvyn8BJXB3o7N8UK/kakaolink40_original.png",
           link: {
             mobileWebUrl: window.location.href,
             webUrl: window.location.href,
@@ -47,7 +47,7 @@ const KakaoShareButton = () => {
       });
     }
   };
-  
+
   return (
     <Box className="kakao-share-button">
       <Helmet>
