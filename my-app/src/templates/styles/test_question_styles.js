@@ -48,7 +48,22 @@ const useStyles = makeStyles((theme) => ({
         alignItems: 'center',
     },
 
+    loadingContainer: {
+        height: "100%",
+        display: 'grid',
+        gridTemplateRows: 'repeat(3, 1fr)',
+    },
+
+    lodingGrid:{
+        gridRow:'2/span 1'
+    },
+    loadingBox:{
+        alignItems: 'center',
+        alignContent: 'center',
+        alignSelf: 'center'
+    },
     loadingText:{
+        display: 'block',
         color: 'white',
         fontSize: '2vmax',
         padding: 20
