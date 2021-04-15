@@ -9,12 +9,12 @@ const useStyles = makeStyles({
     height: "50px",
   },
   shareBtn1Grid: {
-    display: 'block',
-    paddingLeft: '6.5px',
-    marginBlock: "10px"
+    display: "block",
+    paddingLeft: "6.5px",
+    marginBlock: "10px",
   },
   shareBtn2Grid: {
-    display: 'block',
+    display: "block",
   },
 });
 

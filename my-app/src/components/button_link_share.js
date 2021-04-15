@@ -43,33 +43,33 @@ const LinkShareButton = () => {
 
   return (
     <Box>
-    <Box>
-      <textarea
-        type="text"
-        value={window.location.href}
-        ref={textInput}
-        readOnly
-        className={classes.copy}
-      ></textarea>
+      <Box>
+        <textarea
+          type="text"
+          value={window.location.href}
+          ref={textInput}
+          readOnly
+          className={classes.copy}
+        ></textarea>
 
-      <Fab
-        style={{ backgroundColor: "#dc1a28" }}
-        aria-label="edit"
-        onClick={handleClick({ vertical: "bottom", horizontal: "center" })}
-      >
-        <LinkIcon />
-      </Fab>
-    </Box>
+        <Fab
+          style={{ backgroundColor: "#dc1a28" }}
+          aria-label="edit"
+          onClick={handleClick({ vertical: "bottom", horizontal: "center" })}
+        >
+          <LinkIcon />
+        </Fab>
+      </Box>
 
-    <Snackbar
-    anchorOrigin={{ vertical, horizontal }}
-    open={open}
-    onClose={handleClose}
-    autoHideDuration={2000}
-    message="링크가 클립보드에 복사되었습니다."
-    key={vertical + horizontal}
-    action={action}
-    />
+      <Snackbar
+        anchorOrigin={{ vertical, horizontal }}
+        open={open}
+        onClose={handleClose}
+        autoHideDuration={2000}
+        message="링크가 클립보드에 복사되었습니다."
+        key={vertical + horizontal}
+        action={action}
+      />
     </Box>
   );
 };

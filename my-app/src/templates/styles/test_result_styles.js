@@ -1,6 +1,5 @@
 import { makeStyles } from "@material-ui/core/styles";
 
-
 const useStyles = makeStyles((theme) => ({
   root: {
     backgroundColor: "black",
@@ -40,10 +39,10 @@ const useStyles = makeStyles((theme) => ({
     objectFit: "fill",
     width: "100%",
     maxHeight: "100%",
-    borderRadius: '15px'
+    borderRadius: "15px",
   },
 
-  characterTitleGrid:{
+  characterTitleGrid: {
     gridColumn: "span 12",
     gridRow: "11/ span 2",
   },
@@ -52,17 +51,15 @@ const useStyles = makeStyles((theme) => ({
     align: "center",
     marginTop: 15,
     // fontSize: "2vw",
-    fontFamily: 'S-CoreDream-8Heavy',
+    fontFamily: "S-CoreDream-8Heavy",
     fontSize: "25px",
-    whiteSpace: 'pre-wrap'
+    whiteSpace: "pre-wrap",
   },
 
   charScriptText: {
     fontSize: "15px",
-    fontFamily: 'S-CoreDream-6Bold',
-    letterSpacing: '2px',
-
-
+    fontFamily: "S-CoreDream-6Bold",
+    letterSpacing: "2px",
   },
 
   characterScript: {
@@ -75,117 +72,110 @@ const useStyles = makeStyles((theme) => ({
     gridRow: "5/ span 8",
   },
 
-  characterDetailText:{
-    fontSize: '1vw',
-    fontFamily: 'S-CoreDream-3Light',
-    letterSpacing: '2px'
- 
+  characterDetailText: {
+    fontSize: "1vw",
+    fontFamily: "S-CoreDream-3Light",
+    letterSpacing: "2px",
   },
 
   dummyBtn: {
     minWidth: "100%",
   },
-    //Mobile View
+  //Mobile View
 
-    mobileResultMainGrid: {
-      gridColumn: "span 12",
-      gridRow: "span 4",
-      color: "white",
-    },
+  mobileResultMainGrid: {
+    gridColumn: "span 12",
+    gridRow: "span 4",
+    color: "white",
+  },
 
-    mobileImageGrid: {
-      gridColumn: "2/span 10",
-      gridRow: "2/span 6",
-    },
-    mobileCharacterTitleGrid:{
-      gridColumn: "span 12",
-      gridRow: "9/ span 2",
-    },
+  mobileImageGrid: {
+    gridColumn: "2/span 10",
+    gridRow: "2/span 6",
+  },
+  mobileCharacterTitleGrid: {
+    gridColumn: "span 12",
+    gridRow: "9/ span 2",
+  },
 
-    mobileCharacterTitle:{
-      align: "center",
-      marginTop: 15,
+  mobileCharacterTitle: {
+    align: "center",
+    marginTop: 15,
 
-      fontFamily: 'S-CoreDream-6Bold',
-      fontSize: "18px",
-      whiteSpace: 'pre-wrap',
-      letterSpacing: '2px'
+    fontFamily: "S-CoreDream-6Bold",
+    fontSize: "18px",
+    whiteSpace: "pre-wrap",
+    letterSpacing: "2px",
+  },
 
-    },
+  mobileCharacterDetailText: {
+    fontSize: "16px",
+    letterSpacing: "2px",
+  },
 
-    mobileCharacterDetailText:{
-      fontSize: '16px',
-      letterSpacing: '2px'
-    },
+  mobileCharScriptText: {
+    fontSize: "17px",
+    letterSpacing: "2px",
+    fontFamily: "S-CoreDream-6Bold",
+  },
 
-    mobileCharScriptText: {
-      fontSize: "17px",
-    letterSpacing: '2px',
-    fontFamily: 'S-CoreDream-6Bold',
+  mobileCharacterScript: {
+    gridColumn: "2/span 10",
+    gridRow: "span 2",
+  },
 
-    },
+  mobileCharacterDetail: {
+    gridColumn: "span 12",
+    gridRow: "3/ span 8",
+  },
 
-    mobileCharacterScript: {
-      gridColumn: "2/span 10",
-      gridRow: "span 2",
-    },
-    
-    mobileCharacterDetail: {
-      gridColumn: "span 12",
-      gridRow: "3/ span 8",
-    },
+  //Tablet View
+  tabletResultMainGrid: {
+    gridColumn: "span 12",
+    gridRow: "span 4",
+    color: "white",
+  },
 
+  tabletImageGrid: {
+    gridColumn: "2/span 10",
+    gridRow: "2/span 6",
+  },
+  tabletCharacterTitleGrid: {
+    gridColumn: "span 12",
+    gridRow: "9/ span 2",
+  },
 
-    //Tablet View
-    tabletResultMainGrid: {
-      gridColumn: "span 12",
-      gridRow: "span 4",
-      color: "white",
-    },
+  tabletCharacterTitle: {
+    align: "center",
+    marginTop: 15,
 
-    tabletImageGrid: {
-      gridColumn: "2/span 10",
-      gridRow: "2/span 6",
-    },
-    tabletCharacterTitleGrid:{
-      gridColumn: "span 12",
-      gridRow: "9/ span 2",
-    },
+    fontFamily: "S-CoreDream-6Bold",
+    fontSize: "17px",
+    whiteSpace: "pre-wrap",
+    letterSpacing: "1px",
+  },
 
-    tabletCharacterTitle:{
-      align: "center",
-      marginTop: 15,
+  tabletCharacterDetailText: {
+    fontSize: "14px",
+    letterSpacing: "1px",
+  },
 
-      fontFamily: 'S-CoreDream-6Bold',
-      fontSize: "17px",
-      whiteSpace: 'pre-wrap',
-      letterSpacing: '1px'
+  tabletCharScriptText: {
+    fontSize: "14px",
+    letterSpacing: "2px",
+    fontFamily: "S-CoreDream-6Bold",
+  },
 
-    },
+  tabletCharacterScript: {
+    gridColumn: "2/span 10",
+    gridRow: "span 2",
+  },
 
-    tabletCharacterDetailText:{
-      fontSize: '14px',
-      letterSpacing: '1px'
-    },
-
-    tabletCharScriptText: {
-      fontSize: "14px",
-    letterSpacing: '2px',
-    fontFamily: 'S-CoreDream-6Bold',
-
-    },
-
-    tabletCharacterScript: {
-      gridColumn: "2/span 10",
-      gridRow: "span 2",
-    },
-    
-    tabletCharacterDetail: {
-      gridColumn: "span 12",
-      gridRow: "4/span 8",
-    },
-    //PcWide View
-
+  tabletCharacterDetail: {
+    gridColumn: "span 12",
+    gridRow: "4/span 8",
+  },
+  //PcWide View
 }));
 
-export { useStyles }
+export { useStyles };

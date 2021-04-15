@@ -1,181 +1,181 @@
-import { makeStyles } from '@material-ui/core/styles';
+import { makeStyles } from "@material-ui/core/styles";
 
 const useStyles = makeStyles((theme) => ({
-    testContainer: {
-        height: "100%",
-        display: 'grid',
-        gridTemplateRows: 'repeat(12, 1fr)',
-        gridTemplateColumns: 'repeat(12, 1fr)',
-    },
+  testContainer: {
+    height: "100%",
+    display: "grid",
+    gridTemplateRows: "repeat(12, 1fr)",
+    gridTemplateColumns: "repeat(12, 1fr)",
+  },
 
-    imageGrid:{
-        gridColumn : 'span 12',
-        gridRow : 'span 8',
-    },
+  imageGrid: {
+    gridColumn: "span 12",
+    gridRow: "span 8",
+  },
 
-    questionRow: {
-        gridColumn : 'span 12',
-        gridRow : 'span 1',
-    },
+  questionRow: {
+    gridColumn: "span 12",
+    gridRow: "span 1",
+  },
 
-    questionText: {
-        color: 'white',
-        fontSize: '25px',
-        fontFamily: 'S-CoreDream-4Regular',
-        paddingTop: 20
-    },
+  questionText: {
+    color: "white",
+    fontSize: "25px",
+    fontFamily: "S-CoreDream-4Regular",
+    paddingTop: 20,
+  },
 
-    image:{
-        objectFit: 'cover',
-        width: '100%',
-        height: '40vh',
-        borderRadius: "10px"
-    },
+  image: {
+    objectFit: "cover",
+    width: "100%",
+    height: "40vh",
+    borderRadius: "10px",
+  },
 
-    answerGrid:{
-        gridColumn : 'span 12',
-        gridRow : 'span 2',
-        display: 'grid',
-        gridTemplateColumns: 'repeat(2, 1fr)',
-    },
+  answerGrid: {
+    gridColumn: "span 12",
+    gridRow: "span 2",
+    display: "grid",
+    gridTemplateColumns: "repeat(2, 1fr)",
+  },
 
-    emptyBox:{
-        width: '100%',
-        height: "60vh",
-        
-        display:'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-    },
+  emptyBox: {
+    width: "100%",
+    height: "60vh",
 
-    loadingContainer: {
-        height: "100%",
-        display: 'grid',
-        gridTemplateRows: 'repeat(3, 1fr)',
-    },
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+  },
 
-    lodingGrid:{
-        gridRow:'2/span 1'
-    },
-    loadingBox:{
-        display: 'inline-block',
-        verticalAlign : 'middle'
-    },
-    loadingText:{
-        display: 'block',
-        color: 'white',
-        fontSize: '2vmax',
-        padding: 20
-    },
+  loadingContainer: {
+    height: "100%",
+    display: "grid",
+    gridTemplateRows: "repeat(3, 1fr)",
+  },
 
-    // Mobile View
+  loadingGrid: {
+    gridRow: "2/span 1",
+  },
+  loadingBox: {
+    // display: 'inline-block',
+    // verticalAlign : 'middle'
+    align: "center",
+  },
+  loadingText: {
+    display: "block",
+    color: "white",
+    fontSize: "3vmax",
+    padding: 20,
+  },
 
-    mobileTestContainer: {
-        height: "100%",
-        display: 'grid',
-        gridTemplateRows: 'repeat(12, 1fr)',
-    },
+  // Mobile View
 
-    mobileImage:{
-        objectFit: 'cover',
-        width: '100%',
-        height: '28vh',
-        borderRadius: "10px"
-    },
+  mobileTestContainer: {
+    height: "100%",
+    display: "grid",
+    gridTemplateRows: "repeat(12, 1fr)",
+  },
 
-    mobileImageGrid:{
-        gridRow : 'span 5',
-        gridColumn: 'span 12',
-        margin: '10px'
-    },
+  mobileImage: {
+    objectFit: "cover",
+    width: "100%",
+    height: "28vh",
+    borderRadius: "10px",
+  },
 
-    mobileQuestionRow:{
-        gridRow : '6/span 2',
-        gridColumn: 'span 12',
+  mobileImageGrid: {
+    gridRow: "span 5",
+    gridColumn: "span 12",
+    margin: "10px",
+  },
 
-        paddingTop: '10px'
-    },
-    
-    mobileQuestionText:{
-        color: 'white',
-        fontSize: '17px',
-        fontFamily: 'S-CoreDream-4Regular',
-        whiteSpace: 'pre-wrap'
-    },
+  mobileQuestionRow: {
+    gridRow: "6/span 2",
+    gridColumn: "span 12",
 
-    mobileAnswerGrid1:{
-        gridRow : '8/span 1',
-        gridColumn: 'span 12',
-    },    
+    paddingTop: "10px",
+  },
 
-    mobileAnswerGrid2:{
-        gridRow : '10/span 2',
-        gridColumn: 'span 12',
-    },
+  mobileQuestionText: {
+    color: "white",
+    fontSize: "17px",
+    fontFamily: "S-CoreDream-4Regular",
+    whiteSpace: "pre-wrap",
+  },
 
-    mobileBtnWrapper:{
-        display: 'flex',
-        justifyContent: 'center',
-        alignContent: 'center',
-        height: '100%'
-    },
+  mobileAnswerGrid1: {
+    gridRow: "8/span 1",
+    gridColumn: "span 12",
+  },
 
-     //Tablet View
-     tabletImageGrid:{
-        gridColumn : 'span 12',
-        gridRow : 'span 6',
-    },
+  mobileAnswerGrid2: {
+    gridRow: "10/span 2",
+    gridColumn: "span 12",
+  },
 
-    tabletImage:{
-        objectFit: 'cover',
-        width: '100%',
-        height: '30vh',
-        borderRadius: "10px"
-    },
+  mobileBtnWrapper: {
+    display: "flex",
+    justifyContent: "center",
+    alignContent: "center",
+    height: "100%",
+  },
 
-    tabletQuestionRow: {
-        gridColumn : 'span 12',
-        gridRow : '7/span 2',
-    },
+  //Tablet View
+  tabletImageGrid: {
+    gridColumn: "span 12",
+    gridRow: "span 6",
+  },
 
-    tabletQuestionText: {
-        color: 'white',
-        fontSize: '19px',
-        paddingTop: 20,
-        fontFamily: 'S-CoreDream-4Regular',
-        whiteSpace: 'pre-wrap'
-    },
+  tabletImage: {
+    objectFit: "cover",
+    width: "100%",
+    height: "30vh",
+    borderRadius: "10px",
+  },
 
-    //PcWide View
-    pcWideImageGrid:{
-        gridColumn : '3/span 8',
-        gridRow : 'span 6',
-    },
-    pcWideImage:{
-        objectFit: 'cover',
-        width: '100%',
-        height: '53vh',
-        borderRadius: "10px"
-    },
-    pcWideQuestionRow: {
-        gridColumn : 'span 12',
-        gridRow : '9/span 1',
-    },
+  tabletQuestionRow: {
+    gridColumn: "span 12",
+    gridRow: "7/span 2",
+  },
 
-    pcWideQuestionText: {
-        color: 'white',
-        fontSize: '40px',
-        fontFamily: 'S-CoreDream-4Regular',
-        paddingTop: 20
-    },
+  tabletQuestionText: {
+    color: "white",
+    fontSize: "19px",
+    paddingTop: 20,
+    fontFamily: "S-CoreDream-4Regular",
+    whiteSpace: "pre-wrap",
+  },
 
-    pcWideAnswerGrid:{
-        gridColumn : '3/span 8',
-        gridRow : '10/span 2',
-        display: 'grid',
-        gridTemplateColumns: 'repeat(2, 1fr)',
-    },
-    
+  //PcWide View
+  pcWideImageGrid: {
+    gridColumn: "3/span 8",
+    gridRow: "span 6",
+  },
+  pcWideImage: {
+    objectFit: "cover",
+    width: "100%",
+    height: "53vh",
+    borderRadius: "10px",
+  },
+  pcWideQuestionRow: {
+    gridColumn: "span 12",
+    gridRow: "9/span 1",
+  },
+
+  pcWideQuestionText: {
+    color: "white",
+    fontSize: "40px",
+    fontFamily: "S-CoreDream-4Regular",
+    paddingTop: 20,
+  },
+
+  pcWideAnswerGrid: {
+    gridColumn: "3/span 8",
+    gridRow: "10/span 2",
+    display: "grid",
+    gridTemplateColumns: "repeat(2, 1fr)",
+  },
 }));
 
-export { useStyles }
+export { useStyles };

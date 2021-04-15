@@ -32,7 +32,6 @@ const useStyles = makeStyles((theme) => ({
     fontSize: 20,
     color: "white",
     fontFamily: "S-CoreDream-4Regular",
-
   },
 
   gender_img: {
@@ -48,37 +47,34 @@ const useStyles = makeStyles((theme) => ({
   image: {
     borderRadius: "10px",
     height: "120px",
-    weight: "120px"
+    weight: "120px",
   },
 
-//Mobile View
+  //Mobile View
 
- mobileContainer: {
-  height: "100vh",
-  display: "grid",
-  gridTemplateRows: "repeat(3, 1fr)",
-  gridGap: theme.spacing(1),
-},
+  mobileContainer: {
+    height: "100vh",
+    display: "grid",
+    gridTemplateRows: "repeat(3, 1fr)",
+    gridGap: theme.spacing(1),
+  },
 
-mobileGrid:{
-gridRow: '2/span 1'
-},
+  mobileGrid: {
+    gridRow: "2/span 1",
+  },
 
-mobileTitle: {
-paddingBottom: '1vh',
-fontSize: '20px',
-color: 'white',
-fontFamily: "S-CoreDream-4Regular",
+  mobileTitle: {
+    paddingBottom: "1vh",
+    fontSize: "20px",
+    color: "white",
+    fontFamily: "S-CoreDream-4Regular",
+  },
 
-},
-
-mobileImageTitle: {
-fontSize: 17,
-color:'white',
-fontFamily: "S-CoreDream-4Regular",
-
-},
-
+  mobileImageTitle: {
+    fontSize: 17,
+    color: "white",
+    fontFamily: "S-CoreDream-4Regular",
+  },
 
   //Tablet View
 
@@ -102,23 +98,22 @@ fontFamily: "S-CoreDream-4Regular",
   //   gridColumn: "span 2",
   // },
 
-  tabletGenderPageGrid:{
+  tabletGenderPageGrid: {
     gridColumn: "2",
-    gridRow: "2"
+    gridRow: "2",
   },
 
-  // image: { 
+  // image: {
   //   borderRadius:'10px',
   // },
 
-// tabletTitle:{
-//     fontSize: "2.7vw",
-//     color: "white",
+  // tabletTitle:{
+  //     fontSize: "2.7vw",
+  //     color: "white",
 
-//   },
+  //   },
 
-//PcWide View
-
+  //PcWide View
 }));
 
-export { useStyles }
+export { useStyles };

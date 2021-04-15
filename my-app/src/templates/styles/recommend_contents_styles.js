@@ -29,24 +29,21 @@ const useStyles = makeStyles((theme) => ({
     gridColumn: "span 12",
     gridRow: "span 2",
   },
-  
+
   recommendDesc: {
     gridColumn: "5/span 8",
     gridRow: "4/ span 10",
   },
 
-  recommendCharText:{
+  recommendCharText: {
     fontSize: "14px",
     fontFamily: "S-CoreDream-6Bold",
-    paddingBottom: '8px',
-
-
+    paddingBottom: "8px",
   },
 
-  recommendDescText:{
+  recommendDescText: {
     fontSize: "1.6vh",
-    fontFamily: 'S-CoreDream-3Light',
-
+    fontFamily: "S-CoreDream-3Light",
   },
 
   ImageGrid: {
@@ -64,10 +61,10 @@ const useStyles = makeStyles((theme) => ({
     gridColumn: "5/ span 5",
     gridRow: "9/ span 2",
   },
-  
+
   movieLinkBtn: {
     minWidth: "100%",
-    fontSize: "12px"
+    fontSize: "12px",
   },
 
   restartBtnGrid: {
@@ -79,28 +76,28 @@ const useStyles = makeStyles((theme) => ({
     minWidth: "100%",
   },
 
-  recommendTitleText:{
+  recommendTitleText: {
     fontSize: "1.2vw",
-    fontFamily: "S-CoreDream-6Bold"
+    fontFamily: "S-CoreDream-6Bold",
   },
 
   // Mobile View
-  mobileRecommendTitleGrid:{
+  mobileRecommendTitleGrid: {
     gridColumn: "span 12",
     gridRow: "span 2",
   },
 
-  mobileRecommendTitleText:{
+  mobileRecommendTitleText: {
     fontSize: "14px",
-    fontFamily: "S-CoreDream-6Bold"
+    fontFamily: "S-CoreDream-6Bold",
   },
 
-  mobileRecommendCharText:{
+  mobileRecommendCharText: {
     fontSize: "14px",
-    fontFamily: "S-CoreDream-4Regular"
+    fontFamily: "S-CoreDream-4Regular",
   },
 
-  mobileRecommendDesc:{
+  mobileRecommendDesc: {
     gridColumn: "5/span 8",
     gridRow: "4/ span 7",
   },
@@ -108,36 +105,32 @@ const useStyles = makeStyles((theme) => ({
     gridColumn: "5/ span 5",
     gridRow: "-4/ span 2",
   },
-    //Tablet View
-    tabletRecommendTitleGrid:{
-      gridColumn: "span 12",
-      gridRow: "span 2",
-    },
-  
-    tabletRecommendTitleText:{
-      fontSize: "14px",
-      fontFamily: "S-CoreDream-6Bold"
-    },
-  
-    tabletRecommendCharText:{
-      fontSize: "14px",
-      fontFamily: "S-CoreDream-4Regular"
-    },
-  
-    tabletRecommendDesc:{
-      gridColumn: "5/span 8",
-      gridRow: "4/ span 7",
-    },
-    tabletMovieLinkBtnGrid: {
-      gridColumn: "2/span 10",
-      gridRow: "span 2",
-    },
+  //Tablet View
+  tabletRecommendTitleGrid: {
+    gridColumn: "span 12",
+    gridRow: "span 2",
+  },
 
-    //PcWide View
+  tabletRecommendTitleText: {
+    fontSize: "14px",
+    fontFamily: "S-CoreDream-6Bold",
+  },
 
+  tabletRecommendCharText: {
+    fontSize: "14px",
+    fontFamily: "S-CoreDream-4Regular",
+  },
+
+  tabletRecommendDesc: {
+    gridColumn: "5/span 8",
+    gridRow: "4/ span 7",
+  },
+  tabletMovieLinkBtnGrid: {
+    gridColumn: "2/span 10",
+    gridRow: "span 2",
+  },
+
+  //PcWide View
 }));
 
-
-
-
-export { useStyles}
+export { useStyles };
