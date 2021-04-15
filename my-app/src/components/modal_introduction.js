@@ -31,8 +31,6 @@ export default function TransitionsModal() {
 
   return (
     <Modal
-      aria-labelledby="transition-modal-title"
-      aria-describedby="transition-modal-description"
       className={classes.modal}
       open={openModal}
       onClose={handleClose}
@@ -44,7 +42,7 @@ export default function TransitionsModal() {
     >
       <Fade in={openModal}>
         <div className={classes.paper}>
-          <h2 id="transition-modal-title">Transition modal</h2>
+          <h2 id="transition-modal-title" color="white">Transition modal</h2>
           <p id="transition-modal-description">
             react-transition-group animates me.
           </p>
