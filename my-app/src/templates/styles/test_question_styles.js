@@ -65,7 +65,7 @@ const useStyles = makeStyles((theme) => ({
   loadingText: {
     display: "block",
     color: "white",
-    fontSize: "3vmax",
+    fontSize: "3vmin",
     padding: 20,
   },
 
