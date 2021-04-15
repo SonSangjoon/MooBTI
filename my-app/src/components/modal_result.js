@@ -3,12 +3,11 @@ import { makeStyles } from "@material-ui/core/styles";
 import Modal from "@material-ui/core/Modal";
 import Backdrop from "@material-ui/core/Backdrop";
 import Fade from "@material-ui/core/Fade";
-import { Box, Grid, Button } from "@material-ui/core";
+import { Box, Grid } from "@material-ui/core";
 import { GenderContext } from "../App";
 import IconButton from "@material-ui/core/IconButton";
 import CloseIcon from "@material-ui/icons/Close";
 import { Mobile, Tablet, PC, PCwide } from "../components/MediaQuery.js";
-// import happy from '/images/sentiment/기쁨이.png'
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -16,15 +15,7 @@ const useStyles = makeStyles((theme) => ({
   },
   modal: {
     display: "flex",
-    // alignItems: "center",
     justifyContent: "center",
-    // position: "fixed",
-    // left: "50%"
-
-    // position: "absolute",
-    // left: "50%",
-    // top: "50%",
-    // transform: "translate(-50%, -50%)"
     alignItems: "center",
   },
   container: {
@@ -34,7 +25,6 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: "black",
     border: "2px solid red",
     boxShadow: theme.shadows[1],
-    // padding: theme.spacing(3,0),
     maxWidth: "768px",
     width: "100%",
     height: "85vh",
@@ -84,7 +74,6 @@ const useStyles = makeStyles((theme) => ({
   emotionImage: {
     objectFit: "fill",
     width: "80%",
-    // maxHeight: "100%",
   },
 
   emotionText: {
@@ -130,8 +119,6 @@ function SubTitle(data) {
 
 function EmotionCircle(data) {
   const classes = useStyles();
-
-  // src="/images/sentiment/happy.png"
   const imageUrl = `/images/emotion/${data.gender}/${data.emotion}.png`;
   return (
     <Box align="center">

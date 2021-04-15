@@ -14,7 +14,6 @@ const useStyles = makeStyles((theme) => ({
     gridTemplateRows: "repeat(12, 1fr)",
     gridTemplateColumns: "repeat(12, 1fr)",
   },
-
   emptyRow: {
     gridColumn: "span 12",
     gridRow: "span 1",
