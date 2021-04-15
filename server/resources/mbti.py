@@ -118,7 +118,7 @@ class Mbti(Resource):
 
         user_mbti = answer_to_mbti(args["answer"])
 
-        users = Users(args["gender"], user_mbti)
+        users = Users(args["gender"], args["answer"], user_mbti)
         db.session.add(users)
         db.session.commit()
 
