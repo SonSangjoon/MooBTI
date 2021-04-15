@@ -27,7 +27,7 @@ export function ResultPage({ match }) {
   return (
     <Box className={classes.root}>
       <PC>
-        <NavBar />
+        <NavBar pageType="result"/>
         <Grid className={classes.container}>
           <Grid className={classes.resultGrid} item>
             <ResultTemplate data={data} />
