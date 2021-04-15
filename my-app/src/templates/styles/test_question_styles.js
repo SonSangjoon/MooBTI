@@ -58,9 +58,8 @@ const useStyles = makeStyles((theme) => ({
         gridRow:'2/span 1'
     },
     loadingBox:{
-        alignItems: 'center',
-        alignContent: 'center',
-        alignSelf: 'center'
+        display: 'inline-block',
+        verticalAlign : 'middle'
     },
     loadingText:{
         display: 'block',
