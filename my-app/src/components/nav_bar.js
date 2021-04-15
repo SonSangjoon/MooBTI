@@ -64,6 +64,29 @@ export default function NavBar({ pageType }) {
         </Box>
       </Box>
     );
+  } else if (pageType === "result") {
+    return (
+      <Box className={classes.root} position="static">
+        <Box className={classes.sublogo}>
+          <Link to="/">
+            <img
+              src="/images/Logo.png"
+              alt="Logo"
+              className={classes.sublogoimage}
+            />
+          </Link>
+        </Box>
+        {/* <Box className={classes.sublogo}>
+          <Link to="/">
+            <img
+              src="/images/Logo.png"
+              alt="Logo"
+              className={classes.sublogoimage}
+            />
+          </Link>
+        </Box> */}
+      </Box>
+    );
   } else {
     return (
       <Box className={classes.root} position="static">
