@@ -1,6 +1,6 @@
 import React from "react";
 import { Link as RouterLink } from "react-router-dom";
-import { Button, Box, Grid, Link } from "@material-ui/core";
+import { Button, Box, Grid, Link, Typography } from "@material-ui/core";
 import { withStyles } from "@material-ui/core/styles";
 import { useStyles } from "./styles/recommend_contents_styles";
 import { PC, Mobile, PCwide, Tablet } from "../components/MediaQuery";
@@ -36,12 +36,10 @@ function RestartButton() {
   const classes = useStyles();
   return (
     <Link component={RouterLink} to="/" underline="none">
-      <Button
-        variant="outlined"
-        className={classes.restartBtn}
-        style={{color:"#dc1a28", border:"2px solid #dc1a28"}}
-        >
-        테스트 다시 하기
+      <Button className={classes.restartBtn}>
+        <Typography className={classes.restartBtnText}>
+          테스트 다시 하기
+        </Typography>
       </Button>
     </Link>
   );

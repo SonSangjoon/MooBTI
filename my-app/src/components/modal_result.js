@@ -35,7 +35,7 @@ const useStyles = makeStyles((theme) => ({
     gridRow: "2/span 1",
   },
 
-  titleText: {
+  titleTextStyles: {
     color: "white",
     fontFamily: "S-CoreDream-6Bold",
     fontSize: "32px",
@@ -47,7 +47,7 @@ const useStyles = makeStyles((theme) => ({
     paddingTop: "15px"
   },
 
-  subTitleText: {
+  subTitleTextStyles: {
     color: "white",
     fontFamily: "S-CoreDream-4Regular",
     fontSize: "17px",
@@ -85,7 +85,7 @@ const useStyles = makeStyles((theme) => ({
     gridColumn: "span 13",
     gridRow: "12/span 1",
   },
-  analysisText: {
+  analysisTextStyle: {
     color: "white",
     fontSize: "17px",
     fontFamily:"S-CoreDream-4Regular"
@@ -103,7 +103,7 @@ const useStyles = makeStyles((theme) => ({
 function Title(data) {
   const classes = useStyles();
   return (
-    <Box className={classes.titleText} align="center">
+    <Box className={classes.titleTextStyles} align="center">
       {data.text}
     </Box>
   );
@@ -112,7 +112,7 @@ function Title(data) {
 function SubTitle(data) {
   const classes = useStyles();
   return (
-    <Box className={classes.subTitleText} align="center">
+    <Box className={classes.subTitleTextStyles} align="center">
       {data.text}
     </Box>
   );
@@ -134,7 +134,7 @@ function EmotionCircle(data) {
 function Analysis(data) {
   const classes = useStyles();
   return (
-    <Box className={classes.analysisText} align="center">
+    <Box className={classes.analysisTextStyle} align="center">
       {data.text}
     </Box>
   );
@@ -162,21 +162,13 @@ function ModalCloseBtn() {
 export default function TransitionsModal({data}) {
   const classes = useStyles();
   const { openModal, setOpenModal } = useContext(MbtiContext);
-  // const { selectedGender } = useContext(MbtiContext);
 
-  console.log(data.analysisTitle)
-  console.log(data.analysisSubTitle)
-  console.log(data.analysisText)
-  console.log(data.emotion)
   const handleClose = () => {
     setOpenModal(false);
   };
-  // console.log(selectedGender)
   const titleText = data.analysisTitle;
-  const subTitleText =
-  data.analysisSubTitle;
-  const analysisText =
-  data.analysisText;
+  const subTitleText = data.analysisSubTitle;
+  const analysisText =data.analysisText;
 
   const gender = "male";
   const happyNumber = data.emotion[0];

@@ -13,7 +13,7 @@ export function ResultPage({ match }) {
   const classes = useStyles();
 
   const mbtiType = match.params.mbti.toUpperCase();
-  const genderType = match.params.gender;
+  const genderType = match.params.gender.toLowerCase();
 
   const data = resultList[mbtiType][genderType];
   const recommendData = {
@@ -51,7 +51,7 @@ export function ResultPage({ match }) {
             <RecommendContentsTemplate data={recommendData} />
           </Box>
           <Box className={classes.mobileShareButton}>
-            <ShareButton />
+            <ShareButton  data={data}  />
           </Box>
           <Footer type="mobile" />
         </Box>
@@ -69,7 +69,7 @@ export function ResultPage({ match }) {
             <RecommendContentsTemplate data={recommendData} />
           </Grid>
           <Grid className={classes.shareBtnGrid} item>
-            <ShareButton />
+            <ShareButton  data={data}  />
           </Grid>
         </Grid>
         <Footer />
@@ -87,7 +87,7 @@ export function ResultPage({ match }) {
             <RecommendContentsTemplate data={recommendData} />
           </Grid>
           <Grid className={classes.shareBtnGrid} item>
-            <ShareButton />
+            <ShareButton  data={data}  />
           </Grid>
         </Grid>
         <Footer />
