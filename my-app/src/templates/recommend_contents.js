@@ -39,8 +39,8 @@ function RestartButton() {
       <Button
         variant="outlined"
         className={classes.restartBtn}
-        color="secondary"
-      >
+        style={{color:"#dc1a28", border:"2px solid #dc1a28"}}
+        >
         테스트 다시 하기
       </Button>
     </Link>

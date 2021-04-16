@@ -12,8 +12,9 @@ const useStyles = makeStyles({
   },
 });
 
-const KakaoShareButton = () => {
+export function KakaoShareButton({data}) {
   const classes = useStyles();
+  console.log(data)
   const shareByKakao = () => {
     if (window.Kakao) {
       const kakao = window.Kakao;
@@ -25,7 +26,7 @@ const KakaoShareButton = () => {
         objectType: "feed",
         content: {
           title:
-            "타이틀(ex. 당신은 항상 사랑을 말하는 당신은, 타이타닉의 Jack)",
+            data,
           description: "나와 잘 맞는 영화 주인공은?",
           imageUrl:
             "http://mud-kage.kakao.co.kr/dn/Q2iNx/btqgeRgV54P/VLdBs9cvyn8BJXB3o7N8UK/kakaolink40_original.png",

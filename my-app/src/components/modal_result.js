@@ -87,7 +87,7 @@ const useStyles = makeStyles((theme) => ({
   },
   analysisText: {
     color: "white",
-    fontSize: "18px",
+    fontSize: "17px",
     fontFamily:"S-CoreDream-4Regular"
   },
   modalCloseBtnGrid: {
@@ -159,26 +159,31 @@ function ModalCloseBtn() {
   );
 }
 
-export default function TransitionsModal(data) {
+export default function TransitionsModal({data}) {
   const classes = useStyles();
   const { openModal, setOpenModal } = useContext(MbtiContext);
+  // const { selectedGender } = useContext(MbtiContext);
 
+  console.log(data.analysisTitle)
+  console.log(data.analysisSubTitle)
+  console.log(data.analysisText)
+  console.log(data.emotion)
   const handleClose = () => {
     setOpenModal(false);
   };
-
-  const titleText = "ESFP 잭이 로즈를 사로잡은 비결 ♥";
+  // console.log(selectedGender)
+  const titleText = data.analysisTitle;
   const subTitleText =
-    "잭의 대사를 분석해서 머릿 속 감정 친구들 100명을 찾아냈어요!";
+  data.analysisSubTitle;
   const analysisText =
-    "\"ESFP 머릿 속 42명의 기쁨이가 애정을 표현하는 데에 열일했어요!\"";
+  data.analysisText;
 
   const gender = "male";
-  const happyNumber = 10;
-  const sadNumber = 20;
-  const angryNumber = 30;
-  const fussyNumber = 40;
-  const timidNumber = 50;
+  const happyNumber = data.emotion[0];
+  const sadNumber = data.emotion[1];
+  const angryNumber = data.emotion[2];
+  const fussyNumber = data.emotion[3];
+  const timidNumber = data.emotion[4];
 
   return (
     <Modal

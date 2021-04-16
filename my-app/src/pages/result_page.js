@@ -36,7 +36,7 @@ export function ResultPage({ match }) {
             <RecommendContentsTemplate data={recommendData} />
           </Grid>
           <Grid className={classes.shareBtnGrid} item>
-            <ShareButton />
+            <ShareButton data={data} />
           </Grid>
         </Grid>
         <Footer />

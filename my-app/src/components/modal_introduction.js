@@ -9,7 +9,8 @@ import IconButton from "@material-ui/core/IconButton";
 import CloseIcon from "@material-ui/icons/Close";
 import { Mobile, Tablet, PC, PCwide } from "../components/MediaQuery.js";
 import { Link } from "@material-ui/core";
-import LanguageIcon from '@material-ui/icons/Language';
+import GitHubIcon from '@material-ui/icons/GitHub';
+import CreateIcon from '@material-ui/icons/Create';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -100,10 +101,15 @@ const useStyles = makeStyles((theme) => ({
     fontFamily: "S-CoreDream-3Light",
     fontSize: "13px",
   },
-  linkIcon:{
-    width: "36px",
-    height: "23px"
+  linkIcon: {
+    backgroundColor: "#fffff",
+    width: "28px",
+    height: "28px",
+    minHeight: "5px"
 
+  },
+  linkInnerIcon: {
+    fontSize: "18px"
   },
 }));
 
@@ -148,6 +154,8 @@ function ThirdParagraph() {
 function MemberIntro(data) {
   const classes = useStyles();
   const imageUrl = `/images/members/${data.image}.png`;
+  const memberName = data.name;
+
   return (
     <Box align="center" mt={3}>
       <img src={imageUrl} alt="memoji" className={classes.memberImage} />
@@ -159,8 +167,12 @@ function MemberIntro(data) {
       </Box>
       <Box align="center" mt={2}>
         <Link href={data.url} underline="none" target="_blank">
-          <Fab className={classes.linkIcon} style={{backgroundColor: "#dc1a28"}} align="center">
-            <LanguageIcon/>
+          <Fab
+            className={classes.linkIcon}
+            // style={{ backgroundColor: "#fffff" }}
+            align="center"
+          >
+            {memberName === "준효" ? <CreateIcon className={classes.linkInnerIcon}/> : <GitHubIcon className={classes.linkInnerIcon}/>}
           </Fab>
         </Link>
       </Box>
@@ -170,7 +182,7 @@ function MemberIntro(data) {
 
 function ModalCloseBtn() {
   const classes = useStyles();
-  const { setOpenIntroduction} = useContext(MbtiContext);
+  const { setOpenIntroduction } = useContext(MbtiContext);
 
   const handleClose = () => {
     setOpenIntroduction(false);
@@ -189,7 +201,7 @@ function ModalCloseBtn() {
 
 export default function IntroductionModal(data) {
   const classes = useStyles();
-  const { openIntroduction, setOpenIntroduction} = useContext(MbtiContext);
+  const { openIntroduction, setOpenIntroduction } = useContext(MbtiContext);
 
   const handleClose = () => {
     setOpenIntroduction(false);
@@ -431,6 +443,3 @@ export default function IntroductionModal(data) {
     // <ModalWindow />
   );
 }
-
-
-

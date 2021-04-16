@@ -4,6 +4,7 @@ import { MbtiContext } from "../App";
 import { useStyles } from "./styles/test_result_styles";
 import TransitionsModal from "../components/modal_result";
 import { Mobile, PC, PCwide, Tablet } from "../components/MediaQuery";
+import { withStyles } from "@material-ui/core/styles";
 
 function ResultMain({ data }) {
   const classes = useStyles();
@@ -134,7 +135,7 @@ function ResultDescription({ data }) {
 function DataAnalysisBtn({ value }) {
   const classes = useStyles();
   return (
-    <Button variant="outlined" className={classes.dummyBtn} color="secondary">
+    <Button variant="outlined" className={classes.analysisBtn} style={{color:"#dc1a28",border:"2px solid #dc1a28"}}>
       {value}
     </Button>
   );
@@ -143,7 +144,6 @@ function DataAnalysisBtn({ value }) {
 export default function ResultTemplate({ data }) {
   const classes = useStyles();
   const { setOpenModal } = useContext(MbtiContext);
-
   return (
     <Grid className={classes.container}>
       <PC>
@@ -159,7 +159,7 @@ export default function ResultTemplate({ data }) {
         <Grid className={classes.buttonGrid}>
           <DataAnalysisBtn value="영화보러 가기" />
         </Grid>
-        <TransitionsModal />
+        <TransitionsModal data={data}/>
       </PC>
 
       <Mobile>
