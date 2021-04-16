@@ -153,17 +153,25 @@ const useStyles = makeStyles((theme) => ({
   tabletRecommendTitleText: {
     fontSize: "14px",
     fontFamily: "S-CoreDream-6Bold",
+
   },
 
   tabletRecommendCharText: {
     fontSize: "14px",
-    fontFamily: "S-CoreDream-4Regular",
+    fontFamily: "S-CoreDream-6Bold",
+    paddingBottom : "10px"
   },
 
   tabletRecommendDesc: {
     gridColumn: "5/span 8",
     gridRow: "4/ span 7",
   },
+
+  tabletrecommendDescText:{
+    fontSize: "12px",
+    fontFamily: "S-CoreDream-4Regular",
+  },
+
   tabletMovieLinkBtnGrid: {
     gridColumn: "2/span 10",
     gridRow: "span 2",

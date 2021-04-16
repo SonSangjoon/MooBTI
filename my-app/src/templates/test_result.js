@@ -179,7 +179,6 @@ export default function ResultTemplate({ data, genderType }) {
             <DataAnalysisBtn value="👀 왓챠에서 확인하기" url={data.movieUrl}/>
           </Grid>
           ) }
-          <DataAnalysisBtn value="👀 넷플릭스에서 확인하기" url={data.movieUrl}/>
         </Grid>
         <TransitionsModal data={data} genderType={genderType}/>
       </PC>
