@@ -4,7 +4,6 @@ import { MbtiContext } from "../App";
 import { useStyles } from "./styles/test_result_styles";
 import TransitionsModal from "../components/modal_result";
 import { Mobile, PC, PCwide, Tablet } from "../components/MediaQuery";
-import { withStyles } from "@material-ui/core/styles";
 
 function ResultMain({ data }) {
   const classes = useStyles();

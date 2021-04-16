@@ -15,8 +15,6 @@ export function ResultPage({ match }) {
   const mbtiType = match.params.mbti.toUpperCase();
   const genderType = match.params.gender;
 
-  console.log(match.params.mbti, match.params.gender, genderType);
-
   const data = resultList[mbtiType][genderType];
   const recommendData = {
     good:
