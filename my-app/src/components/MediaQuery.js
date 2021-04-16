@@ -1,14 +1,14 @@
 import { useMediaQuery } from "react-responsive";
 
 const Mobile = ({ children }) => {
-  const isMobile = useMediaQuery({ maxWidth: "767px" });
+  const isMobile = useMediaQuery({ maxWidth: "767.9px" });
   return isMobile ? children : null;
 };
 
 const Tablet = ({ children }) => {
   const isTablet = useMediaQuery({
     minWidth: "768px",
-    maxWidth: "1023px",
+    maxWidth: "1023.9px",
   });
   return isTablet ? children : null;
 };
@@ -16,7 +16,7 @@ const Tablet = ({ children }) => {
 const PC = ({ children }) => {
   const isPC = useMediaQuery({
     minWidth: "1024px",
-    maxWidth: "1279px",
+    maxWidth: "1279.9px",
   });
   return isPC ? children : null;
 };

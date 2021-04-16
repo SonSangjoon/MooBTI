@@ -38,9 +38,11 @@ const useStyles = makeStyles((theme) => ({
     gridRow: "2/span 10",
     color: "white",
   },
-  shareBtnGrid: {
-    gridColumn: "12",
-    gridRow: "10/span 2",
+  shareButton: {
+    position: 'fixed',
+    bottom: '100px',
+    right: '5px',
+    padding: '20px'
   },
 
   
@@ -57,7 +59,7 @@ mobileContainer: {
 mobileBlock:{
   overflow: 'auto',
   display: "block",
-  height: "5vh",
+  // height: "5vh",
   margin: "15px"
 },
 

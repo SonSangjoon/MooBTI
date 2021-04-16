@@ -36,13 +36,13 @@ const useStyles = makeStyles((theme) => ({
   },
 
   recommendCharText: {
-    fontSize: "14px",
+    fontSize: "1.2vw",
     fontFamily: "S-CoreDream-6Bold",
-    paddingBottom: "8px",
+    paddingBottom: "10px",
   },
 
   recommendDescText: {
-    fontSize: "1.6vh",
+    fontSize: "1vw",
     fontFamily: "S-CoreDream-3Light",
   },
 
@@ -51,10 +51,11 @@ const useStyles = makeStyles((theme) => ({
     gridRow: "4/ span 7",
   },
 
-  PosterImg: {
+  posterImg: {
     objectFit: "fill",
     width: "100%",
     maxHeight: "100%",
+    borderRadius: '9px'
   },
 
   movieLinkBtnGrid: {
@@ -65,8 +66,13 @@ const useStyles = makeStyles((theme) => ({
   movieLinkBtn: {
     minWidth: "100%",
     fontSize: "12px",
+    color: "secondary"
   },
-
+  movieLinkText:{
+    color:"white",
+    fontFamily: "S-CoreDream-4Regular"
+  },
+  
   restartBtnGrid: {
     gridColumn: "3/ span 8",
     gridRow: "-2/ span 2",
@@ -74,10 +80,21 @@ const useStyles = makeStyles((theme) => ({
 
   restartBtn: {
     minWidth: "100%",
+
+    color:"#dc1a28",
+    border:"2px solid #dc1a28",
+    "&.MuiButton-root:hover":{
+      color: 'lightgrey',
+      border:"2px solid white",
+    }
+  },
+
+  restartBtnText:{
+    fontFamily: "S-CoreDream-6Bold",
   },
 
   recommendTitleText: {
-    fontSize: "1.2vw",
+    fontSize: "1.4vw",
     fontFamily: "S-CoreDream-6Bold",
   },
 
@@ -87,22 +104,44 @@ const useStyles = makeStyles((theme) => ({
     gridRow: "span 2",
   },
 
+  mobileImageGrid:{
+    gridColumn: "span 3",
+    gridRow: "5/ span 4",
+  },
+
   mobileRecommendTitleText: {
-    fontSize: "14px",
+    fontSize: "18px",
     fontFamily: "S-CoreDream-6Bold",
   },
 
+  mobileCharTitleGrid:{
+    gridColumn: "span 12",
+    gridRow: "3/ span 2",
+    textAlign: 'center'
+  },
+
   mobileRecommendCharText: {
-    fontSize: "14px",
+    fontSize: "20px",
     fontFamily: "S-CoreDream-4Regular",
   },
 
   mobileRecommendDesc: {
     gridColumn: "5/span 8",
-    gridRow: "4/ span 7",
+    gridRow: "5/ span 7",
+    textAlignVertical : 'center'
   },
+
+  mobileRecommendDescText: {
+    fontSize: "px",
+  },
+
   mobileMovieLinkBtnGrid: {
-    gridColumn: "5/ span 5",
+    gridColumn: "3/ span 8",
+    gridRow: "-4/ span 2",
+  },
+
+  mobileRestartBtnGrid:{
+    gridColumn: "3/ span 8",
     gridRow: "-4/ span 2",
   },
   //Tablet View
@@ -129,6 +168,11 @@ const useStyles = makeStyles((theme) => ({
     gridColumn: "2/span 10",
     gridRow: "span 2",
   },
+
+  tabletRestartBtnGrid:{
+    gridColumn: "2/ span 10",
+    gridRow: "-2/ span 2",
+  }
 
   //PcWide View
 }));

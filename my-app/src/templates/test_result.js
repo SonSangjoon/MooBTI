@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { Button, Grid, Box } from "@material-ui/core";
+import { Button, Grid, Box, Typography } from "@material-ui/core";
 import { MbtiContext } from "../App";
 import { useStyles } from "./styles/test_result_styles";
 import TransitionsModal from "../components/modal_result";
@@ -131,18 +131,32 @@ function ResultDescription({ data }) {
   );
 }
 
-function DataAnalysisBtn({ value }) {
+function DataAnalysisBtn({value, url }) {
   const classes = useStyles();
-  return (
-    <Button variant="outlined" className={classes.analysisBtn} style={{color:"#dc1a28",border:"2px solid #dc1a28"}}>
-      {value}
-    </Button>
-  );
+  if(url){
+    return (
+      <Button href={"https://" + url} underline="none" target="_blank" variant="outlined" className={classes.analysisBtn} >
+        <Typography className={classes.analysisText}>
+          {value}
+        </Typography>
+      </Button>
+    );
+  }else{
+    return (
+      <Button variant="outlined" className={classes.analysisBtn} >
+        <Typography className={classes.analysisText}>
+          {value}
+        </Typography>
+      </Button>
+    );
+  }
+
 }
 
-export default function ResultTemplate({ data }) {
+export default function ResultTemplate({ data, genderType }) {
   const classes = useStyles();
   const { setOpenModal } = useContext(MbtiContext);
+
   return (
     <Grid className={classes.container}>
       <PC>
@@ -153,12 +167,21 @@ export default function ResultTemplate({ data }) {
           <ResultDescription data={data} />
         </Grid>
         <Grid className={classes.buttonGrid} onClick={() => setOpenModal(true)}>
-          <DataAnalysisBtn value="어떻게 분석했어?" />
+          <DataAnalysisBtn value="🔦 캐릭터의 연애 비결은?" />
         </Grid>
         <Grid className={classes.buttonGrid}>
-          <DataAnalysisBtn value="영화보러 가기" />
+          {(data.movieUrl[4]==='n') ? (
+            <Grid className={classes.buttonGrid}>
+            <DataAnalysisBtn value="👀 넷플릭스에서 확인하기" url={data.movieUrl}/>
+          </Grid>
+          ) : (
+          <Grid className={classes.buttonGrid}>
+            <DataAnalysisBtn value="👀 왓챠에서 확인하기" url={data.movieUrl}/>
+          </Grid>
+          ) }
+          <DataAnalysisBtn value="👀 넷플릭스에서 확인하기" url={data.movieUrl}/>
         </Grid>
-        <TransitionsModal data={data}/>
+        <TransitionsModal data={data} genderType={genderType}/>
       </PC>
 
       <Mobile>
@@ -168,13 +191,19 @@ export default function ResultTemplate({ data }) {
         <Grid className={classes.resultDescriptionGrid} item>
           <ResultDescription data={data} />
         </Grid>
-        <Grid className={classes.buttonGrid} onClick={() => setOpenModal(true)}>
-          <DataAnalysisBtn value="어떻게 분석했어?" />
+        <Grid className={classes.mobileButtonGrid} onClick={() => setOpenModal(true)}>
+          <DataAnalysisBtn value="🔦 캐릭터의 연애 비결은?" />
         </Grid>
-        <Grid className={classes.buttonGrid}>
-          <DataAnalysisBtn value="영화보러 가기" />
-        </Grid>
-        <TransitionsModal />
+        {(data.movieUrl[4]==='n') ? (
+            <Grid className={classes.mobileButtonGrid}>
+            <DataAnalysisBtn value="👀 넷플릭스에서 확인하기" url={data.movieUrl}/>
+          </Grid>
+          ) : (
+          <Grid className={classes.mobileButtonGrid}>
+            <DataAnalysisBtn value="👀 왓챠에서 확인하기" url={data.movieUrl}/>
+          </Grid>
+          ) }
+        <TransitionsModal data={data} genderType={genderType}/>
       </Mobile>
 
       <Tablet>
@@ -184,13 +213,19 @@ export default function ResultTemplate({ data }) {
         <Grid className={classes.resultDescriptionGrid} item>
           <ResultDescription data={data} />
         </Grid>
-        <Grid className={classes.buttonGrid} onClick={() => setOpenModal(true)}>
-          <DataAnalysisBtn value="어떻게 분석했어?" />
+        <Grid className={classes.tabletButtonGrid} onClick={() => setOpenModal(true)}>
+          <DataAnalysisBtn value="🔦 캐릭터의 연애 비결은?" />
         </Grid>
-        <Grid className={classes.buttonGrid}>
-          <DataAnalysisBtn value="영화보러 가기" />
-        </Grid>
-        <TransitionsModal />
+        {(data.movieUrl[4]==='n') ? (
+            <Grid className={classes.tabletButtonGrid}>
+            <DataAnalysisBtn value="👀 넷플릭스에서 확인하기" url={data.movieUrl}/>
+          </Grid>
+          ) : (
+          <Grid className={classes.tabletButtonGrid}>
+            <DataAnalysisBtn value="👀 왓챠에서 확인하기" url={data.movieUrl}/>
+          </Grid>
+          ) }
+        <TransitionsModal data={data} genderType={genderType}/>
       </Tablet>
 
       <PCwide>
@@ -201,12 +236,18 @@ export default function ResultTemplate({ data }) {
           <ResultDescription data={data} />
         </Grid>
         <Grid className={classes.buttonGrid} onClick={() => setOpenModal(true)}>
-          <DataAnalysisBtn value="어떻게 분석했어?" />
+          <DataAnalysisBtn value="🔦 캐릭터의 연애 비결은?" />
         </Grid>
-        <Grid className={classes.buttonGrid}>
-          <DataAnalysisBtn value="영화보러 가기" />
-        </Grid>
-        <TransitionsModal />
+        {(data.movieUrl[4]==='n') ? (
+            <Grid className={classes.buttonGrid}>
+            <DataAnalysisBtn value="👀 넷플릭스에서 확인하기" url={data.movieUrl}/>
+          </Grid>
+          ) : (
+          <Grid className={classes.buttonGrid}>
+            <DataAnalysisBtn value="👀 왓챠에서 확인하기" url={data.movieUrl}/>
+          </Grid>
+          ) }
+        <TransitionsModal data={data} genderType={genderType}/>
       </PCwide>
     </Grid>
   );

@@ -80,11 +80,16 @@ const useStyles = makeStyles((theme) => ({
 
   analysisBtn: {
     minWidth: "100%",
+
     color:"#dc1a28",
     border:"2px solid #dc1a28",
     "&.MuiButton-root:hover":{
-      color: 'lightgrey'
+      color: 'lightgrey',
+      border:"2px solid white",
     }
+  },
+  analysisText:{
+    fontFamily: "S-CoreDream-6Bold",
   },
   //Mobile View
 
@@ -112,10 +117,18 @@ const useStyles = makeStyles((theme) => ({
     whiteSpace: "pre-wrap",
     letterSpacing: "2px",
   },
+  
+  mobileResultDescriptionGrid: {
+    gridColumn: "span 12",
+    gridRow: "span 5",
+    color: "white",
+    maxHeight: 100
+  },
 
   mobileCharacterDetailText: {
     fontSize: "16px",
     letterSpacing: "2px",
+    fontFamily: "S-CoreDream-4Regular"
   },
 
   mobileCharScriptText: {
@@ -131,7 +144,12 @@ const useStyles = makeStyles((theme) => ({
 
   mobileCharacterDetail: {
     gridColumn: "span 12",
-    gridRow: "3/ span 8",
+    gridRow: "3/ span 7",
+  },
+
+  mobileButtonGrid:{
+    gridColumn: "3/ span 8",
+    gridRow: "span 1",
   },
 
   //Tablet View
@@ -180,6 +198,11 @@ const useStyles = makeStyles((theme) => ({
     gridColumn: "span 12",
     gridRow: "4/span 8",
   },
+
+  tabletButtonGrid:{
+    gridColumn: "2/ span 10",
+    gridRow: "span 1",
+  }
   //PcWide View
 }));
 
