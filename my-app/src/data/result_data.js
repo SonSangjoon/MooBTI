@@ -12,6 +12,7 @@ const resultList = {
 
             imageUrl: '/images/result/jack.png',
             imageSmallUrl: '/images/result/jack_small.png',
+            kakaoImageUrl: 'https://ifh.cc/g/FdAgsb.jpg',
 
             goodMbti: 'ISFJ',
             badMbti:'INFP',
@@ -34,6 +35,7 @@ const resultList = {
 
             imageUrl: '/images/result/jenny.png',
             imageSmallUrl: '/images/result/jenny_small.png',
+            kakaoImageUrl: 'https://ifh.cc/g/8FGlws.jpg',
 
             goodMbti: 'ISFJ',
             badMbti: 'INFP' ,
@@ -58,7 +60,7 @@ const resultList = {
 
             imageUrl: '/images/result/gump.png',
             imageSmallUrl: '/images/result/gump_small.png',
-
+            kakaoImageUrl: 'https://ifh.cc/g/KfNyf4.jpg',
 
             goodMbti: 'ESFP',
             badMbti:'INFJ',
@@ -81,6 +83,7 @@ const resultList = {
 
             imageUrl: '/images/result/clementine.png',
             imageSmallUrl: '/images/result/clementine_small.png',
+            kakaoImageUrl: 'https://ifh.cc/g/QzV9Es.jpg',
 
             goodMbti: 'ESFP',
             badMbti: 'INFJ' ,
@@ -105,6 +108,7 @@ const resultList = {
 
             imageUrl: '/images/result/dylan.png',
             imageSmallUrl: '/images/result/dylan_small.png',
+            kakaoImageUrl: 'https://ifh.cc/g/u8tWPH.jpg',
 
             goodMbti: 'ENTJ',
             badMbti:'ISFP',
@@ -127,6 +131,7 @@ const resultList = {
 
             imageUrl: '/images/result/lara.png',
             imageSmallUrl: '/images/result/lara_small.png',
+            kakaoImageUrl: 'https://ifh.cc/g/IthhDQ.jpg',
 
             goodMbti: 'ENTJ',
             badMbti: 'ISFP' ,
@@ -151,6 +156,7 @@ const resultList = {
 
             imageUrl: '/images/result/arthur.png',
             imageSmallUrl: '/images/result/arthur_small.png',
+            kakaoImageUrl: 'https://ifh.cc/g/NkTq6U.jpg',
 
             goodMbti: 'ESFP',
             badMbti:'ENFJ',
@@ -173,6 +179,7 @@ const resultList = {
             
             imageUrl: '/images/result/covey.png',
             imageSmallUrl: '/images/result/covey_small.png',
+            kakaoImageUrl: 'https://ifh.cc/g/YmnxaF.jpg',
 
             goodMbti: 'ESFP',
             badMbti:'ENFJ',
@@ -197,6 +204,7 @@ const resultList = {
 
             imageUrl: '/images/result/simon.png',
             imageSmallUrl: '/images/result/simon_small.png',
+            kakaoImageUrl: 'https://ifh.cc/g/btYeI0.jpg',
 
             goodMbti: 'ESFJ',
             badMbti:'ENFP',
@@ -219,6 +227,7 @@ const resultList = {
 
             imageUrl: '/images/result/jessica.png',
             imageSmallUrl: '/images/result/jessica_small.png',
+            kakaoImageUrl: 'https://ifh.cc/g/p0vip6.jpg',
 
             goodMbti: 'ESFJ',
             badMbti:'ENFP',
@@ -243,6 +252,7 @@ const resultList = {
             
             imageUrl: '/images/result/steve.png',
             imageSmallUrl: '/images/result/steve_small.png',
+            kakaoImageUrl: 'https://ifh.cc/g/cdTg57.jpg',
 
             goodMbti: 'ISFJ',
             badMbti:'ENFJ',
@@ -265,7 +275,8 @@ const resultList = {
 
             imageUrl: '/images/result/jamie.png',
             imageSmallUrl: '/images/result/jamie_small.png',
-            
+            kakaoImageUrl: 'https://ifh.cc/g/C44LYR.jpg',
+
             goodMbti: 'ISFJ',
             badMbti:'ENFJ',
             shortDesc: '사랑하는 사람을 위해 전력 질주하는 ESTP 여자. 하지만 그의 마음은 주전자 같아서, 당신의 마음을 애태울 거예요.' , 
@@ -290,6 +301,7 @@ const resultList = {
             
             imageUrl: '/images/result/bormir.png',
             imageSmallUrl: '/images/result/bormir_small.png',
+            kakaoImageUrl: 'https://ifh.cc/g/gOyXYF.jpg',
 
             goodMbti: 'ENTJ',
             badMbti:'INFP',
@@ -307,12 +319,13 @@ const resultList = {
             name: '헤르미온느',
             title: '안정적인 사랑을 고수하는 ESTJ 당신은,\n 해리포터의 헤르미온느',
             script: '"다음 무도회 때에는 다른 사람이 나한테 신청하기 전에 먼저 나한테 신청하도록 해!"',
-description: '헌신적이고 책임감 강한 ESTJ 유형은, 안정적인 사랑을 위해 노력해요. 좋아하는 사람을 위해 언제든 맞춰줄 준비가 되어 있죠. 바람피우는 일은 절대 없을 거고요.🤭 ESTJ에게 사랑은 변하지 않는 거예요. 이런 사랑을 이뤄내기 위해 사소한 다툼을 피하기 위해 노력해요. 한편 자신처럼 애인도 관계에 헌신하기를 바라죠. 이러한 기대감에 가끔 애인에게 크게 실망할 수도 있답니다. 당신을 위해 지속가능한 관계의 비결을 알려줄게요. 비결은 무리하지 않는 것이에요. 헌신의 무게감을 버리고 본인의 감정에 집중하고 표현하세요. 사랑하는 마음만 있으면 돼요.',
+            description: '헌신적이고 책임감 강한 ESTJ 유형은, 안정적인 사랑을 위해 노력해요. 좋아하는 사람을 위해 언제든 맞춰줄 준비가 되어 있죠. 바람피우는 일은 절대 없을 거고요.🤭 ESTJ에게 사랑은 변하지 않는 거예요. 이런 사랑을 이뤄내기 위해 사소한 다툼을 피하기 위해 노력해요. 한편 자신처럼 애인도 관계에 헌신하기를 바라죠. 이러한 기대감에 가끔 애인에게 크게 실망할 수도 있답니다. 당신을 위해 지속가능한 관계의 비결을 알려줄게요. 비결은 무리하지 않는 것이에요. 헌신의 무게감을 버리고 본인의 감정에 집중하고 표현하세요. 사랑하는 마음만 있으면 돼요.',
             movieUrl: 'www.watcha.com/contents/mmOb3kd',
 
             imageUrl: '/images/result/hermione.png',
             imageSmallUrl: '/images/result/hermione_small.png',
-            
+            kakaoImageUrl: 'https://ifh.cc/g/RDZjrm.jpg',
+
             goodMbti: 'ENTJ',
             badMbti:'INFP',
             shortDesc: '안정적인 사랑을 위해 헌신하는 ESTJ 여자. 당신에게도 헌신을 기대하는 게 문제가 되기도 해요.' , 
@@ -336,6 +349,7 @@ description: '헌신적이고 책임감 강한 ESTJ 유형은, 안정적인 사�
 
             imageUrl: '/images/result/sebastian.png',
             imageSmallUrl: '/images/result/sebastian_small.png',  
+            kakaoImageUrl: 'https://ifh.cc/g/NcDgCd.jpg',
 
             goodMbti: 'ESTJ',
             badMbti:'INFJ',
@@ -356,8 +370,11 @@ description: '헌신적이고 책임감 강한 ESTJ 유형은, 안정적인 사�
             script: '"너를 두려워하지 않아. 단지 널 잃는 게 두려울 뿐이야."',
             description: '자유롭고 즉흥적인 ISFP 유형은, 평화를 사랑하고 갈등을 싫어해요. 그래서 고백을 거절하기도, 받아들이기도 어려워하죠. 하지만 배려심 깊고 겸손해서, 이들이 포근한 매력에 빠지는 사람이 많아요. 🧸 당신은 연애에 신중하기 때문에 관계를 주도하는 스타일은 아니군요! 상대의 리드에 몸을 맡기는 당신은, 불도저 같은 뜨거운 스타일과 잘 어울려요. 생각이 많지만 귀차니즘이 심하기 때문에, 마음 속 이야기를 털어놓지를 못하네요. 가끔은 솔직하게 그에게 숨긴 얘기를 풀어 볼까요? 연인과 한층 더 가깝고 뜨거운 사이가 될 거예요.',
             movieUrl: 'www.netflix.com/title/70099113',
+            
             imageUrl: '/images/result/bella.png',
-            imageSmallUrl: '/images/result/bella_small.png',            
+            imageSmallUrl: '/images/result/bella_small.png',                        
+            kakaoImageUrl: 'https://ifh.cc/g/JHwbC5.jpg',
+
             goodMbti: 'ESTJ',
             badMbti:'INFJ',
             shortDesc: '호수같은 사랑을 꿈꾸는 ISFP 여자. 귀차니즘이 심한 그는 당신의 적극적인 사랑 고백을 기다리고 있어요!' , 
@@ -379,8 +396,9 @@ description: '헌신적이고 책임감 강한 ESTJ 유형은, 안정적인 사�
             description: '주도적이며 대화를 즐기는 ESFJ 유형은 본투비 주인공이에요. 상황이 자기 중심으로 돌아가는 걸 좋아하죠. 외향적인 성격에 사람들이 자신에게 호기심을 가지길 바라요. 🕺🏻 다정한 당신은 애인에게 관심과 사랑을 아주 퍼부어 주네요. 현실적인 성향이 강해서 상대와 자신의 상황과 조건, 성격을 꼼꼼히 따지며 고민하지만 연애를 시작하면 그에게 헌신하는 스타일! 그리고 계획적 데이트와 안정적 관계를 선호하는군요. 그래서 그런 걸까요? 애인에게 준 사랑만큼 사랑받지 못하면 상처를 받아요. 하지만 걱정하지 말아요. 나중엔 그가 당신에게 더 푹 빠질 거니까요.',
             movieUrl: 'www.netflix.com/title/70218756',
 
-            imageUrl: '/images/result/john.png',
-            imageSmallUrl: '/images/result/john_small.png',
+            imageUrl: '/images/result/ted.png',
+            imageSmallUrl: '/images/result/ted_small.png',
+            kakaoImageUrl: 'https://ifh.cc/g/RwwRt5.jpg',
 
             goodMbti: 'ISTP',
             badMbti:'ENFJ',
@@ -403,6 +421,7 @@ description: '헌신적이고 책임감 강한 ESTJ 유형은, 안정적인 사�
 
             imageUrl: '/images/result/dafne.png',
             imageSmallUrl: '/images/result/dafne_small.png',
+            kakaoImageUrl: 'https://ifh.cc/g/JZm97T.jpg',
 
             goodMbti: 'ISTP',
             badMbti:'ENFJ',
@@ -427,6 +446,7 @@ description: '헌신적이고 책임감 강한 ESTJ 유형은, 안정적인 사�
 
             imageUrl: '/images/result/edward.png',
             imageSmallUrl: '/images/result/edward_small.png',
+            kakaoImageUrl: 'https://ifh.cc/g/ilkNhn.jpg',
 
             goodMbti: 'ENTP',
             badMbti:'ISTJ',
@@ -450,6 +470,7 @@ description: '헌신적이고 책임감 강한 ESTJ 유형은, 안정적인 사�
 
             imageUrl: '/images/result/veronica.png',
             imageSmallUrl: '/images/result/veronica_small.png',
+            kakaoImageUrl: 'https://ifh.cc/g/PJ5tPT.jpg',
 
             goodMbti: 'ENTP',
             badMbti:'ISTJ',
@@ -471,8 +492,10 @@ description: '헌신적이고 책임감 강한 ESTJ 유형은, 안정적인 사�
             script: '"제발 이 기억만은 남겨주세요. 이 순간만큼은."',
             description: '활발하고 사교적인 ENFP 유형은, 새로운 사람들과의 만남을 즐겨요. 사람들의 관심과 애정을 아주 좋아하죠. 또한 쉽게 지루함을 느끼고 즉흥적인 면이 있어요. 🕹 어렵지 않게 사람들에게 다가가고, 호감이 가는 사람에게 직진하는 성향을 가졌기 때문에 당신이 연애를 시작하는 계기가 되는 경우가 많죠. 관심 없는 사람에게도 매력을 흘려, 착각해서 다가오는 사람들로 난감해질 수도 있어요. 혹시 인간관계 스트레스에 취약하지 않나요? 밝고 외향적인 외면에 가려진 여린 마음이 있으니까요. 그래서 속 깊은 부분까지 감싸줄 수 있는 사람을 만나서 행복해야 한답니다!',
             movieUrl: 'www.watcha.com/contents/m85X9LW',
+            
             imageUrl: '/images/result/joel.png',
             imageSmallUrl: '/images/result/joel_small.png',
+            kakaoImageUrl: 'https://ifh.cc/g/jwWhIh.jpg',
 
             goodMbti: 'INFJ',
             badMbti:'ESTP',
@@ -493,8 +516,10 @@ description: '헌신적이고 책임감 강한 ESTJ 유형은, 안정적인 사�
             script: '"당신 말대로, 나도 여전히 특별한 상대를 찾고 있어요."',
             description: '활발하고 사교적인 ENFP 유형은, 새로운 사람들과의 만남을 즐겨요. 사람들의 관심과 애정을 아주 좋아하죠. 또한 쉽게 지루함을 느끼고 즉흥적인 면이 있어요. 🕹 어렵지 않게 사람들에게 다가가고, 호감이 가는 사람에게 직진하는 성향을 가졌기 때문에 당신이 연애를 시작하는 계기가 되는 경우가 많죠. 관심 없는 사람에게도 매력을 흘려, 착각해서 다가오는 사람들로 난감해질 수도 있어요. 혹시 인간관계 스트레스에 취약하지 않나요? 밝고 외향적인 외면에 가려진 여린 마음이 있으니까요. 그래서 속 깊은 부분까지 감싸줄 수 있는 사람을 만나서 행복해야 한답니다!',
             movieUrl: 'www.netflix.com/kr/title/60020322',
+            
             imageUrl: '/images/result/bridget.png',
             imageSmallUrl: '/images/result/bridget_small.png',
+            kakaoImageUrl: 'https://ifh.cc/g/Ij4PtM.jpg',
 
             goodMbti: 'INFJ',
             badMbti:'ESTP',
@@ -516,8 +541,11 @@ description: '헌신적이고 책임감 강한 ESTJ 유형은, 안정적인 사�
             script: '"왜냐하면 내가 너를 사랑하게 되었기 때문이야. 오직 너만을."',
             description: '솔직하고 센스 있는 ENFJ 유형은, 호불호가 명확한 편이에요. 말을 잘하고 부드러운 리더십도 있어 주위에 사람들이 많이 모이죠. 효율적인 방법으로 신속하게 일 처리하는 당신, 이미 인기쟁이군요! 🏄 타고난 공감 능력으로 상대방에게 깊게 공감할 수 있고, 애정 표현을 아끼지 않아요. 리더십이 있어서 애인이 더 좋은 사람이 되도록 이끌어주기도 하네요! 한편 당신이 도움을 받는 입장이 되면 마음이 무거워져요. 홀로 문제를 해결하려고 하기 보다, 사랑하는 이의 손을 붙잡는 건 어떨까요? 그가 당신의 손을 기다리고 있어요.',
             movieUrl: 'www.netflix.com/title/80203147',
+            
             imageUrl: '/images/result/peter.png',
             imageSmallUrl: '/images/result/peter_small.png',
+            kakaoImageUrl: 'https://ifh.cc/g/YAPNSV.jpg',
+
             goodMbti: 'INFP',
             badMbti:'ESTJ',
             shortDesc: '센스 넘치는 사랑꾼 ENFJ 남자. 당신을 아름답고 풍요로운 생활로 이끌어주겠지만, 때론 그의 숨겨진 고민을 들어보세요.' , 
@@ -534,10 +562,13 @@ description: '헌신적이고 책임감 강한 ESTJ 유형은, 안정적인 사�
             name: '미아',
             title: '센스 넘치는 사랑꾼 ENFJ 당신은,\n 라라랜드의 미아',
             script: '"사람들은 다른 사람들의 열정에 끌리게 되어있어."',
-description: '솔직하고 센스 있는 ENFJ 유형은, 호불호가 명확한 편이에요. 말을 잘하고 부드러운 리더십도 있어 주위에 사람들이 많이 모이죠. 효율적인 방법으로 신속하게 일 처리하는 당신, 이미 인기쟁이군요! 🏄 타고난 공감 능력으로 상대방에게 깊게 공감할 수 있고, 애정 표현을 아끼지 않아요. 리더십이 있어서 애인이 더 좋은 사람이 되도록 이끌어주기도 하네요! 한편 당신이 도움을 받는 입장이 되면 마음이 무거워져요. 홀로 문제를 해결하려고 하기 보다, 사랑하는 이의 손을 붙잡는 건 어떨까요? 그가 당신의 손을 기다리고 있어요.',
+            description: '솔직하고 센스 있는 ENFJ 유형은, 호불호가 명확한 편이에요. 말을 잘하고 부드러운 리더십도 있어 주위에 사람들이 많이 모이죠. 효율적인 방법으로 신속하게 일 처리하는 당신, 이미 인기쟁이군요! 🏄 타고난 공감 능력으로 상대방에게 깊게 공감할 수 있고, 애정 표현을 아끼지 않아요. 리더십이 있어서 애인이 더 좋은 사람이 되도록 이끌어주기도 하네요! 한편 당신이 도움을 받는 입장이 되면 마음이 무거워져요. 홀로 문제를 해결하려고 하기 보다, 사랑하는 이의 손을 붙잡는 건 어떨까요? 그가 당신의 손을 기다리고 있어요.',
             movieUrl: 'www.watcha.com/contents/m5GXz42',
+            
             imageUrl: '/images/result/mia.png',
             imageSmallUrl: '/images/result/mia_small.png',
+            kakaoImageUrl: 'https://ifh.cc/g/Kqn1TC.jpg',
+
             goodMbti: 'INFP',
             badMbti:'ESTJ',
             shortDesc: '센스 넘치는 사랑꾼 ENFJ 여자. 당신을 아름답고 풍요로운 생활로 이끌어주겠지만, 때론 그의 숨겨진 고민을 들어보세요.',
@@ -558,8 +589,11 @@ description: '솔직하고 센스 있는 ENFJ 유형은, 호불호가 명확한 
             script: '"더 이상 내가 싫지 않다면, 고백하건대 난 마법에 걸렸습니다. 당신을 사랑하고 또 사랑합니다."',
             description: '독립적으로 사고하고 행동하는 INTJ 유형은, 명확한 목표를 갖고 있어요. 생명력과 열정을 갖고 사는 사람에게 푹 빠지는 스타일이죠. 👨 💼 겉으론 무뚝뚝한 INTJ이기에 애정 표현을 하는 게 어색해요. 게다가 어딘가 어른스럽고 냉철해 보여서, 상대방도 거리감을 느껴요. 게다가 INTJ는 연애도 문제 해결의 과정처럼 느낀답니다. 그런데 애인은 당신이 사랑하는 방식에 낯설 수도 있어요. 생각이 관계를 가로막는 당신에게 해주고 싶은 말은, “너무 깊이 생각하지 말아요. 솔직하게 마음을 따라가보세요.“',
             movieUrl: 'www.watcha.com/contents/mOk6ZMW',
+            
             imageUrl: '/images/result/darcy.png',
             imageSmallUrl: '/images/result/darcy_small.png',
+            kakaoImageUrl: 'https://ifh.cc/g/kT75nf.jpg',
+
             goodMbti: 'ENFP',
             badMbti:'ISFJ',
             shortDesc: '독립적으로 사고하고 행동하는 INTJ 남자. 그의 지적인 행동 방식이 멋있기도 하지만, 가끔 이해할 수 없어요.',
@@ -576,10 +610,13 @@ description: '솔직하고 센스 있는 ENFJ 유형은, 호불호가 명확한 
             name: '클라리스',
             title: '논리적인 사랑을 하는 INTJ 당신은,\n 양들의 침묵 클라리스',
             script: '"배우러 왔습니다. 자격이 있는지 없는지는 직접 판단하세요."',
-description: '독립적으로 사고하고 행동하는 INTJ 유형은, 명확한 목표를 갖고 있어요. 생명력과 열정을 갖고 사는 사람에게 푹 빠지는 스타일이죠. 👩 💼 겉으론 무뚝뚝한 INTJ이기에 애정 표현을 하는 게 어색해요. 게다가 어딘가 어른스럽고 냉철해 보여서, 상대방도 거리감을 느껴요. 게다가 INTJ는 연애도 문제 해결의 과정처럼 느낀답니다. 그런데 애인은 당신이 사랑하는 방식에 낯설 수도 있어요. 생각이 관계를 가로막는 당신에게 해주고 싶은 말은, “너무 깊이 생각하지 말아요. 솔직하게 마음을 따라가보세요.“',
+            description: '독립적으로 사고하고 행동하는 INTJ 유형은, 명확한 목표를 갖고 있어요. 생명력과 열정을 갖고 사는 사람에게 푹 빠지는 스타일이죠. 👩 💼 겉으론 무뚝뚝한 INTJ이기에 애정 표현을 하는 게 어색해요. 게다가 어딘가 어른스럽고 냉철해 보여서, 상대방도 거리감을 느껴요. 게다가 INTJ는 연애도 문제 해결의 과정처럼 느낀답니다. 그런데 애인은 당신이 사랑하는 방식에 낯설 수도 있어요. 생각이 관계를 가로막는 당신에게 해주고 싶은 말은, “너무 깊이 생각하지 말아요. 솔직하게 마음을 따라가보세요.“',
             movieUrl: 'www.watcha.com/contents/mW4L2XW',
+            
             imageUrl: '/images/result/clarice.png',
             imageSmallUrl: '/images/result/clarice_small.png',
+            kakaoImageUrl: 'https://ifh.cc/g/caXAFg.jpg',
+
             goodMbti: 'ENFP',
             badMbti:'ISFJ',
             shortDesc: '독립적으로 사고하고 행동하는 INTJ 여자. 그의 지적인 행동 방식이 멋있기도 하지만, 가끔 이해할 수 없어요.' , 
@@ -601,8 +638,11 @@ description: '독립적으로 사고하고 행동하는 INTJ 유형은, 명확�
             script: '"거기서 저와 제 동료가 하는 일은 이 방에 있는 누구도 절대 할 수 없는 지적이고 창의적인 능력을 요구하는 일이거든요."',
             description: '자기애가 높은 INTP는 사랑도 분석적으로 해요. 사랑에 빠지고, 연애하고, 마음을 떠나는 것까지 명확하게 구분하고 느끼는 편이죠. ✂️ 독립적이고 분석적인 성격 탓에 이상형이 매우 확실한 편이라서, 연애를 시작하는 게 대부분 어려웠을 거예요. 사랑에 빠졌다고 해도, 콩깍지를 벗어나는 건 한순간이에요. 당신에게 사랑이 1순위가 아니니까요. 세상이 INTP를 연애에 적합하지 않은 성격이라고 말해요. 하지만 무BTI는 그렇게 생각해요. 세상엔 다양한 사랑의 형태가 있다. 당신의 사랑도 사랑이다.',
             movieUrl: 'www.netflix.com/title/70132721',
+            
             imageUrl: '/images/result/mark.png',
             imageSmallUrl: '/images/result/mark_small.png',
+            kakaoImageUrl: 'https://ifh.cc/g/NfZEnh.jpg',
+
             goodMbti: 'ENTJ',
             badMbti:'ISFP',
             shortDesc: '분석의 끝에 사랑이 있는 INTP 남자. 뇌섹남 매력을 갖고 있어요. 연애가 1순위가 아니기에, 그에게 너무 깊게 빠지면 안돼요.',
@@ -622,8 +662,12 @@ description: '독립적으로 사고하고 행동하는 INTJ 유형은, 명확�
             script: '"전 그저 당신이 매일 밤 어떤 테스트를 하는 지 보고 싶었어요."',
             description: '자기애가 높은 INTP는 사랑도 분석적으로 해요. 사랑에 빠지고, 연애하고, 마음을 떠나는 것까지 명확하게 구분하고 느끼는 편이죠. ✂️ 독립적이고 분석적인 성격 탓에 이상형이 매우 확실한 편이라서, 연애를 시작하는 게 대부분 어려웠을 거예요. 사랑에 빠졌다고 해도, 콩깍지를 벗어나는 건 한순간이에요. 당신에게 사랑이 1순위가 아니니까요. 세상이 INTP를 연애에 적합하지 않은 성격이라고 말해요. 하지만 무BTI는 그렇게 생각해요. 세상엔 다양한 사랑의 형태가 있다. 당신의 사랑도 사랑이다.',
             movieUrl: 'www.netflix.com/title/70131314',
+            
             imageUrl: '/images/result/ariadne.png',
             imageSmallUrl: '/images/result/ariadne_small.png',
+            kakaoImageUrl: 'https://ifh.cc/g/lX1MHo.jpg',
+
+
             goodMbti: 'ENTJ',
             badMbti:'ISFP',
             shortDesc: '분석의 끝에 사랑이 있는 INTP 여자. 뇌섹녀 매력을 갖고 있어요. 연애가 1순위가 아니기에, 그에게 너무 깊게 빠지면 안 돼요.' , 
@@ -644,8 +688,11 @@ description: '독립적으로 사고하고 행동하는 INTJ 유형은, 명확�
             script: '"극단적인 건 항상 나에게 감흥을 주지."',
             description: '밝고 활동적인 ENTP는 자존심 강한 사랑꾼이에요. 자신과 찰떡이라는 사람이 등장하면, 당당하게 다가가 사랑을 쟁취하는 스타일이죠 🦸 자기가 좋아하는 스타일을 찍어서, 썸도 잘 타는 성격인 ENTP. 그야말로 자타공인 연애고수죠. 또 특이한 사람에게 강한 느낌을 받기도 해요. 썸 타고 연애하는 데 능숙하지만, 당신의 자유로운 성격 때문에 헤어질 위기를 겪은 적 없나요? 상대방이 당신의 자유로운 모습에 감당 못 할 수도 있고, 당신이 억압받는다 생각되는 순간 관계는 끝이 나요. 하지만 너무 슬퍼하지 말아요. 곧 당신에게 새로운 연인이 생길 거예요.',
             movieUrl: 'www.watcha.com/contents/mqW9045',
+            
             imageUrl: '/images/result/jd.png',
             imageSmallUrl: '/images/result/jd_small.png',
+            kakaoImageUrl: 'https://ifh.cc/g/052kT5.jpg',
+
             goodMbti: 'INTJ',
             badMbti:'ESFJ',
             shortDesc: '당당하고 썸 잘타는 ENTP 남자. 낭만적 연애의 고수죠. 다만 당신이 자존심을 부리면 관계는 끝난답니다.',
@@ -665,8 +712,11 @@ description: '독립적으로 사고하고 행동하는 INTJ 유형은, 명확�
             script: '"난 저 트로피를 원해, 그러니까 춤을 잘 춰봐."',
             description: '밝고 활동적인 ENTP는 자존심 강한 사랑꾼이에요. 자신과 찰떡이라는 사람이 등장하면, 당당하게 다가가 사랑을 쟁취하는 스타일이죠 🦸 ♀️ 자기가 좋아하는 스타일을 찍어서, 썸도 잘 타는 성격인 ENTP. 그야말로 자타공인 연애고수죠. 또 특이한 사람에게 강한 느낌을 받기도 해요. 썸 타고 연애하는 데 능숙하지만, 당신의 자유로운 성격 때문에 헤어질 위기를 겪은 적 없나요? 상대방이 당신의 자유로운 모습에 감당 못 할 수도 있고, 당신이 억압받는다 생각되는 순간 관계는 끝이 나요. 하지만 너무 슬퍼하지 말아요. 곧 당신에게 새로운 연인이 생길 거예요.',
             movieUrl: 'www.watcha.com/contents/mOgBDaW',
+            
             imageUrl: '/images/result/pulp_mia.png',
             imageSmallUrl: '/images/result/pulp_mia_small.png',
+            kakaoImageUrl: 'https://ifh.cc/g/f9UVib.jpg',
+
             goodMbti: 'INTJ',
             badMbti:'ESFJ',
             shortDesc: '당당하고 썸 잘타는 ENTP 여자. 낭만적 연애의 고수죠. 다만 당신이 자존심을 부리면 관계는 끝난답니다.' , 
@@ -687,9 +737,11 @@ description: '독립적으로 사고하고 행동하는 INTJ 유형은, 명확�
             script: '"내 세상의 시작과 끝은 당신과 함께였으면 좋겠어."',
             description: '탁월한 리더십을 갖춘 ENTJ 유형은, 마음속에 엄격한 기준을 품고 있어요. 하지만 막상 이상형보다는 자연스럽게 타인에게 빠져버리죠. 🎯 ENTJ는 연애도 목표 지향적이에요. 연애의 시작은 사람이 아니라, 관계의 맥락이에요. 예를 들면 그가 처음부터 좋은 게 아니라, 독서클럽에 가서 만난 그와 대화를 하면서 빠져드는 거죠. 완벽주의자라 스트레스를 많이 받고, 그 스트레스 때문에 연인과 관계가 안 좋아질 수도 있어요. 이제 편하게 마음을 내려놓고, 그에게 기대보세요.',
             movieUrl: 'www.netflix.com/title/80131194',
+            
             imageUrl: '/images/result/gray.png',
             imageSmallUrl: '/images/result/gray_small.png',
-            
+            kakaoImageUrl: 'https://ifh.cc/g/NtciVS.jpg',
+
             goodMbti: 'INTP',
             badMbti: 'ESFJ',
             shortDesc: '탁월한 리더십을 갖춘 ENTJ 남자. 당신과 대화하며 교류하는 순간에 자기도 모르게 푹 빠져버려요.',
@@ -709,8 +761,11 @@ description: '독립적으로 사고하고 행동하는 INTJ 유형은, 명확�
             script: '"그 사람 생각을 멈출 수가 없어."',
             description: '탁월한 리더십을 갖춘 ENTJ 유형은, 마음속에 엄격한 기준을 품고 있어요. 하지만 막상 이상형보다는 자연스럽게 타인에게 빠져버리죠. 🎯 ENTJ는 연애도 목표 지향적이에요. 연애의 시작은 사람이 아니라, 관계의 맥락이에요. 예를 들면 그가 처음부터 좋은 게 아니라, 독서클럽에 가서 만난 그와 대화를 하면서 빠져드는 거죠. 완벽주의자라 스트레스를 많이 받고, 그 스트레스 때문에 연인과 관계가 안 좋아질 수도 있어요. 이제 편하게 마음을 내려놓고, 그에게 기대보세요.',
             movieUrl: 'www.netflix.com/title/70159317',
+            
             imageUrl: '/images/result/emma.png',
             imageSmallUrl: '/images/result/emma_small.png',
+            kakaoImageUrl: 'https://ifh.cc/g/aU5tDG.jpg',
+
             goodMbti: 'INTP',
             badMbti: 'ESFJ',
             shortDesc: '탁월한 리더십을 갖춘 ENTJ 여자. 당신과 대화하며 교류하는 순간에 자기도 모르게 푹 빠져버려요.',

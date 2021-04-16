@@ -12,9 +12,8 @@ const useStyles = makeStyles({
   },
 });
 
-export function KakaoShareButton({data}) {
+export function KakaoShareButton({ data }) {
   const classes = useStyles();
-  console.log(data)
   const shareByKakao = () => {
     if (window.Kakao) {
       const kakao = window.Kakao;
@@ -25,11 +24,9 @@ export function KakaoShareButton({data}) {
       kakao.Link.sendDefault({
         objectType: "feed",
         content: {
-          title:
-            data,
+          title: data.title,
           description: "나와 잘 맞는 영화 주인공은?",
-          imageUrl:
-            "http://mud-kage.kakao.co.kr/dn/Q2iNx/btqgeRgV54P/VLdBs9cvyn8BJXB3o7N8UK/kakaolink40_original.png",
+          imageUrl: data.kakaoImageUrl,
           link: {
             mobileWebUrl: window.location.href,
             webUrl: window.location.href,
@@ -64,5 +61,5 @@ export function KakaoShareButton({data}) {
       </Fab>
     </Box>
   );
-};
+}
 export default KakaoShareButton;
