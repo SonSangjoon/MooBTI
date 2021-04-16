@@ -28,7 +28,6 @@ export default function TestQuestionTemplate() {
   }, [answer]);
 
   function proceedTest(n) {
-
     if (n === 1) {
       setTestData({ ...testData, answer: answer + "1" });
     } else {

@@ -12,8 +12,8 @@ const useStyles = makeStyles((theme) => ({
     gridTemplateRows: "repeat(3, 1fr)",
     gridGap: theme.spacing(2),
   },
-  genderGrid:{
-    gridRow: '2/span 1'
+  genderGrid: {
+    gridRow: "2/span 1",
   },
   title: {
     paddingBottom: "1vh",
@@ -34,54 +34,50 @@ const useStyles = makeStyles((theme) => ({
     },
     padding: "14px 14px",
     marginBottom: "10px",
-
   },
 
   image: {
     borderRadius: "50px",
-    objectFit: 'cover',
-    width: '100%',
-    height: '53vh',
+    objectFit: "cover",
+    width: "100%",
+    height: "53vh",
   },
 
-  
-// Mobile View
- mobileContainer: {
+  // Mobile View
+  mobileContainer: {
     height: "100vh",
     display: "grid",
     gridTemplateRows: "repeat(3, 1fr)",
     gridGap: theme.spacing(1),
- },
+  },
 
- mobileGrid:{
-  gridRow: '2/span 1'
- },
+  mobileGrid: {
+    gridRow: "2/span 1",
+  },
 
- mobiletitle: {
-  paddingBottom: '1vh',
-  fontSize: '20px',
-  color: 'white',
-},
+  mobiletitle: {
+    paddingBottom: "1vh",
+    fontSize: "20px",
+    color: "white",
+  },
 
-mobileImageTitle: {
-  fontSize: 17,
-  color:'white'
-},
+  mobileImageTitle: {
+    fontSize: 17,
+    color: "white",
+  },
 
-//Tablet View
+  //Tablet View
 
-tabletContainer: {
-  height: "100vh",
-  display: "grid",
-  gridTemplateRows: "repeat(3, 1fr)",
-  gridGap: theme.spacing(2),
-},
+  tabletContainer: {
+    height: "100vh",
+    display: "grid",
+    gridTemplateRows: "repeat(3, 1fr)",
+    gridGap: theme.spacing(2),
+  },
 
-tabletGenderPageGrid:{
-  gridRow: '2/span 1'
-},
-
-
+  tabletGenderPageGrid: {
+    gridRow: "2/span 1",
+  },
 }));
 
-export { useStyles }
+export { useStyles };

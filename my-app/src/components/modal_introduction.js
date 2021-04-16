@@ -9,8 +9,8 @@ import IconButton from "@material-ui/core/IconButton";
 import CloseIcon from "@material-ui/icons/Close";
 import { Mobile, Tablet, PC, PCwide } from "../components/MediaQuery.js";
 import { Link } from "@material-ui/core";
-import GitHubIcon from '@material-ui/icons/GitHub';
-import CreateIcon from '@material-ui/icons/Create';
+import GitHubIcon from "@material-ui/icons/GitHub";
+import CreateIcon from "@material-ui/icons/Create";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -105,11 +105,10 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: "#fffff",
     width: "28px",
     height: "28px",
-    minHeight: "5px"
-
+    minHeight: "5px",
   },
   linkInnerIcon: {
-    fontSize: "18px"
+    fontSize: "18px",
   },
 }));
 
@@ -172,7 +171,11 @@ function MemberIntro(data) {
             // style={{ backgroundColor: "#fffff" }}
             align="center"
           >
-            {memberName === "준효" ? <CreateIcon className={classes.linkInnerIcon}/> : <GitHubIcon className={classes.linkInnerIcon}/>}
+            {memberName === "준효" ? (
+              <CreateIcon className={classes.linkInnerIcon} />
+            ) : (
+              <GitHubIcon className={classes.linkInnerIcon} />
+            )}
           </Fab>
         </Link>
       </Box>

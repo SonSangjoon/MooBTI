@@ -7,7 +7,7 @@ import LinkShareButton from "./button_link_share";
 const useStyles = makeStyles({
   container: {
     height: "50px",
-    width: "50px"
+    width: "50px",
   },
   shareBtn1Grid: {
     display: "block",
@@ -18,13 +18,13 @@ const useStyles = makeStyles({
   },
 });
 
-export default function ShareButton({data}) {
+export default function ShareButton({ data }) {
   const classes = useStyles();
-  
+
   return (
     <Box className={classes.container}>
       <Box className={classes.shareBtn1Grid}>
-        <KakaoShareButton data={data}/>
+        <KakaoShareButton data={data} />
       </Box>
       <Box className={classes.shareBtn2Grid}>
         <LinkShareButton />

@@ -131,26 +131,27 @@ function ResultDescription({ data }) {
   );
 }
 
-function DataAnalysisBtn({value, url }) {
+function DataAnalysisBtn({ value, url }) {
   const classes = useStyles();
-  if(url){
+  if (url) {
     return (
-      <Button href={"https://" + url} underline="none" target="_blank" variant="outlined" className={classes.analysisBtn} >
-        <Typography className={classes.analysisText}>
-          {value}
-        </Typography>
+      <Button
+        href={"https://" + url}
+        underline="none"
+        target="_blank"
+        variant="outlined"
+        className={classes.analysisBtn}
+      >
+        <Typography className={classes.analysisText}>{value}</Typography>
       </Button>
     );
-  }else{
+  } else {
     return (
-      <Button variant="outlined" className={classes.analysisBtn} >
-        <Typography className={classes.analysisText}>
-          {value}
-        </Typography>
+      <Button variant="outlined" className={classes.analysisBtn}>
+        <Typography className={classes.analysisText}>{value}</Typography>
       </Button>
     );
   }
-
 }
 
 export default function ResultTemplate({ data, genderType }) {
@@ -170,17 +171,23 @@ export default function ResultTemplate({ data, genderType }) {
           <DataAnalysisBtn value="🔦 캐릭터의 연애 비결은?" />
         </Grid>
         <Grid className={classes.buttonGrid}>
-          {(data.movieUrl[4]==='n') ? (
+          {data.movieUrl[4] === "n" ? (
             <Grid className={classes.buttonGrid}>
-            <DataAnalysisBtn value="👀 넷플릭스에서 확인하기" url={data.movieUrl}/>
-          </Grid>
+              <DataAnalysisBtn
+                value="👀 넷플릭스에서 확인하기"
+                url={data.movieUrl}
+              />
+            </Grid>
           ) : (
-          <Grid className={classes.buttonGrid}>
-            <DataAnalysisBtn value="👀 왓챠에서 확인하기" url={data.movieUrl}/>
-          </Grid>
-          ) }
+            <Grid className={classes.buttonGrid}>
+              <DataAnalysisBtn
+                value="👀 왓챠에서 확인하기"
+                url={data.movieUrl}
+              />
+            </Grid>
+          )}
         </Grid>
-        <TransitionsModal data={data} genderType={genderType}/>
+        <TransitionsModal data={data} genderType={genderType} />
       </PC>
 
       <Mobile>
@@ -190,19 +197,25 @@ export default function ResultTemplate({ data, genderType }) {
         <Grid className={classes.resultDescriptionGrid} item>
           <ResultDescription data={data} />
         </Grid>
-        <Grid className={classes.mobileButtonGrid} onClick={() => setOpenModal(true)}>
+        <Grid
+          className={classes.mobileButtonGrid}
+          onClick={() => setOpenModal(true)}
+        >
           <DataAnalysisBtn value="🔦 캐릭터의 연애 비결은?" />
         </Grid>
-        {(data.movieUrl[4]==='n') ? (
-            <Grid className={classes.mobileButtonGrid}>
-            <DataAnalysisBtn value="👀 넷플릭스에서 확인하기" url={data.movieUrl}/>
-          </Grid>
-          ) : (
+        {data.movieUrl[4] === "n" ? (
           <Grid className={classes.mobileButtonGrid}>
-            <DataAnalysisBtn value="👀 왓챠에서 확인하기" url={data.movieUrl}/>
+            <DataAnalysisBtn
+              value="👀 넷플릭스에서 확인하기"
+              url={data.movieUrl}
+            />
           </Grid>
-          ) }
-        <TransitionsModal data={data} genderType={genderType}/>
+        ) : (
+          <Grid className={classes.mobileButtonGrid}>
+            <DataAnalysisBtn value="👀 왓챠에서 확인하기" url={data.movieUrl} />
+          </Grid>
+        )}
+        <TransitionsModal data={data} genderType={genderType} />
       </Mobile>
 
       <Tablet>
@@ -212,19 +225,25 @@ export default function ResultTemplate({ data, genderType }) {
         <Grid className={classes.resultDescriptionGrid} item>
           <ResultDescription data={data} />
         </Grid>
-        <Grid className={classes.tabletButtonGrid} onClick={() => setOpenModal(true)}>
+        <Grid
+          className={classes.tabletButtonGrid}
+          onClick={() => setOpenModal(true)}
+        >
           <DataAnalysisBtn value="🔦 캐릭터의 연애 비결은?" />
         </Grid>
-        {(data.movieUrl[4]==='n') ? (
-            <Grid className={classes.tabletButtonGrid}>
-            <DataAnalysisBtn value="👀 넷플릭스에서 확인하기" url={data.movieUrl}/>
-          </Grid>
-          ) : (
+        {data.movieUrl[4] === "n" ? (
           <Grid className={classes.tabletButtonGrid}>
-            <DataAnalysisBtn value="👀 왓챠에서 확인하기" url={data.movieUrl}/>
+            <DataAnalysisBtn
+              value="👀 넷플릭스에서 확인하기"
+              url={data.movieUrl}
+            />
           </Grid>
-          ) }
-        <TransitionsModal data={data} genderType={genderType}/>
+        ) : (
+          <Grid className={classes.tabletButtonGrid}>
+            <DataAnalysisBtn value="👀 왓챠에서 확인하기" url={data.movieUrl} />
+          </Grid>
+        )}
+        <TransitionsModal data={data} genderType={genderType} />
       </Tablet>
 
       <PCwide>
@@ -237,16 +256,19 @@ export default function ResultTemplate({ data, genderType }) {
         <Grid className={classes.buttonGrid} onClick={() => setOpenModal(true)}>
           <DataAnalysisBtn value="🔦 캐릭터의 연애 비결은?" />
         </Grid>
-        {(data.movieUrl[4]==='n') ? (
-            <Grid className={classes.buttonGrid}>
-            <DataAnalysisBtn value="👀 넷플릭스에서 확인하기" url={data.movieUrl}/>
-          </Grid>
-          ) : (
+        {data.movieUrl[4] === "n" ? (
           <Grid className={classes.buttonGrid}>
-            <DataAnalysisBtn value="👀 왓챠에서 확인하기" url={data.movieUrl}/>
+            <DataAnalysisBtn
+              value="👀 넷플릭스에서 확인하기"
+              url={data.movieUrl}
+            />
           </Grid>
-          ) }
-        <TransitionsModal data={data} genderType={genderType}/>
+        ) : (
+          <Grid className={classes.buttonGrid}>
+            <DataAnalysisBtn value="👀 왓챠에서 확인하기" url={data.movieUrl} />
+          </Grid>
+        )}
+        <TransitionsModal data={data} genderType={genderType} />
       </PCwide>
     </Grid>
   );
