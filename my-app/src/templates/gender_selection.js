@@ -9,18 +9,16 @@ import { useStyles } from "./styles/gender_selection_styles";
 
 export default function GenderPageSelect() {
   const classes = useStyles();
-  const { selectedGender, setSelectedGender } = useContext(MbtiContext);
+  const { setSelectedGender } = useContext(MbtiContext);
 
   const handleGenderChange = (event) => {
     setSelectedGender(event.currentTarget.value);
-    console.log(selectedGender);
   };
 
   return (
     <Box>
       <PC>
-        <Box>
-          <Box className={classes.title} align="center" gutterBottom>
+          <Box className={classes.title} align="center" >
             테스트를 진행할 프로필을 선택하세요.
           </Box>
           <Box display="flex" justifyContent="center" mt={3}>
@@ -42,7 +40,7 @@ export default function GenderPageSelect() {
                 className={classes.imgTitle}
                 variant="h6"
                 align="center"
-                gutterBottom
+                
               >
                 남성
               </Box>
@@ -65,17 +63,16 @@ export default function GenderPageSelect() {
                 className={classes.imgTitle}
                 variant="h6"
                 align="center"
-                gutterBottom
+                
               >
                 여성
               </Box>
             </Box>
           </Box>
-        </Box>
       </PC>
 
       <Mobile>
-        <Box className={classes.mobileTitle} align="center" gutterBottom>
+        <Box className={classes.mobileTitle} align="center" >
           테스트를 진행할 프로필을 선택하세요.
         </Box>
         <Box display="flex" justifyContent="center" mt={3}>
@@ -96,7 +93,7 @@ export default function GenderPageSelect() {
             <Box
               className={classes.mobileImageTitle}
               align="center"
-              gutterBottom
+              
             >
               남성
             </Box>
@@ -118,7 +115,7 @@ export default function GenderPageSelect() {
             <Box
               className={classes.mobileImageTitle}
               align="center"
-              gutterBottom
+              
             >
               여성
             </Box>
@@ -127,8 +124,7 @@ export default function GenderPageSelect() {
       </Mobile>
 
       <Tablet>
-        <Box>
-          <Box className={classes.title} align="center" gutterBottom>
+          <Box className={classes.title} align="center" >
             테스트를 진행할 프로필을 선택하세요.
           </Box>
           <Box display="flex" justifyContent="center" mt={3}>
@@ -150,7 +146,7 @@ export default function GenderPageSelect() {
                 className={classes.imgTitle}
                 variant="h6"
                 align="center"
-                gutterBottom
+                
               >
                 남성
               </Box>
@@ -173,17 +169,15 @@ export default function GenderPageSelect() {
                 className={classes.imgTitle}
                 variant="h6"
                 align="center"
-                gutterBottom
+                
               >
                 여성
               </Box>
             </Box>
           </Box>
-        </Box>
       </Tablet>
       <PCwide>
-        <Box>
-          <Box className={classes.title} align="center" gutterBottom>
+          <Box className={classes.title} align="center" >
             테스트를 진행할 프로필을 선택하세요.
           </Box>
           <Box display="flex" justifyContent="center" mt={3}>
@@ -205,7 +199,7 @@ export default function GenderPageSelect() {
                 className={classes.imgTitle}
                 variant="h6"
                 align="center"
-                gutterBottom
+                
               >
                 남성
               </Box>
@@ -228,12 +222,11 @@ export default function GenderPageSelect() {
                 className={classes.imgTitle}
                 variant="h6"
                 align="center"
-                gutterBottom
+                
               >
                 여성
               </Box>
             </Box>
-          </Box>
         </Box>
       </PCwide>
     </Box>

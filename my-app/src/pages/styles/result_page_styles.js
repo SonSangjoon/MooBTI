@@ -41,7 +41,7 @@ const useStyles = makeStyles((theme) => ({
   shareButton: {
     position: 'fixed',
     bottom: '100px',
-    right: '10px',
+    right: '5px',
     padding: '20px'
   },
 
@@ -59,7 +59,7 @@ mobileContainer: {
 mobileBlock:{
   overflow: 'auto',
   display: "block",
-  height: "5vh",
+  // height: "5vh",
   margin: "15px"
 },
 

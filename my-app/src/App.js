@@ -8,7 +8,7 @@ import './App.css'
 const MbtiContext = createContext({});
 
 export function App() {
-  const [selectedGender, setSelectedGender] = useState("")
+  const [selectedGender, setSelectedGender] = useState("female")
   const [openModal, setOpenModal] = useState(false)
   const [openIntroduction, setOpenIntroduction] = useState(false)
 

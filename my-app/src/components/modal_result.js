@@ -111,6 +111,7 @@ function Title(data) {
 
 function SubTitle(data) {
   const classes = useStyles();
+  
   return (
     <Box className={classes.subTitleTextStyles} align="center">
       {data.text}
@@ -119,9 +120,9 @@ function SubTitle(data) {
 }
 
 function EmotionCircle(data) {
-  console.log(data)
   const classes = useStyles();
   const imageUrl = `/images/emotion/${data.gender}/${data.emotion}.png`;
+  
   return (
     <Box align="center">
       <img src={imageUrl} alt="Logo" className={classes.emotionImage} />

@@ -31,6 +31,7 @@ const useStyles = makeStyles((theme) => ({
 
   mainText: {
     padding: 5,
+    marginBottom: 15,
     color: 'white',
     fontSize: "3.5vw",
     fontFamily: 'S-CoreDream-4Regular'
@@ -38,7 +39,7 @@ const useStyles = makeStyles((theme) => ({
 
   subText: {
     padding: 5,
-    marginBottom: 10,
+    marginBottom: 15,
     color: 'white',
     fontSize: "2vw",
     fontFamily: 'S-CoreDream-4Regular'
