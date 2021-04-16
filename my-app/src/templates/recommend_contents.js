@@ -17,19 +17,29 @@ const CustomRestartBtn = withStyles((theme) => ({
 
 function LinkButton({ url }) {
   const classes = useStyles();
-  console.log(url[4]);
-
-  return (
-    <Link href={"https://" + url} underline="none" target="_blank">
-      <CustomRestartBtn
-        variant="contained"
-        className={classes.movieLinkBtn}
-        color="secondary"
-      >
-        Netflix에서 보기
-      </CustomRestartBtn>
-    </Link>
-  );
+  
+  if (url[4] === 'n'){
+    return (
+      <Link href={"https://" + url} underline="none" target="_blank">
+        <CustomRestartBtn className={classes.movieLinkBtn}>
+          <Typography className={classes.movieLinkText}>
+            Netflix에서 보기
+          </Typography>
+        </CustomRestartBtn>
+      </Link>
+    );
+  }
+  else{
+    return (
+      <Link href={"https://" + url} underline="none" target="_blank">
+        <CustomRestartBtn className={classes.movieLinkBtn}>
+          <Typography className={classes.movieLinkText}>
+            Watcha에서 보기
+          </Typography>
+        </CustomRestartBtn>
+      </Link>
+    );
+  }
 }
 
 function RestartButton() {

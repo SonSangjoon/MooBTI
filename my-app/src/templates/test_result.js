@@ -1,4 +1,5 @@
 import React, { useContext } from "react";
+import { Link } from "react-router-dom";
 import { Button, Grid, Box, Typography } from "@material-ui/core";
 import { MbtiContext } from "../App";
 import { useStyles } from "./styles/test_result_styles";
@@ -131,21 +132,32 @@ function ResultDescription({ data }) {
   );
 }
 
-function DataAnalysisBtn({ value }) {
+function DataAnalysisBtn({value, url }) {
   const classes = useStyles();
-  return (
-    <Button variant="outlined" className={classes.analysisBtn} >
-      <Typography className={classes.analysisText}>
-        {value}
-      </Typography>
-    </Button>
-  );
+  if(url){
+    return (
+      <Button href={"https://" + url} underline="none" target="_blank" variant="outlined" className={classes.analysisBtn} >
+        <Typography className={classes.analysisText}>
+          {value}
+        </Typography>
+      </Button>
+    );
+  }else{
+    return (
+      <Button variant="outlined" className={classes.analysisBtn} >
+        <Typography className={classes.analysisText}>
+          {value}
+        </Typography>
+      </Button>
+    );
+  }
+
 }
 
 export default function ResultTemplate({ data, genderType }) {
   const classes = useStyles();
   const { setOpenModal } = useContext(MbtiContext);
-  console.log(genderType)
+  console.log(data.movieUrl)
   return (
     <Grid className={classes.container}>
       <PC>
@@ -159,7 +171,7 @@ export default function ResultTemplate({ data, genderType }) {
           <DataAnalysisBtn value="어떻게 분석했어?" />
         </Grid>
         <Grid className={classes.buttonGrid}>
-          <DataAnalysisBtn value="영화보러 가기" />
+          <DataAnalysisBtn value="영화보러 가기" url={data.movieUrl}/>
         </Grid>
         <TransitionsModal data={data} genderType={genderType}/>
       </PC>
@@ -175,7 +187,7 @@ export default function ResultTemplate({ data, genderType }) {
           <DataAnalysisBtn value="어떻게 분석했어?" />
         </Grid>
         <Grid className={classes.buttonGrid}>
-          <DataAnalysisBtn value="영화보러 가기" />
+          <DataAnalysisBtn value="영화보러 가기" url={data.movieUrl}/>
         </Grid>
         <TransitionsModal data={data} genderType={genderType}/>
       </Mobile>
@@ -191,7 +203,9 @@ export default function ResultTemplate({ data, genderType }) {
           <DataAnalysisBtn value="어떻게 분석했어?" />
         </Grid>
         <Grid className={classes.buttonGrid}>
-          <DataAnalysisBtn value="영화보러 가기" />
+          <Link href={"https://" + data.movieUrl} underline="none" target="_blank">
+            <DataAnalysisBtn value="영화보러 가기" url={data.movieUrl}/>
+          </Link>
         </Grid>
         <TransitionsModal data={data} genderType={genderType}/>
       </Tablet>
@@ -207,7 +221,7 @@ export default function ResultTemplate({ data, genderType }) {
           <DataAnalysisBtn value="어떻게 분석했어?" />
         </Grid>
         <Grid className={classes.buttonGrid}>
-          <DataAnalysisBtn value="영화보러 가기" />
+          <DataAnalysisBtn value="영화보러 가기" url={data.movieUrl}/>
         </Grid>
         <TransitionsModal data={data} genderType={genderType}/>
       </PCwide>
