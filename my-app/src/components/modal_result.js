@@ -119,6 +119,7 @@ function SubTitle(data) {
 }
 
 function EmotionCircle(data) {
+  console.log(data)
   const classes = useStyles();
   const imageUrl = `/images/emotion/${data.gender}/${data.emotion}.png`;
   return (
@@ -159,7 +160,7 @@ function ModalCloseBtn() {
   );
 }
 
-export default function TransitionsModal({data}) {
+export default function TransitionsModal({data, genderType}) {
   const classes = useStyles();
   const { openModal, setOpenModal } = useContext(MbtiContext);
 
@@ -170,7 +171,6 @@ export default function TransitionsModal({data}) {
   const subTitleText = data.analysisSubTitle;
   const analysisText =data.analysisText;
 
-  const gender = "male";
   const happyNumber = data.emotion[0];
   const sadNumber = data.emotion[1];
   const angryNumber = data.emotion[2];
@@ -201,7 +201,7 @@ export default function TransitionsModal({data}) {
               <Grid className={classes.happyCircleGrid}>
                 <EmotionCircle
                   name="기쁨이"
-                  gender={gender}
+                  gender={genderType}
                   number={happyNumber}
                   emotion="happy"
                 />
@@ -209,7 +209,7 @@ export default function TransitionsModal({data}) {
               <Grid className={classes.sadCircleGrid}>
                 <EmotionCircle
                   name="슬픔이"
-                  gender={gender}
+                  gender={genderType}
                   number={sadNumber}
                   emotion="sad"
                 />
@@ -217,7 +217,7 @@ export default function TransitionsModal({data}) {
               <Grid className={classes.angryCircleGrid}>
                 <EmotionCircle
                   name="버럭이"
-                  gender={gender}
+                  gender={genderType}
                   number={angryNumber}
                   emotion="angry"
                 />
@@ -225,7 +225,7 @@ export default function TransitionsModal({data}) {
               <Grid className={classes.fussyCircleGrid}>
                 <EmotionCircle
                   name="까칠이"
-                  gender={gender}
+                  gender={genderType}
                   number={fussyNumber}
                   emotion="fussy"
                 />
@@ -233,7 +233,7 @@ export default function TransitionsModal({data}) {
               <Grid className={classes.timidCircleGrid}>
                 <EmotionCircle
                   name="소심이"
-                  gender={gender}
+                  gender={genderType}
                   number={timidNumber}
                   emotion="timid"
                 />
@@ -261,7 +261,7 @@ export default function TransitionsModal({data}) {
               <Grid className={classes.happyCircleGrid}>
                 <EmotionCircle
                   name="기쁨이"
-                  gender={gender}
+                  gender={genderType}
                   number={happyNumber}
                   emotion="happy"
                 />
@@ -269,7 +269,7 @@ export default function TransitionsModal({data}) {
               <Grid className={classes.sadCircleGrid}>
                 <EmotionCircle
                   name="슬픔이"
-                  gender={gender}
+                  gender={genderType}
                   number={sadNumber}
                   emotion="sad"
                 />
@@ -277,7 +277,7 @@ export default function TransitionsModal({data}) {
               <Grid className={classes.angryCircleGrid}>
                 <EmotionCircle
                   name="버럭이"
-                  gender={gender}
+                  gender={genderType}
                   number={angryNumber}
                   emotion="angry"
                 />
@@ -285,7 +285,7 @@ export default function TransitionsModal({data}) {
               <Grid className={classes.fussyCircleGrid}>
                 <EmotionCircle
                   name="까칠이"
-                  gender={gender}
+                  gender={genderType}
                   number={fussyNumber}
                   emotion="fussy"
                 />
@@ -293,7 +293,7 @@ export default function TransitionsModal({data}) {
               <Grid className={classes.timidCircleGrid}>
                 <EmotionCircle
                   name="소심이"
-                  gender={gender}
+                  gender={genderType}
                   number={timidNumber}
                   emotion="timid"
                 />
@@ -321,7 +321,7 @@ export default function TransitionsModal({data}) {
               <Grid className={classes.happyCircleGrid}>
                 <EmotionCircle
                   name="기쁨이"
-                  gender={gender}
+                  gender={genderType}
                   number={happyNumber}
                   emotion="happy"
                 />
@@ -329,7 +329,7 @@ export default function TransitionsModal({data}) {
               <Grid className={classes.sadCircleGrid}>
                 <EmotionCircle
                   name="슬픔이"
-                  gender={gender}
+                  gender={genderType}
                   number={sadNumber}
                   emotion="sad"
                 />
@@ -337,7 +337,7 @@ export default function TransitionsModal({data}) {
               <Grid className={classes.angryCircleGrid}>
                 <EmotionCircle
                   name="버럭이"
-                  gender={gender}
+                  gender={genderType}
                   number={angryNumber}
                   emotion="angry"
                 />
@@ -345,7 +345,7 @@ export default function TransitionsModal({data}) {
               <Grid className={classes.fussyCircleGrid}>
                 <EmotionCircle
                   name="까칠이"
-                  gender={gender}
+                  gender={genderType}
                   number={fussyNumber}
                   emotion="fussy"
                 />
@@ -353,7 +353,7 @@ export default function TransitionsModal({data}) {
               <Grid className={classes.timidCircleGrid}>
                 <EmotionCircle
                   name="소심이"
-                  gender={gender}
+                  gender={genderType}
                   number={timidNumber}
                   emotion="timid"
                 />
@@ -381,7 +381,7 @@ export default function TransitionsModal({data}) {
               <Grid className={classes.happyCircleGrid}>
                 <EmotionCircle
                   name="기쁨이"
-                  gender={gender}
+                  gender={genderType}
                   number={happyNumber}
                   emotion="happy"
                 />
@@ -389,7 +389,7 @@ export default function TransitionsModal({data}) {
               <Grid className={classes.sadCircleGrid}>
                 <EmotionCircle
                   name="슬픔이"
-                  gender={gender}
+                  gender={genderType}
                   number={sadNumber}
                   emotion="sad"
                 />
@@ -397,7 +397,7 @@ export default function TransitionsModal({data}) {
               <Grid className={classes.angryCircleGrid}>
                 <EmotionCircle
                   name="버럭이"
-                  gender={gender}
+                  gender={genderType}
                   number={angryNumber}
                   emotion="angry"
                 />
@@ -405,7 +405,7 @@ export default function TransitionsModal({data}) {
               <Grid className={classes.fussyCircleGrid}>
                 <EmotionCircle
                   name="까칠이"
-                  gender={gender}
+                  gender={genderType}
                   number={fussyNumber}
                   emotion="fussy"
                 />
@@ -413,7 +413,7 @@ export default function TransitionsModal({data}) {
               <Grid className={classes.timidCircleGrid}>
                 <EmotionCircle
                   name="소심이"
-                  gender={gender}
+                  gender={genderType}
                   number={timidNumber}
                   emotion="timid"
                 />

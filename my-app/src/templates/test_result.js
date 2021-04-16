@@ -142,9 +142,10 @@ function DataAnalysisBtn({ value }) {
   );
 }
 
-export default function ResultTemplate({ data }) {
+export default function ResultTemplate({ data, genderType }) {
   const classes = useStyles();
   const { setOpenModal } = useContext(MbtiContext);
+  console.log(genderType)
   return (
     <Grid className={classes.container}>
       <PC>
@@ -160,7 +161,7 @@ export default function ResultTemplate({ data }) {
         <Grid className={classes.buttonGrid}>
           <DataAnalysisBtn value="영화보러 가기" />
         </Grid>
-        <TransitionsModal data={data}/>
+        <TransitionsModal data={data} genderType={genderType}/>
       </PC>
 
       <Mobile>
@@ -176,7 +177,7 @@ export default function ResultTemplate({ data }) {
         <Grid className={classes.buttonGrid}>
           <DataAnalysisBtn value="영화보러 가기" />
         </Grid>
-        <TransitionsModal data={data}/>
+        <TransitionsModal data={data} genderType={genderType}/>
       </Mobile>
 
       <Tablet>
@@ -192,7 +193,7 @@ export default function ResultTemplate({ data }) {
         <Grid className={classes.buttonGrid}>
           <DataAnalysisBtn value="영화보러 가기" />
         </Grid>
-        <TransitionsModal data={data}/>
+        <TransitionsModal data={data} genderType={genderType}/>
       </Tablet>
 
       <PCwide>
@@ -208,7 +209,7 @@ export default function ResultTemplate({ data }) {
         <Grid className={classes.buttonGrid}>
           <DataAnalysisBtn value="영화보러 가기" />
         </Grid>
-        <TransitionsModal data={data}/>
+        <TransitionsModal data={data} genderType={genderType}/>
       </PCwide>
     </Grid>
   );
