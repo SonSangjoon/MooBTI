@@ -18,13 +18,14 @@ const useStyles = makeStyles({
   },
 });
 
-export default function ShareButton() {
+export default function ShareButton({data}) {
   const classes = useStyles();
-
+  console.log(data.title)
+  const title = data.title
   return (
     <Box className={classes.container}>
       <Box className={classes.shareBtn1Grid}>
-        <KakaoShareButton />
+        <KakaoShareButton data={title}/>
       </Box>
       <Box className={classes.shareBtn2Grid}>
         <LinkShareButton />

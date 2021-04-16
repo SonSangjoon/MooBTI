@@ -78,8 +78,13 @@ const useStyles = makeStyles((theme) => ({
     letterSpacing: "2px",
   },
 
-  dummyBtn: {
+  analysisBtn: {
     minWidth: "100%",
+    color:"#dc1a28",
+    border:"2px solid #dc1a28",
+    "&.MuiButton-root:hover":{
+      color: 'lightgrey'
+    }
   },
   //Mobile View
 
