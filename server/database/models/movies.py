@@ -9,4 +9,3 @@ class Movies(db.Model):
     def __init__(self, movie_title, movie_link):
         self.movie_title = movie_title
         self.movie_link = movie_link
-        self.character_id = character_id
