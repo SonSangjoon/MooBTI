@@ -23,7 +23,7 @@ function LinkButton({ url }) {
       <Link href={"https://" + url} underline="none" target="_blank">
         <CustomRestartBtn className={classes.movieLinkBtn}>
           <Typography className={classes.movieLinkText}>
-            Netflix에서 보기
+           NETFLIX에서 확인하기
           </Typography>
         </CustomRestartBtn>
       </Link>
@@ -34,7 +34,7 @@ function LinkButton({ url }) {
       <Link href={"https://" + url} underline="none" target="_blank">
         <CustomRestartBtn className={classes.movieLinkBtn}>
           <Typography className={classes.movieLinkText}>
-            Watcha에서 보기
+            WATCHA에서 확인하기
           </Typography>
         </CustomRestartBtn>
       </Link>
@@ -66,7 +66,7 @@ function RecommendComponent({ data, value }) {
         </Grid>
         <Grid className={classes.ImageGrid}>
           <img
-            className={classes.PosterImg}
+            className={classes.posterImg}
             src={data.imageSmallUrl}
             alt="poster"
           />
@@ -88,7 +88,7 @@ function RecommendComponent({ data, value }) {
         </Grid>
         <Grid className={classes.ImageGrid}>
           <img
-            className={classes.PosterImg}
+            className={classes.posterImg}
             src={data.imageSmallUrl}
             alt="poster"
           />
@@ -110,7 +110,7 @@ function RecommendComponent({ data, value }) {
         </Grid>
         <Grid className={classes.ImageGrid}>
           <img
-            className={classes.PosterImg}
+            className={classes.posterImg}
             src={data.imageSmallUrl}
             alt="poster"
           />
@@ -132,7 +132,7 @@ function RecommendComponent({ data, value }) {
         </Grid>
         <Grid className={classes.ImageGrid}>
           <img
-            className={classes.PosterImg}
+            className={classes.posterImg}
             src={data.imageSmallUrl}
             alt="poster"
           />
@@ -160,13 +160,13 @@ export default function RecommendContentsTemplate({ data }) {
         <Grid className={classes.recommendGrid1} item>
           <RecommendComponent
             data={data.good}
-            value="나와 잘 맞는 MBTI의 영화 주인공은 어떻게 연애했을까?"
+            value="💖 나와 케미 터지는 여주(남주)는 누구?"
           />
         </Grid>
         <Grid className={classes.recommendGrid2} item>
           <RecommendComponent
             data={data.bad}
-            value="나와 안 맞는 MBTI의 영화 주인공은 어떻게 연애했을까?"
+            value="💔 나와 케미 별로인 여주(남주)는 누구?"
           />
         </Grid>
         <Grid className={classes.restartBtnGrid} mt={40}>
@@ -178,13 +178,13 @@ export default function RecommendContentsTemplate({ data }) {
         <Grid className={classes.recommendGrid1} item>
           <RecommendComponent
             data={data.good}
-            value="나와 잘 맞는 MBTI의 영화 주인공은 어떻게 연애했을까?"
+            value="💖 나와 케미 터지는 여주(남주)는 누구?"
           />
         </Grid>
         <Grid className={classes.recommendGrid2} item>
           <RecommendComponent
             data={data.bad}
-            value="나와 안 맞는 MBTI의 영화 주인공은 어떻게 연애했을까?"
+            value="💔 나와 케미 별로인 여주(남주)는 누구?"
           />
         </Grid>
         <Grid className={classes.restartBtnGrid} mt={40}>
@@ -196,13 +196,13 @@ export default function RecommendContentsTemplate({ data }) {
         <Grid className={classes.recommendGrid1} item>
           <RecommendComponent
             data={data.good}
-            value="나와 잘 맞는 MBTI의 영화 주인공은 어떻게 연애했을까?"
+            value="💖 나와 케미 터지는 여주(남주)는 누구?"
           />
         </Grid>
         <Grid className={classes.recommendGrid2} item>
           <RecommendComponent
             data={data.bad}
-            value="나와 안 맞는 MBTI의 영화 주인공은 어떻게 연애했을까?"
+            value="💔 나와 케미 별로인 여주(남주)는 누구?"
           />
         </Grid>
         <Grid className={classes.restartBtnGrid} mt={40}>
@@ -214,13 +214,13 @@ export default function RecommendContentsTemplate({ data }) {
         <Grid className={classes.recommendGrid1} item>
           <RecommendComponent
             data={data.good}
-            value="나와 잘 맞는 MBTI의 영화 주인공은 어떻게 연애했을까?"
+            value="💖 나와 케미 터지는 여주(남주)는 누구?"
           />
         </Grid>
         <Grid className={classes.recommendGrid2} item>
           <RecommendComponent
             data={data.bad}
-            value="나와 안 맞는 MBTI의 영화 주인공은 어떻게 연애했을까?"
+            value="💔 나와 케미 별로인 여주(남주)는 누구?"
           />
         </Grid>
         <Grid className={classes.restartBtnGrid} mt={40}>

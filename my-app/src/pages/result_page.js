@@ -33,9 +33,9 @@ export function ResultPage({ match }) {
           <Grid className={classes.recommendContentsGrid} item>
             <RecommendContentsTemplate data={recommendData} />
           </Grid>
-          <Grid className={classes.shareBtnGrid} item>
-            <ShareButton data={data}  genderType={genderType}/>
-          </Grid>
+          <Box className={classes.shareButton}>
+            <ShareButton  data={data}  />
+          </Box>
         </Grid>
         <Footer />
       </PC>
@@ -68,9 +68,9 @@ export function ResultPage({ match }) {
           <Grid className={classes.recommendContentsGrid} item>
             <RecommendContentsTemplate data={recommendData} />
           </Grid>
-          <Grid className={classes.shareBtnGrid} item>
+          <Box className={classes.shareButton}>
             <ShareButton  data={data}  />
-          </Grid>
+          </Box>
         </Grid>
         <Footer />
       </Tablet>
@@ -86,9 +86,9 @@ export function ResultPage({ match }) {
           <Grid className={classes.recommendContentsGrid} item>
             <RecommendContentsTemplate data={recommendData} />
           </Grid>
-          <Grid className={classes.shareBtnGrid} item>
+          <Box className={classes.shareButton}>
             <ShareButton  data={data}  />
-          </Grid>
+          </Box>
         </Grid>
         <Footer />
       </PCwide>
