@@ -21,20 +21,20 @@ export function ResultPage({ match }) {
       resultList[data["goodMbti"]][genderType === "male" ? "female" : "male"],
     bad: resultList[data["badMbti"]][genderType === "male" ? "female" : "male"],
   };
-
+  console.log(genderType)
   return (
     <Box className={classes.root}>
       <PC>
         <NavBar pageType="intro" />
         <Grid className={classes.container}>
           <Grid className={classes.resultGrid} item>
-            <ResultTemplate data={data} />
+            <ResultTemplate data={data} genderType={genderType}/>
           </Grid>
           <Grid className={classes.recommendContentsGrid} item>
             <RecommendContentsTemplate data={recommendData} />
           </Grid>
           <Grid className={classes.shareBtnGrid} item>
-            <ShareButton data={data} />
+            <ShareButton data={data}  genderType={genderType}/>
           </Grid>
         </Grid>
         <Footer />
@@ -45,7 +45,7 @@ export function ResultPage({ match }) {
           <NavBar pageType="intro"  />
           <Box className={classes.mobileBlock}></Box>
           <Box className={classes.mobileResultBlock}>
-            <ResultTemplate data={data} />
+            <ResultTemplate data={data} genderType={genderType} />
           </Box>
           <Box className={classes.mobileRecommendBlock}>
             <RecommendContentsTemplate data={recommendData} />
@@ -63,7 +63,7 @@ export function ResultPage({ match }) {
         <NavBar pageType="intro" />
         <Grid className={classes.container}>
           <Grid className={classes.resultGrid} item>
-            <ResultTemplate data={data} />
+            <ResultTemplate data={data} genderType={genderType}/>
           </Grid>
           <Grid className={classes.recommendContentsGrid} item>
             <RecommendContentsTemplate data={recommendData} />
@@ -81,7 +81,7 @@ export function ResultPage({ match }) {
         <NavBar pageType="intro" />
         <Grid className={classes.container}>
           <Grid className={classes.resultGrid} item>
-            <ResultTemplate data={data} />
+            <ResultTemplate data={data} genderType={genderType}/>
           </Grid>
           <Grid className={classes.recommendContentsGrid} item>
             <RecommendContentsTemplate data={recommendData} />
