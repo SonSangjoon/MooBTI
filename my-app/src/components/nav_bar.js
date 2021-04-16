@@ -42,7 +42,8 @@ const useStyles = makeStyles((theme) => ({
   mobileLogo: {
     width: "auto",
     height: "auto",
-    maxHeight: "30px",
+    maxHeight: "35px",
+    paddingTop: '5px'
   },
 }));
 
@@ -66,9 +67,10 @@ export default function NavBar({ pageType }) {
             <Box>
               <IconButton
                 onClick={() => setOpenIntroduction(true)}
-                color="inherit"
+                color="inherit" 
+
               >
-                <AccountCircle />
+                <AccountCircle fontSize="large" />
               </IconButton>
             </Box>
         </Toolbar>
@@ -92,9 +94,9 @@ export default function NavBar({ pageType }) {
             <Box>
               <IconButton
                 onClick={() => setOpenIntroduction(true)}
-                color="inherit"
+                color="inherit" 
               >
-                <AccountCircle />
+                <AccountCircle fontSize="large" />
               </IconButton>
             </Box>
         </Toolbar>

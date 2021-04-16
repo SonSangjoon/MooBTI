@@ -28,7 +28,6 @@ export default function TestQuestionTemplate() {
   }, [answer]);
 
   function proceedTest(n) {
-    console.log(testData);
 
     if (n === 1) {
       setTestData({ ...testData, answer: answer + "1" });
@@ -38,17 +37,15 @@ export default function TestQuestionTemplate() {
   }
 
   function GetMbti() {
-    console.log(testData);
     axios
       .post(
         `http://elice-kdt-ai-track-vm-da-03.koreacentral.cloudapp.azure.com:5000/mbti`,
         testData
       )
       .then((response) => {
-        console.log(response.data.user_mbti);
         setTimeout(() => {
           history.push(`/${response.data.user_mbti}/${testData["gender"]}`);
-        }, 2000);
+        }, 1800);
       });
   }
 
