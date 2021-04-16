@@ -21,7 +21,7 @@ export function ResultPage({ match }) {
       resultList[data["goodMbti"]][genderType === "male" ? "female" : "male"],
     bad: resultList[data["badMbti"]][genderType === "male" ? "female" : "male"],
   };
-  console.log(genderType)
+
   return (
     <Box className={classes.root}>
       <PC>

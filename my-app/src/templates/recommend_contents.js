@@ -23,7 +23,7 @@ function LinkButton({ url }) {
       <Link href={"https://" + url} underline="none" target="_blank">
         <CustomRestartBtn className={classes.movieLinkBtn}>
           <Typography className={classes.movieLinkText}>
-           NETFLIX에서 확인하기
+            NETFLIX에서 확인하기
           </Typography>
         </CustomRestartBtn>
       </Link>
@@ -34,7 +34,7 @@ function LinkButton({ url }) {
       <Link href={"https://" + url} underline="none" target="_blank">
         <CustomRestartBtn className={classes.movieLinkBtn}>
           <Typography className={classes.movieLinkText}>
-            WATCHA에서 확인하기
+          왓챠에서 확인하기
           </Typography>
         </CustomRestartBtn>
       </Link>
@@ -86,18 +86,21 @@ function RecommendComponent({ data, value }) {
         <Grid className={classes.mobileRecommendTitleGrid}>
           <Box className={classes.mobileRecommendTitleText}>{value}</Box>
         </Grid>
-        <Grid className={classes.ImageGrid}>
+        <Grid className={classes.mobileImageGrid}>
           <img
             className={classes.posterImg}
             src={data.imageSmallUrl}
             alt="poster"
           />
-        </Grid>
-        <Grid className={classes.mobileRecommendDesc}>
+        </Grid >
+        <Grid className={classes.mobileCharTitleGrid} item>
           <Box className={classes.mobileRecommendCharText}>
             {data.mbit} {data.movie}의 {data.name}
           </Box>
-          <Box className={classes.recommendDescText}>{data.shortDesc}</Box>
+        </Grid>
+        <Grid className={classes.mobileRecommendDesc}>
+
+          <Box className={classes.mobileRecommendDescText}>{data.shortDesc}</Box>
         </Grid>
         <Grid className={classes.mobileMovieLinkBtnGrid}>
           <LinkButton url={data.movieUrl} />
@@ -153,7 +156,7 @@ function RecommendComponent({ data, value }) {
 
 export default function RecommendContentsTemplate({ data }) {
   const classes = useStyles();
-  console.log(data.good);
+
   return (
     <Grid className={classes.container}>
       <PC>
@@ -205,7 +208,7 @@ export default function RecommendContentsTemplate({ data }) {
             value="💔 나와 케미 별로인 여주(남주)는 누구?"
           />
         </Grid>
-        <Grid className={classes.restartBtnGrid} mt={40}>
+        <Grid className={classes.tabletRestartBtnGrid} mt={40}>
           <RestartButton />
         </Grid>
       </Tablet>

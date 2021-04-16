@@ -247,7 +247,7 @@ export default function IntroductionModal(data) {
                   image="SJ"
                   name="상준"
                   part="프론트엔드 / 기획"
-                  url="https://brunch.co.kr/@junhyopark"
+                  url="https://github.com/SonSangjoon"
                 />
               </Grid>
               <Grid className={classes.YJGrid}>
@@ -302,7 +302,7 @@ export default function IntroductionModal(data) {
                   image="SJ"
                   name="상준"
                   part="프론트엔드 / 기획"
-                  url="https://brunch.co.kr/@junhyopark"
+                  url="https://github.com/SonSangjoon"
                 />
               </Grid>
               <Grid className={classes.YJGrid}>
@@ -357,7 +357,7 @@ export default function IntroductionModal(data) {
                   image="SJ"
                   name="상준"
                   part="프론트엔드 / 기획"
-                  url="https://brunch.co.kr/@junhyopark"
+                  url="https://github.com/SonSangjoon"
                 />
               </Grid>
               <Grid className={classes.YJGrid}>
@@ -412,7 +412,7 @@ export default function IntroductionModal(data) {
                   image="SJ"
                   name="상준"
                   part="프론트엔드 / 기획"
-                  url="https://brunch.co.kr/@junhyopark"
+                  url="https://github.com/SonSangjoon"
                 />
               </Grid>
               <Grid className={classes.YJGrid}>

@@ -7,11 +7,11 @@ import LinkShareButton from "./button_link_share";
 const useStyles = makeStyles({
   container: {
     height: "50px",
+    width: "50px"
   },
   shareBtn1Grid: {
     display: "block",
-    paddingLeft: "6.5px",
-    marginBlock: "10px",
+    marginBottom: "10px",
   },
   shareBtn2Grid: {
     display: "block",

@@ -44,6 +44,13 @@ const LinkShareButton = () => {
   return (
     <Box>
       <Box>
+        <Fab
+          style={{ backgroundColor: "white" }}
+          aria-label="edit"
+          onClick={handleClick({ vertical: "bottom", horizontal: "center" })}
+        >
+          <LinkIcon />
+        </Fab>
         <textarea
           type="text"
           value={window.location.href}
@@ -51,14 +58,6 @@ const LinkShareButton = () => {
           readOnly
           className={classes.copy}
         ></textarea>
-
-        <Fab
-          style={{ backgroundColor: "#dc1a28" }}
-          aria-label="edit"
-          onClick={handleClick({ vertical: "bottom", horizontal: "center" })}
-        >
-          <LinkIcon />
-        </Fab>
       </Box>
 
       <Snackbar
