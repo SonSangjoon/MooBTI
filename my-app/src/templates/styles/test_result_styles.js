@@ -80,11 +80,16 @@ const useStyles = makeStyles((theme) => ({
 
   analysisBtn: {
     minWidth: "100%",
+
     color:"#dc1a28",
     border:"2px solid #dc1a28",
     "&.MuiButton-root:hover":{
-      color: 'lightgrey'
+      color: 'lightgrey',
+      border:"2px solid white",
     }
+  },
+  analysisText:{
+    fontFamily: "S-CoreDream-6Bold",
   },
   //Mobile View
 

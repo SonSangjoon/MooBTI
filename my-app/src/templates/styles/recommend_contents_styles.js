@@ -74,6 +74,17 @@ const useStyles = makeStyles((theme) => ({
 
   restartBtn: {
     minWidth: "100%",
+
+    color:"#dc1a28",
+    border:"2px solid #dc1a28",
+    "&.MuiButton-root:hover":{
+      color: 'lightgrey',
+      border:"2px solid white",
+    }
+  },
+
+  restartBtnText:{
+    fontFamily: "S-CoreDream-6Bold",
   },
 
   recommendTitleText: {

@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { Button, Grid, Box } from "@material-ui/core";
+import { Button, Grid, Box, Typography } from "@material-ui/core";
 import { MbtiContext } from "../App";
 import { useStyles } from "./styles/test_result_styles";
 import TransitionsModal from "../components/modal_result";
@@ -134,8 +134,10 @@ function ResultDescription({ data }) {
 function DataAnalysisBtn({ value }) {
   const classes = useStyles();
   return (
-    <Button variant="outlined" className={classes.analysisBtn} style={{color:"#dc1a28",border:"2px solid #dc1a28"}}>
-      {value}
+    <Button variant="outlined" className={classes.analysisBtn} >
+      <Typography className={classes.analysisText}>
+        {value}
+      </Typography>
     </Button>
   );
 }
@@ -174,7 +176,7 @@ export default function ResultTemplate({ data }) {
         <Grid className={classes.buttonGrid}>
           <DataAnalysisBtn value="영화보러 가기" />
         </Grid>
-        <TransitionsModal />
+        <TransitionsModal data={data}/>
       </Mobile>
 
       <Tablet>
@@ -190,7 +192,7 @@ export default function ResultTemplate({ data }) {
         <Grid className={classes.buttonGrid}>
           <DataAnalysisBtn value="영화보러 가기" />
         </Grid>
-        <TransitionsModal />
+        <TransitionsModal data={data}/>
       </Tablet>
 
       <PCwide>
@@ -206,7 +208,7 @@ export default function ResultTemplate({ data }) {
         <Grid className={classes.buttonGrid}>
           <DataAnalysisBtn value="영화보러 가기" />
         </Grid>
-        <TransitionsModal />
+        <TransitionsModal data={data}/>
       </PCwide>
     </Grid>
   );

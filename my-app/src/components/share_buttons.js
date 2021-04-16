@@ -20,8 +20,7 @@ const useStyles = makeStyles({
 
 export default function ShareButton({data}) {
   const classes = useStyles();
-  console.log(data.title)
-  // const title = data.title
+  
   return (
     <Box className={classes.container}>
       <Box className={classes.shareBtn1Grid}>
