@@ -164,10 +164,10 @@ export default function TransitionsModal({data}) {
   const { openModal, setOpenModal } = useContext(MbtiContext);
   // const { selectedGender } = useContext(MbtiContext);
 
-  console.log(data.analysisTitle)
-  console.log(data.analysisSubTitle)
-  console.log(data.analysisText)
-  console.log(data.emotion)
+  // console.log(data.analysisTitle)
+  // console.log(data.analysisSubTitle)
+  // console.log(data.analysisText)
+  // console.log(data.emotion)
   const handleClose = () => {
     setOpenModal(false);
   };
@@ -177,6 +177,11 @@ export default function TransitionsModal({data}) {
   data.analysisSubTitle;
   const analysisText =
   data.analysisText;
+//   const titleText = "data.analysisTitle";
+//   const subTitleText =
+// "  data.analysisSubTitle";
+//   const analysisText =
+//  " data.analysisText";
 
   const gender = "male";
   const happyNumber = data.emotion[0];
@@ -184,6 +189,13 @@ export default function TransitionsModal({data}) {
   const angryNumber = data.emotion[2];
   const fussyNumber = data.emotion[3];
   const timidNumber = data.emotion[4];
+
+
+  // const happyNumber = "data.analysisTitle";
+  // const sadNumber = "data.analysisTitle";
+  // const angryNumber = "data.analysisTitle";
+  // const fussyNumber = "data.analysisTitle";
+  // const timidNumber = "data.analysisTitle";
 
   return (
     <Modal
