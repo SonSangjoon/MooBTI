@@ -44,6 +44,7 @@ const useStyles = makeStyles((theme) => ({
   subTitleGrid: {
     gridColumn: "span 13",
     gridRow: "3/span 1",
+    paddingTop: "15px"
   },
 
   subTitleText: {
@@ -53,23 +54,23 @@ const useStyles = makeStyles((theme) => ({
   },
   happyCircleGrid: {
     gridColumn: "2/span 3",
-    gridRow: "4/span 4",
+    gridRow: "5/span 3",
   },
   sadCircleGrid: {
     gridColumn: "6/span 3",
-    gridRow: "4/span 4",
+    gridRow: "5/span 3",
   },
   angryCircleGrid: {
     gridColumn: "10/span 3",
-    gridRow: "4/span 4",
+    gridRow: "5/span 3",
   },
   fussyCircleGrid: {
     gridColumn: "4/span 3",
-    gridRow: "8/span 4",
+    gridRow: "8/span 3",
   },
   timidCircleGrid: {
     gridColumn: "8/span 3",
-    gridRow: "8/span 4",
+    gridRow: "8/span 3",
   },
   emotionImage: {
     objectFit: "fill",
