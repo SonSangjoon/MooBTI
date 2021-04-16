@@ -39,22 +39,25 @@
 }
 
 @font-face {
-  font-family: 'S-CoreDream-8Heavy';
-  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-8Heavy.woff') format('woff');
+  font-family: "S-CoreDream-8Heavy";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-8Heavy.woff")
+    format("woff");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'S-CoreDream-7ExtraBold';
-  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-7ExtraBold.woff') format('woff');
+  font-family: "S-CoreDream-7ExtraBold";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-7ExtraBold.woff")
+    format("woff");
   font-weight: normal;
   font-style: normal;
 }
 
 * {
   font-family: "S-CoreDream-2ExtraLight", "S-CoreDream-3Light",
-    "S-CoreDream-4Regular", "S-CoreDream-6Bold", 'S-CoreDream-8Heavy', 'S-CoreDream-7ExtraBold';
+    "S-CoreDream-4Regular", "S-CoreDream-6Bold", "S-CoreDream-8Heavy",
+    "S-CoreDream-7ExtraBold";
 }
 
 .App {

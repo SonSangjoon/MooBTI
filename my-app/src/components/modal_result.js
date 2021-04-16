@@ -44,7 +44,7 @@ const useStyles = makeStyles((theme) => ({
   subTitleGrid: {
     gridColumn: "span 13",
     gridRow: "3/span 1",
-    paddingTop: "15px"
+    paddingTop: "15px",
   },
 
   subTitleTextStyles: {
@@ -79,7 +79,7 @@ const useStyles = makeStyles((theme) => ({
 
   emotionText: {
     color: "white",
-    fontFamily:"S-CoreDream-4Regular"
+    fontFamily: "S-CoreDream-4Regular",
   },
   analysisGrid: {
     gridColumn: "span 13",
@@ -88,7 +88,7 @@ const useStyles = makeStyles((theme) => ({
   analysisTextStyle: {
     color: "white",
     fontSize: "17px",
-    fontFamily:"S-CoreDream-4Regular"
+    fontFamily: "S-CoreDream-4Regular",
   },
   modalCloseBtnGrid: {
     gridColumn: "13",
@@ -111,7 +111,7 @@ function Title(data) {
 
 function SubTitle(data) {
   const classes = useStyles();
-  
+
   return (
     <Box className={classes.subTitleTextStyles} align="center">
       {data.text}
@@ -122,7 +122,7 @@ function SubTitle(data) {
 function EmotionCircle(data) {
   const classes = useStyles();
   const imageUrl = `/images/emotion/${data.gender}/${data.emotion}.png`;
-  
+
   return (
     <Box align="center">
       <img src={imageUrl} alt="Logo" className={classes.emotionImage} />
@@ -161,7 +161,7 @@ function ModalCloseBtn() {
   );
 }
 
-export default function TransitionsModal({data, genderType}) {
+export default function TransitionsModal({ data, genderType }) {
   const classes = useStyles();
   const { openModal, setOpenModal } = useContext(MbtiContext);
 
@@ -170,7 +170,7 @@ export default function TransitionsModal({data, genderType}) {
   };
   const titleText = data.analysisTitle;
   const subTitleText = data.analysisSubTitle;
-  const analysisText =data.analysisText;
+  const analysisText = data.analysisText;
 
   const happyNumber = data.emotion[0];
   const sadNumber = data.emotion[1];

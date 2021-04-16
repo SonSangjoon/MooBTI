@@ -6,7 +6,6 @@ import { Box, Grid } from "@material-ui/core";
 import { Mobile, Tablet, PC, PCwide } from "../components/MediaQuery.js";
 import { useStyles } from "./styles/test_page_styles";
 
-
 export function TestPage() {
   const classes = useStyles();
 

@@ -17,8 +17,8 @@ const CustomRestartBtn = withStyles((theme) => ({
 
 function LinkButton({ url }) {
   const classes = useStyles();
-  
-  if (url[4] === 'n'){
+
+  if (url[4] === "n") {
     return (
       <Link href={"https://" + url} underline="none" target="_blank">
         <CustomRestartBtn className={classes.movieLinkBtn}>
@@ -28,13 +28,12 @@ function LinkButton({ url }) {
         </CustomRestartBtn>
       </Link>
     );
-  }
-  else{
+  } else {
     return (
       <Link href={"https://" + url} underline="none" target="_blank">
         <CustomRestartBtn className={classes.movieLinkBtn}>
           <Typography className={classes.movieLinkText}>
-          왓챠에서 확인하기
+            왓챠에서 확인하기
           </Typography>
         </CustomRestartBtn>
       </Link>
@@ -92,15 +91,16 @@ function RecommendComponent({ data, value }) {
             src={data.imageSmallUrl}
             alt="poster"
           />
-        </Grid >
+        </Grid>
         <Grid className={classes.mobileCharTitleGrid} item>
           <Box className={classes.mobileRecommendCharText}>
             {data.mbit} {data.movie}의 {data.name}
           </Box>
         </Grid>
         <Grid className={classes.mobileRecommendDesc}>
-
-          <Box className={classes.mobileRecommendDescText}>{data.shortDesc}</Box>
+          <Box className={classes.mobileRecommendDescText}>
+            {data.shortDesc}
+          </Box>
         </Grid>
         <Grid className={classes.mobileMovieLinkBtnGrid}>
           <LinkButton url={data.movieUrl} />
@@ -122,7 +122,9 @@ function RecommendComponent({ data, value }) {
           <Box className={classes.tabletRecommendCharText}>
             {data.mbit} {data.movie}의 {data.name}
           </Box>
-          <Box className={classes.tabletrecommendDescText}>{data.shortDesc}</Box>
+          <Box className={classes.tabletrecommendDescText}>
+            {data.shortDesc}
+          </Box>
         </Grid>
         <Grid className={classes.tabletMovieLinkBtnGrid}>
           <LinkButton url={data.movieUrl} />

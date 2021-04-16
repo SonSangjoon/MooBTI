@@ -55,7 +55,7 @@ const useStyles = makeStyles((theme) => ({
     objectFit: "fill",
     width: "100%",
     maxHeight: "100%",
-    borderRadius: '9px'
+    borderRadius: "9px",
   },
 
   movieLinkBtnGrid: {
@@ -66,13 +66,13 @@ const useStyles = makeStyles((theme) => ({
   movieLinkBtn: {
     minWidth: "100%",
     fontSize: "12px",
-    color: "secondary"
+    color: "secondary",
   },
-  movieLinkText:{
-    color:"white",
-    fontFamily: "S-CoreDream-4Regular"
+  movieLinkText: {
+    color: "white",
+    fontFamily: "S-CoreDream-4Regular",
   },
-  
+
   restartBtnGrid: {
     gridColumn: "3/ span 8",
     gridRow: "-2/ span 2",
@@ -81,15 +81,15 @@ const useStyles = makeStyles((theme) => ({
   restartBtn: {
     minWidth: "100%",
 
-    color:"#dc1a28",
-    border:"2px solid #dc1a28",
-    "&.MuiButton-root:hover":{
-      color: 'lightgrey',
-      border:"2px solid white",
-    }
+    color: "#dc1a28",
+    border: "2px solid #dc1a28",
+    "&.MuiButton-root:hover": {
+      color: "lightgrey",
+      border: "2px solid white",
+    },
   },
 
-  restartBtnText:{
+  restartBtnText: {
     fontFamily: "S-CoreDream-6Bold",
   },
 
@@ -104,7 +104,7 @@ const useStyles = makeStyles((theme) => ({
     gridRow: "span 2",
   },
 
-  mobileImageGrid:{
+  mobileImageGrid: {
     gridColumn: "span 3",
     gridRow: "5/ span 4",
   },
@@ -114,10 +114,10 @@ const useStyles = makeStyles((theme) => ({
     fontFamily: "S-CoreDream-6Bold",
   },
 
-  mobileCharTitleGrid:{
+  mobileCharTitleGrid: {
     gridColumn: "span 12",
     gridRow: "3/ span 2",
-    textAlign: 'center'
+    textAlign: "center",
   },
 
   mobileRecommendCharText: {
@@ -128,7 +128,7 @@ const useStyles = makeStyles((theme) => ({
   mobileRecommendDesc: {
     gridColumn: "5/span 8",
     gridRow: "5/ span 7",
-    textAlignVertical : 'center'
+    textAlignVertical: "center",
   },
 
   mobileRecommendDescText: {
@@ -140,7 +140,7 @@ const useStyles = makeStyles((theme) => ({
     gridRow: "-4/ span 2",
   },
 
-  mobileRestartBtnGrid:{
+  mobileRestartBtnGrid: {
     gridColumn: "3/ span 8",
     gridRow: "-4/ span 2",
   },
@@ -153,13 +153,12 @@ const useStyles = makeStyles((theme) => ({
   tabletRecommendTitleText: {
     fontSize: "14px",
     fontFamily: "S-CoreDream-6Bold",
-
   },
 
   tabletRecommendCharText: {
     fontSize: "14px",
     fontFamily: "S-CoreDream-6Bold",
-    paddingBottom : "10px"
+    paddingBottom: "10px",
   },
 
   tabletRecommendDesc: {
@@ -167,7 +166,7 @@ const useStyles = makeStyles((theme) => ({
     gridRow: "4/ span 7",
   },
 
-  tabletrecommendDescText:{
+  tabletrecommendDescText: {
     fontSize: "12px",
     fontFamily: "S-CoreDream-4Regular",
   },
@@ -177,10 +176,10 @@ const useStyles = makeStyles((theme) => ({
     gridRow: "span 2",
   },
 
-  tabletRestartBtnGrid:{
+  tabletRestartBtnGrid: {
     gridColumn: "2/ span 10",
     gridRow: "-2/ span 2",
-  }
+  },
 
   //PcWide View
 }));

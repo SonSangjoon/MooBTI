@@ -1,7 +1,6 @@
 import { makeStyles } from "@material-ui/core/styles";
 
 const useStyles = makeStyles((theme) => ({
-
   root: {
     height: "100vh",
     backgroundColor: "black",
@@ -39,52 +38,49 @@ const useStyles = makeStyles((theme) => ({
     color: "white",
   },
   shareButton: {
-    position: 'fixed',
-    bottom: '100px',
-    right: '5px',
-    padding: '20px'
+    position: "fixed",
+    bottom: "100px",
+    right: "5px",
+    padding: "20px",
   },
 
-  
-// Mobile View
+  // Mobile View
 
-mobileContainer: {
-  // overflow: 'auto',
-  backgroundColor: "black",
-  height: 'auto',
-  position: 'relative',
+  mobileContainer: {
+    // overflow: 'auto',
+    backgroundColor: "black",
+    height: "auto",
+    position: "relative",
+  },
 
-},
+  mobileBlock: {
+    overflow: "auto",
+    display: "block",
+    // height: "5vh",
+    margin: "15px",
+  },
 
-mobileBlock:{
-  overflow: 'auto',
-  display: "block",
-  // height: "5vh",
-  margin: "15px"
-},
+  mobileResultBlock: {
+    overflow: "auto",
+    display: "block",
+    margin: "15px",
+  },
 
-mobileResultBlock:{
-  overflow: 'auto',
-  display: "block",
-  margin: "15px"
-},
+  mobileRecommendBlock: {
+    overflow: "auto",
+    display: "block",
+    margin: "15px",
+  },
+  mobileShareButton: {
+    position: "fixed",
+    bottom: "80px",
+    right: "0",
+    padding: "10px",
+  },
 
-mobileRecommendBlock:{
-  overflow: 'auto',
-  display: "block",
-  margin: "15px"
-},
-mobileShareButton:{
-    position: 'fixed',
-    bottom: '80px',
-    right: '0',
-    padding: '10px'
-},
+  //Tablet View
 
-//Tablet View
-
-//PcWide View
-
+  //PcWide View
 }));
 
-export {useStyles }
+export { useStyles };
