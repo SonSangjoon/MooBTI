@@ -122,7 +122,7 @@ function RecommendComponent({ data, value }) {
           <Box className={classes.tabletRecommendCharText}>
             {data.mbit} {data.movie}의 {data.name}
           </Box>
-          <Box className={classes.recommendDescText}>{data.shortDesc}</Box>
+          <Box className={classes.tabletrecommendDescText}>{data.shortDesc}</Box>
         </Grid>
         <Grid className={classes.tabletMovieLinkBtnGrid}>
           <LinkButton url={data.movieUrl} />

@@ -178,13 +178,6 @@ export default function TransitionsModal({data, genderType}) {
   const fussyNumber = data.emotion[3];
   const timidNumber = data.emotion[4];
 
-
-  // const happyNumber = "data.analysisTitle";
-  // const sadNumber = "data.analysisTitle";
-  // const angryNumber = "data.analysisTitle";
-  // const fussyNumber = "data.analysisTitle";
-  // const timidNumber = "data.analysisTitle";
-
   return (
     <Modal
       className={classes.modal}
