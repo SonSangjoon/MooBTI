@@ -36,13 +36,13 @@ const useStyles = makeStyles((theme) => ({
   },
 
   recommendCharText: {
-    fontSize: "14px",
+    fontSize: "1.2vw",
     fontFamily: "S-CoreDream-6Bold",
-    paddingBottom: "8px",
+    paddingBottom: "10px",
   },
 
   recommendDescText: {
-    fontSize: "1.6vh",
+    fontSize: "1vw",
     fontFamily: "S-CoreDream-3Light",
   },
 
@@ -51,10 +51,11 @@ const useStyles = makeStyles((theme) => ({
     gridRow: "4/ span 7",
   },
 
-  PosterImg: {
+  posterImg: {
     objectFit: "fill",
     width: "100%",
     maxHeight: "100%",
+    borderRadius: '9px'
   },
 
   movieLinkBtnGrid: {
@@ -69,8 +70,9 @@ const useStyles = makeStyles((theme) => ({
   },
   movieLinkText:{
     color:"white",
-    fontFamily: "S-CoreDream-4Regular"
+    fontFamily: "S-CoreDream-6Bold"
   },
+
   restartBtnGrid: {
     gridColumn: "3/ span 8",
     gridRow: "-2/ span 2",
@@ -92,7 +94,7 @@ const useStyles = makeStyles((theme) => ({
   },
 
   recommendTitleText: {
-    fontSize: "1.2vw",
+    fontSize: "1.4vw",
     fontFamily: "S-CoreDream-6Bold",
   },
 
