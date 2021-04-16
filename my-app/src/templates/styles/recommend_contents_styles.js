@@ -65,8 +65,12 @@ const useStyles = makeStyles((theme) => ({
   movieLinkBtn: {
     minWidth: "100%",
     fontSize: "12px",
+    color: "secondary"
   },
-
+  movieLinkText:{
+    color:"white",
+    fontFamily: "S-CoreDream-4Regular"
+  },
   restartBtnGrid: {
     gridColumn: "3/ span 8",
     gridRow: "-2/ span 2",
