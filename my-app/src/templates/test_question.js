@@ -35,21 +35,20 @@ export default function TestQuestionTemplate() {
     }
   }
 
-  function GetMbti() {
-    axios
-      .post(
-        `http://elice-kdt-ai-track-vm-da-03.koreacentral.cloudapp.azure.com:5000/mbti`,
-        testData
-      )
-      .then((response) => {
-        setTimeout(() => {
-          history.push(`/${response.data.user_mbti}/${testData["gender"]}`);
-        }, 1800);
-      });
-  }
-
   if (answer.length >= 12) {
-    GetMbti();
+    
+    axios
+    .post(
+      `http://elice-kdt-ai-track-vm-da-03.koreacentral.cloudapp.azure.com:5000/mbti`,
+      testData
+    )
+    .then((response) => {
+      console.log(response)
+      setTimeout(() => {
+        history.push(`/${response.data.user_mbti}/${testData["gender"]}`);
+      }, 1800);
+    });
+
     return (
       <Grid className={classes.loadingContainer}>
         {/* <Grid item></Grid> */}
