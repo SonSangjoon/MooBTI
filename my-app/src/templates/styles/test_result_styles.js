@@ -115,7 +115,7 @@ const useStyles = makeStyles((theme) => ({
     fontFamily: "S-CoreDream-6Bold",
     fontSize: "18px",
     whiteSpace: "pre-wrap",
-    letterSpacing: "2px",
+    letterSpacing: "1px",
   },
 
   mobileResultDescriptionGrid: {
@@ -127,13 +127,13 @@ const useStyles = makeStyles((theme) => ({
 
   mobileCharacterDetailText: {
     fontSize: "16px",
-    letterSpacing: "2px",
+    letterSpacing: "1px",
     fontFamily: "S-CoreDream-4Regular",
   },
 
   mobileCharScriptText: {
     fontSize: "17px",
-    letterSpacing: "2px",
+    letterSpacing: "1px",
     fontFamily: "S-CoreDream-6Bold",
   },
 
@@ -185,7 +185,7 @@ const useStyles = makeStyles((theme) => ({
 
   tabletCharScriptText: {
     fontSize: "14px",
-    letterSpacing: "2px",
+    letterSpacing: "1px",
     fontFamily: "S-CoreDream-6Bold",
   },
 
