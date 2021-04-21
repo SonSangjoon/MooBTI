@@ -59,7 +59,7 @@ const useStyles = makeStyles((theme) => ({
   charScriptText: {
     fontSize: "15px",
     fontFamily: "S-CoreDream-6Bold",
-    letterSpacing: "2px",
+    letterSpacing: "1px",
   },
 
   characterScript: {
@@ -75,7 +75,7 @@ const useStyles = makeStyles((theme) => ({
   characterDetailText: {
     fontSize: "1vw",
     fontFamily: "S-CoreDream-3Light",
-    letterSpacing: "2px",
+    letterSpacing: "1px",
   },
 
   analysisBtn: {
