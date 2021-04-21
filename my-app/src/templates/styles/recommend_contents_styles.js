@@ -166,7 +166,7 @@ const useStyles = makeStyles((theme) => ({
     gridRow: "4/ span 7",
   },
 
-  tabletrecommendDescText: {
+  tabletRecommendDescText: {
     fontSize: "12px",
     fontFamily: "S-CoreDream-4Regular",
   },

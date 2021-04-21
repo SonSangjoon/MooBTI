@@ -31,7 +31,7 @@ const useStyles = makeStyles((theme) => ({
   },
 
   imageGrid: {
-    gridColumn: "2/span 10",
+    gridColumn: "span 12",
     gridRow: "2/span 9",
   },
 
@@ -105,7 +105,7 @@ const useStyles = makeStyles((theme) => ({
   },
   mobileCharacterTitleGrid: {
     gridColumn: "span 12",
-    gridRow: "9/ span 2",
+    gridRow: "10/ span 2",
   },
 
   mobileCharacterTitle: {
@@ -150,6 +150,11 @@ const useStyles = makeStyles((theme) => ({
   mobileButtonGrid: {
     gridColumn: "3/ span 8",
     gridRow: "span 1",
+  },
+  mobileResultDescriptionGrid: {
+    gridColumn: "span 12",
+    gridRow: "span 3",
+    color: "white",
   },
 
   //Tablet View
