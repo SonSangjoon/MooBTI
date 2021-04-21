@@ -22,6 +22,11 @@ function ResultMain({ data }) {
             {data.title}
           </Box>
         </Grid>
+        {/* <Grid className={classes.mobileCharacterScript} item>
+          <Box className={classes.mobileCharScriptText} align="center">
+            {data.script}
+          </Box>
+        </Grid> */}
       </Mobile>
 
       <PC>
@@ -194,7 +199,7 @@ export default function ResultTemplate({ data, genderType }) {
         <Grid className={classes.mobileResultMainGrid} item>
           <ResultMain data={data} />
         </Grid>
-        <Grid className={classes.resultDescriptionGrid} item>
+        <Grid className={classes.mobileResultDescriptionGrid} item>
           <ResultDescription data={data} />
         </Grid>
         <Grid
