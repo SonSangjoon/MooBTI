@@ -1,0 +1,38 @@
+@mixin apple-sd-gothic-neo-38-medium {
+  font-family: "Apple SD Gothic Neo";
+  font-size: 38px;
+  font-weight: 500;
+  line-height: normal;
+}
+$white: rgba(255, 255, 255, 1);
+$black: rgba(0, 0, 0, 1);
+
+.iPadPro1110 {
+  background-color: $black;
+  padding: 415px 139px 583px 138px;
+//   display: flex;
+  align-items: flex-start;
+}
+
+.frame20 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.title {
+  color: $white;
+  text-align: center;
+  margin-bottom: 30px;
+  @include apple-sd-gothic-neo-38-medium;
+}
+.profileImg {
+  display: flex;
+  align-items: flex-start;
+}
+.boyProfile1 {
+  border-radius: 4px;
+  &:not(:last-of-type) {
+    margin-right: 50px;
+  }
+}

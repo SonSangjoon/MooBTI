@@ -1,0 +1,242 @@
+$black: rgba(0, 0, 0, 1);
+$brown: rgba(146, 32, 32, 1);
+$crimson: rgba(220, 26, 40, 1);
+$dark-gray: rgba(154, 154, 154, 1);
+$dark-gray-2: rgba(150, 150, 150, 1);
+$gainsboro: rgba(218, 218, 218, 1);
+$gainsboro-2: rgba(217, 217, 217, 1);
+$light-pink: rgba(241, 167, 173, 1);
+$steel-blue: rgba(26, 130, 189, 1);
+$tomato: rgba(235, 87, 87, 1);
+$transparent-black: rgba(0, 0, 0, 0.92);
+$transparent-black-2: rgba(0, 0, 0, 0.04);
+$transparent-black-3: rgba(0, 0, 0, 0.08);
+$transparent-black-4: rgba(0, 0, 0, 0.1);
+$transparent-black-5: rgba(0, 0, 0, 0.85);
+$transparent-black-6: rgba(0, 0, 0, 0);
+$transparent-white: rgba(255, 255, 255, 0);
+$white: rgba(255, 255, 255, 1);
+$white-smoke: rgba(238, 238, 238, 1);
+$yellow: rgba(254, 240, 27, 1);
+
+@mixin apple-sd-gothic-neo-10-semi-bold {
+  font-family: "Apple SD Gothic Neo";
+  font-size: 10px;
+  font-weight: 600;
+  line-height: 14px;
+}
+@mixin apple-sd-gothic-neo-14-extra-bold {
+  font-family: "Apple SD Gothic Neo";
+  font-size: 14px;
+  font-weight: 800;
+  line-height: normal;
+}
+@mixin apple-sd-gothic-neo-14-extra-bold-line20 {
+  font-family: "Apple SD Gothic Neo";
+  font-size: 14px;
+  font-weight: 800;
+  line-height: 20px;
+}
+@mixin apple-sd-gothic-neo-14-semi-bold {
+  font-family: "Apple SD Gothic Neo";
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 14px;
+}
+@mixin apple-sd-gothic-neo-15-semi-bold {
+  font-family: "Apple SD Gothic Neo";
+  font-size: 15px;
+  font-weight: 600;
+  line-height: normal;
+}
+@mixin apple-sd-gothic-neo-16-bold {
+  font-family: "Apple SD Gothic Neo";
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 22px;
+}
+@mixin apple-sd-gothic-neo-16-medium {
+  font-family: "Apple SD Gothic Neo";
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 22px;
+}
+@mixin apple-sd-gothic-neo-16-semi-bold {
+  font-family: "Apple SD Gothic Neo";
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 22px;
+}
+@mixin apple-sd-gothic-neo-18-bold {
+  font-family: "Apple SD Gothic Neo";
+  font-size: 18px;
+  font-weight: 700;
+  line-height: normal;
+}
+@mixin apple-sd-gothic-neo-18-extra-bold {
+  font-family: "Apple SD Gothic Neo";
+  font-size: 18px;
+  font-weight: 800;
+  line-height: normal;
+}
+@mixin apple-sd-gothic-neo-18-extra-bold-line35 {
+  font-family: "Apple SD Gothic Neo";
+  font-size: 18px;
+  font-weight: 800;
+  line-height: 35px;
+}
+@mixin apple-sd-gothic-neo-18-medium {
+  font-family: "Apple SD Gothic Neo";
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 20px;
+}
+@mixin apple-sd-gothic-neo-18-semi-bold {
+  font-family: "Apple SD Gothic Neo";
+  font-size: 18px;
+  font-weight: 600;
+  line-height: normal;
+}
+@mixin apple-sd-gothic-neo-20-bold {
+  font-family: "Apple SD Gothic Neo";
+  font-size: 20px;
+  font-weight: 700;
+  line-height: normal;
+}
+@mixin apple-sd-gothic-neo-20-medium {
+  font-family: "Apple SD Gothic Neo";
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 20px;
+}
+@mixin apple-sd-gothic-neo-20-semi-bold {
+  font-family: "Apple SD Gothic Neo";
+  font-size: 20px;
+  font-weight: 600;
+  line-height: normal;
+}
+@mixin apple-sd-gothic-neo-23-bold {
+  font-family: "Apple SD Gothic Neo";
+  font-size: 23px;
+  font-weight: 700;
+  line-height: normal;
+}
+@mixin apple-sd-gothic-neo-23-extra-bold {
+  font-family: "Apple SD Gothic Neo";
+  font-size: 23px;
+  font-weight: 800;
+  line-height: normal;
+}
+@mixin apple-sd-gothic-neo-23-semi-bold {
+  font-family: "Apple SD Gothic Neo";
+  font-size: 23px;
+  font-weight: 600;
+  line-height: normal;
+}
+@mixin apple-sd-gothic-neo-24-bold {
+  font-family: "Apple SD Gothic Neo";
+  font-size: 24px;
+  font-weight: 700;
+  line-height: normal;
+}
+@mixin apple-sd-gothic-neo-24-extra-bold {
+  font-family: "Apple SD Gothic Neo";
+  font-size: 24px;
+  font-weight: 800;
+  line-height: normal;
+}
+@mixin apple-sd-gothic-neo-24-semi-bold {
+  font-family: "Apple SD Gothic Neo";
+  font-size: 24px;
+  font-weight: 600;
+  line-height: normal;
+}
+@mixin apple-sd-gothic-neo-26-extra-bold {
+  font-family: "Apple SD Gothic Neo";
+  font-size: 26px;
+  font-weight: 800;
+  line-height: normal;
+}
+@mixin apple-sd-gothic-neo-38-medium {
+  font-family: "Apple SD Gothic Neo";
+  font-size: 38px;
+  font-weight: 500;
+  line-height: normal;
+}
+@mixin apple-sd-gothic-neo-50-extra-bold {
+  font-family: "Apple SD Gothic Neo";
+  font-size: 50px;
+  font-weight: 800;
+  line-height: normal;
+}
+@mixin nanum-myeongjo-16-bold {
+  font-family: "Nanum Myeongjo";
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 22px;
+}
+.desktop1Full {
+  background-color: $black;
+  padding: 0 0 433px;
+  // display: flex;
+  align-items: flex-start;
+}
+
+.contentWithImg {
+  // display: flex;
+  align-items: flex-start;
+}
+.desktop1ContentWithImg {
+  // padding: 434px 240px 151px 310px;
+  // display: flex;
+  align-items: flex-start;
+  background: linear-gradient(168deg, $black 12%, $transparent-black-6 23%);
+}
+
+.frame19 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.frame18 {
+  margin-bottom: 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.title1 {
+  width: 637px;
+  color: $white;
+  text-align: center;
+  margin-bottom: 18px;
+  @include apple-sd-gothic-neo-50-extra-bold;
+}
+.title2 {
+  max-width: 355px;
+  color: $gainsboro;
+  text-align: center;
+  @include apple-sd-gothic-neo-23-semi-bold;
+}
+.startButton {
+  position: relative;
+}
+.button {
+  width: 111px;
+  height: 40px;
+  background-color: $crimson;
+  border-radius: 6px;
+  position: relative;
+}
+.startButtonText {
+  width: 71px;
+  color: $white;
+  text-align: center;
+  text-transform: uppercase;
+  position: absolute;
+  left: 20px;
+  top: 3px;
+  letter-spacing: 0.57px;
+  @include apple-sd-gothic-neo-18-extra-bold-line35;
+}
