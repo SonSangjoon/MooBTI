@@ -1,0 +1,90 @@
+.contentWithImg {
+    display: flex;
+    align-items: flex-start;
+  }
+.desktop1ContentWithImg {
+    padding: 434px 240px 151px 310px;
+    display: flex;
+    align-items: flex-start;
+    background: linear-gradient(
+      168deg,
+      black 12%,
+      transparent-black-6 23%
+    );
+  }
+
+.desktop1Full {
+    background-color:black;
+    padding: 0 0 433px;
+    display: flex;
+    align-items: flex-start;
+  }
+
+.contentWithImg {
+    display: flex;
+    align-items: flex-start;
+  }
+  
+
+.desktop1ContentWithImg {
+    padding: 434px 240px 151px 310px;
+    display: flex;
+    align-items: flex-start;
+    background: linear-gradient(
+      168deg,
+      black 12%,
+      transparent-black-6 23%
+    );
+  }
+
+.frame19 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+.frame18 {
+    margin-bottom: 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+.title1 {
+  font-size: 50px;
+    
+    width: 637px;
+    color: white;
+    text-align: center;
+    margin-bottom: 18px;
+    // @include apple-sd-gothic-neo-50-extra-bold;
+  }
+.title2 {
+  font-size: 23px;
+    max-width: 355px;
+    color: gainsboro;
+    text-align: center;
+    // @include apple-sd-gothic-neo-23-semi-bold;
+  }
+.startButton {
+    position: relative;
+  }
+.button {
+    width: 111px;
+    height: 40px;
+    background-color: crimson;
+    border-radius: 6px;
+    position: relative;
+  }
+.startButtonText {
+    font-size: 18px;
+    width: 71px;
+    color: white;
+    text-align: center;
+    text-transform: uppercase;
+    position: absolute;
+    left: 20px;
+    top: 3px;
+    letter-spacing: 0.57px;
+    // @include apple-sd-gothic-neo-18-extra-bold-line35;
+  }
