@@ -60,25 +60,25 @@ function RecommendComponent({ data, value }) {
   return (
     <Grid className={classes.recommendContainer} item>
       <PC>
-        <Grid className={classes.recommendTitleGrid}>
-          <Box className={classes.recommendTitleText}>{value}</Box>
-        </Grid>
-        <Grid className={classes.ImageGrid}>
-          <img
-            className={classes.posterImg}
-            src={data.imageSmallUrl}
-            alt="poster"
-          />
-        </Grid>
-        <Grid className={classes.recommendDesc}>
-          <Box className={classes.recommendCharText}>
-            {data.mbit} {data.movie}의 {data.name}
-          </Box>
-          <Box className={classes.recommendDescText}>{data.shortDesc}</Box>
-        </Grid>
-        <Grid className={classes.movieLinkBtnGrid}>
-          <LinkButton url={data.movieUrl} />
-        </Grid>
+          <Grid className={classes.recommendTitleGrid}>
+            <Box className={classes.recommendTitleText}>{value}</Box>
+          </Grid>
+          <Grid className={classes.ImageGrid}>
+            <img
+              className={classes.posterImg}
+              src={data.imageSmallUrl}
+              alt="poster"
+            />
+          </Grid>
+          <Grid className={classes.recommendDesc}>
+            <Box className={classes.recommendCharText}>
+              {data.mbit} {data.movie}의 {data.name}
+            </Box>
+            <Box className={classes.recommendDescText}>{data.shortDesc}</Box>
+          </Grid>
+          <Grid className={classes.movieLinkBtnGrid}>
+            <LinkButton url={data.movieUrl} />
+          </Grid>
       </PC>
 
       <Mobile>
