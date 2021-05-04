@@ -155,6 +155,9 @@ const useStyles = makeStyles((theme) => ({
     gridColumn: "3/ span 8",
     gridRow: "-4/ span 2",
   },
+
+
+
   //Tablet View
   tabletRecommendTitleGrid: {
     gridColumn: "span 12",
@@ -174,7 +177,7 @@ const useStyles = makeStyles((theme) => ({
 
   tabletRecommendDesc: {
     gridColumn: "5/span 8",
-    gridRow: "4/ span 7",
+    gridRow: "3/ span 7",
   },
 
   tabletRecommendDescText: {
@@ -182,9 +185,13 @@ const useStyles = makeStyles((theme) => ({
     fontFamily: "S-CoreDream-4Regular",
   },
 
+  // tabletMovieLinkBtnGrid: {
+  //   gridColumn: "2/span 10",
+  //   gridRow: "span 2",
+  // },
   tabletMovieLinkBtnGrid: {
-    gridColumn: "2/span 10",
-    gridRow: "span 2",
+    gridColumn: "4/ span 9",
+    gridRow: "9/ span 2",
   },
 
   tabletRestartBtnGrid: {

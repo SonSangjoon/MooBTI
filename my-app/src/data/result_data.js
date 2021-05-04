@@ -88,7 +88,8 @@ const resultList = {
 
             goodMbti: 'ESFP',
             badMbti: 'INFJ' ,
-            shortDesc: '영원한 사랑을 찾는 ISFJ 여자. 따뜻하고 배려심이 넘치지만, 당신에게 서운함이 있어도 마음에 숨겨두고 있어요.' , 
+            // shortDesc: '영원한 사랑을 찾는 ISFJ 여자. 따뜻하고 배려심이 넘치지만, 당신에게 서운함이 있어도 마음에 숨겨두고 있어요.' , 
+            shortDesc: '분석의 끝에 사랑이 있는 INTP 남자. 뇌섹남 매력을 갖고 있어요. 연애가 1순위가 아니기에, 그에게 너무 깊게 빠지면 안돼요.',
         
             analysisTitle : "ISFJ 클레멘타인이 조엘을 사로잡은 비결💘",
             analysisSubTitle : "클레멘타인의 대사를 분석해서 머릿 속 감정 친구들 100명을 찾아냈어요!",
