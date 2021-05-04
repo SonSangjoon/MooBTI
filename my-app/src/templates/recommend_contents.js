@@ -94,8 +94,9 @@ function RecommendComponent({ data, value }) {
         </Grid>
         <Grid className={classes.mobileCharTitleGrid} item>
           <Box className={classes.mobileRecommendCharText}>
-            {data.mbit} {data.movie}의 {data.name}
+            {data.movie}의 {data.name}
           </Box>
+          <Box className={classes.mobileCharMbtiText}> {data.mbit}</Box>
         </Grid>
         <Grid className={classes.mobileRecommendDesc}>
           <Box className={classes.mobileRecommendDescText}>
@@ -165,13 +166,13 @@ export default function RecommendContentsTemplate({ data }) {
         <Grid className={classes.recommendGrid1} item>
           <RecommendComponent
             data={data.good}
-            value="💖 나와 케미 터지는 여주(남주)는 누구?"
+            value="나와 🔥 불꽃 케미 터지는 캐릭터는"
           />
         </Grid>
         <Grid className={classes.recommendGrid2} item>
           <RecommendComponent
             data={data.bad}
-            value="💔 나와 케미 별로인 여주(남주)는 누구?"
+            value="나와 ❄️ 얼음 케미인 캐릭터는"
           />
         </Grid>
         <Grid className={classes.restartBtnGrid} mt={40}>
@@ -180,16 +181,16 @@ export default function RecommendContentsTemplate({ data }) {
       </PC>
 
       <Mobile>
-        <Grid className={classes.recommendGrid1} item>
+        <Grid className={classes.mobileRecommendGrid1} item>
           <RecommendComponent
             data={data.good}
-            value="💖 나와 케미 터지는 여주(남주)는 누구?"
+            value="나와 🔥 불꽃 케미 터지는 캐릭터는"
           />
         </Grid>
-        <Grid className={classes.recommendGrid2} item>
+        <Grid className={classes.mobileRecommendGrid2} item>
           <RecommendComponent
             data={data.bad}
-            value="💔 나와 케미 별로인 여주(남주)는 누구?"
+            value="나와 ❄️ 얼음 케미인 캐릭터는"
           />
         </Grid>
         <Grid className={classes.restartBtnGrid} mt={40}>
@@ -201,13 +202,13 @@ export default function RecommendContentsTemplate({ data }) {
         <Grid className={classes.recommendGrid1} item>
           <RecommendComponent
             data={data.good}
-            value="💖 나와 케미 터지는 여주(남주)는 누구?"
+            value="나와 🔥 불꽃 케미 터지는 캐릭터는"
           />
         </Grid>
         <Grid className={classes.recommendGrid2} item>
           <RecommendComponent
             data={data.bad}
-            value="💔 나와 케미 별로인 여주(남주)는 누구?"
+            value="나와 ❄️ 얼음 케미인 캐릭터는"
           />
         </Grid>
         <Grid className={classes.tabletRestartBtnGrid} mt={40}>
@@ -219,13 +220,13 @@ export default function RecommendContentsTemplate({ data }) {
         <Grid className={classes.recommendGrid1} item>
           <RecommendComponent
             data={data.good}
-            value="💖 나와 케미 터지는 여주(남주)는 누구?"
+            value="나와 🔥 불꽃 케미 터지는 캐릭터는"
           />
         </Grid>
         <Grid className={classes.recommendGrid2} item>
           <RecommendComponent
             data={data.bad}
-            value="💔 나와 케미 별로인 여주(남주)는 누구?"
+            value="나와 ❄️ 얼음 케미인 캐릭터는"
           />
         </Grid>
         <Grid className={classes.restartBtnGrid} mt={40}>
