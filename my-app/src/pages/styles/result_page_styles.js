@@ -70,6 +70,7 @@ const useStyles = makeStyles((theme) => ({
     overflow: "auto",
     display: "block",
     margin: "15px",
+    
   },
   mobileShareButton: {
     position: "fixed",

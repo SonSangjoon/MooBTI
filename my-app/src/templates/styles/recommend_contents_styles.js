@@ -110,45 +110,71 @@ const useStyles = makeStyles((theme) => ({
   },
 
   // Mobile View
+
+  mobileRecommendGrid1: {
+    gridColumn: "span 12",
+    gridRow: "span 4",
+    background: "linear-gradient(180deg, #000000 0%, #922020 30%)",
+  },
+  mobileRecommendGrid2: {
+    gridColumn: "span 12",
+    gridRow: "7/span 4",
+    background: "linear-gradient(180deg, #000000 0%, #1b83be 40%)",
+
+
+  },
+
+
   mobileRecommendTitleGrid: {
     gridColumn: "span 12",
-    gridRow: "span 2",
+    gridRow: "span 1",
   },
 
   mobileImageGrid: {
-    gridColumn: "span 3",
-    gridRow: "5/ span 4",
+    gridColumn: "5/span 4",
+    gridRow: "4/ span 4",
   },
 
   mobileRecommendTitleText: {
-    fontSize: "18px",
+    fontSize: "19px",
+    textAlign: "center",
     fontFamily: "S-CoreDream-6Bold",
   },
 
   mobileCharTitleGrid: {
     gridColumn: "span 12",
-    gridRow: "3/ span 2",
+    gridRow: "2/ span 2",
     textAlign: "center",
   },
 
   mobileRecommendCharText: {
-    fontSize: "20px",
-    fontFamily: "S-CoreDream-4Regular",
+    fontSize: "22px",
+    fontWeight: "bold",
+
   },
 
+  mobileCharMbtiText: {
+    fontSize: "20px",
+    fontWeight: "bold",
+  },
+
+
   mobileRecommendDesc: {
-    gridColumn: "5/span 8",
-    gridRow: "5/ span 7",
+    gridColumn: "2/span 10",
+    gridRow: "9/ span 7",
     textAlignVertical: "center",
+    whiteSpace: "pre-wrap",
+
   },
 
   mobileRecommendDescText: {
     fontSize: "px",
+    textAlign: "center",
   },
 
   mobileMovieLinkBtnGrid: {
     gridColumn: "3/ span 8",
-    gridRow: "-4/ span 2",
+    gridRow: "-3/ span 1",
   },
 
   mobileRestartBtnGrid: {

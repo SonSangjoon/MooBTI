@@ -101,11 +101,11 @@ const useStyles = makeStyles((theme) => ({
 
   mobileImageGrid: {
     gridColumn: "span 12",
-    gridRow: "2/span 6",
+    gridRow: "2/span 3",
   },
   mobileCharacterTitleGrid: {
     gridColumn: "span 12",
-    gridRow: "9/ span 2",
+    gridRow: "6/ span 2",
   },
 
   mobileCharacterTitle: {
