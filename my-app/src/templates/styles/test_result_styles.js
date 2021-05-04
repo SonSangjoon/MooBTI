@@ -51,15 +51,16 @@ const useStyles = makeStyles((theme) => ({
     align: "center",
     marginTop: 15,
     // fontSize: "2vw",
-    fontFamily: "S-CoreDream-8Heavy",
-    fontSize: "25px",
+    fontSize: "22px",
     whiteSpace: "pre-wrap",
+    fontWeight: "bold"
   },
 
   charScriptText: {
     fontSize: "15px",
-    fontFamily: "S-CoreDream-6Bold",
     letterSpacing: "1px",
+    whiteSpace: "pre-wrap",
+
   },
 
   characterScript: {
@@ -74,7 +75,7 @@ const useStyles = makeStyles((theme) => ({
 
   characterDetailText: {
     fontSize: "1vw",
-    fontFamily: "S-CoreDream-3Light",
+    // fontSize: "15px",
     letterSpacing: "1px",
   },
 
@@ -89,7 +90,6 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   analysisText: {
-    fontFamily: "S-CoreDream-6Bold",
   },
   //Mobile View
 
@@ -101,19 +101,19 @@ const useStyles = makeStyles((theme) => ({
 
   mobileImageGrid: {
     gridColumn: "span 12",
-    gridRow: "3/span 6",
+    gridRow: "2/span 6",
   },
   mobileCharacterTitleGrid: {
     gridColumn: "span 12",
-    gridRow: "10/ span 2",
+    gridRow: "9/ span 2",
   },
 
   mobileCharacterTitle: {
     align: "center",
     marginTop: 15,
 
-    fontFamily: "S-CoreDream-6Bold",
-    fontSize: "18px",
+    fontSize: "28px",
+    fontWeight: "bold",
     whiteSpace: "pre-wrap",
     letterSpacing: "1px",
   },
@@ -128,13 +128,11 @@ const useStyles = makeStyles((theme) => ({
   mobileCharacterDetailText: {
     fontSize: "16px",
     letterSpacing: "1px",
-    fontFamily: "S-CoreDream-4Regular",
   },
 
   mobileCharScriptText: {
     fontSize: "17px",
     letterSpacing: "1px",
-    fontFamily: "S-CoreDream-6Bold",
   },
 
   mobileCharacterScript: {
@@ -151,6 +149,7 @@ const useStyles = makeStyles((theme) => ({
     gridColumn: "3/ span 8",
     gridRow: "span 1",
   },
+  
   mobileResultDescriptionGrid: {
     gridColumn: "span 12",
     gridRow: "span 3",
@@ -177,7 +176,6 @@ const useStyles = makeStyles((theme) => ({
     align: "center",
     marginTop: 15,
 
-    fontFamily: "S-CoreDream-6Bold",
     fontSize: "17px",
     whiteSpace: "pre-wrap",
     letterSpacing: "1px",
@@ -191,7 +189,6 @@ const useStyles = makeStyles((theme) => ({
   tabletCharScriptText: {
     fontSize: "14px",
     letterSpacing: "1px",
-    fontFamily: "S-CoreDream-6Bold",
   },
 
   tabletCharacterScript: {

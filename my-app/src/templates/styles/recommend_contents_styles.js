@@ -46,7 +46,12 @@ const useStyles = makeStyles((theme) => ({
     fontFamily: "S-CoreDream-3Light",
   },
 
-  ImageGrid: {
+  // ImageGrid: {
+  //   gridColumn: "span 3",
+  //   gridRow: "4/ span 7",
+  // },
+
+    ImageGrid: {
     gridColumn: "span 3",
     gridRow: "4/ span 7",
   },
@@ -94,7 +99,9 @@ const useStyles = makeStyles((theme) => ({
   },
 
   recommendTitleText: {
-    fontSize: "1.4vw",
+    // fontSize: "1.4vw",
+    fontSize: "18px",
+    fontWeight: "bold",
     fontFamily: "S-CoreDream-6Bold",
   },
 
