@@ -27,13 +27,17 @@ const useStyles = makeStyles((theme) => ({
 
   recommendTitleGrid: {
     gridColumn: "span 12",
-    gridRow: "span 2",
+    gridRow: "span 1",
   },
 
   recommendDesc: {
     gridColumn: "5/span 8",
-    gridRow: "4/ span 10",
+    gridRow: "3/ span 10",
   },
+  // recommendDesc: {
+  //   gridColumn: "5/span 8",
+  //   gridRow: "4/ span 10",
+  // },
 
   recommendCharText: {
     fontSize: "1.2vw",
@@ -46,15 +50,15 @@ const useStyles = makeStyles((theme) => ({
     fontFamily: "S-CoreDream-3Light",
   },
 
-  // ImageGrid: {
-  //   gridColumn: "span 3",
-  //   gridRow: "4/ span 7",
-  // },
-
-    ImageGrid: {
+  ImageGrid: {
     gridColumn: "span 3",
-    gridRow: "4/ span 7",
+    gridRow: "3/ span 5",
   },
+
+  //   ImageGrid: {
+  //   gridColumn: "5/span 4",
+  //   gridRow: "3/ span 7",
+  // },
 
   posterImg: {
     objectFit: "fill",
@@ -64,8 +68,8 @@ const useStyles = makeStyles((theme) => ({
   },
 
   movieLinkBtnGrid: {
-    gridColumn: "5/ span 5",
-    gridRow: "9/ span 2",
+    gridColumn: "5/ span 8",
+    gridRow: "7/ span 2",
   },
 
   movieLinkBtn: {
