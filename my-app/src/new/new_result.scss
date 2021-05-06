@@ -1,0 +1,487 @@
+$black: rgba(0, 0, 0, 1);
+$brown: rgba(146, 32, 32, 1);
+$crimson: rgba(220, 26, 40, 1);
+$dark-gray: rgba(154, 154, 154, 1);
+$dark-gray-2: rgba(150, 150, 150, 1);
+$gainsboro: rgba(218, 218, 218, 1);
+$gainsboro-2: rgba(217, 217, 217, 1);
+$light-pink: rgba(241, 167, 173, 1);
+$steel-blue: rgba(26, 130, 189, 1);
+$tomato: rgba(235, 87, 87, 1);
+$transparent-black: rgba(0, 0, 0, 0.92);
+$transparent-black-2: rgba(0, 0, 0, 0.04);
+$transparent-black-3: rgba(0, 0, 0, 0.08);
+$transparent-black-4: rgba(0, 0, 0, 0.1);
+$transparent-black-5: rgba(0, 0, 0, 0.85);
+$transparent-black-6: rgba(0, 0, 0, 0);
+$transparent-white: rgba(255, 255, 255, 0);
+$white: rgba(255, 255, 255, 1);
+$white-smoke: rgba(238, 238, 238, 1);
+$yellow: rgba(254, 240, 27, 1);
+
+@mixin apple-sd-gothic-neo-10-semi-bold {
+  font-family: "Apple SD Gothic Neo";
+  font-size: 10px;
+  font-weight: 600;
+  line-height: 14px;
+}
+@mixin apple-sd-gothic-neo-14-extra-bold {
+  font-family: "Apple SD Gothic Neo";
+  font-size: 14px;
+  font-weight: 800;
+  line-height: normal;
+}
+@mixin apple-sd-gothic-neo-14-extra-bold-line20 {
+  font-family: "Apple SD Gothic Neo";
+  font-size: 14px;
+  font-weight: 800;
+  line-height: 20px;
+}
+@mixin apple-sd-gothic-neo-14-semi-bold {
+  font-family: "Apple SD Gothic Neo";
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 14px;
+}
+@mixin apple-sd-gothic-neo-15-semi-bold {
+  font-family: "Apple SD Gothic Neo";
+  font-size: 15px;
+  font-weight: 600;
+  line-height: normal;
+}
+@mixin apple-sd-gothic-neo-16-bold {
+  font-family: "Apple SD Gothic Neo";
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 22px;
+}
+@mixin apple-sd-gothic-neo-16-medium {
+  font-family: "Apple SD Gothic Neo";
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 22px;
+}
+@mixin apple-sd-gothic-neo-16-semi-bold {
+  font-family: "Apple SD Gothic Neo";
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 22px;
+}
+@mixin apple-sd-gothic-neo-18-bold {
+  font-family: "Apple SD Gothic Neo";
+  font-size: 18px;
+  font-weight: 700;
+  line-height: normal;
+}
+@mixin apple-sd-gothic-neo-18-extra-bold {
+  font-family: "Apple SD Gothic Neo";
+  font-size: 18px;
+  font-weight: 800;
+  line-height: normal;
+}
+@mixin apple-sd-gothic-neo-18-extra-bold-line35 {
+  font-family: "Apple SD Gothic Neo";
+  font-size: 18px;
+  font-weight: 800;
+  line-height: 35px;
+}
+@mixin apple-sd-gothic-neo-18-medium {
+  font-family: "Apple SD Gothic Neo";
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 20px;
+}
+@mixin apple-sd-gothic-neo-18-semi-bold {
+  font-family: "Apple SD Gothic Neo";
+  font-size: 18px;
+  font-weight: 600;
+  line-height: normal;
+}
+@mixin apple-sd-gothic-neo-20-bold {
+  font-family: "Apple SD Gothic Neo";
+  font-size: 20px;
+  font-weight: 700;
+  line-height: normal;
+}
+@mixin apple-sd-gothic-neo-20-medium {
+  font-family: "Apple SD Gothic Neo";
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 20px;
+}
+@mixin apple-sd-gothic-neo-20-semi-bold {
+  font-family: "Apple SD Gothic Neo";
+  font-size: 20px;
+  font-weight: 600;
+  line-height: normal;
+}
+@mixin apple-sd-gothic-neo-23-bold {
+  font-family: "Apple SD Gothic Neo";
+  font-size: 23px;
+  font-weight: 700;
+  line-height: normal;
+}
+@mixin apple-sd-gothic-neo-23-extra-bold {
+  font-family: "Apple SD Gothic Neo";
+  font-size: 23px;
+  font-weight: 800;
+  line-height: normal;
+}
+@mixin apple-sd-gothic-neo-23-semi-bold {
+  font-family: "Apple SD Gothic Neo";
+  font-size: 23px;
+  font-weight: 600;
+  line-height: normal;
+}
+@mixin apple-sd-gothic-neo-24-bold {
+  font-family: "Apple SD Gothic Neo";
+  font-size: 24px;
+  font-weight: 700;
+  line-height: normal;
+}
+@mixin apple-sd-gothic-neo-24-extra-bold {
+  font-family: "Apple SD Gothic Neo";
+  font-size: 24px;
+  font-weight: 800;
+  line-height: normal;
+}
+@mixin apple-sd-gothic-neo-24-semi-bold {
+  font-family: "Apple SD Gothic Neo";
+  font-size: 24px;
+  font-weight: 600;
+  line-height: normal;
+}
+@mixin apple-sd-gothic-neo-26-extra-bold {
+  font-family: "Apple SD Gothic Neo";
+  font-size: 26px;
+  font-weight: 800;
+  line-height: normal;
+}
+@mixin apple-sd-gothic-neo-38-medium {
+  font-family: "Apple SD Gothic Neo";
+  font-size: 38px;
+  font-weight: 500;
+  line-height: normal;
+}
+@mixin apple-sd-gothic-neo-50-extra-bold {
+  font-family: "Apple SD Gothic Neo";
+  font-size: 50px;
+  font-weight: 800;
+  line-height: normal;
+}
+@mixin nanum-myeongjo-16-bold {
+  font-family: "Nanum Myeongjo";
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 22px;
+}
+
+
+.mobileResultIce {
+    padding: 44px 68px 60px;
+    display: flex;
+    align-items: flex-start;
+  }
+  .shareSection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .sharetext {
+    max-width: 239px;
+    color: $gainsboro;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 24px;
+    @include apple-sd-gothic-neo-16-bold;
+  }
+  .shareButton {
+    background-color: $yellow;
+    margin-bottom: 24px;
+    border-radius: 30px;
+    padding: 4px 32px;
+    display: flex;
+    align-items: flex-start;
+    border: 2px solid $yellow;
+  }
+  .shareTitle {
+    color: $black;
+    text-align: center;
+    text-transform: uppercase;
+    @include apple-sd-gothic-neo-14-extra-bold-line20;
+  }
+  .reTest {
+    border-radius: 30px;
+    padding: 7px 38px;
+    display: flex;
+    align-items: flex-start;
+    border: 2px solid $dark-gray-2;
+  }
+  .reTestText {
+    color: $gainsboro-2;
+    text-align: center;
+    text-transform: uppercase;
+    @include apple-sd-gothic-neo-14-semi-bold;
+  }
+
+  .mobileResultIce {
+    padding: 38.18px 24.06px 30.15px 24.94px;
+    display: flex;
+    align-items: flex-start;
+    background: linear-gradient(
+      180deg,
+      $transparent-black 0%,
+      $steel-blue 96%
+    );
+  }
+  .contentTwo {
+    position: relative;
+  }
+  .content {
+    padding: 2.84px 0.5px 2.83px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+  .frame50 {
+    margin-bottom: 37.5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .title1 {
+    width: 325px;
+    color: $white;
+    text-align: center;
+    margin-bottom: 1px;
+    @include apple-sd-gothic-neo-18-bold;
+  }
+  .title2 {
+    height: 24px;
+    width: 325px;
+    color: $white;
+    display: flex;
+    text-align: center;
+    @include apple-sd-gothic-neo-24-bold;
+  }
+  .profileImg {
+    margin-bottom: 37.5px;
+    border-radius: 10px;
+  }
+  .text {
+    max-width: 261px;
+    color: $white;
+    text-align: center;
+    @include apple-sd-gothic-neo-16-medium;
+  }
+  .playButton {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: absolute;
+    right: 86.94px;
+    bottom: 76.85px;
+  }
+  .playButtonImg {
+    margin-bottom: 3px;
+  }
+  .ottName {
+    color: $tomato;
+    text-align: center;
+    @include apple-sd-gothic-neo-14-extra-bold;
+  }
+
+  .mobileResultFire {
+    padding: 38.18px 24px 30.15px 25px;
+    display: flex;
+    align-items: flex-start;
+    background: linear-gradient(
+      180deg,
+      $transparent-black 0%,
+      $brown 96%
+    );
+  }
+  .contentTwo {
+    position: relative;
+  }
+  .content {
+    padding: 2.84px 0.5px 2.83px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+  .frame49 {
+    margin-bottom: 37.5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .title1 {
+    width: 325px;
+    color: $white;
+    text-align: center;
+    margin-bottom: 1px;
+    @include apple-sd-gothic-neo-18-bold;
+  }
+  .title2 {
+    height: 24px;
+    width: 325px;
+    display: flex;
+    text-align: center;
+    color: $white;
+    @include apple-sd-gothic-neo-24-bold;
+  }
+  .title2Emphasis1 {
+    color: $dark-gray-2;
+    @include apple-sd-gothic-neo-24-bold;
+  }
+  .profileImage {
+    margin-bottom: 37.5px;
+    border-radius: 9px;
+  }
+  .text {
+    max-width: 261px;
+    color: $white;
+    text-align: center;
+    @include apple-sd-gothic-neo-16-medium;
+  }
+  .playButton {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: absolute;
+    right: 86.94px;
+    bottom: 76.85px;
+  }
+  .playButtonImg {
+    margin-bottom: 3px;
+  }
+  .ottName {
+    color: $tomato;
+    text-align: center;
+    @include apple-sd-gothic-neo-14-extra-bold;
+  }
+
+  .mobileTopResultNobackground {
+    padding: 285px 24px 0 19px;
+    position: relative;
+  }
+  .sceneSection {
+    padding: 0 0 38px;
+    display: flex;
+    align-items: flex-start;
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+  .scene {
+    width: 375px;
+    height: 259px;
+    background: linear-gradient(
+      180deg,
+      $transparent-white 50%,
+      $transparent-black-5 100%
+    );
+    position: relative;
+  }
+  .playbutton1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    right: 24px;
+    bottom: 0;
+  }
+  .frame4 {
+    margin-bottom: 3px;
+    display: flex;
+    align-items: center;
+  }
+  .ottName {
+    color: $tomato;
+    @include apple-sd-gothic-neo-14-extra-bold;
+  }
+  .frame15 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+  .frame57 {
+    margin-bottom: 45px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .mbtiBackground {
+    margin-bottom: 9px;
+    padding: 4px 5px 5px;
+    display: flex;
+    align-items: center;
+    background-image: url("https://static.overlay-tech.com/assets/020568ae-6b41-4db1-aac2-d356d019a409.png");
+    background-size: 100% 100%;
+  }
+  .mbti {
+    height: 15px;
+    width: 40px;
+    color: $black;
+    display: flex;
+    text-align: center;
+    @include apple-sd-gothic-neo-15-semi-bold;
+  }
+  .frame54 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .title1 {
+    width: 325px;
+    color: $white;
+    margin-bottom: 2px;
+    @include apple-sd-gothic-neo-18-semi-bold;
+  }
+  .title2 {
+    width: 325px;
+    color: $dark-gray;
+    @include apple-sd-gothic-neo-24-extra-bold;
+  }
+  .quotes {
+    max-width: 332px;
+    color: $white;
+    text-align: center;
+    margin-bottom: 45px;
+    @include nanum-myeongjo-16-bold;
+  }
+  .text {
+    width: 325px;
+    margin-bottom: 45px;
+    color: $gainsboro;
+    @include apple-sd-gothic-neo-16-semi-bold;
+  }
+  .textEmphasis1 {
+    color: $gainsboro;
+    @include apple-sd-gothic-neo-10-semi-bold;
+  }
+  .loveTips {
+    border-radius: 30px;
+    padding: 9px 1px 7px 0;
+    display: flex;
+    align-items: center;
+    border: 2px solid $dark-gray-2;
+  }
+  .lookupButtonText {
+    width: 168px;
+    color: $white-smoke;
+    text-align: center;
+    text-transform: uppercase;
+    @include apple-sd-gothic-neo-14-semi-bold;
+  }
