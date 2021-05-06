@@ -89,71 +89,80 @@ const useStyles = makeStyles((theme) => ({
       border: "2px solid white",
     },
   },
+
+
+
   analysisText: {
   },
+
+
   //Mobile View
+  mobileBoxRoot:{
+    align: "center",
+
+  },
 
   mobileResultMainGrid: {
-    gridColumn: "span 12",
-    gridRow: "span 4",
     color: "white",
-  },
-
-  mobileImageGrid: {
-    gridColumn: "span 12",
-    gridRow: "2/span 3",
-  },
-  mobileCharacterTitleGrid: {
-    gridColumn: "span 12",
-    gridRow: "6/ span 2",
   },
 
   mobileCharacterTitle: {
     align: "center",
     marginTop: 15,
-
-    fontSize: "28px",
+    color: "white",
+    fontSize: "6vw",
     fontWeight: "bold",
     whiteSpace: "pre-wrap",
     letterSpacing: "1px",
   },
 
-  mobileResultDescriptionGrid: {
-    gridColumn: "span 12",
-    gridRow: "span 5",
+  mobileResultDescription: {
+
     color: "white",
     maxHeight: 100,
   },
 
+  mobileImageBox:{
+    textAlign: "center",
+    alignItems:"center"
+  },
+
+  mobileButtonBox:{
+    textAlign: "center",
+  },
+
+  mobilecharacterImage: {
+    objectFit: "fill",
+    width: "95%",
+    maxHeight: "100%",
+    borderRadius: "15px",
+  },
+
   mobileCharacterDetailText: {
+    color: "white",
+    marginTop: 15,
+
     fontSize: "16px",
-    letterSpacing: "1px",
+    // letterSpacing: "1px",
   },
 
   mobileCharScriptText: {
+    marginTop: 15,
+    color: "white",
     fontSize: "17px",
     letterSpacing: "1px",
   },
-
-  mobileCharacterScript: {
-    gridColumn: "2/span 10",
-    gridRow: "span 2",
-  },
-
-  mobileCharacterDetail: {
-    gridColumn: "span 12",
-    gridRow: "3/ span 7",
-  },
-
-  mobileButtonGrid: {
-    gridColumn: "3/ span 8",
-    gridRow: "span 1",
-  },
   
-  mobileResultDescriptionGrid: {
-    gridColumn: "span 12",
-    gridRow: "span 3",
+  analysisBtnMobile: {
+    minWidth: "80%",
+
     color: "white",
+    border: "2px solid white",
+    borderRadius: "20px",
+    "&.MuiButton-root:hover": {
+      color: "lightgrey",
+      border: "2px solid white",
+    },
   },
 
   //Tablet View
@@ -206,6 +215,11 @@ const useStyles = makeStyles((theme) => ({
     gridRow: "span 1",
   },
   //PcWide View
+
+  pcWideimageGrid:{
+    gridColumn: "3/span 8",
+    gridRow: "2/span 8",
+  }
 }));
 
 export { useStyles };

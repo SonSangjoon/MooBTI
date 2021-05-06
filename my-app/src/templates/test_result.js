@@ -60,7 +60,7 @@ function ResultMain({ data }) {
       </Tablet>
 
       <PCwide>
-        <Grid className={classes.imageGrid} item>
+        <Grid className={classes.pcWideimageGrid} item>
           <img
             className={classes.characterImage}
             src={data.imageUrl}
@@ -195,33 +195,6 @@ export default function ResultTemplate({ data, genderType }) {
         <TransitionsModal data={data} genderType={genderType} />
       </PC>
 
-      <Mobile>
-        <Grid className={classes.mobileResultMainGrid} item>
-          <ResultMain data={data} />
-        </Grid>
-        <Grid className={classes.mobileResultDescriptionGrid} item>
-          <ResultDescription data={data} />
-        </Grid>
-        <Grid
-          className={classes.mobileButtonGrid}
-          onClick={() => setOpenModal(true)}
-        >
-          <DataAnalysisBtn value="🔦 캐릭터의 연애 비결은?" />
-        </Grid>
-        {data.movieUrl[4] === "n" ? (
-          <Grid className={classes.mobileButtonGrid}>
-            <DataAnalysisBtn
-              value="👀 넷플릭스에서 확인하기"
-              url={data.movieUrl}
-            />
-          </Grid>
-        ) : (
-          <Grid className={classes.mobileButtonGrid}>
-            <DataAnalysisBtn value="👀 왓챠에서 확인하기" url={data.movieUrl} />
-          </Grid>
-        )}
-        <TransitionsModal data={data} genderType={genderType} />
-      </Mobile>
 
       <Tablet>
         <Grid className={classes.resultMainGrid} item>
@@ -276,5 +249,40 @@ export default function ResultTemplate({ data, genderType }) {
         <TransitionsModal data={data} genderType={genderType} />
       </PCwide>
     </Grid>
+  );
+}
+
+export function MobileResultTemplate({ data, genderType }) {
+  const classes = useStyles();
+  const { setOpenModal } = useContext(MbtiContext);
+  return(
+
+    <Mobile>
+    <Grid className={classes.mobileResultMainGrid} item>
+      <ResultMain data={data} />
+    </Grid>
+    <Grid className={classes.mobileResultDescriptionGrid} item>
+      <ResultDescription data={data} />
+    </Grid>
+    <Grid
+      className={classes.mobileButtonGrid}
+      onClick={() => setOpenModal(true)}
+    >
+      <DataAnalysisBtn value="🔦 캐릭터의 연애 비결은?" />
+    </Grid>
+    {data.movieUrl[4] === "n" ? (
+      <Grid className={classes.mobileButtonGrid}>
+        <DataAnalysisBtn
+          value="👀 넷플릭스에서 확인하기"
+          url={data.movieUrl}
+        />
+      </Grid>
+    ) : (
+      <Grid className={classes.mobileButtonGrid}>
+        <DataAnalysisBtn value="👀 왓챠에서 확인하기" url={data.movieUrl} />
+      </Grid>
+    )}
+    <TransitionsModal data={data} genderType={genderType} />
+  </Mobile>
   );
 }
