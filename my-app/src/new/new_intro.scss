@@ -175,7 +175,8 @@ $yellow: rgba(254, 240, 27, 1);
   font-weight: 700;
   line-height: 22px;
 }
-.desktop1Full {
+.desktop1Full {    
+  // height: 100vh;
   background-color: $black;
   padding: 0 0 433px;
   // display: flex;
@@ -228,6 +229,15 @@ $yellow: rgba(254, 240, 27, 1);
   background-color: $crimson;
   border-radius: 6px;
   position: relative;
+  &:hover {
+    background-color: #dc1a28;
+    opacity: 0.8;
+    color: rgba(250, 250, 250, 0.5);
+  };
+  &:active {
+    box-shadow: none;
+    background-color: rgba(250, 0, 0, 0.7);
+  };
 }
 .startButtonText {
   width: 71px;
@@ -240,3 +250,90 @@ $yellow: rgba(254, 240, 27, 1);
   letter-spacing: 0.57px;
   @include apple-sd-gothic-neo-18-extra-bold-line35;
 }
+
+
+.iPhone11ProX13 {
+  background-color: $black;
+  padding: 27px 0 318px;
+}
+.backgroundImg {
+  width: 375px;
+  height: 467px;
+  background: linear-gradient(
+    168deg,
+    $black 12%,
+    $transparent-black-6 23%
+  );
+  position: relative;
+}
+.mobile1Content {
+  position: absolute;
+  left: 25px;
+  top: 309px;
+}
+
+.mobile1Content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.mbframe18 {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.mbtitle1 {
+  width: 325px;
+  color: $white;
+  text-align: center;
+  margin-bottom: 8px;
+  @include apple-sd-gothic-neo-26-extra-bold;
+}
+.mbtitle2 {
+  max-width: 278px;
+  color: $gainsboro;
+  text-align: center;
+  @include apple-sd-gothic-neo-18-semi-bold;
+}
+.mbstartButton {
+  position: relative;
+}
+.mbbutton {
+  width: 111px;
+  height: 40px;
+  background-color: $crimson;
+  border-radius: 6px;
+  position: relative;
+}
+.mbstartButtonText {
+  width: 71px;
+  color: $white;
+  text-align: center;
+  text-transform: uppercase;
+  position: absolute;
+  left: 20px;
+  top: -15px;
+  letter-spacing: 0.57px;
+  @include apple-sd-gothic-neo-18-extra-bold-line35;
+}
+
+  .button {
+    padding: 5px 30px 5px 30px;
+    size: large;
+    font-size: 25px;
+    font-weight: bold;
+    background: #dc1a28;
+    color: black;
+    &:hover {
+      background-color: #dc1a28;
+      opacity: 0.8;
+      color: rgba(250, 250, 250, 0.5);
+    };
+    &:active {
+      box-shadow: none;
+      background-color: rgba(250, 0, 0, 0.7);
+    };
+  }
