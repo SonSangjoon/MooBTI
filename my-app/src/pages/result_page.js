@@ -5,6 +5,7 @@ import ShareButton from "../components/share_buttons";
 import ResultTemplate from "../templates/test_result";
 import MobileResultTemplate from "../templates/test_result_mobile";
 import RecommendContentsTemplate from "../templates/recommend_contents";
+import MobileRecommendContentsTemplate from "../templates/recommend_contents_mobile";
 import { Box, Grid } from "@material-ui/core";
 import { Mobile, Tablet, PC, PCwide } from "../components/MediaQuery";
 import { useStyles } from "./styles/result_page_styles";
@@ -47,7 +48,7 @@ export function ResultPage({ match }) {
           <Box className={classes.mobileBlock}></Box>
             <MobileResultTemplate data={data} genderType={genderType} />
           <Box className={classes.mobileRecommendBlock}>
-            <RecommendContentsTemplate data={recommendData} />
+            <MobileRecommendContentsTemplate data={recommendData} />
           </Box>
           <Box className={classes.mobileShareButton}>
             <ShareButton data={data} />
