@@ -78,7 +78,7 @@ const useStyles = makeStyles((theme) => ({
     color: "secondary",
   },
   movieLinkText: {
-    color: "white",
+    color: "rgba(256,256,256,0.8)",
     fontFamily: "S-CoreDream-4Regular",
   },
 
@@ -110,9 +110,7 @@ const useStyles = makeStyles((theme) => ({
   },
 
   // Mobile View
-  mobileroot:{
-    align: "center",
-  },
+
   mobileposterImg: {
     width: "40%",
     borderRadius: "9px",
@@ -120,24 +118,31 @@ const useStyles = makeStyles((theme) => ({
 
   mobileRecommendBox1: {
     marginTop: "20px",
-    background: "linear-gradient(180deg, #000000 0%, #922020 95%)",
+    background: "linear-gradient(to top, black, 30%,rgba(146,32,32, 1))",
     borderRadius: "10px",
     textAlign: "center",
+    paddingTop: "15px",
+    paddingBottom: "15px",
+    // border: "0.01px solid rgba(256,256,256, 0.1)",
   },
 
   mobileRecommendBox2: {
     marginTop: "40px",
-    background: "linear-gradient(180deg, #000000 0%, #1b83be 95%)",
+    // to top, black, 20%, cyan
+    background: "linear-gradient(to top, black, 30%, rgba(27,131,190, 0.7))",
     borderRadius: "10px",
     textAlign: "center",
+    paddingTop: "15px",
+    paddingBottom: "25px",
   },
 
   mobileRecommendTitleBox: {
-    color: "white"
+    color: "white",
+
   },
 
   mobileImageBox: {
-    marginTop: "40px"
+    marginTop: "20px"
   },
 
   mobileRecommendTitleText: {
@@ -153,7 +158,7 @@ const useStyles = makeStyles((theme) => ({
 
   mobileRecommendCharText: {
     marginTop: "4px",
-    fontSize: "20px",
+    fontSize: "25px",
     fontWeight: "bold",
   },
 
@@ -174,17 +179,12 @@ const useStyles = makeStyles((theme) => ({
     textAlign: "center",
   },
 
-  mobileMovieLinkBtnBox: {
-    margin: "20px",
-    textAlign: "center",
-  },
-
   mobileEmptynBox:{
     height: "20px,"
   },
 
   mobilerestartBtn: {
-    width: "80%",
+    width: "70%",
     color: "white",
     border: "2px solid white",
     borderRadius: "20px"
@@ -197,9 +197,14 @@ const useStyles = makeStyles((theme) => ({
   },
 
   mobileMovieLinkBtn:{
-    width: "80%",
-    color: "white",
+    width: "53%",
+    color: "black",
+    textAlign: "center",
+    backgroundColor: "rgba(0,0,0,0.3)",
+    border: "2px solid rgba(256,256,256,0.1)",
+    borderRadius: "8px"
   },
+
 
   //Tablet View
   tabletRecommendTitleGrid: {
@@ -228,10 +233,6 @@ const useStyles = makeStyles((theme) => ({
     fontFamily: "S-CoreDream-4Regular",
   },
 
-  // tabletMovieLinkBtnGrid: {
-  //   gridColumn: "2/span 10",
-  //   gridRow: "span 2",
-  // },
   tabletMovieLinkBtnGrid: {
     gridColumn: "4/ span 9",
     gridRow: "9/ span 2",

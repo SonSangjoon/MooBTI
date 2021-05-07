@@ -46,7 +46,9 @@ export function ResultPage({ match }) {
         <Box className={classes.mobileContainer}>
           <NavBar pageType="mobile" />
           <Box className={classes.mobileBlock}></Box>
+          <Box className={classes.mobileRecommendBlock}>
             <MobileResultTemplate data={data} genderType={genderType} />
+          </Box>
           <Box className={classes.mobileRecommendBlock}>
             <MobileRecommendContentsTemplate data={recommendData} />
           </Box>

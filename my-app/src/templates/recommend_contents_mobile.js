@@ -1,19 +1,9 @@
 import React from "react";
 import { Link as RouterLink } from "react-router-dom";
 import { Button, Box, Link, Typography } from "@material-ui/core";
-import { withStyles } from "@material-ui/core/styles";
 import { useStyles } from "./styles/recommend_contents_styles";
 import { Mobile} from "../components/MediaQuery";
 
-const CustomRestartBtn = withStyles((theme) => ({
-  root: {
-    // color: theme.palette.getContrastText(purple[500]),
-    backgroundColor: "#c81926",
-    "&:hover": {
-      backgroundColor: "#99141d",
-    },
-  },
-}))(Button);
 
 function LinkButton({ url }) {
   const classes = useStyles();
@@ -21,21 +11,21 @@ function LinkButton({ url }) {
   if (url[4] === "n") {
     return (
       <Link href={"https://" + url} underline="none" target="_blank">
-        <CustomRestartBtn className={classes.mobileMovieLinkBtn}>
+        <Button className={classes.mobileMovieLinkBtn}>
           <Typography className={classes.movieLinkText}>
-            넷플릭스에서 확인하기
+            넷플릭스에서 확인하기 
           </Typography>
-        </CustomRestartBtn>
+        </Button>
       </Link>
     );
   } else {
     return (
       <Link href={"https://" + url} underline="none" target="_blank">
-        <CustomRestartBtn className={classes.mobileMovieLinkBtn}>
+        <Button className={classes.mobileMovieLinkBtn}>
           <Typography className={classes.movieLinkText}>
             왓챠에서 확인하기
           </Typography>
-        </CustomRestartBtn>
+        </Button>
       </Link>
     );
   }
