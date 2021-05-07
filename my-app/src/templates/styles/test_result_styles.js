@@ -92,8 +92,6 @@ const useStyles = makeStyles((theme) => ({
   analysisText: {},
 
   //Mobile View
-  mobileBoxRoot: {
-  },
 
   mobileResultMainGrid: {
     color: "white",
@@ -139,12 +137,9 @@ const useStyles = makeStyles((theme) => ({
 
   mobileButtonBox: {
     textAlign: "center",
-    marginBottom: "40px",
+    marginTop : "40px",
   },
 
-  mobileButton: {
-    margin: "15px",
-  },
 
   mobilecharacterImage: {
     objectFit: "fill",
@@ -170,8 +165,8 @@ const useStyles = makeStyles((theme) => ({
   },
 
   analysisBtnMobile: {
-    minWidth: "80%",
-
+    width: "70%",
+    margin: "5px",
     color: "white",
     border: "2px solid white",
     borderRadius: "20px",

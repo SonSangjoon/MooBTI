@@ -74,26 +74,16 @@ export default function MobileResultTemplate({ data, genderType }) {
         <ResultMain data={data} />
         <ResultDescription data={data} />
         <Box className={classes.mobileButtonBox}>
-          <Box
-            className={classes.mobileButton}
-            onClick={() => setOpenModal(true)}
-          >
+          <Box onClick={() => setOpenModal(true)}>
             <DataAnalysisBtn value="🔦 캐릭터의 연애 비결은?" />
           </Box>
           {data.movieUrl[4] === "n" ? (
-            <Box className={classes.mobileButton}>
-              <DataAnalysisBtn
-                value="👀 넷플릭스에서 확인하기"
-                url={data.movieUrl}
-              />
-            </Box>
+            <DataAnalysisBtn
+              value="👀 넷플릭스에서 확인하기"
+              url={data.movieUrl}
+            />
           ) : (
-            <Box className={classes.mobileButton}>
-              <DataAnalysisBtn
-                value="👀 왓챠에서 확인하기"
-                url={data.movieUrl}
-              />
-            </Box>
+            <DataAnalysisBtn value="👀 왓챠에서 확인하기" url={data.movieUrl} />
           )}
         </Box>
         <TransitionsModal data={data} genderType={genderType} />
