@@ -17,6 +17,7 @@ function ResultMain({ data }) {
             alt="dummy"
           />
         </Box>
+        <Button className={classes.mobileCharacterMbtiBox}>{data.mbti}</Button>
         <Box className={classes.mobileCharacterTitle} align="center">
           {data.title}
         </Box>
@@ -72,19 +73,27 @@ export default function MobileResultTemplate({ data, genderType }) {
       <Box className={classes.mobileBoxRoot}>
         <ResultMain data={data} />
         <ResultDescription data={data} />
-        <Box
-          className={classes.mobileButtonGrid}
-          onClick={() => setOpenModal(true)}
-        >
-          <DataAnalysisBtn value="🔦 캐릭터의 연애 비결은?" />
-
+        <Box className={classes.mobileButtonBox}>
+          <Box
+            className={classes.mobileButton}
+            onClick={() => setOpenModal(true)}
+          >
+            <DataAnalysisBtn value="🔦 캐릭터의 연애 비결은?" />
+          </Box>
           {data.movieUrl[4] === "n" ? (
-            <DataAnalysisBtn
-              value="👀 넷플릭스에서 확인하기"
-              url={data.movieUrl}
-            />
+            <Box className={classes.mobileButton}>
+              <DataAnalysisBtn
+                value="👀 넷플릭스에서 확인하기"
+                url={data.movieUrl}
+              />
+            </Box>
           ) : (
-            <DataAnalysisBtn value="👀 왓챠에서 확인하기" url={data.movieUrl} />
+            <Box className={classes.mobileButton}>
+              <DataAnalysisBtn
+                value="👀 왓챠에서 확인하기"
+                url={data.movieUrl}
+              />
+            </Box>
           )}
         </Box>
         <TransitionsModal data={data} genderType={genderType} />

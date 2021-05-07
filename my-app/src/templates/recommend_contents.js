@@ -23,7 +23,7 @@ function LinkButton({ url }) {
       <Link href={"https://" + url} underline="none" target="_blank">
         <CustomRestartBtn className={classes.movieLinkBtn}>
           <Typography className={classes.movieLinkText}>
-            NETFLIX에서 확인하기
+            넷플릭스에서 확인하기
           </Typography>
         </CustomRestartBtn>
       </Link>

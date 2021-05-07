@@ -57,7 +57,7 @@ const useStyles = makeStyles((theme) => ({
     overflow: "auto",
     display: "block",
     // height: "5vh",
-    margin: "40px",
+    margin: "30px",
   },
 
   mobileResultBlock: {

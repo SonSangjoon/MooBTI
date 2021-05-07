@@ -53,14 +53,13 @@ const useStyles = makeStyles((theme) => ({
     // fontSize: "2vw",
     fontSize: "22px",
     whiteSpace: "pre-wrap",
-    fontWeight: "bold"
+    fontWeight: "bold",
   },
 
   charScriptText: {
     fontSize: "15px",
     letterSpacing: "1px",
     whiteSpace: "pre-wrap",
-
   },
 
   characterScript: {
@@ -90,16 +89,10 @@ const useStyles = makeStyles((theme) => ({
     },
   },
 
-
-
-  analysisText: {
-  },
-
+  analysisText: {},
 
   //Mobile View
-  mobileBoxRoot:{
-    align: "center",
-
+  mobileBoxRoot: {
   },
 
   mobileResultMainGrid: {
@@ -107,8 +100,9 @@ const useStyles = makeStyles((theme) => ({
   },
 
   mobileCharacterTitle: {
-    align: "center",
-    marginTop: 15,
+    textAlign: "left",
+    marginLeft: 15,
+    margin: 10,
     color: "white",
     fontSize: "6vw",
     fontWeight: "bold",
@@ -116,43 +110,65 @@ const useStyles = makeStyles((theme) => ({
     letterSpacing: "1px",
   },
 
-  mobileResultDescription: {
+  mobileCharacterMbtiBox:{
+    marginLeft: 15,
+    textAlign: "center",
+    backgroundColor: "white",
+    color: "black",
+    width: "55px",
+    height: "25px",
+    border: "2px solid white",
+    borderRadius: "20px",
+    fontWeight: "bold",
+    fontSize: "17px",
+  },
 
+  mobileCharacterMbti:{
+  },
+
+  mobileResultDescription: {
     color: "white",
     maxHeight: 100,
   },
 
-  mobileImageBox:{
+  mobileImageBox: {
+    margin: 15,
     textAlign: "center",
-    alignItems:"center"
+    alignItems: "center",
   },
 
-  mobileButtonBox:{
+  mobileButtonBox: {
     textAlign: "center",
+    marginBottom: "40px",
+  },
+
+  mobileButton: {
+    margin: "15px",
   },
 
   mobilecharacterImage: {
     objectFit: "fill",
-    width: "95%",
+    width: "100%",
     maxHeight: "100%",
     borderRadius: "15px",
   },
 
   mobileCharacterDetailText: {
     color: "white",
-    marginTop: 15,
-
+    margin: 15,
+    marginBottom: 40,
+    textAlign: "left",
     fontSize: "16px",
-    // letterSpacing: "1px",
+    lineHeight: "30px",
   },
 
   mobileCharScriptText: {
-    marginTop: 15,
+    margin: 40,
     color: "white",
     fontSize: "17px",
     letterSpacing: "1px",
   },
-  
+
   analysisBtnMobile: {
     minWidth: "80%",
 
@@ -216,10 +232,10 @@ const useStyles = makeStyles((theme) => ({
   },
   //PcWide View
 
-  pcWideimageGrid:{
+  pcWideimageGrid: {
     gridColumn: "3/span 8",
     gridRow: "2/span 8",
-  }
+  },
 }));
 
 export { useStyles };

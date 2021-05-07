@@ -78,7 +78,8 @@ const useStyles = makeStyles((theme) => ({
   mobileMainText: {
     padding: 5,
     color: "white",
-    fontSize: "5.5vw",
+    fontSize: "6vw",
+    fontWeight: "bold",
     textAlign: "center",
   },
 

@@ -110,47 +110,51 @@ const useStyles = makeStyles((theme) => ({
   },
 
   // Mobile View
-
-  mobileRecommendGrid1: {
-    gridColumn: "span 12",
-    gridRow: "span 4",
-    background: "linear-gradient(180deg, #000000 0%, #922020 30%)",
+  mobileroot:{
+    align: "center",
   },
-  mobileRecommendGrid2: {
-    gridColumn: "span 12",
-    gridRow: "7/span 4",
-    background: "linear-gradient(180deg, #000000 0%, #1b83be 40%)",
-
-
+  mobileposterImg: {
+    width: "40%",
+    borderRadius: "9px",
   },
 
-
-  mobileRecommendTitleGrid: {
-    gridColumn: "span 12",
-    gridRow: "span 1",
+  mobileRecommendBox1: {
+    marginTop: "20px",
+    background: "linear-gradient(180deg, #000000 0%, #922020 95%)",
+    borderRadius: "10px",
+    textAlign: "center",
   },
 
-  mobileImageGrid: {
-    gridColumn: "5/span 4",
-    gridRow: "4/ span 4",
+  mobileRecommendBox2: {
+    marginTop: "40px",
+    background: "linear-gradient(180deg, #000000 0%, #1b83be 95%)",
+    borderRadius: "10px",
+    textAlign: "center",
+  },
+
+  mobileRecommendTitleBox: {
+    color: "white"
+  },
+
+  mobileImageBox: {
+    marginTop: "40px"
   },
 
   mobileRecommendTitleText: {
-    fontSize: "19px",
+    fontSize: "17px",
     textAlign: "center",
     fontFamily: "S-CoreDream-6Bold",
   },
 
-  mobileCharTitleGrid: {
-    gridColumn: "span 12",
-    gridRow: "2/ span 2",
+  mobileCharTitleBox: {
+    color:"white",
     textAlign: "center",
   },
 
   mobileRecommendCharText: {
-    fontSize: "22px",
+    marginTop: "4px",
+    fontSize: "20px",
     fontWeight: "bold",
-
   },
 
   mobileCharMbtiText: {
@@ -158,31 +162,44 @@ const useStyles = makeStyles((theme) => ({
     fontWeight: "bold",
   },
 
-
   mobileRecommendDesc: {
-    gridColumn: "2/span 10",
-    gridRow: "9/ span 7",
     textAlignVertical: "center",
     whiteSpace: "pre-wrap",
-
   },
 
   mobileRecommendDescText: {
-    fontSize: "px",
+    margin: "30px",
+    color: "white",
+    fontSize: "17px",
     textAlign: "center",
   },
 
-  mobileMovieLinkBtnGrid: {
-    gridColumn: "3/ span 8",
-    gridRow: "-3/ span 1",
+  mobileMovieLinkBtnBox: {
+    margin: "20px",
+    textAlign: "center",
   },
 
-  mobileRestartBtnGrid: {
-    gridColumn: "3/ span 8",
-    gridRow: "-4/ span 2",
+  mobileEmptynBox:{
+    height: "20px,"
   },
 
+  mobilerestartBtn: {
+    width: "80%",
+    color: "white",
+    border: "2px solid white",
+    borderRadius: "20px"
+    },
 
+
+  mobileRestartBtnBox: {
+    textAlign: "center",
+    marginTop : "40px",
+  },
+
+  mobileMovieLinkBtn:{
+    width: "80%",
+    color: "white",
+  },
 
   //Tablet View
   tabletRecommendTitleGrid: {
