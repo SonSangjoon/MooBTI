@@ -25,13 +25,11 @@ const useStyles = makeStyles((theme) => ({
     paddingBottom: "1vh",
     fontSize: "28px",
     color: "white",
-    fontFamily: "S-CoreDream-4Regular",
   },
 
   imgTitle: {
     fontSize: 20,
     color: "white",
-    fontFamily: "S-CoreDream-4Regular",
   },
 
   gender_img: {
@@ -67,13 +65,11 @@ const useStyles = makeStyles((theme) => ({
     paddingBottom: "1vh",
     fontSize: "20px",
     color: "white",
-    fontFamily: "S-CoreDream-4Regular",
   },
 
   mobileImageTitle: {
     fontSize: 17,
     color: "white",
-    fontFamily: "S-CoreDream-4Regular",
   },
 
   //Tablet View

@@ -33,7 +33,7 @@ const useStyles = makeStyles((theme) => ({
     marginBottom: 15,
     color: "white",
     fontSize: "3.5vw",
-    fontFamily: "S-CoreDream-4Regular",
+    fontWeight: "bold"
   },
 
   subText: {
@@ -41,7 +41,6 @@ const useStyles = makeStyles((theme) => ({
     marginBottom: 15,
     color: "white",
     fontSize: "2vw",
-    fontFamily: "S-CoreDream-4Regular",
   },
 
   link: {
@@ -79,8 +78,8 @@ const useStyles = makeStyles((theme) => ({
   mobileMainText: {
     padding: 5,
     color: "white",
-    fontSize: "5.5vw",
-    fontFamily: "S-CoreDream-4Regular",
+    fontSize: "6vw",
+    fontWeight: "bold",
     textAlign: "center",
   },
 
@@ -89,7 +88,6 @@ const useStyles = makeStyles((theme) => ({
     // marginBottom: 5,
     color: "white",
     fontSize: "4vw",
-    fontFamily: "S-CoreDream-4Regular",
     textAlign: "center",
   },
 

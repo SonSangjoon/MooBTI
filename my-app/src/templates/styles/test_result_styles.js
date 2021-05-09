@@ -31,7 +31,7 @@ const useStyles = makeStyles((theme) => ({
   },
 
   imageGrid: {
-    gridColumn: "2/span 10",
+    gridColumn: "span 12",
     gridRow: "2/span 9",
   },
 
@@ -51,15 +51,15 @@ const useStyles = makeStyles((theme) => ({
     align: "center",
     marginTop: 15,
     // fontSize: "2vw",
-    fontFamily: "S-CoreDream-8Heavy",
-    fontSize: "25px",
+    fontSize: "22px",
     whiteSpace: "pre-wrap",
+    fontWeight: "bold",
   },
 
   charScriptText: {
     fontSize: "15px",
-    fontFamily: "S-CoreDream-6Bold",
-    letterSpacing: "2px",
+    letterSpacing: "1px",
+    whiteSpace: "pre-wrap",
   },
 
   characterScript: {
@@ -74,8 +74,8 @@ const useStyles = makeStyles((theme) => ({
 
   characterDetailText: {
     fontSize: "1vw",
-    fontFamily: "S-CoreDream-3Light",
-    letterSpacing: "2px",
+    // fontSize: "15px",
+    letterSpacing: "1px",
   },
 
   analysisBtn: {
@@ -88,68 +88,92 @@ const useStyles = makeStyles((theme) => ({
       border: "2px solid white",
     },
   },
-  analysisText: {
-    fontFamily: "S-CoreDream-6Bold",
-  },
+
+  analysisText: {},
+
   //Mobile View
 
   mobileResultMainGrid: {
-    gridColumn: "span 12",
-    gridRow: "span 4",
     color: "white",
   },
 
-  mobileImageGrid: {
-    gridColumn: "2/span 10",
-    gridRow: "2/span 6",
-  },
-  mobileCharacterTitleGrid: {
-    gridColumn: "span 12",
-    gridRow: "9/ span 2",
-  },
-
   mobileCharacterTitle: {
-    align: "center",
-    marginTop: 15,
-
-    fontFamily: "S-CoreDream-6Bold",
-    fontSize: "18px",
+    textAlign: "left",
+    marginLeft: 15,
+    margin: 10,
+    color: "white",
+    fontSize: "6vw",
+    fontWeight: "bold",
     whiteSpace: "pre-wrap",
-    letterSpacing: "2px",
+    letterSpacing: "1px",
   },
 
-  mobileResultDescriptionGrid: {
-    gridColumn: "span 12",
-    gridRow: "span 5",
+  mobileCharacterMbtiBox:{
+    marginLeft: 15,
+    textAlign: "center",
+    backgroundColor: "white",
+    color: "black",
+    width: "55px",
+    height: "25px",
+    border: "2px solid white",
+    borderRadius: "20px",
+    fontWeight: "bold",
+    fontSize: "17px",
+  },
+
+  mobileCharacterMbti:{
+  },
+
+  mobileResultDescription: {
     color: "white",
     maxHeight: 100,
   },
 
+  mobileImageBox: {
+    margin: 15,
+    textAlign: "center",
+    alignItems: "center",
+  },
+
+  mobileButtonBox: {
+    textAlign: "center",
+    marginTop : "40px",
+  },
+
+
+  mobilecharacterImage: {
+    objectFit: "fill",
+    width: "100%",
+    maxHeight: "100%",
+    borderRadius: "15px",
+  },
+
   mobileCharacterDetailText: {
+    color: "white",
+    margin: 15,
+    marginBottom: 40,
+    textAlign: "left",
     fontSize: "16px",
-    letterSpacing: "2px",
-    fontFamily: "S-CoreDream-4Regular",
+    lineHeight: "30px",
   },
 
   mobileCharScriptText: {
+    margin: 40,
+    color: "white",
     fontSize: "17px",
-    letterSpacing: "2px",
-    fontFamily: "S-CoreDream-6Bold",
+    letterSpacing: "1px",
   },
 
-  mobileCharacterScript: {
-    gridColumn: "2/span 10",
-    gridRow: "span 2",
-  },
-
-  mobileCharacterDetail: {
-    gridColumn: "span 12",
-    gridRow: "3/ span 7",
-  },
-
-  mobileButtonGrid: {
-    gridColumn: "3/ span 8",
-    gridRow: "span 1",
+  analysisBtnMobile: {
+    width: "70%",
+    margin: "5px",
+    color: "white",
+    border: "2px solid white",
+    borderRadius: "20px",
+    "&.MuiButton-root:hover": {
+      color: "lightgrey",
+      border: "2px solid white",
+    },
   },
 
   //Tablet View
@@ -172,7 +196,6 @@ const useStyles = makeStyles((theme) => ({
     align: "center",
     marginTop: 15,
 
-    fontFamily: "S-CoreDream-6Bold",
     fontSize: "17px",
     whiteSpace: "pre-wrap",
     letterSpacing: "1px",
@@ -185,8 +208,7 @@ const useStyles = makeStyles((theme) => ({
 
   tabletCharScriptText: {
     fontSize: "14px",
-    letterSpacing: "2px",
-    fontFamily: "S-CoreDream-6Bold",
+    letterSpacing: "1px",
   },
 
   tabletCharacterScript: {
@@ -204,6 +226,11 @@ const useStyles = makeStyles((theme) => ({
     gridRow: "span 1",
   },
   //PcWide View
+
+  pcWideimageGrid: {
+    gridColumn: "3/span 8",
+    gridRow: "2/span 8",
+  },
 }));
 
 export { useStyles };

@@ -26,7 +26,7 @@ const useStyles = makeStyles((theme) => ({
     border: "2px solid red",
     boxShadow: theme.shadows[1],
     maxWidth: "768px",
-    width: "100%",
+    width: "90vw",
     height: "85vh",
   },
 
