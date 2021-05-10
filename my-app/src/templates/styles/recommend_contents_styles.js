@@ -103,8 +103,8 @@ const useStyles = makeStyles((theme) => ({
   },
 
   recommendTitleText: {
-    // fontSize: "1.4vw",
-    fontSize: "18px",
+    fontSize: "1.4vw",
+    // fontSize: "18px",
     fontWeight: "bold",
     fontFamily: "S-CoreDream-6Bold",
   },

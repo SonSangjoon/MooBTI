@@ -50,14 +50,14 @@ const useStyles = makeStyles((theme) => ({
   characterTitle: {
     align: "center",
     marginTop: 15,
-    // fontSize: "2vw",
-    fontSize: "22px",
+    fontSize: "1.5vw",
+    // fontSize: "22px",
     whiteSpace: "pre-wrap",
     fontWeight: "bold",
   },
 
   charScriptText: {
-    fontSize: "15px",
+    fontSize: "1vw",
     letterSpacing: "1px",
     whiteSpace: "pre-wrap",
   },
@@ -70,12 +70,11 @@ const useStyles = makeStyles((theme) => ({
   characterDetail: {
     gridColumn: "span 12",
     gridRow: "5/ span 8",
+    padding: "10px",
   },
 
   characterDetailText: {
     fontSize: "1vw",
-    // fontSize: "15px",
-    letterSpacing: "1px",
   },
 
   analysisBtn: {
@@ -106,6 +105,7 @@ const useStyles = makeStyles((theme) => ({
     fontWeight: "bold",
     whiteSpace: "pre-wrap",
     letterSpacing: "1px",
+    fontFamily: "Apple SD Gothic Neo",
   },
 
   mobileCharacterMbtiBox:{
@@ -127,6 +127,8 @@ const useStyles = makeStyles((theme) => ({
   mobileResultDescription: {
     color: "white",
     maxHeight: 100,
+    fontFamily: "Apple SD Gothic Neo",
+
   },
 
   mobileImageBox: {
@@ -155,6 +157,8 @@ const useStyles = makeStyles((theme) => ({
     textAlign: "left",
     fontSize: "16px",
     lineHeight: "30px",
+    fontFamily: "Apple SD Gothic Neo",
+
   },
 
   mobileCharScriptText: {
@@ -162,6 +166,8 @@ const useStyles = makeStyles((theme) => ({
     color: "white",
     fontSize: "17px",
     letterSpacing: "1px",
+    fontFamily: "Apple SD Gothic Neo",
+
   },
 
   analysisBtnMobile: {
