@@ -74,6 +74,7 @@ const useStyles = makeStyles((theme) => ({
     height: "100%",
     display: "grid",
     gridTemplateRows: "repeat(12, 1fr)",
+    
   },
 
   mobileImage: {
@@ -100,6 +101,7 @@ const useStyles = makeStyles((theme) => ({
     color: "white",
     fontSize: "17px",
     whiteSpace: "pre-wrap",
+    
   },
 
   mobileAnswerGrid1: {
