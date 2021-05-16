@@ -5,9 +5,23 @@ import TestQuestionTemplate from "../templates/test_question";
 import { Box, Grid } from "@material-ui/core";
 import { Mobile, Tablet, PC, PCwide } from "../components/MediaQuery.js";
 import { useStyles } from "./styles/test_page_styles";
+import ReactGA from "react-ga";
+import { useEffect } from "react";
 
 export function TestPage() {
   const classes = useStyles();
+
+  useEffect(() => {
+    getGA();
+  }, []);
+
+  const getGA = () => {
+    const pathName = window.location.pathname;
+    ReactGA.initialize("UA-196189871-2");
+    ReactGA.set({ page: pathName });
+    ReactGA.pageview(pathName);
+  };
+
 
   return (
     <Box className={classes.root}>

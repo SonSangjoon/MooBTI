@@ -14,9 +14,11 @@ const useStyles = makeStyles((theme) => ({
     gridGap: theme.spacing(2),
   },
 
-  emptyRowGrid: {
+  emptyRow1Grid: {
     gridRow: "span 2",
   },
+
+
   emptyColumnGrid: {
     gridColumn: "span 2",
   },
