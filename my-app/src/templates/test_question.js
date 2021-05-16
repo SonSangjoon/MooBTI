@@ -39,7 +39,7 @@ export default function TestQuestionTemplate() {
     
     axios
     .post(
-      `http://elice-kdt-ai-track-vm-da-03.koreacentral.cloudapp.azure.com:5000/mbti`,
+      `http://52.78.18.205:5000/mbti`,
       testData
     )
     .then((response) => {

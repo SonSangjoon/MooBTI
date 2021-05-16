@@ -10,9 +10,23 @@ import { Box, Grid } from "@material-ui/core";
 import { Mobile, Tablet, PC, PCwide } from "../components/MediaQuery";
 import { useStyles } from "./styles/result_page_styles";
 import { resultList } from "../data/result_data";
+import { useEffect } from "react";
+import ReactGA from "react-ga";
+
 
 export function ResultPage({ match }) {
   const classes = useStyles();
+  
+  useEffect(() => {
+    getGA();
+  }, []);
+
+  const getGA = () => {
+    const pathName = window.location.pathname;
+    ReactGA.initialize("UA-196189871-2");
+    ReactGA.set({ page: pathName });
+    ReactGA.pageview(pathName);
+  };
 
   const mbtiType = match.params.mbti.toUpperCase();
   const genderType = match.params.gender.toLowerCase();

@@ -5,6 +5,8 @@ import Footer from "../components/footer";
 import { Box, Grid, Button } from "@material-ui/core";
 import { Mobile, Tablet, PC, PCwide } from "../components/MediaQuery";
 import { useStyles } from "./styles/intro_page_styles";
+import ReactGA from "react-ga";
+import { useEffect } from "react";
 
 function IntroPageText() {
   const classes = useStyles();
@@ -72,6 +74,19 @@ function IntroPageText() {
 
 export function IntroPage() {
   const classes = useStyles();
+  useEffect(() => {
+    getGA();
+  }, []);
+
+  const getGA = () => {
+    console.log("페이지 들어옴");
+    const pathName = window.location.pathname;
+    ReactGA.initialize("UA-196189871-2");
+    ReactGA.set({ page: pathName });
+    ReactGA.pageview(pathName);
+  };
+
+
   return (
     <Box className={classes.root}>
       <PC>

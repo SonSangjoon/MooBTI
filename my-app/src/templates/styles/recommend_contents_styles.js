@@ -197,7 +197,7 @@ const useStyles = makeStyles((theme) => ({
   },
 
   mobileMovieLinkBtn:{
-    width: "53%",
+    width: "59%",
     color: "black",
     textAlign: "center",
     backgroundColor: "rgba(0,0,0,0.3)",
