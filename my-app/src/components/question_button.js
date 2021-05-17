@@ -47,6 +47,7 @@ const useStyles = makeStyles((theme) => ({
   imageTitle: {
     fontSize: "17px",
     position: "relative",
+    fontFamily: "Apple SD Gothic Neo",
     // padding: `${theme.spacing(2)}px ${theme.spacing(4)}px ${theme.spacing(1) + 6}px`,
     padding: 20,
   },
@@ -66,6 +67,8 @@ const useStyles = makeStyles((theme) => ({
     fontSize: "3.5vw",
     position: "relative",
     padding: 20,
+    fontFamily: "Apple SD Gothic Neo",
+
   },
 
   mobileImageMarked: {
@@ -85,6 +88,8 @@ const useStyles = makeStyles((theme) => ({
     position: "relative",
     padding: 20,
     whiteSpace: "pre-wrap",
+    fontFamily: "Apple SD Gothic Neo",
+
   },
 
   //PcWide View
@@ -93,6 +98,8 @@ const useStyles = makeStyles((theme) => ({
     fontSize: "22px",
     position: "relative",
     padding: 20,
+    fontFamily: "Apple SD Gothic Neo",
+
   },
 }));
 
