@@ -41,13 +41,11 @@ const useStyles = makeStyles((theme) => ({
 
   recommendCharText: {
     fontSize: "1.2vw",
-    fontFamily: "S-CoreDream-6Bold",
     paddingBottom: "10px",
   },
 
   recommendDescText: {
     fontSize: "1vw",
-    fontFamily: "S-CoreDream-3Light",
   },
 
   ImageGrid: {
@@ -70,6 +68,8 @@ const useStyles = makeStyles((theme) => ({
   movieLinkBtnGrid: {
     gridColumn: "5/ span 8",
     gridRow: "7/ span 2",
+    fontFamily: "Apple SD Gothic Neo",
+
   },
 
   movieLinkBtn: {
@@ -79,7 +79,8 @@ const useStyles = makeStyles((theme) => ({
   },
   movieLinkText: {
     color: "rgba(256,256,256,0.8)",
-    fontFamily: "S-CoreDream-4Regular",
+    fontFamily: "Apple SD Gothic Neo",
+
   },
 
   restartBtnGrid: {
@@ -99,14 +100,14 @@ const useStyles = makeStyles((theme) => ({
   },
 
   restartBtnText: {
-    fontFamily: "S-CoreDream-6Bold",
+    fontFamily: "Apple SD Gothic Neo",
+
   },
 
   recommendTitleText: {
     fontSize: "1.4vw",
     // fontSize: "18px",
     fontWeight: "bold",
-    fontFamily: "S-CoreDream-6Bold",
   },
 
   // Mobile View
@@ -148,7 +149,6 @@ const useStyles = makeStyles((theme) => ({
   mobileRecommendTitleText: {
     fontSize: "17px",
     textAlign: "center",
-    fontFamily: "S-CoreDream-6Bold",
   },
 
   mobileCharTitleBox: {
@@ -214,12 +214,10 @@ const useStyles = makeStyles((theme) => ({
 
   tabletRecommendTitleText: {
     fontSize: "14px",
-    fontFamily: "S-CoreDream-6Bold",
   },
 
   tabletRecommendCharText: {
     fontSize: "14px",
-    fontFamily: "S-CoreDream-6Bold",
     paddingBottom: "10px",
   },
 
@@ -230,7 +228,6 @@ const useStyles = makeStyles((theme) => ({
 
   tabletRecommendDescText: {
     fontSize: "12px",
-    fontFamily: "S-CoreDream-4Regular",
   },
 
   tabletMovieLinkBtnGrid: {
