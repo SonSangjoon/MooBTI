@@ -105,7 +105,6 @@ const useStyles = makeStyles((theme) => ({
     fontWeight: "bold",
     whiteSpace: "pre-wrap",
     letterSpacing: "1px",
-    fontFamily: "Apple SD Gothic Neo",
   },
 
   mobileCharacterMbtiBox:{
@@ -127,7 +126,6 @@ const useStyles = makeStyles((theme) => ({
   mobileResultDescription: {
     color: "white",
     maxHeight: 100,
-    fontFamily: "Apple SD Gothic Neo",
 
   },
 
@@ -157,7 +155,6 @@ const useStyles = makeStyles((theme) => ({
     textAlign: "left",
     fontSize: "16px",
     lineHeight: "30px",
-    fontFamily: "Apple SD Gothic Neo",
 
   },
 
@@ -166,7 +163,6 @@ const useStyles = makeStyles((theme) => ({
     color: "white",
     fontSize: "17px",
     letterSpacing: "1px",
-    fontFamily: "Apple SD Gothic Neo",
 
   },
 
