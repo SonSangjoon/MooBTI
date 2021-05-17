@@ -5,11 +5,8 @@ import Footer from "../components/footer";
 import { Box, Grid, Button } from "@material-ui/core";
 import { Mobile, Tablet, PC, PCwide } from "../components/MediaQuery";
 import { useStyles } from "./styles/intro_page_styles";
-<<<<<<< HEAD
-=======
 import ReactGA from "react-ga";
 import { useEffect } from "react";
->>>>>>> feature/front
 
 function IntroPageText() {
   const classes = useStyles();
@@ -77,8 +74,6 @@ function IntroPageText() {
 
 export function IntroPage() {
   const classes = useStyles();
-<<<<<<< HEAD
-=======
   useEffect(() => {
     getGA();
   }, []);
@@ -92,7 +87,6 @@ export function IntroPage() {
   };
 
 
->>>>>>> feature/front
   return (
     <Box className={classes.root}>
       <PC>

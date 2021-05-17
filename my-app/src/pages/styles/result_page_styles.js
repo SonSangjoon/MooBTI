@@ -57,11 +57,7 @@ const useStyles = makeStyles((theme) => ({
     overflow: "auto",
     display: "block",
     // height: "5vh",
-<<<<<<< HEAD
-    margin: "15px",
-=======
     margin: "30px",
->>>>>>> feature/front
   },
 
   mobileResultBlock: {
@@ -74,10 +70,7 @@ const useStyles = makeStyles((theme) => ({
     overflow: "auto",
     display: "block",
     margin: "15px",
-<<<<<<< HEAD
-=======
     
->>>>>>> feature/front
   },
   mobileShareButton: {
     position: "fixed",
