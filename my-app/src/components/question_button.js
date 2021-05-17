@@ -46,8 +46,8 @@ const useStyles = makeStyles((theme) => ({
 
   imageTitle: {
     fontSize: "17px",
-    fontFamily: "S-CoreDream-3Light",
     position: "relative",
+    fontFamily: "Apple SD Gothic Neo",
     // padding: `${theme.spacing(2)}px ${theme.spacing(4)}px ${theme.spacing(1) + 6}px`,
     padding: 20,
   },
@@ -65,9 +65,10 @@ const useStyles = makeStyles((theme) => ({
 
   mobileImageTitle: {
     fontSize: "3.5vw",
-    fontFamily: "S-CoreDream-3Light",
     position: "relative",
     padding: 20,
+    fontFamily: "Apple SD Gothic Neo",
+
   },
 
   mobileImageMarked: {
@@ -84,19 +85,21 @@ const useStyles = makeStyles((theme) => ({
 
   tabletImageTitle: {
     fontSize: "16px",
-    fontFamily: "S-CoreDream-3Light",
     position: "relative",
     padding: 20,
     whiteSpace: "pre-wrap",
+    fontFamily: "Apple SD Gothic Neo",
+
   },
 
   //PcWide View
 
   pcWideImageTitle: {
     fontSize: "22px",
-    fontFamily: "S-CoreDream-3Light",
     position: "relative",
     padding: 20,
+    fontFamily: "Apple SD Gothic Neo",
+
   },
 }));
 
