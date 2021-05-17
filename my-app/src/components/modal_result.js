@@ -37,7 +37,6 @@ const useStyles = makeStyles((theme) => ({
 
   titleTextStyles: {
     color: "white",
-    fontFamily: "S-CoreDream-6Bold",
     fontSize: "32px",
   },
 
@@ -49,7 +48,6 @@ const useStyles = makeStyles((theme) => ({
 
   subTitleTextStyles: {
     color: "white",
-    fontFamily: "S-CoreDream-4Regular",
     fontSize: "17px",
   },
   happyCircleGrid: {
@@ -79,7 +77,6 @@ const useStyles = makeStyles((theme) => ({
 
   emotionText: {
     color: "white",
-    fontFamily: "S-CoreDream-4Regular",
   },
   analysisGrid: {
     gridColumn: "span 13",
@@ -88,7 +85,6 @@ const useStyles = makeStyles((theme) => ({
   analysisTextStyle: {
     color: "white",
     fontSize: "17px",
-    fontFamily: "S-CoreDream-4Regular",
   },
   modalCloseBtnGrid: {
     gridColumn: "13",
@@ -111,7 +107,6 @@ const useStyles = makeStyles((theme) => ({
   },
   mobileTitleText: {
     color: "white",
-    fontFamily: "S-CoreDream-6Bold",
     fontSize: "6vw",
     textAlign: "center",
     marginTop: "20px"

@@ -93,12 +93,10 @@ const useStyles = makeStyles((theme) => ({
   },
   memberNameText: {
     color: "white",
-    fontFamily: "S-CoreDream-4Regular",
     fontSize: "25px",
   },
   memberPartText: {
     color: "white",
-    fontFamily: "S-CoreDream-3Light",
     fontSize: "13px",
   },
   linkIcon: {
@@ -129,7 +127,6 @@ const useStyles = makeStyles((theme) => ({
   },
   mobilememberNameText: {
     color: "white",
-    fontFamily: "S-CoreDream-4Regular",
     fontSize: "25px",
   },
 }));
