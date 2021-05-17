@@ -29,7 +29,7 @@ const useStyles = makeStyles((theme) => ({
     border: "2px solid red",
     boxShadow: theme.shadows[1],
     maxWidth: "768px",
-    width: "100%",
+    width: "90vw",
     height: "85vh",
   },
 
@@ -110,6 +110,28 @@ const useStyles = makeStyles((theme) => ({
   linkInnerIcon: {
     fontSize: "18px",
   },
+
+  //mobile
+  moiblememberImage: {
+    height: "20vw",
+  },
+  mobilelinkInnerIcon: {
+    fontSize: "14px",
+  },
+  mobilelinkIcon: {
+    backgroundColor: "#fffff",
+    width: "22px",
+    height: "22px",
+    minHeight: "5px",
+  },
+  mobilememberBox: {
+    textAlign: "center",
+  },
+  mobilememberNameText: {
+    color: "white",
+    fontFamily: "S-CoreDream-4Regular",
+    fontSize: "25px",
+  },
 }));
 
 function TitleLogo() {
@@ -156,29 +178,116 @@ function MemberIntro(data) {
   const memberName = data.name;
 
   return (
-    <Box align="center" mt={3}>
-      <img src={imageUrl} alt="memoji" className={classes.memberImage} />
-      <Box className={classes.memberNameText} align="center">
-        {data.name}
-      </Box>
-      <Box className={classes.memberPartText} align="center" mt={1}>
-        {data.part}
-      </Box>
-      <Box align="center" mt={2}>
-        <Link href={data.url} underline="none" target="_blank">
-          <Fab
-            className={classes.linkIcon}
-            // style={{ backgroundColor: "#fffff" }}
-            align="center"
-          >
-            {memberName === "준효" ? (
-              <CreateIcon className={classes.linkInnerIcon} />
-            ) : (
-              <GitHubIcon className={classes.linkInnerIcon} />
-            )}
-          </Fab>
-        </Link>
-      </Box>
+    <Box>
+      <Mobile>
+        <Box align="center">
+          <img
+            src={imageUrl}
+            alt="memoji"
+            className={classes.moiblememberImage}
+          />
+        </Box>
+        <Box className={classes.mobilememberBox}>
+          <Box className={classes.memberNameText}>
+            {data.name}
+            <Box>
+              <Link href={data.url} underline="none" target="_blank">
+                <Fab className={classes.mobilelinkIcon} align="center">
+                  {memberName === "준효" ? (
+                    <CreateIcon className={classes.mobilelinkInnerIcon} />
+                  ) : (
+                    <GitHubIcon className={classes.mobilelinkInnerIcon} />
+                  )}
+                </Fab>
+              </Link>
+            </Box>
+          </Box>
+        </Box>
+
+        <Box className={classes.memberPartText} align="center" mt={1}>
+          {data.part}
+        </Box>
+        <Box align="center" mt={2}></Box>
+      </Mobile>
+
+      <PC>
+        <Box align="center" mt={3}>
+          <img src={imageUrl} alt="memoji" className={classes.memberImage} />
+          <Box className={classes.memberNameText} align="center">
+            {data.name}
+          </Box>
+          <Box className={classes.memberPartText} align="center" mt={1}>
+            {data.part}
+          </Box>
+          <Box align="center" mt={2}>
+            <Link href={data.url} underline="none" target="_blank">
+              <Fab
+                className={classes.linkIcon}
+                // style={{ backgroundColor: "#fffff" }}
+                align="center"
+              >
+                {memberName === "준효" ? (
+                  <CreateIcon className={classes.linkInnerIcon} />
+                ) : (
+                  <GitHubIcon className={classes.linkInnerIcon} />
+                )}
+              </Fab>
+            </Link>
+          </Box>
+        </Box>
+      </PC>
+      <PCwide>
+        <Box align="center" mt={3}>
+          <img src={imageUrl} alt="memoji" className={classes.memberImage} />
+          <Box className={classes.memberNameText} align="center">
+            {data.name}
+          </Box>
+          <Box className={classes.memberPartText} align="center" mt={1}>
+            {data.part}
+          </Box>
+          <Box align="center" mt={2}>
+            <Link href={data.url} underline="none" target="_blank">
+              <Fab
+                className={classes.linkIcon}
+                // style={{ backgroundColor: "#fffff" }}
+                align="center"
+              >
+                {memberName === "준효" ? (
+                  <CreateIcon className={classes.linkInnerIcon} />
+                ) : (
+                  <GitHubIcon className={classes.linkInnerIcon} />
+                )}
+              </Fab>
+            </Link>
+          </Box>
+        </Box>
+      </PCwide>
+      <Tablet>
+        <Box align="center" mt={3}>
+          <img src={imageUrl} alt="memoji" className={classes.memberImage} />
+          <Box className={classes.memberNameText} align="center">
+            {data.name}
+          </Box>
+          <Box className={classes.memberPartText} align="center" mt={1}>
+            {data.part}
+          </Box>
+          <Box align="center" mt={2}>
+            <Link href={data.url} underline="none" target="_blank">
+              <Fab
+                className={classes.linkIcon}
+                // style={{ backgroundColor: "#fffff" }}
+                align="center"
+              >
+                {memberName === "준효" ? (
+                  <CreateIcon className={classes.linkInnerIcon} />
+                ) : (
+                  <GitHubIcon className={classes.linkInnerIcon} />
+                )}
+              </Fab>
+            </Link>
+          </Box>
+        </Box>
+      </Tablet>
     </Box>
   );
 }
@@ -222,62 +331,60 @@ export default function IntroductionModal(data) {
       }}
     >
       <Box className={classes.root}>
-        <PC>
-          <Fade in={openIntroduction}>
-            <Grid className={classes.container}>
-              <Grid className={classes.titleLogoGrid}>
-                <TitleLogo />
-              </Grid>
-              <Grid className={classes.firstParagraphGrid}>
-                <FirstParagraph />
-              </Grid>
-              <Grid className={classes.secondParagraphGrid}>
-                <SecondParagraph />
-              </Grid>
-              <Grid className={classes.thirdParagraphGrid}>
-                <ThirdParagraph />
-              </Grid>
-              <Grid className={classes.JHGrid}>
-                <MemberIntro
-                  image="JH"
-                  name="준효"
-                  part="PM / 기획"
-                  url="https://brunch.co.kr/@junhyopark"
-                />
-              </Grid>
-              <Grid className={classes.SJGrid}>
-                <MemberIntro
-                  image="SJ"
-                  name="상준"
-                  part="프론트엔드 / 기획"
-                  url="https://github.com/SonSangjoon"
-                />
-              </Grid>
-              <Grid className={classes.YJGrid}>
-                <MemberIntro
-                  image="YJ"
-                  name="유지"
-                  part="프론트엔드 / 기획"
-                  url="https://kdt-gitlab.elice.io/CARMINE"
-                />
-              </Grid>
-              <Grid className={classes.MHGrid}>
-                <MemberIntro
-                  image="MH"
-                  name="민호"
-                  part="데이터분석 / 백엔드"
-                  url="https://github.com/yeemh"
-                />
-              </Grid>
-              <Grid className={classes.modalCloseBtnGrid}>
-                <ModalCloseBtn />
-              </Grid>
+        <Fade in={openIntroduction}>
+          <Grid className={classes.container}>
+            <Grid className={classes.titleLogoGrid}>
+              <TitleLogo />
             </Grid>
-          </Fade>
-        </PC>
+            <Grid className={classes.firstParagraphGrid}>
+              <FirstParagraph />
+            </Grid>
+            <Grid className={classes.secondParagraphGrid}>
+              <SecondParagraph />
+            </Grid>
+            <Grid className={classes.thirdParagraphGrid}>
+              <ThirdParagraph />
+            </Grid>
+            <Grid className={classes.JHGrid}>
+              <MemberIntro
+                image="JH"
+                name="준효"
+                part="PM / 기획"
+                url="https://brunch.co.kr/@junhyopark"
+              />
+            </Grid>
+            <Grid className={classes.SJGrid}>
+              <MemberIntro
+                image="SJ"
+                name="상준"
+                part="프론트엔드 / 기획"
+                url="https://github.com/SonSangjoon"
+              />
+            </Grid>
+            <Grid className={classes.YJGrid}>
+              <MemberIntro
+                image="YJ"
+                name="유지"
+                part="프론트엔드 / 기획"
+                url="https://kdt-gitlab.elice.io/CARMINE"
+              />
+            </Grid>
+            <Grid className={classes.MHGrid}>
+              <MemberIntro
+                image="MH"
+                name="민호"
+                part="데이터분석 / 백엔드"
+                url="https://github.com/yeemh"
+              />
+            </Grid>
+            <Grid className={classes.modalCloseBtnGrid}>
+              <ModalCloseBtn />
+            </Grid>
+          </Grid>
+        </Fade>
 
         {/* Tablet View */}
-        <Tablet>
+        {/* <Tablet>
           <Fade in={openIntroduction}>
             <Grid className={classes.container}>
               <Grid className={classes.titleLogoGrid}>
@@ -329,65 +436,51 @@ export default function IntroductionModal(data) {
               </Grid>
             </Grid>
           </Fade>
-        </Tablet>
+        </Tablet> */}
 
         {/* Mobile View */}
-        <Mobile>
+        {/* <Mobile>
           <Fade in={openIntroduction}>
-            <Grid className={classes.container}>
-              <Grid className={classes.titleLogoGrid}>
-                <TitleLogo />
-              </Grid>
-              <Grid className={classes.firstParagraphGrid}>
-                <FirstParagraph />
-              </Grid>
-              <Grid className={classes.secondParagraphGrid}>
-                <SecondParagraph />
-              </Grid>
-              <Grid className={classes.thirdParagraphGrid}>
-                <ThirdParagraph />
-              </Grid>
-              <Grid className={classes.JHGrid}>
+            <Box>
+              <ModalCloseBtn />
+              <TitleLogo />
+              <FirstParagraph />
+              <SecondParagraph />
+              <ThirdParagraph />
+              <Box>
                 <MemberIntro
                   image="JH"
                   name="준효"
                   part="프로덕트 매니저 / 기획"
                   url="https://brunch.co.kr/@junhyopark"
                 />
-              </Grid>
-              <Grid className={classes.SJGrid}>
                 <MemberIntro
                   image="SJ"
                   name="상준"
                   part="프론트엔드 / 기획"
                   url="https://github.com/SonSangjoon"
                 />
-              </Grid>
-              <Grid className={classes.YJGrid}>
+              </Box>
+              <Box>
                 <MemberIntro
                   image="YJ"
                   name="유지"
                   part="프론트엔드 / 기획"
                   url="https://kdt-gitlab.elice.io/CARMINE"
                 />
-              </Grid>
-              <Grid className={classes.MHGrid}>
                 <MemberIntro
                   image="MH"
                   name="민호"
                   part="데이터분석 / 백엔드"
                   url="https://github.com/yeemh"
                 />
-              </Grid>
-              <Grid className={classes.modalCloseBtnGrid}>
-                <ModalCloseBtn />
-              </Grid>
-            </Grid>
+              </Box>
+            </Box>
           </Fade>
-        </Mobile>
+        </Mobile> */}
 
         {/* PCwide View */}
-        <PCwide>
+        {/* <PCwide>
           <Fade in={openIntroduction}>
             <Grid className={classes.container}>
               <Grid className={classes.titleLogoGrid}>
@@ -440,9 +533,10 @@ export default function IntroductionModal(data) {
             </Grid>
           </Fade>
         </PCwide>
+      // </Box>
+    </Modal> */}
       </Box>
     </Modal>
-
     // <ModalWindow />
   );
 }

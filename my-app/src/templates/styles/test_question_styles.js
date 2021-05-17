@@ -21,7 +21,6 @@ const useStyles = makeStyles((theme) => ({
   questionText: {
     color: "white",
     fontSize: "25px",
-    fontFamily: "S-CoreDream-4Regular",
     paddingTop: 20,
   },
 
@@ -75,6 +74,7 @@ const useStyles = makeStyles((theme) => ({
     height: "100%",
     display: "grid",
     gridTemplateRows: "repeat(12, 1fr)",
+    
   },
 
   mobileImage: {
@@ -100,8 +100,8 @@ const useStyles = makeStyles((theme) => ({
   mobileQuestionText: {
     color: "white",
     fontSize: "17px",
-    fontFamily: "S-CoreDream-4Regular",
     whiteSpace: "pre-wrap",
+    
   },
 
   mobileAnswerGrid1: {
@@ -143,7 +143,6 @@ const useStyles = makeStyles((theme) => ({
     color: "white",
     fontSize: "19px",
     paddingTop: 20,
-    fontFamily: "S-CoreDream-4Regular",
     whiteSpace: "pre-wrap",
   },
 
@@ -166,7 +165,6 @@ const useStyles = makeStyles((theme) => ({
   pcWideQuestionText: {
     color: "white",
     fontSize: "40px",
-    fontFamily: "S-CoreDream-4Regular",
     paddingTop: 20,
   },
 
