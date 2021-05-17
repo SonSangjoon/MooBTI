@@ -6,9 +6,8 @@ import { makeStyles } from "@material-ui/core/styles";
 import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
 import Typography from "@material-ui/core/Typography";
-import IconButton from "@material-ui/core/IconButton";
-import AccountCircle from "@material-ui/icons/AccountCircle";
 import IntroductionModal from "../components/modal_introduction";
+import { ReactComponent as InfoIcon } from "../images/infoicon.svg";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -66,12 +65,7 @@ export default function NavBar({ pageType }) {
             </Box>
             <Typography variant="h6" className={classes.title}></Typography>
             <Box>
-              <IconButton
-                onClick={() => setOpenIntroduction(true)}
-                color="inherit"
-              >
-                <AccountCircle fontSize="large" />
-              </IconButton>
+              <InfoIcon onClick={() => setOpenIntroduction(true)} />
             </Box>
           </Toolbar>
         </AppBar>
@@ -94,12 +88,7 @@ export default function NavBar({ pageType }) {
             </Box>
             <Typography variant="h6" className={classes.title}></Typography>
             <Box>
-              <IconButton
-                onClick={() => setOpenIntroduction(true)}
-                color="inherit"
-              >
-                <AccountCircle fontSize="large" />
-              </IconButton>
+              <InfoIcon onClick={() => setOpenIntroduction(true)} />
             </Box>
           </Toolbar>
         </AppBar>

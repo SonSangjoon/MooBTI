@@ -20,9 +20,9 @@ const useStyles = makeStyles((theme) => ({
       "& $imageTitle": {
         border: "4px solid currentColor",
       },
-      "& $mobileImageTitle": {
-        border: "4px solid currentColor",
-      },
+      // "& $mobileImageTitle": {
+      //   border: "4px solid currentColor",
+      // },
       "& $tabletImageTitle": {
         border: "4px solid currentColor",
       },
@@ -70,6 +70,16 @@ const useStyles = makeStyles((theme) => ({
     padding: 20,
   },
 
+  mobileImageMarked: {
+    height: 3,
+    width: 18,
+    backgroundColor: theme.palette.common.white,
+    position: "absolute",
+    bottom: -2,
+    left: "calc(50% - 9px)",
+    transition: theme.transitions.create("opacity"),
+  },
+
   //Tablet View
 
   tabletImageTitle: {
@@ -83,7 +93,7 @@ const useStyles = makeStyles((theme) => ({
   //PcWide View
 
   pcWideImageTitle: {
-    fontSize: "19px",
+    fontSize: "22px",
     fontFamily: "S-CoreDream-3Light",
     position: "relative",
     padding: 20,
@@ -119,7 +129,7 @@ export default function ButtonBases({ choice }) {
           <span className={classes.imageButton}>
             <Typography className={classes.mobileImageTitle}>
               {choice}
-              <span className={classes.imageMarked} />
+              <span className={classes.mobileImageMarked} />
             </Typography>
           </span>
         </ButtonBase>
