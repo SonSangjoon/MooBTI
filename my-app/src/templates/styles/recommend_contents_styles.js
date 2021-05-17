@@ -68,6 +68,8 @@ const useStyles = makeStyles((theme) => ({
   movieLinkBtnGrid: {
     gridColumn: "5/ span 8",
     gridRow: "7/ span 2",
+    fontFamily: "Apple SD Gothic Neo",
+
   },
 
   movieLinkBtn: {
@@ -77,6 +79,8 @@ const useStyles = makeStyles((theme) => ({
   },
   movieLinkText: {
     color: "rgba(256,256,256,0.8)",
+    fontFamily: "Apple SD Gothic Neo",
+
   },
 
   restartBtnGrid: {
@@ -96,6 +100,8 @@ const useStyles = makeStyles((theme) => ({
   },
 
   restartBtnText: {
+    fontFamily: "Apple SD Gothic Neo",
+
   },
 
   recommendTitleText: {
