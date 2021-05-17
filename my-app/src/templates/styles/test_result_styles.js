@@ -88,7 +88,10 @@ const useStyles = makeStyles((theme) => ({
     },
   },
 
-  analysisText: {},
+  analysisText: {
+    fontFamily: "Apple SD Gothic Neo",
+
+  },
 
   //Mobile View
 
@@ -171,6 +174,7 @@ const useStyles = makeStyles((theme) => ({
     margin: "5px",
     color: "white",
     border: "2px solid white",
+
     borderRadius: "20px",
     "&.MuiButton-root:hover": {
       color: "lightgrey",
