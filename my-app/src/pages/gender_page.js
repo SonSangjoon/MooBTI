@@ -4,11 +4,6 @@ import { Box, Grid } from "@material-ui/core";
 import { Mobile, Tablet, PC, PCwide } from "../components/MediaQuery";
 import { useStyles } from "./styles/gender_page_styles";
 import GenderPageSelect from "../templates/gender_selection";
-<<<<<<< HEAD
-
-export function GenderPage() {
-  const classes = useStyles();
-=======
 import ReactGA from "react-ga";
 import { useEffect } from "react";
 
@@ -28,7 +23,6 @@ export function GenderPage() {
   };
 
 
->>>>>>> feature/front
   return (
     <Box className={classes.root}>
       <PC>

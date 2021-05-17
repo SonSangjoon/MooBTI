@@ -12,18 +12,6 @@ Installation:
 
 npm install
 
-<<<<<<< HEAD
-npm run build
-
-docker build -t nginx-react:0.1 .
-
-To Start Server:
-
-docker run -d --name my-react-app -p 80:80 nginx-react:0.1
-
-
-
-=======
 To Run Test Suite:
 
 npm test
@@ -35,4 +23,3 @@ npm start
 To Visit App:
 
 localhost:3000/
->>>>>>> feature/front
