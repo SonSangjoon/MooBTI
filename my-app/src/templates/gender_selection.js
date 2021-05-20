@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { MbtiContext } from "../App";
 // import female_pic from "../images/gender/girl_profile.png";
@@ -6,13 +6,23 @@ import { MbtiContext } from "../App";
 import { Button, Box } from "@material-ui/core";
 import { Mobile, Tablet, PC, PCwide } from "../components/MediaQuery";
 import { useStyles } from "./styles/gender_selection_styles";
+import ReactGA from "react-ga";
+
 
 export default function GenderPageSelect() {
   const classes = useStyles();
   const { setSelectedGender } = useContext(MbtiContext);
 
   const handleGenderChange = (event) => {
+    console.log(event.currentTarget.value)
     setSelectedGender(event.currentTarget.value);
+  };
+  useEffect(() => {
+    getGA();
+  }, []);
+
+  const getGA = () => {
+    ReactGA.initialize("UA-196189871-2");
   };
 
   return (
@@ -27,7 +37,13 @@ export default function GenderPageSelect() {
               <Button
                 className={classes.gender_img}
                 value="male"
-                onClick={handleGenderChange}
+                onClick={(e)=>{handleGenderChange(e);
+                    ReactGA.initialize("UA-196189871-2");
+                    ReactGA.event({
+                      category: "Gender",
+                      action: "Select male",
+                    });
+                  }}
               >
                 <img
                   src="/images/gender/boy_profile.png"
@@ -45,7 +61,13 @@ export default function GenderPageSelect() {
               <Button
                 className={classes.gender_img}
                 value="female"
-                onClick={handleGenderChange}
+                onClick={(e)=>{handleGenderChange(e);
+                  ReactGA.initialize("UA-196189871-2");
+                  ReactGA.event({
+                    category: "Gender",
+                    action: "Select female",
+                  });
+                }}
               >
                 <img
                   src="/images/gender/girl_profile.png"
@@ -71,7 +93,13 @@ export default function GenderPageSelect() {
               <Button
                 className={classes.gender_img}
                 value="male"
-                onClick={handleGenderChange}
+                onClick={(e)=>{handleGenderChange(e);
+                  ReactGA.initialize("UA-196189871-2");
+                  ReactGA.event({
+                    category: "Gender",
+                    action: "Select male",
+                  });
+                }}
               >
                 <img
                   src="/images/gender/boy_profile.png"
@@ -89,7 +117,13 @@ export default function GenderPageSelect() {
               <Button
                 className={classes.gender_img}
                 value="female"
-                onClick={handleGenderChange}
+                onClick={(e)=>{handleGenderChange(e);
+                  ReactGA.initialize("UA-196189871-2");
+                  ReactGA.event({
+                    category: "Gender",
+                    action: "Select female",
+                  });
+                }}
               >
                 <img
                   src="/images/gender/girl_profile.png"
@@ -115,7 +149,13 @@ export default function GenderPageSelect() {
               <Button
                 className={classes.gender_img}
                 value="male"
-                onClick={handleGenderChange}
+                onClick={(e)=>{handleGenderChange(e);
+                  ReactGA.initialize("UA-196189871-2");
+                  ReactGA.event({
+                    category: "Gender",
+                    action: "Select male",
+                  });
+                }}
               >
                 <img
                   src="/images/gender/boy_profile.png"
@@ -133,7 +173,13 @@ export default function GenderPageSelect() {
               <Button
                 className={classes.gender_img}
                 value="female"
-                onClick={handleGenderChange}
+                onClick={(e)=>{handleGenderChange(e);
+                  ReactGA.initialize("UA-196189871-2");
+                  ReactGA.event({
+                    category: "Gender",
+                    action: "Select female",
+                  });
+                }}
               >
                 <img
                   src="/images/gender/girl_profile.png"
@@ -158,7 +204,13 @@ export default function GenderPageSelect() {
               <Button
                 className={classes.gender_img}
                 value="male"
-                onClick={handleGenderChange}
+                onClick={(e)=>{handleGenderChange(e);
+                  ReactGA.initialize("UA-196189871-2");
+                  ReactGA.event({
+                    category: "Gender",
+                    action: "Select male",
+                  });
+                }}
               >
                 <img
                   src="/images/gender/boy_profile.png"
@@ -176,7 +228,13 @@ export default function GenderPageSelect() {
               <Button
                 className={classes.gender_img}
                 value="female"
-                onClick={handleGenderChange}
+                onClick={(e)=>{handleGenderChange(e);
+                  ReactGA.initialize("UA-196189871-2");
+                  ReactGA.event({
+                    category: "Gender",
+                    action: "Select female",
+                  });
+                }}
               >
                 <img
                   src="/images/gender/girl_profile.png"

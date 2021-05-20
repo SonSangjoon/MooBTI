@@ -1,19 +1,36 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link as RouterLink } from "react-router-dom";
 import { Button, Box, Link, Typography } from "@material-ui/core";
 import { useStyles } from "./styles/recommend_contents_styles";
-import { Mobile} from "../components/MediaQuery";
-
+import { Mobile } from "../components/MediaQuery";
+import ReactGA from "react-ga";
 
 function LinkButton({ url }) {
   const classes = useStyles();
+  useEffect(() => {
+    getGA();
+  }, []);
+
+  const getGA = () => {
+    ReactGA.initialize("UA-196189871-2");
+  };
 
   if (url[4] === "n") {
     return (
       <Link href={"https://" + url} underline="none" target="_blank">
-        <Button className={classes.mobileMovieLinkBtn}>
+        <Button
+          className={classes.mobileMovieLinkBtn}
+          onClick={() => {
+            ReactGA.initialize("UA-196189871-2");
+            ReactGA.event({
+              category: "Watch Movie",
+              action: "link to netflix",
+              label: "https://" + url,
+            });
+          }}
+        >
           <Typography className={classes.movieLinkText}>
-            넷플릭스에서 확인하기 
+            넷플릭스에서 확인하기
           </Typography>
         </Button>
       </Link>
@@ -21,7 +38,17 @@ function LinkButton({ url }) {
   } else {
     return (
       <Link href={"https://" + url} underline="none" target="_blank">
-        <Button className={classes.mobileMovieLinkBtn}>
+        <Button
+          className={classes.mobileMovieLinkBtn}
+          onClick={() => {
+            ReactGA.initialize("UA-196189871-2");
+            ReactGA.event({
+              category: "Watch Movie",
+              action: "link to watcha",
+              label: "https://" + url,
+            });
+          }}
+        >
           <Typography className={classes.movieLinkText}>
             왓챠에서 확인하기
           </Typography>
@@ -67,9 +94,7 @@ function RecommendComponent({ data, value }) {
         <Box className={classes.mobileMovieLinkBtnBox}>
           <LinkButton url={data.movieUrl} />
         </Box>
-        <Box className={classes.mobileEmptynBox}>
-          
-        </Box>
+        <Box className={classes.mobileEmptynBox}></Box>
       </Mobile>
     </Box>
   );
@@ -79,8 +104,8 @@ export default function MobileRecommendContentsTemplate({ data }) {
   const classes = useStyles();
 
   return (
-      <Mobile>
-      <Box className={classes.mobileroot} >
+    <Mobile>
+      <Box className={classes.mobileroot}>
         <Box className={classes.mobileRecommendBox1} item>
           <RecommendComponent
             data={data.good}
@@ -97,6 +122,6 @@ export default function MobileRecommendContentsTemplate({ data }) {
           <RestartButton />
         </Box>
       </Box>
-      </Mobile>
+    </Mobile>
   );
 }
