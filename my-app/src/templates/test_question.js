@@ -36,7 +36,7 @@ export default function TestQuestionTemplate() {
   }
 
   if (answer.length >= 12) {
-    
+    console.log("problem1")
     axios
     .post(
       `http://52.78.18.205:5000/mbti`,
