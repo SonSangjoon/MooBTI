@@ -47,29 +47,39 @@ const useStyles = makeStyles((theme) => ({
     width: "85%",
   },
   titleLogoGrid: {
+    marginTop: "20px",
     gridColumn: "5/span 5",
-    gridRow: "2/span 2",
+    gridRow: "1/span 2",
   },
   firstParagraphGrid: {
+    marginTop: "20px",
+
     gridColumn: "1/span 13",
-    gridRow: "3/span 3",
+    gridRow: "2/span 2",
   },
   firstParagraphText: {
     color: "white",
+    fontSize:"min(20px,4vw)"
   },
   secondParagraphGrid: {
     gridColumn: "1/span 13",
-    gridRow: "4/span 3",
+    gridRow: "3/span 3",
   },
   secondParagraphText: {
     color: "white",
+    fontSize:"min(20px,4vw)"
+
+
   },
   thirdParagraphGrid: {
     gridColumn: "1/span 13",
-    gridRow: "5/span 3",
+    gridRow: "4/span 2",
   },
   thirdParagraphText: {
     color: "white",
+    fontSize:"min(20px,4vw)"
+
+
   },
   memberImage: {
     objectFit: "fill",
@@ -90,6 +100,22 @@ const useStyles = makeStyles((theme) => ({
   MHGrid: {
     gridColumn: "11/span 2",
     gridRow: "7/span 3",
+  },
+  mobileJHGrid: {
+    gridColumn: "2/span 5",
+    gridRow: "6/span 4",
+  },
+  mobileSJGrid: {
+    gridColumn: "8/span 5",
+    gridRow: "6/span 4",
+  },
+  mobileYJGrid: {
+    gridColumn: "2/span 5",
+    gridRow: "9/span 4",
+  },
+  mobileMHGrid: {
+    gridColumn:"8/span 5",
+    gridRow: "9/span 4",
   },
   memberNameText: {
     color: "white",
@@ -328,6 +354,8 @@ export default function IntroductionModal(data) {
       }}
     >
       <Box className={classes.root}>
+        <PC>
+
         <Fade in={openIntroduction}>
           <Grid className={classes.container}>
             <Grid className={classes.titleLogoGrid}>
@@ -379,9 +407,10 @@ export default function IntroductionModal(data) {
             </Grid>
           </Grid>
         </Fade>
+        </PC>
 
         {/* Tablet View */}
-        {/* <Tablet>
+        <Tablet>
           <Fade in={openIntroduction}>
             <Grid className={classes.container}>
               <Grid className={classes.titleLogoGrid}>
@@ -433,51 +462,65 @@ export default function IntroductionModal(data) {
               </Grid>
             </Grid>
           </Fade>
-        </Tablet> */}
+        </Tablet> 
 
         {/* Mobile View */}
-        {/* <Mobile>
+         <Mobile>
           <Fade in={openIntroduction}>
-            <Box>
-              <ModalCloseBtn />
-              <TitleLogo />
-              <FirstParagraph />
-              <SecondParagraph />
-              <ThirdParagraph />
-              <Box>
+            <Grid className={classes.container}>
+              <Grid className={classes.titleLogoGrid}>
+                <TitleLogo />
+              </Grid>
+              <Grid className={classes.firstParagraphGrid}>
+                <FirstParagraph />
+              </Grid>
+              <Grid className={classes.secondParagraphGrid}>
+                <SecondParagraph />
+              </Grid>
+              <Grid className={classes.thirdParagraphGrid}>
+                <ThirdParagraph />
+              </Grid>
+              <Grid className={classes.mobileJHGrid}>
                 <MemberIntro
                   image="JH"
                   name="준효"
-                  part="프로덕트 매니저 / 기획"
+                  part="PM / 기획"
                   url="https://brunch.co.kr/@junhyopark"
                 />
+              </Grid>
+              <Grid className={classes.mobileSJGrid}>
                 <MemberIntro
                   image="SJ"
                   name="상준"
                   part="프론트엔드 / 기획"
                   url="https://github.com/SonSangjoon"
                 />
-              </Box>
-              <Box>
+              </Grid>
+              <Grid className={classes.mobileYJGrid}>
                 <MemberIntro
                   image="YJ"
                   name="유지"
                   part="프론트엔드 / 기획"
                   url="https://kdt-gitlab.elice.io/CARMINE"
                 />
+              </Grid>
+              <Grid className={classes.mobileMHGrid}>
                 <MemberIntro
                   image="MH"
                   name="민호"
                   part="데이터분석 / 백엔드"
                   url="https://github.com/yeemh"
                 />
-              </Box>
-            </Box>
+              </Grid>
+              <Grid className={classes.modalCloseBtnGrid}>
+                <ModalCloseBtn />
+              </Grid>
+            </Grid>
           </Fade>
-        </Mobile> */}
+        </Mobile>
 
         {/* PCwide View */}
-        {/* <PCwide>
+         <PCwide>
           <Fade in={openIntroduction}>
             <Grid className={classes.container}>
               <Grid className={classes.titleLogoGrid}>
@@ -530,10 +573,9 @@ export default function IntroductionModal(data) {
             </Grid>
           </Fade>
         </PCwide>
-      // </Box>
-    </Modal> */}
-      </Box>
+       </Box>
     </Modal>
+    // </Modal>
     // <ModalWindow />
   );
 }

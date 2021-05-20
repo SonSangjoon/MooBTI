@@ -1,8 +1,9 @@
-import React, { useRef, useState } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import { Box, Fab, Button } from "@material-ui/core";
 import LinkIcon from "@material-ui/icons/Link";
 import Snackbar from "@material-ui/core/Snackbar";
+import ReactGA from "react-ga";
 
 const useStyles = makeStyles({
   copy: {
@@ -15,6 +16,7 @@ const useStyles = makeStyles({
 });
 
 const LinkShareButton = () => {
+
   const classes = useStyles();
   const textInput = useRef();
   const [snackBarState, setSnackBarState] = useState({
@@ -23,6 +25,13 @@ const LinkShareButton = () => {
     horizontal: "center",
   });
   const { vertical, horizontal, open } = snackBarState;
+  useEffect(() => {
+    getGA();
+  }, []);
+
+  const getGA = () => {
+    ReactGA.initialize("UA-196189871-2");
+  };
 
   const handleClick = (newState) => () => {
     const el = textInput.current;
@@ -42,7 +51,15 @@ const LinkShareButton = () => {
   );
 
   return (
-    <Box>
+    <Box
+      onClick={() => {
+        ReactGA.initialize("UA-196189871-2");
+        ReactGA.event({
+          category: "share",
+          action: "share via url",
+        });
+      }}
+    >
       <Box>
         <Fab
           style={{ backgroundColor: "white" }}

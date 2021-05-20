@@ -4,6 +4,8 @@ import { makeStyles } from "@material-ui/core/styles";
 import { Helmet } from "react-helmet";
 import { Fab } from "@material-ui/core";
 import { ReactComponent as KakaoTalk } from "../images/sharebutton/kakaotalk.svg";
+import ReactGA from "react-ga";
+import { useEffect } from "react";
 
 const useStyles = makeStyles({
   imageIcon: {
@@ -13,6 +15,13 @@ const useStyles = makeStyles({
 });
 
 export function KakaoShareButton({ data }) {
+  useEffect(() => {
+    getGA();
+  }, []);
+
+  const getGA = () => {
+    ReactGA.initialize("UA-196189871-2");
+  };
   const classes = useStyles();
   const shareByKakao = () => {
     if (window.Kakao) {
@@ -47,7 +56,16 @@ export function KakaoShareButton({ data }) {
   };
 
   return (
-    <Box className="kakao-share-button">
+    <Box
+      className="kakao-share-button"
+      onClick={() => {
+        ReactGA.initialize("UA-196189871-2");
+        ReactGA.event({
+          category: "share",
+          action: "share via kakao",
+        });
+      }}
+    >
       <Helmet>
         <script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
       </Helmet>
