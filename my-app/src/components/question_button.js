@@ -20,9 +20,9 @@ const useStyles = makeStyles((theme) => ({
       "& $imageTitle": {
         border: "4px solid currentColor",
       },
-      "& $mobileImageTitle": {
-        border: "4px solid currentColor",
-      },
+      // "& $mobileImageTitle": {
+      //   border: "4px solid currentColor",
+      // },
       "& $tabletImageTitle": {
         border: "4px solid currentColor",
       },
@@ -46,8 +46,8 @@ const useStyles = makeStyles((theme) => ({
 
   imageTitle: {
     fontSize: "17px",
-    fontFamily: "S-CoreDream-3Light",
     position: "relative",
+    fontFamily: "Apple SD Gothic Neo",
     // padding: `${theme.spacing(2)}px ${theme.spacing(4)}px ${theme.spacing(1) + 6}px`,
     padding: 20,
   },
@@ -65,28 +65,41 @@ const useStyles = makeStyles((theme) => ({
 
   mobileImageTitle: {
     fontSize: "3.5vw",
-    fontFamily: "S-CoreDream-3Light",
     position: "relative",
     padding: 20,
+    fontFamily: "Apple SD Gothic Neo",
+
+  },
+
+  mobileImageMarked: {
+    height: 3,
+    width: 18,
+    backgroundColor: theme.palette.common.white,
+    position: "absolute",
+    bottom: -2,
+    left: "calc(50% - 9px)",
+    transition: theme.transitions.create("opacity"),
   },
 
   //Tablet View
 
   tabletImageTitle: {
     fontSize: "16px",
-    fontFamily: "S-CoreDream-3Light",
     position: "relative",
     padding: 20,
     whiteSpace: "pre-wrap",
+    fontFamily: "Apple SD Gothic Neo",
+
   },
 
   //PcWide View
 
   pcWideImageTitle: {
-    fontSize: "19px",
-    fontFamily: "S-CoreDream-3Light",
+    fontSize: "22px",
     position: "relative",
     padding: 20,
+    fontFamily: "Apple SD Gothic Neo",
+
   },
 }));
 
@@ -119,7 +132,7 @@ export default function ButtonBases({ choice }) {
           <span className={classes.imageButton}>
             <Typography className={classes.mobileImageTitle}>
               {choice}
-              <span className={classes.imageMarked} />
+              <span className={classes.mobileImageMarked} />
             </Typography>
           </span>
         </ButtonBase>

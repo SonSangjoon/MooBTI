@@ -1,9 +1,10 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import { Button, Grid, Box, Typography } from "@material-ui/core";
 import { MbtiContext } from "../App";
 import { useStyles } from "./styles/test_result_styles";
 import TransitionsModal from "../components/modal_result";
 import { Mobile, PC, PCwide, Tablet } from "../components/MediaQuery";
+import ReactGA from "react-ga";
 
 function ResultMain({ data }) {
   const classes = useStyles();
@@ -22,6 +23,11 @@ function ResultMain({ data }) {
             {data.title}
           </Box>
         </Grid>
+        {/* <Grid className={classes.mobileCharacterScript} item>
+          <Box className={classes.mobileCharScriptText} align="center">
+            {data.script}
+          </Box>
+        </Grid> */}
       </Mobile>
 
       <PC>
@@ -55,7 +61,7 @@ function ResultMain({ data }) {
       </Tablet>
 
       <PCwide>
-        <Grid className={classes.imageGrid} item>
+        <Grid className={classes.pcWideimageGrid} item>
           <img
             className={classes.characterImage}
             src={data.imageUrl}
@@ -157,6 +163,13 @@ function DataAnalysisBtn({ value, url }) {
 export default function ResultTemplate({ data, genderType }) {
   const classes = useStyles();
   const { setOpenModal } = useContext(MbtiContext);
+  useEffect(() => {
+    getGA();
+  }, []);
+
+  const getGA = () => {
+    ReactGA.initialize("UA-196189871-2");
+  };
 
   return (
     <Grid className={classes.container}>
@@ -176,6 +189,14 @@ export default function ResultTemplate({ data, genderType }) {
               <DataAnalysisBtn
                 value="👀 넷플릭스에서 확인하기"
                 url={data.movieUrl}
+                onClick={() => {
+                  ReactGA.initialize("UA-196189871-2");
+                  ReactGA.event({
+                    category: "Watch Movie",
+                    action: "link to netflix",
+                    label: data.movieUrl,
+                  });
+                }}
               />
             </Grid>
           ) : (
@@ -183,40 +204,20 @@ export default function ResultTemplate({ data, genderType }) {
               <DataAnalysisBtn
                 value="👀 왓챠에서 확인하기"
                 url={data.movieUrl}
+                onClick={() => {
+                  ReactGA.initialize("UA-196189871-2");
+                  ReactGA.event({
+                    category: "Watch Movie",
+                    action: "link to watcha",
+                    label: data.movieUrl,
+                  });
+                }}
               />
             </Grid>
           )}
         </Grid>
         <TransitionsModal data={data} genderType={genderType} />
       </PC>
-
-      <Mobile>
-        <Grid className={classes.mobileResultMainGrid} item>
-          <ResultMain data={data} />
-        </Grid>
-        <Grid className={classes.resultDescriptionGrid} item>
-          <ResultDescription data={data} />
-        </Grid>
-        <Grid
-          className={classes.mobileButtonGrid}
-          onClick={() => setOpenModal(true)}
-        >
-          <DataAnalysisBtn value="🔦 캐릭터의 연애 비결은?" />
-        </Grid>
-        {data.movieUrl[4] === "n" ? (
-          <Grid className={classes.mobileButtonGrid}>
-            <DataAnalysisBtn
-              value="👀 넷플릭스에서 확인하기"
-              url={data.movieUrl}
-            />
-          </Grid>
-        ) : (
-          <Grid className={classes.mobileButtonGrid}>
-            <DataAnalysisBtn value="👀 왓챠에서 확인하기" url={data.movieUrl} />
-          </Grid>
-        )}
-        <TransitionsModal data={data} genderType={genderType} />
-      </Mobile>
 
       <Tablet>
         <Grid className={classes.resultMainGrid} item>
@@ -236,11 +237,30 @@ export default function ResultTemplate({ data, genderType }) {
             <DataAnalysisBtn
               value="👀 넷플릭스에서 확인하기"
               url={data.movieUrl}
+              onClick={() => {
+                ReactGA.initialize("UA-196189871-2");
+                ReactGA.event({
+                  category: "Watch Movie",
+                  action: "link to netflix",
+                  label: data.movieUrl,
+                });
+              }}
             />
           </Grid>
         ) : (
           <Grid className={classes.tabletButtonGrid}>
-            <DataAnalysisBtn value="👀 왓챠에서 확인하기" url={data.movieUrl} />
+            <DataAnalysisBtn
+              value="👀 왓챠에서 확인하기"
+              url={data.movieUrl}
+              onClick={() => {
+                ReactGA.initialize("UA-196189871-2");
+                ReactGA.event({
+                  category: "Watch Movie",
+                  action: "link to watcha",
+                  label: data.movieUrl,
+                });
+              }}
+            />
           </Grid>
         )}
         <TransitionsModal data={data} genderType={genderType} />
@@ -261,15 +281,87 @@ export default function ResultTemplate({ data, genderType }) {
             <DataAnalysisBtn
               value="👀 넷플릭스에서 확인하기"
               url={data.movieUrl}
+              onClick={() => {
+                ReactGA.initialize("UA-196189871-2");
+                ReactGA.event({
+                  category: "Watch Movie",
+                  action: "link to netflix",
+                  label: data.movieUrl,
+                });
+              }}
             />
           </Grid>
         ) : (
           <Grid className={classes.buttonGrid}>
-            <DataAnalysisBtn value="👀 왓챠에서 확인하기" url={data.movieUrl} />
+            <DataAnalysisBtn
+              value="👀 왓챠에서 확인하기"
+              url={data.movieUrl}
+              onClick={() => {
+                ReactGA.initialize("UA-196189871-2");
+                ReactGA.event({
+                  category: "Watch Movie",
+                  action: "link to watcha",
+                  label: data.movieUrl,
+                });
+              }}
+            />
           </Grid>
         )}
         <TransitionsModal data={data} genderType={genderType} />
       </PCwide>
     </Grid>
+  );
+}
+
+export function MobileResultTemplate({ data, genderType }) {
+  const classes = useStyles();
+  const { setOpenModal } = useContext(MbtiContext);
+  return (
+    <Mobile>
+      <Grid className={classes.mobileResultMainGrid} item>
+        <ResultMain data={data} />
+      </Grid>
+      <Grid className={classes.mobileResultDescriptionGrid} item>
+        <ResultDescription data={data} />
+      </Grid>
+      <Grid
+        className={classes.mobileButtonGrid}
+        onClick={() => setOpenModal(true)}
+      >
+        <DataAnalysisBtn value="🔦 캐릭터의 연애 비결은?" />
+      </Grid>
+      {data.movieUrl[4] === "n" ? (
+        <Grid className={classes.mobileButtonGrid}>
+          <DataAnalysisBtn
+            value="👀 넷플릭스에서 확인하기"
+            url={data.movieUrl}
+            onClick={() => {
+              ReactGA.initialize("UA-196189871-2");
+              ReactGA.event({
+                category: "Watch Movie",
+                action: "link to netflix",
+                label: data.movieUrl,
+              });
+            }}
+          />
+        </Grid>
+      ) : (
+        <Grid className={classes.mobileButtonGrid}>
+          <DataAnalysisBtn
+            value="👀 왓챠에서 확인하기"
+            url={data.movieUrl}
+            onClick={() => {
+              ReactGA.initialize("UA-196189871-2");
+              ReactGA.event({
+                category: "Watch Movie",
+                action: "link to watcha", 
+                label: data.movieUrl,
+              });
+            }}
+          />
+        </Grid>
+      )}
+      <TransitionsModal data={data} genderType={genderType} />
+    </Mobile>
   );
 }
