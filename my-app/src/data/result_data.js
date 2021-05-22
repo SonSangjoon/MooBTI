@@ -452,7 +452,7 @@ const resultList = {
 
             goodMbti: 'ENTP',
             badMbti:'ISTJ',
-            shortDesc: '주관이 뚜렷하고 독립심 강한 남자. \n가 당신을 좋아하는 걸 숨기고 있어요. 먼저 어필해볼까요?',
+            shortDesc: '주관이 뚜렷하고 독립심 강한 남자. \n 그가 당신을 좋아하는 걸 숨기고 있어요. 먼저 어필해볼까요?',
 
             analysisTitle : "INFJ 에드워드가 벨라를 사로잡은 비결💘",
             analysisSubTitle : "에드워드의 대사를 분석해서 \n 머릿 속 감정 친구들 100명을 찾아냈어요!",
