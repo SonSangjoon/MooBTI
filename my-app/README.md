@@ -12,13 +12,14 @@ Installation:
 
 npm install
 
-npm run build
+To Run Test Suite:
 
-docker build -t nginx-react:0.1 .
+npm test
 
 To Start Server:
 
-docker run -d --name my-react-app -p 80:80 nginx-react:0.1
+npm start
 
+To Visit App:
 
-
+localhost:3000/

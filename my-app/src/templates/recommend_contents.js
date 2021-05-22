@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link as RouterLink } from "react-router-dom";
 import { Button, Box, Grid, Link, Typography } from "@material-ui/core";
 import { withStyles } from "@material-ui/core/styles";
 import { useStyles } from "./styles/recommend_contents_styles";
 import { PC, Mobile, PCwide, Tablet } from "../components/MediaQuery";
+import ReactGA from "react-ga";
 
 const CustomRestartBtn = withStyles((theme) => ({
   root: {
@@ -17,13 +18,30 @@ const CustomRestartBtn = withStyles((theme) => ({
 
 function LinkButton({ url }) {
   const classes = useStyles();
+  useEffect(() => {
+    getGA();
+  }, []);
+
+  const getGA = () => {
+    ReactGA.initialize("UA-196189871-2");
+  };
 
   if (url[4] === "n") {
     return (
       <Link href={"https://" + url} underline="none" target="_blank">
-        <CustomRestartBtn className={classes.movieLinkBtn}>
+        <CustomRestartBtn
+          className={classes.movieLinkBtn}
+          onClick={() => {
+            ReactGA.initialize("UA-196189871-2");
+            ReactGA.event({
+              category: "Watch Movie",
+              action: "link to netflix",
+              label: "https://" + url,
+            });
+          }}
+        >
           <Typography className={classes.movieLinkText}>
-            NETFLIX에서 확인하기
+            넷플릭스에서 확인하기
           </Typography>
         </CustomRestartBtn>
       </Link>
@@ -31,7 +49,17 @@ function LinkButton({ url }) {
   } else {
     return (
       <Link href={"https://" + url} underline="none" target="_blank">
-        <CustomRestartBtn className={classes.movieLinkBtn}>
+        <CustomRestartBtn
+          className={classes.movieLinkBtn}
+          onClick={() => {
+            ReactGA.initialize("UA-196189871-2");
+            ReactGA.event({
+              category: "Watch Movie",
+              action: "link to watcha",
+              label: "https://" + url,
+            });
+          }}
+        >
           <Typography className={classes.movieLinkText}>
             왓챠에서 확인하기
           </Typography>
@@ -94,8 +122,9 @@ function RecommendComponent({ data, value }) {
         </Grid>
         <Grid className={classes.mobileCharTitleGrid} item>
           <Box className={classes.mobileRecommendCharText}>
-            {data.mbit} {data.movie}의 {data.name}
+            {data.movie}의 {data.name}
           </Box>
+          <Box className={classes.mobileCharMbtiText}> {data.mbit}</Box>
         </Grid>
         <Grid className={classes.mobileRecommendDesc}>
           <Box className={classes.mobileRecommendDescText}>
@@ -122,7 +151,7 @@ function RecommendComponent({ data, value }) {
           <Box className={classes.tabletRecommendCharText}>
             {data.mbit} {data.movie}의 {data.name}
           </Box>
-          <Box className={classes.tabletrecommendDescText}>
+          <Box className={classes.tabletRecommendDescText}>
             {data.shortDesc}
           </Box>
         </Grid>
@@ -156,7 +185,7 @@ function RecommendComponent({ data, value }) {
   );
 }
 
-export default function RecommendContentsTemplate({ data, genderType }) {
+export default function RecommendContentsTemplate({ data }) {
   const classes = useStyles();
 
   return (
@@ -165,13 +194,13 @@ export default function RecommendContentsTemplate({ data, genderType }) {
         <Grid className={classes.recommendGrid1} item>
           <RecommendComponent
             data={data.good}
-            value={genderType === 'male' ? ("💖 나와 케미 터지는 여주는 누구?") : ("💖 나와 케미 터지는 남주는 누구?")}
+            value="나와 🔥 불꽃 케미 터지는 캐릭터는"
           />
         </Grid>
         <Grid className={classes.recommendGrid2} item>
           <RecommendComponent
             data={data.bad}
-            value={genderType === 'male' ? ("💔 나와 케미 별로인 여주는 누구?") : ("💔 나와 케미 별로인 남주는 누구?")}
+            value="나와 ❄️ 얼음 케미인 캐릭터는"
           />
         </Grid>
         <Grid className={classes.restartBtnGrid} mt={40}>
@@ -180,16 +209,16 @@ export default function RecommendContentsTemplate({ data, genderType }) {
       </PC>
 
       <Mobile>
-        <Grid className={classes.recommendGrid1} item>
+        <Grid className={classes.mobileRecommendGrid1} item>
           <RecommendComponent
             data={data.good}
-            value={genderType === 'male' ? ("💖 나와 케미 터지는 여주는 누구?") : ("💖 나와 케미 터지는 남주는 누구?")}
+            value="나와 🔥 불꽃 케미 터지는 캐릭터는"
           />
         </Grid>
-        <Grid className={classes.recommendGrid2} item>
+        <Grid className={classes.mobileRecommendGrid2} item>
           <RecommendComponent
             data={data.bad}
-            value={genderType === 'male' ? ("💔 나와 케미 별로인 여주는 누구?") : ("💔 나와 케미 별로인 남주는 누구?")}
+            value="나와 ❄️ 얼음 케미인 캐릭터는"
           />
         </Grid>
         <Grid className={classes.restartBtnGrid} mt={40}>
@@ -201,13 +230,13 @@ export default function RecommendContentsTemplate({ data, genderType }) {
         <Grid className={classes.recommendGrid1} item>
           <RecommendComponent
             data={data.good}
-            value={genderType === 'male' ? ("💖 나와 케미 터지는 여주는 누구?") : ("💖 나와 케미 터지는 남주는 누구?")}
+            value="나와 🔥 불꽃 케미 터지는 캐릭터는"
           />
         </Grid>
         <Grid className={classes.recommendGrid2} item>
           <RecommendComponent
             data={data.bad}
-            value={genderType === 'male' ? ("💔 나와 케미 별로인 여주는 누구?") : ("💔 나와 케미 별로인 남주는 누구?")}
+            value="나와 ❄️ 얼음 케미인 캐릭터는"
           />
         </Grid>
         <Grid className={classes.tabletRestartBtnGrid} mt={40}>
@@ -219,13 +248,13 @@ export default function RecommendContentsTemplate({ data, genderType }) {
         <Grid className={classes.recommendGrid1} item>
           <RecommendComponent
             data={data.good}
-            value={genderType === 'male' ? ("💖 나와 케미 터지는 여주는 누구?") : ("💖 나와 케미 터지는 남주는 누구?")}
+            value="나와 🔥 불꽃 케미 터지는 캐릭터는"
           />
         </Grid>
         <Grid className={classes.recommendGrid2} item>
           <RecommendComponent
             data={data.bad}
-            value={genderType === 'male' ? ("💔 나와 케미 별로인 여주는 누구?") : ("💔 나와 케미 별로인 남주는 누구?")}
+            value="나와 ❄️ 얼음 케미인 캐릭터는"
           />
         </Grid>
         <Grid className={classes.restartBtnGrid} mt={40}>
