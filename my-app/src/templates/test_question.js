@@ -39,7 +39,7 @@ export default function TestQuestionTemplate() {
     console.log("problem1")
     axios
     .post(
-      `http://52.78.18.205:5000/mbti`,
+      process.env.REACT_APP_API_URL + `mbti`,
       testData
     )
     .then((response) => {
