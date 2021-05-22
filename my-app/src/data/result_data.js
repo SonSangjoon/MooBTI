@@ -16,7 +16,7 @@ const resultList = {
 
             goodMbti: 'ISFJ',
             badMbti:'INFP',
-            shortDesc: '항상 사랑을 말하는 남자.\n 낙천적이고 사교적이지만, 조금이라도 관계가 불편해지면 빠르게 거리를 둬요.',
+            shortDesc: '항상 사랑을 말하는 남자.  \n낙천적이고 사교적이지만, 조금이라도 관계가 불편해지면 빠르게 거리를 둬요.',
             
             analysisTitle : "ESFP 잭이 로즈를 사로잡은 비결💘",
             analysisSubTitle : "잭의 대사를 분석해서 \n 머릿 속 감정 친구들 100명을 찾아냈어요!",
@@ -65,7 +65,7 @@ const resultList = {
 
             goodMbti: 'ESFP',
             badMbti:'INFJ',
-            shortDesc: '영원한 사랑을 찾는 남자.\n\n따뜻하고 배려심 넘치지만, 당신에게 서운함이 있어도 마음에 숨겨두고 있어요.',
+            shortDesc: '영원한 사랑을 찾는 남자. \n따뜻하고 배려심 넘치지만, 당신에게 서운함이 있어도 마음에 숨겨두고 있어요.',
 
             analysisTitle : "ISFJ 포레스트 검프가 제니를 사로잡은 비결💘",
             analysisSubTitle : "포레스트 검프의 대사를 분석해서 \n 머릿 속 감정 친구들 100명을 찾아냈어요!",
@@ -113,7 +113,7 @@ const resultList = {
 
             goodMbti: 'ENTJ',
             badMbti:'ISFP',
-            shortDesc: '낭만적 사랑을 찾아다니는 남자.\n\n내면에서 혼자 고민을 많이 하지만, 당신에게 환상을 갖고 푹 빠져버릴 거예요.',
+            shortDesc: '낭만적 사랑을 찾아다니는 남자. \n내면에서 혼자 고민을 많이 하지만, 당신에게 환상을 갖고 푹 빠져버릴 거예요.',
 
             analysisTitle : "INFP 딜런이 제이미를 사로잡은 비결💘",
             analysisSubTitle : "딜런의 대사를 분석해서 \n 머릿 속 감정 친구들 100명을 찾아냈어요!",
@@ -161,7 +161,7 @@ const resultList = {
 
             goodMbti: 'ESFP',
             badMbti:'ENFJ',
-            shortDesc: '믿음직한 연인이 되어줄 남자.\n \n쉽게 마음을 얻을 수 없지만, 한 번 사랑에 빠지면 오래 사랑을 나눌 거예요.',
+            shortDesc: '믿음직한 연인이 되어줄 남자. 쉽게 마음을 얻을 수 없지만, 한 번 사랑에 빠지면 오래 사랑을 나눌 거예요.',
 
             analysisTitle : "ISTJ 아서가 사랑을 쟁취하는 비결💘",
             analysisSubTitle : "아서의 대사를 분석해서 \n 머릿 속 감정 친구들 100명을 찾아냈어요!",
@@ -209,7 +209,7 @@ const resultList = {
 
             goodMbti: 'ESFJ',
             badMbti:'ENFP',
-            shortDesc: '내색 없이 사랑에 몰입하는 남자.\n\n자유로워 보이지만 속으로는 오직 당신만 바라보고 있어요.',
+            shortDesc: '내색 없이 사랑에 몰입하는 남자. \n자유로워 보이지만 속으로는 오직 당신만 바라보고 있어요.',
 
             analysisTitle : "ISTP 사이먼이 다프네를 사로잡은 비결💘",
             analysisSubTitle : "사이먼의 대사를 분석해서 \n 머릿 속 감정 친구들 100명을 찾아냈어요!",
@@ -257,7 +257,7 @@ const resultList = {
 
             goodMbti: 'ISFJ',
             badMbti:'ENFJ',
-            shortDesc: '사랑을 위해 전력 질주하는 남자.\n\n하지만 그의 마음은 주전자 같아서, 당신의 마음을 애태울 거예요.',
+            shortDesc: '사랑을 위해 전력 질주하는 남자. \n하지만 그의 마음은 주전자 같아서, 당신의 마음을 애태울 거예요.',
 
             analysisTitle : "ESTP 스티브가 사랑을 쟁취하는 비결💘",
             analysisSubTitle : "스티브의 대사를 분석해서 \n 머릿 속 감정 친구들 100명을 찾아냈어요!",
@@ -306,7 +306,7 @@ const resultList = {
 
             goodMbti: 'ENTJ',
             badMbti:'INFP',
-            shortDesc: '사랑을 위해 헌신하는 남자.\n\n당신에게도 헌신을 기대하는 게 문제가 되기도 해요.',
+            shortDesc: '사랑을 위해 헌신하는 남자. \n당신에게도 헌신을 기대하는 게 문제가 되기도 해요.',
 
             analysisTitle : "ESTJ 보로미르가 사랑을 쟁취하는 비결💘",
             analysisSubTitle : "보로미르의 대사를 분석해서 \n 머릿 속 감정 친구들 100명을 찾아냈어요!",
@@ -354,7 +354,7 @@ const resultList = {
 
             goodMbti: 'ESTJ',
             badMbti:'INFJ',
-            shortDesc: '호수같은 사랑을 꿈꾸는 남자.\n \n귀차니즘이 심한 그는 당신의 적극적인 사랑 고백을 기다리고 있어요!',
+            shortDesc: '호수같은 사랑을 꿈꾸는 남자.  \n귀차니즘이 심한 그는 당신의 적극적인 사랑 고백을 기다리고 있어요!',
 
             analysisTitle : "ISFP 세바스찬이 미아를 사로잡은 비결💘",
             analysisSubTitle : "세바스찬의 대사를 분석해서 \n 머릿 속 감정 친구들 100명을 찾아냈어요!",
@@ -403,7 +403,7 @@ const resultList = {
 
             goodMbti: 'ISTP',
             badMbti:'ENFJ',
-            shortDesc: '마음속에 사랑을 가득 채운 남자.\n\n인기가 많은 그의 마음을 가지려면, 조급하겠는데요?',
+            shortDesc: '마음속에 사랑을 가득 채운 남자. \n인기가 많은 그의 마음을 가지려면, 조급하겠는데요?',
 
             analysisTitle : "ESFJ 존이 사랑을 쟁취하는 비결💘",
             analysisSubTitle : "존의 대사를 분석해서 \n 머릿 속 감정 친구들 100명을 찾아냈어요!",
@@ -452,7 +452,7 @@ const resultList = {
 
             goodMbti: 'ENTP',
             badMbti:'ISTJ',
-            shortDesc: '주관이 뚜렷하고 독립심 강한 남자.\n \n 그가 당신을 좋아하는 걸 숨기고 있어요. 먼저 어필해볼까요?',
+            shortDesc: '주관이 뚜렷하고 독립심 강한 남자.  \n 그가 당신을 좋아하는 걸 숨기고 있어요. 먼저 어필해볼까요?',
 
             analysisTitle : "INFJ 에드워드가 벨라를 사로잡은 비결💘",
             analysisSubTitle : "에드워드의 대사를 분석해서 \n 머릿 속 감정 친구들 100명을 찾아냈어요!",
@@ -501,7 +501,7 @@ const resultList = {
 
             goodMbti: 'INFJ',
             badMbti:'ESTP',
-            shortDesc: '순수하고 사교성이 넘치는 남자.\n\n당신의 애정으로 그의 여린 내면까지 포용해 주세요.',
+            shortDesc: '순수하고 사교성이 넘치는 남자. \n당신의 애정으로 그의 여린 내면까지 포용해 주세요.',
 
             analysisTitle : "ENFP 조엘이 클레멘타인을 사로잡은 비결💘",
             analysisSubTitle : "조엘의 대사를 분석해서 \n 머릿 속 감정 친구들 100명을 찾아냈어요!",
@@ -550,7 +550,7 @@ const resultList = {
 
             goodMbti: 'INFP',
             badMbti:'ESTJ',
-            shortDesc: '센스 넘치는 사랑꾼 남자.\n\n당신을 아름답고 풍요로운 생활로 이끌어주지만, 때론 그의 고민을 들어보세요.',
+            shortDesc: '센스 넘치는 사랑꾼 남자. \n당신을 아름답고 풍요로운 생활로 이끌어주지만, 때론 그의 고민을 들어보세요.',
 
             analysisTitle : "ENFJ 피터가 라라진을 사로잡은 비결💘",
             analysisSubTitle : "피터의 대사를 분석해서 \n 머릿 속 감정 친구들 100명을 찾아냈어요!",
@@ -598,7 +598,7 @@ const resultList = {
 
             goodMbti: 'ENFP',
             badMbti:'ISFJ',
-            shortDesc: '성숙하고 독립적인 남자.\n\n그의 지적인 행동 방식이 멋있기도 하지만, 가끔 이해할 수 없어요.',
+            shortDesc: '성숙하고 독립적인 남자. \n그의 지적인 행동 방식이 멋있기도 하지만, 가끔 이해할 수 없어요.',
 
             analysisTitle : "INTJ 다아시가 리지를 사로잡은 비결💘",
             analysisSubTitle : "다아시의 대사를 분석해서 \n 머릿 속 감정 친구들 100명을 찾아냈어요!",
@@ -647,7 +647,7 @@ const resultList = {
 
             goodMbti: 'ENTJ',
             badMbti:'ISFP',
-            shortDesc: '분석의 끝에 사랑이 있는 남자.\n \n뇌섹남 매력을 갖고 있어요. 사랑이 1순위가 아니기에, 너무 깊게 빠지면 안돼요.',
+            shortDesc: '분석의 끝에 사랑이 있는 남자.  \n뇌섹남 매력을 갖고 있어요. 사랑이 1순위가 아니기에, 너무 깊게 빠지면 안돼요.',
 
             analysisTitle : "INTP 주커버그가 사랑을 쟁취하는 비결💘",
             analysisSubTitle : "주커버그의 대사를 분석해서 \n 머릿 속 감정 친구들 100명을 찾아냈어요!",
@@ -697,7 +697,7 @@ const resultList = {
 
             goodMbti: 'INTJ',
             badMbti:'ESFJ',
-            shortDesc: '당당하고 썸 잘타는 남자.\n\n낭만적 연애의 고수죠. 다만 당신이 자존심을 부리면 관계는 끝난답니다.',
+            shortDesc: '당당하고 썸 잘타는 남자. \n낭만적 연애의 고수죠. 다만 당신이 자존심을 부리면 관계는 끝난답니다.',
 
             analysisTitle : "ENTP J.D.가 베로니카를 사로잡은 비결💘",
             analysisSubTitle : "J.D.의 대사를 분석해서 \n 머릿 속 감정 친구들 100명을 찾아냈어요!",
@@ -746,7 +746,7 @@ const resultList = {
 
             goodMbti: 'INTP',
             badMbti: 'ESFJ',
-            shortDesc: '탁월한 리더십을 갖춘 남자.\n \n당신과 대화하며 교류하는 순간에 자기도 모르게 푹 빠져버려요.',
+            shortDesc: '탁월한 리더십을 갖춘 남자.  \n당신과 대화하며 교류하는 순간에 자기도 모르게 푹 빠져버려요.',
 
             analysisTitle : "ENTJ 그레이가 사랑을 쟁취하는 비결💘",
             analysisSubTitle : "그레이의 대사를 분석해서 \n 머릿 속 감정 친구들 100명을 찾아냈어요!",
