@@ -90,7 +90,16 @@ function RecommendComponent({ data, value }) {
             alt="poster"
           />
         </Box>
-        <Box className={classes.mobileRecommendDescText}>{data.shortDesc}</Box>
+        <Box className={classes.mobileRecommendDescText}>
+          {data.shortDesc.split("\n").map((line) => {
+              return (
+              <span className={classes.span}>
+                {line}
+                <br />
+              </span>
+              )
+          })}
+        </Box>
         <Box className={classes.mobileMovieLinkBtnBox}>
           <LinkButton url={data.movieUrl} />
         </Box>

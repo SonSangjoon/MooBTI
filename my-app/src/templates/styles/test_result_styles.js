@@ -164,7 +164,7 @@ const useStyles = makeStyles((theme) => ({
   mobileCharScriptText: {
     margin: 40,
     color: "white",
-    fontSize: "17px",
+    fontSize: "20px",
     letterSpacing: "1px",
 
   },
@@ -180,6 +180,13 @@ const useStyles = makeStyles((theme) => ({
       color: "lightgrey",
       border: "2px solid white",
     },
+  },
+
+  span2: {
+    textAlign: "right",
+  },
+  span1: {
+    textAlign: "left",
   },
 
   //Tablet View

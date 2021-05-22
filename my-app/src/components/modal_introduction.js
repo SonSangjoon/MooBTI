@@ -53,13 +53,12 @@ const useStyles = makeStyles((theme) => ({
   },
   firstParagraphGrid: {
     marginTop: "20px",
-
     gridColumn: "1/span 13",
     gridRow: "2/span 2",
   },
   firstParagraphText: {
     color: "white",
-    fontSize:"min(20px,4vw)"
+    fontSize: "min(20px,4vw)",
   },
   secondParagraphGrid: {
     gridColumn: "1/span 13",
@@ -67,9 +66,7 @@ const useStyles = makeStyles((theme) => ({
   },
   secondParagraphText: {
     color: "white",
-    fontSize:"min(20px,4vw)"
-
-
+    fontSize: "min(20px,4vw)",
   },
   thirdParagraphGrid: {
     gridColumn: "1/span 13",
@@ -77,9 +74,7 @@ const useStyles = makeStyles((theme) => ({
   },
   thirdParagraphText: {
     color: "white",
-    fontSize:"min(20px,4vw)"
-
-
+    fontSize: "min(20px,4vw)",
   },
   memberImage: {
     objectFit: "fill",
@@ -103,19 +98,19 @@ const useStyles = makeStyles((theme) => ({
   },
   mobileJHGrid: {
     gridColumn: "2/span 5",
-    gridRow: "6/span 4",
+    gridRow: "6/span 3",
   },
   mobileSJGrid: {
     gridColumn: "8/span 5",
-    gridRow: "6/span 4",
+    gridRow: "6/span 3",
   },
   mobileYJGrid: {
     gridColumn: "2/span 5",
-    gridRow: "9/span 4",
+    gridRow: "9/span 3",
   },
   mobileMHGrid: {
-    gridColumn:"8/span 5",
-    gridRow: "9/span 4",
+    gridColumn: "8/span 5",
+    gridRow: "9/span 3",
   },
   memberNameText: {
     color: "white",
@@ -136,24 +131,69 @@ const useStyles = makeStyles((theme) => ({
   },
 
   //mobile
+
+  mobilefirstParagraphGrid: {
+    gridColumn: "1/span 13",
+    gridRow: "2/span 2",
+  },
+  mobilefirstParagraphText: {
+    color: "white",
+    fontSize: "min(20px,4vw)",
+  },
+  mobilesecondParagraphGrid: {
+    marginTop: "40px",
+    gridColumn: "1/span 13",
+    gridRow: "2/span 2",
+  },
+
+  mobilesecondParagraphText: {
+    color: "white",
+    fontSize: "min(20px,4vw)",
+  },
+
+  mobilethirdParagraphGrid: {
+    marginTop: "20px",
+    gridColumn: "1/span 13",
+    gridRow: "3/span 2",
+  },
+
+  mobilethirdParagraphText: {
+    color: "white",
+    fontSize: "min(20px,4vw)",
+  },
+
   moiblememberImage: {
-    height: "20vw",
+    height: "8vh",
   },
   mobilelinkInnerIcon: {
-    fontSize: "14px",
+    fontSize: "2vh",
   },
   mobilelinkIcon: {
     backgroundColor: "#fffff",
-    width: "22px",
-    height: "22px",
+    width: "2.5vh",
+    height: "2.5vh",
     minHeight: "5px",
+    marginLeft: "15px",
+    justifyContent: "center",
+    alignContent: "center",
   },
   mobilememberBox: {
     textAlign: "center",
   },
+
   mobilememberNameText: {
     color: "white",
     fontSize: "25px",
+  },
+  mobilefaq: {
+    color:"white",
+    gridColumn: "1/span 13",
+    gridRow: "12/span 2",
+    textAlign:"center"
+  },
+  mobilefaqText: {
+    color: "gray",
+    fontSize: "min(20px,4vw)",
   },
 }));
 
@@ -213,17 +253,15 @@ function MemberIntro(data) {
         <Box className={classes.mobilememberBox}>
           <Box className={classes.memberNameText}>
             {data.name}
-            <Box>
-              <Link href={data.url} underline="none" target="_blank">
-                <Fab className={classes.mobilelinkIcon} align="center">
-                  {memberName === "준효" ? (
-                    <CreateIcon className={classes.mobilelinkInnerIcon} />
-                  ) : (
-                    <GitHubIcon className={classes.mobilelinkInnerIcon} />
-                  )}
-                </Fab>
-              </Link>
-            </Box>
+            <Link href={data.url} underline="none" target="_blank">
+              <Fab className={classes.mobilelinkIcon} align="center">
+                {memberName === "준효" ? (
+                  <CreateIcon className={classes.mobilelinkInnerIcon} />
+                ) : (
+                  <GitHubIcon className={classes.mobilelinkInnerIcon} />
+                )}
+              </Fab>
+            </Link>
           </Box>
         </Box>
 
@@ -329,7 +367,7 @@ function ModalCloseBtn() {
       className={classes.closeButton}
       onClick={handleClose}
     >
-      <CloseIcon />
+      <CloseIcon onClick={handleClose} />
     </IconButton>
   );
 }
@@ -337,7 +375,7 @@ function ModalCloseBtn() {
 export default function IntroductionModal(data) {
   const classes = useStyles();
   const { openIntroduction, setOpenIntroduction } = useContext(MbtiContext);
-
+  const faq = "D.N.B 팀에게 개선점을 알려주세요 elice.dnb@gmail.com";
   const handleClose = () => {
     setOpenIntroduction(false);
   };
@@ -355,58 +393,62 @@ export default function IntroductionModal(data) {
     >
       <Box className={classes.root}>
         <PC>
-
-        <Fade in={openIntroduction}>
-          <Grid className={classes.container}>
-            <Grid className={classes.titleLogoGrid}>
-              <TitleLogo />
+          <Fade in={openIntroduction}>
+            <Grid className={classes.container}>
+              <Grid className={classes.titleLogoGrid}>
+                <TitleLogo />
+              </Grid>
+              <Grid className={classes.firstParagraphGrid}>
+                <FirstParagraph />
+              </Grid>
+              <Grid className={classes.secondParagraphGrid}>
+                <SecondParagraph />
+              </Grid>
+              <Grid className={classes.thirdParagraphGrid}>
+                <ThirdParagraph />
+              </Grid>
+              <Grid className={classes.JHGrid}>
+                <MemberIntro
+                  image="JH"
+                  name="준효"
+                  part="PM / 기획"
+                  url="https://brunch.co.kr/@junhyopark"
+                />
+              </Grid>
+              <Grid className={classes.SJGrid}>
+                <MemberIntro
+                  image="SJ"
+                  name="상준"
+                  part="프론트엔드 / 기획"
+                  url="https://github.com/SonSangjoon"
+                />
+              </Grid>
+              <Grid className={classes.YJGrid}>
+                <MemberIntro
+                  image="YJ"
+                  name="유지"
+                  part="프론트엔드 / 기획"
+                  url="https://kdt-gitlab.elice.io/CARMINE"
+                />
+              </Grid>
+              <Grid className={classes.MHGrid}>
+                <MemberIntro
+                  image="MH"
+                  name="민호"
+                  part="데이터분석 / 백엔드"
+                  url="https://github.com/yeemh"
+                />
+              </Grid>
+              <Grid className={classes.modalCloseBtnGrid}>
+                <ModalCloseBtn />
+              </Grid>
+              <Grid className={classes.mobilefaq}>
+              <Box className={classes.mobilefaqText}>
+              {faq}
+              </Box>
+              </Grid>
             </Grid>
-            <Grid className={classes.firstParagraphGrid}>
-              <FirstParagraph />
-            </Grid>
-            <Grid className={classes.secondParagraphGrid}>
-              <SecondParagraph />
-            </Grid>
-            <Grid className={classes.thirdParagraphGrid}>
-              <ThirdParagraph />
-            </Grid>
-            <Grid className={classes.JHGrid}>
-              <MemberIntro
-                image="JH"
-                name="준효"
-                part="PM / 기획"
-                url="https://brunch.co.kr/@junhyopark"
-              />
-            </Grid>
-            <Grid className={classes.SJGrid}>
-              <MemberIntro
-                image="SJ"
-                name="상준"
-                part="프론트엔드 / 기획"
-                url="https://github.com/SonSangjoon"
-              />
-            </Grid>
-            <Grid className={classes.YJGrid}>
-              <MemberIntro
-                image="YJ"
-                name="유지"
-                part="프론트엔드 / 기획"
-                url="https://kdt-gitlab.elice.io/CARMINE"
-              />
-            </Grid>
-            <Grid className={classes.MHGrid}>
-              <MemberIntro
-                image="MH"
-                name="민호"
-                part="데이터분석 / 백엔드"
-                url="https://github.com/yeemh"
-              />
-            </Grid>
-            <Grid className={classes.modalCloseBtnGrid}>
-              <ModalCloseBtn />
-            </Grid>
-          </Grid>
-        </Fade>
+          </Fade>
         </PC>
 
         {/* Tablet View */}
@@ -460,24 +502,29 @@ export default function IntroductionModal(data) {
               <Grid className={classes.modalCloseBtnGrid}>
                 <ModalCloseBtn />
               </Grid>
+              <Grid className={classes.mobilefaq}>
+              <Box className={classes.mobilefaqText}>
+              {faq}
+              </Box>
+              </Grid>
             </Grid>
           </Fade>
-        </Tablet> 
+        </Tablet>
 
         {/* Mobile View */}
-         <Mobile>
+        <Mobile>
           <Fade in={openIntroduction}>
             <Grid className={classes.container}>
               <Grid className={classes.titleLogoGrid}>
                 <TitleLogo />
               </Grid>
-              <Grid className={classes.firstParagraphGrid}>
+              <Grid className={classes.mobilefirstParagraphGrid}>
                 <FirstParagraph />
               </Grid>
-              <Grid className={classes.secondParagraphGrid}>
+              <Grid className={classes.mobilesecondParagraphGrid}>
                 <SecondParagraph />
               </Grid>
-              <Grid className={classes.thirdParagraphGrid}>
+              <Grid className={classes.mobilethirdParagraphGrid}>
                 <ThirdParagraph />
               </Grid>
               <Grid className={classes.mobileJHGrid}>
@@ -512,15 +559,21 @@ export default function IntroductionModal(data) {
                   url="https://github.com/yeemh"
                 />
               </Grid>
+
               <Grid className={classes.modalCloseBtnGrid}>
                 <ModalCloseBtn />
+              </Grid>
+              <Grid className={classes.mobilefaq}>
+              <Box className={classes.mobilefaqText}>
+              D.N.B 팀에게 개선점을 알려주세요 <br/> elice.dnb@gmail.com
+              </Box>
               </Grid>
             </Grid>
           </Fade>
         </Mobile>
 
         {/* PCwide View */}
-         <PCwide>
+        <PCwide>
           <Fade in={openIntroduction}>
             <Grid className={classes.container}>
               <Grid className={classes.titleLogoGrid}>
@@ -570,10 +623,15 @@ export default function IntroductionModal(data) {
               <Grid className={classes.modalCloseBtnGrid}>
                 <ModalCloseBtn />
               </Grid>
+              <Grid className={classes.mobilefaq}>
+              <Box className={classes.mobilefaqText}>
+              {faq}
+              </Box>
+              </Grid>
             </Grid>
           </Fade>
         </PCwide>
-       </Box>
+      </Box>
     </Modal>
     // </Modal>
     // <ModalWindow />
