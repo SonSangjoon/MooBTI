@@ -36,7 +36,14 @@ function ResultDescription({ data }) {
           {data.script}
         </Box>
         <Box align="center" className={classes.mobileCharacterDetailText}>
-          {data.description}
+          {data.description.split("\n").map((line) => { 
+            return (
+              <span>
+                {line}
+                <br />
+              </span>
+            );
+          })}
         </Box>
       </Mobile>
     </Box>

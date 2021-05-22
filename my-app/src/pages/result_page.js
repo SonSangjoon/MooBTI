@@ -59,8 +59,7 @@ export function ResultPage({ match }) {
       <Mobile>
         <Box className={classes.mobileContainer}>
           <NavBar pageType="mobile" />
-          <Box className={classes.mobileBlock}></Box>
-          <Box className={classes.mobileRecommendBlock}>
+          <Box className={classes.mobileRecommendBlock1}>
             <MobileResultTemplate data={data} genderType={genderType} />
           </Box>
           <Box className={classes.mobileRecommendBlock}>

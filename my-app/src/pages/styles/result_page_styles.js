@@ -66,6 +66,13 @@ const useStyles = makeStyles((theme) => ({
     margin: "15px",
   },
 
+  mobileRecommendBlock1: {
+    overflow: "auto",
+    display: "block",
+    margin: "15px",
+    marginTop:"45px",
+  },
+
   mobileRecommendBlock: {
     overflow: "auto",
     display: "block",
@@ -78,7 +85,9 @@ const useStyles = makeStyles((theme) => ({
     right: "0",
     padding: "10px",
   },
-
+  mobileempty:{
+    height:"10px"
+  }
   //Tablet View
 
   //PcWide View

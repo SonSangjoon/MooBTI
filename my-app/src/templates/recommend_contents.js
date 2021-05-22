@@ -102,39 +102,21 @@ function RecommendComponent({ data, value }) {
           <Box className={classes.recommendCharText}>
             {data.mbit} {data.movie}의 {data.name}
           </Box>
-          <Box className={classes.recommendDescText}>{data.shortDesc}</Box>
+          <Box className={classes.recommendDescText}>
+            {data.shortDesc.split("\n").map((line) => {
+              return (
+                <span className={classes.span}>
+                  {line}
+                  {/* <br /> */}
+                </span>
+              );
+            })}
+          </Box>
         </Grid>
         <Grid className={classes.movieLinkBtnGrid}>
           <LinkButton url={data.movieUrl} />
         </Grid>
       </PC>
-
-      <Mobile>
-        <Grid className={classes.mobileRecommendTitleGrid}>
-          <Box className={classes.mobileRecommendTitleText}>{value}</Box>
-        </Grid>
-        <Grid className={classes.mobileImageGrid}>
-          <img
-            className={classes.posterImg}
-            src={data.imageSmallUrl}
-            alt="poster"
-          />
-        </Grid>
-        <Grid className={classes.mobileCharTitleGrid} item>
-          <Box className={classes.mobileRecommendCharText}>
-            {data.movie}의 {data.name}
-          </Box>
-          <Box className={classes.mobileCharMbtiText}> {data.mbit}</Box>
-        </Grid>
-        <Grid className={classes.mobileRecommendDesc}>
-          <Box className={classes.mobileRecommendDescText}>
-            {data.shortDesc}
-          </Box>
-        </Grid>
-        <Grid className={classes.mobileMovieLinkBtnGrid}>
-          <LinkButton url={data.movieUrl} />
-        </Grid>
-      </Mobile>
 
       <Tablet>
         <Grid className={classes.tabletRecommendTitleGrid}>
@@ -152,7 +134,14 @@ function RecommendComponent({ data, value }) {
             {data.mbit} {data.movie}의 {data.name}
           </Box>
           <Box className={classes.tabletRecommendDescText}>
-            {data.shortDesc}
+            {data.shortDesc.split("\n").map((line) => {
+              return (
+                <span className={classes.span}>
+                  {line}
+                  <br />
+                </span>
+              );
+            })}
           </Box>
         </Grid>
         <Grid className={classes.tabletMovieLinkBtnGrid}>
@@ -175,7 +164,17 @@ function RecommendComponent({ data, value }) {
           <Box className={classes.recommendCharText}>
             {data.mbit} {data.movie}의 {data.name}
           </Box>
-          <Box className={classes.recommendDescText}>{data.shortDesc}</Box>
+          <Box className={classes.recommendDescText}>
+            {" "}
+            {data.shortDesc.split("\n").map((line) => {
+              return (
+                <span className={classes.span}>
+                  {line}
+                  <br />
+                </span>
+              );
+            })}
+          </Box>
         </Grid>
         <Grid className={classes.movieLinkBtnGrid}>
           <LinkButton url={data.movieUrl} />

@@ -69,7 +69,6 @@ const useStyles = makeStyles((theme) => ({
     gridColumn: "5/ span 8",
     gridRow: "7/ span 2",
     fontFamily: "Apple SD Gothic Neo",
-
   },
 
   movieLinkBtn: {
@@ -80,7 +79,6 @@ const useStyles = makeStyles((theme) => ({
   movieLinkText: {
     color: "rgba(256,256,256,0.8)",
     fontFamily: "Apple SD Gothic Neo",
-
   },
 
   restartBtnGrid: {
@@ -101,7 +99,6 @@ const useStyles = makeStyles((theme) => ({
 
   restartBtnText: {
     fontFamily: "Apple SD Gothic Neo",
-
   },
 
   recommendTitleText: {
@@ -139,11 +136,10 @@ const useStyles = makeStyles((theme) => ({
 
   mobileRecommendTitleBox: {
     color: "white",
-
   },
 
   mobileImageBox: {
-    marginTop: "20px"
+    marginTop: "20px",
   },
 
   mobileRecommendTitleText: {
@@ -152,7 +148,7 @@ const useStyles = makeStyles((theme) => ({
   },
 
   mobileCharTitleBox: {
-    color:"white",
+    color: "white",
     textAlign: "center",
   },
 
@@ -177,34 +173,34 @@ const useStyles = makeStyles((theme) => ({
     color: "white",
     fontSize: "17px",
     textAlign: "center",
+    fontFamily: "Apple SD Gothic Neo",
   },
 
-  mobileEmptynBox:{
-    height: "20px,"
+  mobileEmptynBox: {
+    height: "20px,",
   },
 
   mobilerestartBtn: {
     width: "70%",
     color: "white",
     border: "2px solid white",
-    borderRadius: "20px"
-    },
+    borderRadius: "20px",
+  },
 
 
   mobileRestartBtnBox: {
     textAlign: "center",
-    marginTop : "40px",
+    marginTop: "40px",
   },
 
-  mobileMovieLinkBtn:{
+  mobileMovieLinkBtn: {
     width: "59%",
     color: "black",
     textAlign: "center",
     backgroundColor: "rgba(0,0,0,0.3)",
     border: "2px solid rgba(256,256,256,0.1)",
-    borderRadius: "8px"
+    borderRadius: "8px",
   },
-
 
   //Tablet View
   tabletRecommendTitleGrid: {
@@ -241,6 +237,10 @@ const useStyles = makeStyles((theme) => ({
   },
 
   //PcWide View
+
+  span: {
+    margin: "10px",
+  },
 }));
 
 export { useStyles };
