@@ -177,6 +177,7 @@ const useStyles = makeStyles((theme) => ({
     color: "white",
     fontSize: "17px",
     textAlign: "center",
+    fontFamily: "Apple SD Gothic Neo",
   },
 
   mobileEmptynBox:{
