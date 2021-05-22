@@ -90,7 +90,14 @@ function ResultDescription({ data }) {
         </Grid>
         <Grid className={classes.mobileCharacterDetail}>
           <Box align="center" className={classes.mobileCharacterDetailText}>
-            {data.description}
+            {data.description.split("\n").map((line) => {
+              return (
+                <span>
+                  {line}
+                  <br />
+                </span>
+              );
+            })}
           </Box>
         </Grid>
       </Mobile>
@@ -103,7 +110,14 @@ function ResultDescription({ data }) {
         </Grid>
         <Grid className={classes.characterDetail}>
           <Box align="center" className={classes.characterDetailText}>
-            {data.description}
+            {data.description.split("\n").map((line) => {
+              return (
+                <span>
+                  {line}
+                  <br />
+                </span>
+              );
+            })}
           </Box>
         </Grid>
       </PC>
@@ -116,7 +130,14 @@ function ResultDescription({ data }) {
         </Grid>
         <Grid className={classes.tabletCharacterDetail}>
           <Box align="center" className={classes.tabletCharacterDetailText}>
-            {data.description}
+            {data.description.split("\n").map((line) => {
+              return (
+                <span>
+                  {line}
+                  <br />
+                </span>
+              );
+            })}
           </Box>
         </Grid>
       </Tablet>
@@ -129,7 +150,14 @@ function ResultDescription({ data }) {
         </Grid>
         <Grid className={classes.characterDetail}>
           <Box align="center" className={classes.characterDetailText}>
-            {data.description}
+            {data.description.split("\n").map((line) => {
+              return (
+                <span>
+                  {line}
+                  <br />
+                </span>
+              );
+            })}
           </Box>
         </Grid>
       </PCwide>
@@ -354,7 +382,7 @@ export function MobileResultTemplate({ data, genderType }) {
               ReactGA.initialize("UA-196189871-2");
               ReactGA.event({
                 category: "Watch Movie",
-                action: "link to watcha", 
+                action: "link to watcha",
                 label: data.movieUrl,
               });
             }}
