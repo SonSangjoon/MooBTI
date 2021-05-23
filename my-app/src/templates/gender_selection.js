@@ -14,7 +14,6 @@ export default function GenderPageSelect() {
   const { setSelectedGender } = useContext(MbtiContext);
 
   const handleGenderChange = (event) => {
-    console.log(event.currentTarget.value)
     setSelectedGender(event.currentTarget.value);
   };
   useEffect(() => {
