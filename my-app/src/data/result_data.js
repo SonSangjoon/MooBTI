@@ -161,7 +161,7 @@ const resultList = {
 
             goodMbti: 'ESFP',
             badMbti:'ENFJ',
-            shortDesc: '믿음직한 연인이 되어줄 남자. 쉽게 마음을 얻을 수 없지만, 한 번 사랑에 빠지면 오래 사랑을 나눌 거예요.',
+            shortDesc: '믿음직한 연인이 되어줄 남자. \n쉽게 마음을 얻을 수 없지만, 한 번 사랑에 빠지면 오래 사랑을 나눌 거예요.',
 
             analysisTitle : "ISTJ 아서가 사랑을 쟁취하는 비결💘",
             analysisSubTitle : "아서의 대사를 분석해서 \n 머릿 속 감정 친구들 100명을 찾아냈어요!",
@@ -329,7 +329,7 @@ const resultList = {
 
             goodMbti: 'ENTJ',
             badMbti:'INFP',
-            shortDesc: '사랑을 위해 헌신하는 여자.\n당신에게도 헌신을 기대하는 게 문제가 되기도 해요.' , 
+            shortDesc: '사랑을 위해 헌신하는 여자. \n당신에게도 헌신을 기대하는 게 문제가 되기도 해요.' , 
 
             analysisTitle : "ESTJ 헤르미온느가 사랑을 쟁취하는 비결💘",
             analysisSubTitle : "헤르미온느의 대사를 분석해서 \n 머릿 속 감정 친구들 100명을 찾아냈어요!",
