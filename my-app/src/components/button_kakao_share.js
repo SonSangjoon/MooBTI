@@ -44,7 +44,7 @@ export function KakaoShareButton({ data }) {
 
         buttons: [
           {
-            title: "나도 테스트 해보기",
+            title: "결과 보러가기",
             link: {
               mobileWebUrl: window.location.href,
               webUrl: window.location.href,
