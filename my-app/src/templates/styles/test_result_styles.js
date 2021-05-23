@@ -121,6 +121,8 @@ const useStyles = makeStyles((theme) => ({
     borderRadius: "20px",
     fontWeight: "bold",
     fontSize: "17px",
+    justifyContent: "center",
+    alignContent: "center",
   },
 
   mobileCharacterMbti:{
