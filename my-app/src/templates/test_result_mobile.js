@@ -18,8 +18,9 @@ function ResultMain({ data }) {
             alt="dummy"
           />
         </Box>
-        <Box className={classes.mobileCharacterMbtiBox}><Box>{data.mbti}
-          </Box></Box>
+        <Box className={classes.mobileCharacterMbtiBox}>
+          {data.mbti}
+        </Box>
         <Box className={classes.mobileCharacterTitle} align="center">
           {data.title}
         </Box>
@@ -37,7 +38,7 @@ function ResultDescription({ data }) {
           {data.script}
         </Box>
         <Box align="center" className={classes.mobileCharacterDetailText}>
-          {data.description.split("\n").map((line) => { 
+          {data.description.split("\n").map((line) => {
             return (
               <span>
                 {line}
@@ -61,7 +62,6 @@ function DataAnalysisBtn({ value, url }) {
         target="_blank"
         variant="outlined"
         className={classes.analysisBtnMobile}
-
       >
         <Typography className={classes.analysisText}>{value}</Typography>
       </Button>
