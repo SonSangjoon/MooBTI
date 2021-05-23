@@ -25,7 +25,14 @@ export default function TestQuestionTemplate() {
 
   useEffect(() => {
     SetQuestionNum((questionNum) => questionNum + 1);
-  }, [answer]);
+    if (answer.length >= 12) {
+      axios.post(`http://52.78.18.205:5000/mbti`, testData).then((response) => {
+        console.log(response);
+        setTimeout(() => {
+          history.push(`/${response.data.user_mbti}/${testData["gender"]}`);
+        }, 1800);
+      });}
+  }, [answer, testData, history]);
 
   function proceedTest(n) {
     if (n === 1) {
