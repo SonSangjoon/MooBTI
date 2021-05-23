@@ -79,7 +79,6 @@ export function IntroPage() {
   }, []);
 
   const getGA = () => {
-    console.log("페이지 들어옴");
     const pathName = window.location.pathname;
     ReactGA.initialize("UA-196189871-2");
     ReactGA.set({ page: pathName });
