@@ -41,6 +41,16 @@ const useStyles = makeStyles((theme) => ({
     fontSize: "32px",
   },
 
+  mobiletitleTextStyles: {
+    color: "white",
+    fontSize: "min(5.5vh, 5.5vw)",
+  },
+
+  mobilesubTitleTextStyles: {
+    color: "white",
+    fontSize: "min(4.5vh, 4.5vw)",
+  },
+
   subTitleGrid: {
     margin: "10px",
     gridColumn: "span 13",
@@ -74,11 +84,21 @@ const useStyles = makeStyles((theme) => ({
   },
   emotionImage: {
     objectFit: "fill",
-    width: "80%",
+    width: "70%",
+  },
+
+  mobileemotionImage: {
+    objectFit: "fill",
+    width: "min(22vh,22vw)",
   },
 
   emotionText: {
     color: "white",
+  },
+
+  mobileemotionText: {
+    color: "white",
+    fontSize: "min(4vh, 4vw)",
   },
   analysisGrid: {
     gridColumn: "span 13",
@@ -87,11 +107,16 @@ const useStyles = makeStyles((theme) => ({
   mobileanalysisGrid: {
     gridColumn: "span 13",
     gridRow: "11/span 1",
-    margin: "10px"
+    margin: "10px",
   },
   analysisTextStyle: {
     color: "white",
     fontSize: "17px",
+  },
+
+  mobileanalysisTextStyle: {
+    color: "white",
+    fontSize: "min(4.5vh, 4.5vw)",
   },
   modalCloseBtnGrid: {
     gridColumn: "13",
@@ -133,16 +158,16 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: "center",
     alignContent: "center",
     textAlign: "center",
-    fontSize: "15px"
+    fontSize: "15px",
   },
   emotionBox: {
     height: "100px",
     width: "100px",
-    fontSize: "15px"
+    fontSize: "15px",
   },
-  mobileEmotionGridLast:{
+  mobileEmotionGridLast: {
     marginTop: "20px",
-  }
+  },
 }));
 
 function Title(data) {
@@ -164,17 +189,48 @@ function SubTitle(data) {
   );
 }
 
-function EmotionCircle(data) {
+function EmotionCircle(data, { type }) {
   const classes = useStyles();
   const imageUrl = `/images/emotion/${data.gender}/${data.emotion}.png`;
-
   return (
-    <Box align="center">
-      <img src={imageUrl} alt="Logo" className={classes.emotionImage} />
-      <Box className={classes.emotionText} align="center">
-        {data.number}명의 {data.name}
-      </Box>
-    </Box>
+    <React.Fragment>
+      <PC>
+        <Box align="center">
+          <img src={imageUrl} alt="Logo" className={classes.emotionImage} />
+          <Box className={classes.emotionText} align="center">
+            {data.number}명의 {data.name}
+          </Box>
+        </Box>
+      </PC>
+      <Tablet>
+        <Box align="center">
+          <img src={imageUrl} alt="Logo" className={classes.emotionImage} />
+          <Box className={classes.emotionText} align="center">
+            {data.number}명의 {data.name}
+          </Box>
+        </Box>
+      </Tablet>
+      <PCwide>
+        <Box align="center">
+          <img src={imageUrl} alt="Logo" className={classes.emotionImage} />
+          <Box className={classes.emotionText} align="center">
+            {data.number}명의 {data.name}
+          </Box>
+        </Box>
+      </PCwide>
+      <Mobile>
+        <Box align="center">
+          <img
+            src={imageUrl}
+            alt="Logo"
+            className={classes.mobileemotionImage}
+          />
+          <Box className={classes.mobileemotionText} align="center">
+            {data.number}명의 {data.name}
+          </Box>
+        </Box>
+      </Mobile>
+    </React.Fragment>
   );
 }
 
@@ -356,149 +412,81 @@ export default function TransitionsModal({ data, genderType }) {
 
         {/* Mobile View */}
         <Mobile>
-
-        <Fade in={openModal}>
+          <Fade in={openModal}>
             <Grid className={classes.container}>
               <Grid className={classes.titleGrid}>
-                <Title text={titleText} />
+                <Box className={classes.mobiletitleTextStyles} align="center">
+                  {titleText}
+                </Box>
               </Grid>
               <Grid className={classes.subTitleGrid}>
-                <SubTitle text={subTitleText} />
+                <Box
+                  className={classes.mobilesubTitleTextStyles}
+                  align="center"
+                >
+                  {subTitleText}
+                </Box>
               </Grid>
               <Grid className={classes.happyCircleGrid}>
-              <Box className={classes.emotionBox}>
-                    <EmotionCircle
-                      name="기쁨이"
-                      gender={genderType}
-                      number={happyNumber}
-                      emotion="happy"
-                    />
-                  </Box>
+                <Box className={classes.emotionBox}>
+                  <EmotionCircle
+                    name="기쁨이"
+                    gender={genderType}
+                    number={happyNumber}
+                    emotion="happy"
+                  />
+                </Box>
               </Grid>
               <Grid className={classes.sadCircleGrid}>
-              <Box className={classes.emotionBox}>
-                    <EmotionCircle
-                      name="슬픔이"
-                      gender={genderType}
-                      number={sadNumber}
-                      emotion="sad"
-                    />
-                  </Box>
+                <Box className={classes.emotionBox}>
+                  <EmotionCircle
+                    name="슬픔이"
+                    gender={genderType}
+                    number={sadNumber}
+                    emotion="sad"
+                  />
+                </Box>
               </Grid>
               <Grid className={classes.angryCircleGrid}>
-              <Box className={classes.emotionBox}>
-                    <EmotionCircle
-                      name="버럭이"
-                      gender={genderType}
-                      number={angryNumber}
-                      emotion="angry"
-                    />
-                  </Box>
+                <Box className={classes.emotionBox}>
+                  <EmotionCircle
+                    name="버럭이"
+                    gender={genderType}
+                    number={angryNumber}
+                    emotion="angry"
+                  />
+                </Box>
               </Grid>
               <Grid className={classes.fussyCircleGrid}>
-              <Box className={classes.emotionBox}>
-                    <EmotionCircle
-                      name="까칠이"
-                      gender={genderType}
-                      number={fussyNumber}
-                      emotion="fussy"
-                    />
-                  </Box>
+                <Box className={classes.emotionBox}>
+                  <EmotionCircle
+                    name="까칠이"
+                    gender={genderType}
+                    number={fussyNumber}
+                    emotion="fussy"
+                  />
+                </Box>
               </Grid>
               <Grid className={classes.timidCircleGrid}>
-              <Box className={classes.emotionBox}>
-                    <EmotionCircle
-                      name="소심이"
-                      gender={genderType}
-                      number={timidNumber}
-                      emotion="timid"
-                    />
-                  </Box>
+                <Box className={classes.emotionBox}>
+                  <EmotionCircle
+                    name="소심이"
+                    gender={genderType}
+                    number={timidNumber}
+                    emotion="timid"
+                  />
+                </Box>
               </Grid>
               <Grid className={classes.mobileanalysisGrid}>
-                <Analysis text={analysisText} />
+                <Box className={classes.mobileanalysisTextStyle} align="center">
+                  {analysisText}
+                </Box>
               </Grid>
               <Grid className={classes.modalCloseBtnGrid}>
                 <ModalCloseBtn />
               </Grid>
             </Grid>
           </Fade>
-          {/* <Fade in={openModal}>
-            <Box className={classes.mobileContainer}>
-              <Grid className={classes.mobilecloseContainer} container>
-                <Grid item xs={10}></Grid>
-                <Grid item xs={1}>
-                  {" "}
-                  <ModalCloseBtn />
-                </Grid>
-              </Grid>
-              <Box className={classes.mobileTitleText}>{titleText}</Box>
-              <Box className={classes.mobileSubTitleText}>{subTitleText}</Box>
-              <Grid container>
-                <Grid item xs={4}></Grid>
-                <Grid item xs={4} className={classes.mobileEmotionGrid}>
-                  <Box className={classes.emotionBox}>
-                    <EmotionCircle
-                      name="기쁨이"
-                      gender={genderType}
-                      number={happyNumber}
-                      emotion="happy"
-                    />
-                  </Box>
-                </Grid>
-              </Grid>
-              <Grid container>
-                <Grid item xs={4} className={classes.mobileEmotionGrid}>
-                  <Box className={classes.emotionBox}>
-                    <EmotionCircle
-                      name="슬픔이"
-                      gender={genderType}
-                      number={sadNumber}
-                      emotion="sad"
-                    />
-                  </Box>
-                </Grid>
-                <Grid item xs={4}></Grid>
-                <Grid item xs={4} className={classes.mobileEmotionGrid}>
-                  <Box className={classes.emotionBox}>
-                    <EmotionCircle
-                      name="버럭이"
-                      gender={genderType}
-                      number={angryNumber}
-                      emotion="angry"
-                    />
-                  </Box>
-                </Grid>
-              </Grid>
-              <Grid container className={classes.mobileEmotionGridLast}>
-                <Grid item xs={2}></Grid>
-                <Grid item xs={4} className={classes.mobileEmotionGrid}>
-                  <Box className={classes.emotionBox}>
-                    <EmotionCircle
-                      name="까칠이"
-                      gender={genderType}
-                      number={fussyNumber}
-                      emotion="fussy"
-                    />
-                  </Box>
-                </Grid>
-
-                <Grid item xs={4} className={classes.mobileEmotionGrid}>
-                  <Box className={classes.emotionBox}>
-                    <EmotionCircle
-                      name="소심이"
-                      gender={genderType}
-                      number={timidNumber}
-                      emotion="timid"
-                    />
-                  </Box>
-                </Grid>
-              </Grid>
-              <Box className={classes.analysisGrid} marginTop="20px">
-                <Analysis text={analysisText} />
-              </Box>
-            </Box>
-          </Fade> */}
         </Mobile>
 
         {/* PCwide View */}
