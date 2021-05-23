@@ -112,6 +112,7 @@ const useStyles = makeStyles((theme) => ({
 
   mobileCharacterMbtiBox:{
     marginLeft: 15,
+    lineHeight: "25px",
     textAlign: "center",
     backgroundColor: "white",
     color: "black",
@@ -121,12 +122,9 @@ const useStyles = makeStyles((theme) => ({
     borderRadius: "20px",
     fontWeight: "bold",
     fontSize: "17px",
-    justifyContent: "center",
-    alignContent: "center",
   },
 
-  mobileCharacterMbti:{
-  },
+
 
   mobileResultDescription: {
     color: "white",
