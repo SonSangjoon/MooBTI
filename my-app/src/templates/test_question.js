@@ -43,6 +43,18 @@ export default function TestQuestionTemplate() {
   }
 
   if (answer.length >= 12) {
+    console.log("problem1")
+    axios
+    .post(
+      process.env.REACT_APP_API_URL + `mbti`,
+      testData
+    )
+    .then((response) => {
+      console.log(response)
+      setTimeout(() => {
+        history.push(`/${response.data.user_mbti}/${testData["gender"]}`);
+      }, 1800);
+    });
 
     return (
       <Grid className={classes.loadingContainer}>
