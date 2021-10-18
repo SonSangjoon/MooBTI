@@ -23,7 +23,7 @@ function IntroPageText() {
           당신의 연애를 코칭해 줄 영화를 받아보세요!
         </Box>
         <Link to="/gender" className={classes.link}>
-          <Button className={classes.button}>시작하기</Button>
+          <Button className={classes.button}>검사하기</Button>
         </Link>
       </PC>
 
@@ -37,7 +37,7 @@ function IntroPageText() {
           당신의 연애를 코칭해 줄 영화를 받아보세요!
         </Box>
         <Link to="/gender" className={classes.mobileLink}>
-          <Button className={classes.mobileButton}>시작하기</Button>
+          <Button className={classes.mobileButton}>검사하기</Button>
         </Link>
       </Mobile>
 
@@ -51,7 +51,7 @@ function IntroPageText() {
           당신의 연애를 코칭해 줄 영화를 받아보세요!
         </Box>
         <Link to="/gender" className={classes.link}>
-          <Button className={classes.button}>시작하기</Button>
+          <Button className={classes.button}>검사하기</Button>
         </Link>
       </Tablet>
 
@@ -84,7 +84,6 @@ export function IntroPage() {
     ReactGA.set({ page: pathName });
     ReactGA.pageview(pathName);
   };
-
 
   return (
     <Box className={classes.root}>

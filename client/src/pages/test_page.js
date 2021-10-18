@@ -22,7 +22,6 @@ export function TestPage() {
     ReactGA.pageview(pathName);
   };
 
-
   return (
     <Box className={classes.root}>
       <PC>

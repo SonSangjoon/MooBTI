@@ -4,9 +4,8 @@ import Wallpaper from "../../images/intro/Wallpaper.jpeg";
 const useStyles = makeStyles((theme) => ({
   root: {
     height: "100vh",
-    backgroundImage: `url(${Wallpaper})`,
-    backgroundRepeat: "no-repeat",
-    backgroundSize: "cover",
+    background:
+      "linear-gradient(180deg, rgba(0, 0, 0, 1), 90%,rgba(200, 50, 50, 0.9))",
   },
 
   container: {
@@ -15,7 +14,7 @@ const useStyles = makeStyles((theme) => ({
     gridTemplateRows: "repeat(3, 1fr)",
     gridTemplateColumns: "repeat(3, 1fr)",
     gridGap: theme.spacing(3),
-    background: "linear-gradient(135deg, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0))",
+    // background: "linear-gradient(135deg, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0))",
   },
 
   emptyGrid: {
@@ -33,13 +32,14 @@ const useStyles = makeStyles((theme) => ({
     marginBottom: 15,
     color: "white",
     fontSize: "3.5vw",
-    fontWeight: "bold"
+    fontWeight: "bold",
   },
 
   subText: {
     padding: 5,
     marginBottom: 15,
-    color: "white",
+    color: "rgba(180, 180, 180, 1)",
+
     fontSize: "2vw",
   },
 
@@ -48,6 +48,7 @@ const useStyles = makeStyles((theme) => ({
   },
 
   button: {
+    borderRadius: "10px",
     padding: "5px 30px 5px 30px",
     size: "large",
     fontSize: "25px",
@@ -85,8 +86,8 @@ const useStyles = makeStyles((theme) => ({
 
   mobileSubText: {
     padding: 15,
+    color: "rgba(180, 180, 180, 1)",
     // marginBottom: 5,
-    color: "white",
     fontSize: "4vw",
     textAlign: "center",
   },
@@ -100,6 +101,7 @@ const useStyles = makeStyles((theme) => ({
   },
 
   mobileButton: {
+    borderRadius: "10px",
     padding: "5px 30px 5px 30px",
     size: "large",
     fontSize: "20px",
