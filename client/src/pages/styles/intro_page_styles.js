@@ -70,42 +70,41 @@ const useStyles = makeStyles((theme) => ({
 
   mobileContainer: {
     height: "100vh",
-    display: "grid",
-    gridTemplateRows: "repeat(3, 1fr)",
-    gridGap: theme.spacing(1),
-    background: "linear-gradient(135deg, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0))",
+    width: "100vw",
+    display: "flex",
+    alignItems: "center",
+  },
+
+  mobileTextBox: {
+    padding: "5px",
+    justifyContent: "center",
   },
 
   mobileMainText: {
-    padding: 5,
+    padding: 10,
     color: "white",
     fontSize: "6vw",
     fontWeight: "bold",
-    textAlign: "center",
+    marginTop: "20",
   },
 
   mobileSubText: {
-    padding: 15,
+    padding: 10,
     color: "rgba(180, 180, 180, 1)",
-    // marginBottom: 5,
     fontSize: "4vw",
-    textAlign: "center",
   },
 
   mobileLink: {
     textDecoration: "none",
-    marginTop: "20px",
-    position: "absolute",
-    left: "50%",
-    transform: "translate(-50%, 0%)",
+    margin: "20px 0 0 15px",
   },
 
   mobileButton: {
+    background: "#dc1a28",
     borderRadius: "10px",
     padding: "5px 30px 5px 30px",
     size: "large",
     fontSize: "20px",
-    background: "#dc1a28",
     color: "white",
     "&:hover": {
       backgroundColor: "#dc1a28",
@@ -115,10 +114,6 @@ const useStyles = makeStyles((theme) => ({
     "&:active": {
       boxShadow: "none",
       backgroundColor: "rgba(250, 0, 0, 0.7)",
-    },
-
-    mobileIntro: {
-      gridRow: "1/span 1",
     },
   },
 }));

@@ -28,13 +28,15 @@ function IntroPageText() {
       </PC>
 
       <Mobile>
-        <Box className={classes.mobileMainText}>
-          내가 만약 로맨스 영화 주인공이라면?
-        </Box>
-        <Box className={classes.mobileSubText}>
-          로맨스 영화 속 나의 부캐와 궁합을 찾고,
-          <br />
-          당신의 연애를 코칭해 줄 영화를 받아보세요!
+        <Box className={classes.mobileTextBox}>
+          <Box className={classes.mobileMainText}>
+            내가 만약 로맨스 영화 주인공이라면?
+          </Box>
+          <Box className={classes.mobileSubText}>
+            로맨스 영화 속 나의 부캐와 궁합을 찾고,
+            <br />
+            당신의 연애를 코칭해 줄 영화를 받아보세요!
+          </Box>
         </Box>
         <Link to="/gender" className={classes.mobileLink}>
           <Button className={classes.mobileButton}>검사하기</Button>
@@ -102,12 +104,9 @@ export function IntroPage() {
 
       <Mobile>
         <NavBar pageType="mobile" />
-        <Grid className={classes.mobileContainer}>
-          <Grid item></Grid>
-          <Grid className={classes.mobileIntro} item>
-            <IntroPageText />
-          </Grid>
-        </Grid>
+        <Box className={classes.mobileContainer}>
+          <IntroPageText />
+        </Box>
         <Footer />
       </Mobile>
 
