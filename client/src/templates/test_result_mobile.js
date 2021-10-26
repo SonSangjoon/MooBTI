@@ -18,9 +18,7 @@ function ResultMain({ data }) {
             alt="dummy"
           />
         </Box>
-        <Box className={classes.mobileCharacterMbtiBox}>
-          {data.mbti}
-        </Box>
+        <Box className={classes.mobileCharacterMbtiBox}>{data.mbti}</Box>
         <Box className={classes.mobileCharacterTitle} align="center">
           {data.title}
         </Box>

@@ -23,17 +23,25 @@ export default function TestQuestionTemplate() {
 
   const { answer } = testData;
 
-  useEffect(() => {
-    SetQuestionNum((questionNum) => questionNum + 1);
-    if (answer.length >= 12) {
-      axios.post(`http://52.78.18.205:5000/mbti`, testData).then((response) => {
+  const sendData = () => {
+    axios
+      .post(process.env.REACT_APP_API_URL + `mbti`, testData)
+      .then((response) => {
         setTimeout(() => {
           history.push(`/${response.data.user_mbti}/${testData["gender"]}`);
         }, 1800);
-      });}
-  }, [answer, testData, history]);
+      });
+  };
+
+  useEffect(() => {
+    SetQuestionNum((questionNum) => questionNum + 1);
+    if (answer.length >= 12) {
+      sendData();
+    }
+  }, []);
 
   function proceedTest(n) {
+    console.log("test");
     if (n === 1) {
       setTestData({ ...testData, answer: answer + "1" });
     } else {
@@ -43,19 +51,15 @@ export default function TestQuestionTemplate() {
 
   if (answer.length >= 12) {
     axios
-    .post(
-      process.env.REACT_APP_API_URL + `mbti`,
-      testData
-    )
-    .then((response) => {
-      setTimeout(() => {
-        history.push(`/${response.data.user_mbti}/${testData["gender"]}`);
-      }, 1800);
-    });
+      .post(process.env.REACT_APP_API_URL + `mbti`, testData)
+      .then((response) => {
+        setTimeout(() => {
+          history.push(`/${response.data.user_mbti}/${testData["gender"]}`);
+        }, 1800);
+      });
 
     return (
       <Grid className={classes.loadingContainer}>
-        {/* <Grid item></Grid> */}
         <Grid className={classes.loadingGrid} item>
           <PC>
             <Box className={classes.loadingBox} align="center">
