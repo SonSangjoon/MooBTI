@@ -1,5 +1,4 @@
 import { makeStyles } from "@material-ui/core/styles";
-import Wallpaper from "../../images/intro/Wallpaper.jpeg";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -11,23 +10,19 @@ const useStyles = makeStyles((theme) => ({
   container: {
     height: "100vh",
     display: "grid",
-    gridTemplateRows: "repeat(3, 1fr)",
-    gridTemplateColumns: "repeat(3, 1fr)",
-    gridGap: theme.spacing(3),
-    // background: "linear-gradient(135deg, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0))",
+    direction: "column",
+    justifyContent: "center",
+    alignItems: "center",
   },
 
-  emptyGrid: {
-    gridColumn: "span 3",
-  },
-
-  textGrid: {
-    paddingLeft: 50,
-    paddingTop: 20,
-    gridColumn: "span 2",
+  textBox: {
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center",
   },
 
   mainText: {
+    alignItems: "center",
     padding: 5,
     marginBottom: 15,
     color: "white",
@@ -36,10 +31,10 @@ const useStyles = makeStyles((theme) => ({
   },
 
   subText: {
+    textAlign: "center",
     padding: 5,
     marginBottom: 15,
     color: "rgba(180, 180, 180, 1)",
-
     fontSize: "2vw",
   },
 
@@ -50,9 +45,8 @@ const useStyles = makeStyles((theme) => ({
   button: {
     borderRadius: "10px",
     padding: "5px 30px 5px 30px",
-    size: "large",
     fontSize: "25px",
-    fontWeight: "bold",
+    fontWeight: "bolder",
     background: "#dc1a28",
     color: "white",
     "&:hover": {
@@ -68,16 +62,8 @@ const useStyles = makeStyles((theme) => ({
 
   // Mobile
 
-  mobileContainer: {
-    height: "100vh",
-    width: "100vw",
-    display: "flex",
-    alignItems: "center",
-  },
-
   mobileTextBox: {
     padding: "5px",
-    justifyContent: "center",
   },
 
   mobileMainText: {
@@ -103,8 +89,8 @@ const useStyles = makeStyles((theme) => ({
     background: "#dc1a28",
     borderRadius: "10px",
     padding: "5px 30px 5px 30px",
-    size: "large",
     fontSize: "20px",
+    fontWeight: "1000",
     color: "white",
     "&:hover": {
       backgroundColor: "#dc1a28",
