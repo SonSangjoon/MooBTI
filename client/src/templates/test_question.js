@@ -35,10 +35,7 @@ export default function TestQuestionTemplate() {
 
   useEffect(() => {
     SetQuestionNum((questionNum) => questionNum + 1);
-    if (answer.length >= 12) {
-      sendData();
-    }
-  }, []);
+  }, [testData]);
 
   function proceedTest(n) {
     console.log("test");
