@@ -19,8 +19,6 @@ const useStyles = makeStyles((theme) => ({
     gridRow: "3/span 10",
   },
 
-  //Mobile View
-
   mobileContainer: {
     height: "100vh",
 
@@ -33,12 +31,11 @@ const useStyles = makeStyles((theme) => ({
     gridRow: "2/span 10",
   },
 
-  //Tablet View
   tabletTestGrid: {
     gridColumn: "2/span 10",
     gridRow: "3/span 9",
   },
-  //PcWide View
+
   pcwideTestGrid: {
     gridColumn: "1/span10",
     gridRow: "2/span 10",

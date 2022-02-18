@@ -28,7 +28,6 @@ export function KakaoShareButton({ data }) {
       const kakao = window.Kakao;
       if (!kakao.isInitialized()) {
         kakao.init(process.env.REACT_APP_KAKAO_KEY);
-        console.log(window.Kakao.isInitialized());
       }
       kakao.Link.sendDefault({
         objectType: "feed",

@@ -100,8 +100,6 @@ export function IntroPage() {
         <Footer />
       </PC>
 
-      {/* Mobile View */}
-
       <Mobile>
         <NavBar pageType="mobile" />
         <Box className={classes.mobileContainer}>

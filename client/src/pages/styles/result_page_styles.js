@@ -44,10 +44,7 @@ const useStyles = makeStyles((theme) => ({
     padding: "20px",
   },
 
-  // Mobile View
-
   mobileContainer: {
-    // overflow: 'auto',
     backgroundColor: "black",
     height: "auto",
     position: "relative",
@@ -56,7 +53,6 @@ const useStyles = makeStyles((theme) => ({
   mobileBlock: {
     overflow: "auto",
     display: "block",
-    // height: "5vh",
     margin: "30px",
   },
 
@@ -88,9 +84,6 @@ const useStyles = makeStyles((theme) => ({
   mobileempty:{
     height:"10px"
   }
-  //Tablet View
-
-  //PcWide View
 }));
 
 export { useStyles };

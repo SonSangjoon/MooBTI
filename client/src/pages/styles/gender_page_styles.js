@@ -43,7 +43,6 @@ const useStyles = makeStyles((theme) => ({
     height: "53vh",
   },
 
-  // Mobile View
   mobileContainer: {
     height: "100vh",
     display: "grid",
@@ -65,8 +64,6 @@ const useStyles = makeStyles((theme) => ({
     fontSize: 17,
     color: "white",
   },
-
-  //Tablet View
 
   tabletContainer: {
     height: "100vh",

@@ -310,7 +310,6 @@ function MemberIntro(data) {
             <Link href={data.url} underline="none" target="_blank">
               <Fab
                 className={classes.linkIcon}
-                // style={{ backgroundColor: "#fffff" }}
                 align="center"
               >
                 {memberName === "준효" ? (
@@ -451,7 +450,6 @@ export default function IntroductionModal(data) {
           </Fade>
         </PC>
 
-        {/* Tablet View */}
         <Tablet>
           <Fade in={openIntroduction}>
             <Grid className={classes.container}>
@@ -511,7 +509,6 @@ export default function IntroductionModal(data) {
           </Fade>
         </Tablet>
 
-        {/* Mobile View */}
         <Mobile>
           <Fade in={openIntroduction}>
             <Grid className={classes.container}>
@@ -572,7 +569,6 @@ export default function IntroductionModal(data) {
           </Fade>
         </Mobile>
 
-        {/* PCwide View */}
         <PCwide>
           <Fade in={openIntroduction}>
             <Grid className={classes.container}>
@@ -633,7 +629,5 @@ export default function IntroductionModal(data) {
         </PCwide>
       </Box>
     </Modal>
-    // </Modal>
-    // <ModalWindow />
   );
 }

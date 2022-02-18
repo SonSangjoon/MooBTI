@@ -1,5 +1,4 @@
 import { makeStyles } from "@material-ui/core/styles";
-import Wallpaper from "../../images/intro/Wallpaper.jpeg";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -14,7 +13,6 @@ const useStyles = makeStyles((theme) => ({
     gridTemplateRows: "repeat(3, 1fr)",
     gridTemplateColumns: "repeat(3, 1fr)",
     gridGap: theme.spacing(3),
-    // background: "linear-gradient(135deg, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0))",
   },
 
   emptyGrid: {
@@ -65,8 +63,6 @@ const useStyles = makeStyles((theme) => ({
       backgroundColor: "rgba(250, 0, 0, 0.7)",
     },
   },
-
-  // Mobile
 
   mobileContainer: {
     height: "100vh",

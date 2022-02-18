@@ -72,8 +72,6 @@ export function ResultPage({ match }) {
         </Box>
       </Mobile>
 
-      {/* Tablet view */}
-
       <Tablet>
         <NavBar pageType="intro" />
         <Grid className={classes.container}>
@@ -89,8 +87,6 @@ export function ResultPage({ match }) {
         </Grid>
         <Footer />
       </Tablet>
-
-      {/* PC wide view */}
 
       <PCwide>
         <NavBar pageType="intro" />
