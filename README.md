@@ -2,7 +2,7 @@
   <br />
     <img src="https://user-images.githubusercontent.com/74908906/154793168-84b3dccb-c760-4bde-b2ea-a7d9f0f25554.png" alt="메인 화면" />
   <h2> 영화 캐릭터로 알아보는 나의 연애 성향</h2>
-  <a href="http://asq.kr/z1o2cQC" target="_blank">현실연애 무BTI 해보기</a>
+  <a href="http://asq.kr/z1o2cQC" target="_blank">2600명이 사용한 현실연애 무BTI 해보기</a>
 
 </div>
 <br/>
