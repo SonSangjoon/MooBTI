@@ -1,13 +1,11 @@
 <div align="center">
   <br />
-  <h1>현실 연애 무BTI</h1>
-  <img src="https://i.imgur.com/bqK1lEy.png" alt="메인 화면" />
-  <br />
+    <img src="https://user-images.githubusercontent.com/74908906/154793168-84b3dccb-c760-4bde-b2ea-a7d9f0f25554.png" alt="메인 화면" />
+  <h2> 영화 캐릭터로 알아보는 나의 연애 성향</h2>
+  <a href="http://asq.kr/z1o2cQC" target="_blank">현실연애 무BTI 해보기</a>
+
 </div>
-
 <br/>
-
-> [현실연애 무BTI 해보기](http://asq.kr/z1o2cQC)
 
 <br/>
 
@@ -63,6 +61,8 @@
     1. 연애 유형 MBTI 검사 및 결과 제공
     1. 영화 캐릭터 분석 데이터 제공
     1. 추천 영화 콘텐츠 제공  
+
+  <img src="https://i.imgur.com/bqK1lEy.png" alt="메인 화면" />
 
 
 - **우리 서비스로 유저는 어떤 정보를 얻을까?**
